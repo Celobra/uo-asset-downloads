@@ -5,10 +5,10 @@ import { validateGallery } from '../tools/validate-gallery.mjs';
 
 test('Every published item and armour piece has an intact native download and real preview files', async () => {
   const result = await validateGallery();
-  assert.equal(result.items, 551);
-  assert.equal(result.listings, 332);
+  assert.equal(result.items, 552);
+  assert.equal(result.listings, 333);
   assert.equal(result.sets, 30);
-  assert.equal(result.packages, 418);
+  assert.equal(result.packages, 419);
 });
 
 test('Homepage resolves gallery media and downloads from its subdirectory', async () => {

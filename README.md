@@ -2,7 +2,7 @@
 
 Browse the gallery and use the small Download link on an item to get its files. Open an armour set to inspect or download the complete set or an individual piece.
 
-The library contains 332 listings with 418 ZIP packages. Shared collections stay together when their import tools require the full set.
+The library contains 333 listings with 419 ZIP packages. Shared collections stay together when their import tools require the full set.
 
 - Equipment: native 35-action VDs, inventory icons and male/female paperdoll images.
 - Creatures and mounts: native VDs and available setup files.
@@ -22,3 +22,20 @@ Build: node tools/build.mjs
 Tests: node --test tests/*.test.mjs
 
 Only public is deployed to Cloudflare Workers. wrangler.jsonc configures that directory. The optional original catalogue builder remains available; the populated gallery is the homepage.
+
+
+## Travelling Caravan
+
+[Open the animated example](https://uo-asset-library.farthrex.workers.dev/#travelling-caravan) · [Download the test build](public/gallery/downloads/world/travelling-caravan.zip)
+
+![Caravan with horse: travelling and parked](public/gallery/media/travelling-caravan/Caravan-with-horse.gif)
+
+A movable UO-style caravan in two versions, with and without a harness horse. The wheels turn while travelling and stop when parked; chimney smoke continues. Passengers, furniture, loose floor items and cargo containers keep their positions as the caravan moves and turns, including items nested inside containers.
+
+Each version includes a placement deed. Successful placement gives the owner reins in their backpack for boarding, travelling, parking, turning, leaving and securing furniture. The cabin has walkable rear steps, a cargo chest and a bedroll. Travel requires clear, level land with sufficient turning space.
+
+Sphere X test build with a guarded native-data installer and rollback backup. Includes four facings, native wheel/horse/smoke animation, two deeds and setup instructions. After installation, a GM can create the deeds with `.add i_deed_gc_caravan` and `.add i_deed_gc_horse_caravan`.
+
+The isolated tests passed 226 movement/cargo checks, 20 connected-player access checks and installer/rollback checks. Native roof cutaway, lighting and player overlap still require an in-game visual check. The horse is an attached animated part rather than a pet; the rear door is decorative and this build has no redeeding command. Preview GIFs are assembled native frames, not game recordings.
+
+![Caravan without horse](public/gallery/media/travelling-caravan/Caravan-without-horse.gif)
