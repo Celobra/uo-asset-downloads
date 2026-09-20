@@ -1,0 +1,18 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { buildCatalogue } from '../tools/catalog.mjs';
+const input = () => ({site:{name:'Test Library', owner:'Test Curator', assetBaseUrl:'https://assets.example.com', contactEmail:''}, assets:[]});
+const asset = () => ({id:'test-creature', published:true, name:'Test creature', category:'Creatures', summary:'Test fixture only.', creator:'Test creator', license:'Test fixture terms', format:'PNG', version:'1.0', updated:'2026-09-20', bodyId:'0x003B', frameCount:10, actionCount:1, directionCount:1, sourceUrl:'', tags:['test'], thumbnailKey:'previews/test/thumb.png', previews:[{label:'Walk / South',type:'image',key:'previews/test/walk-s.png'}], downloads:[{label:'Download',key:'packs/test/v1/frames.zip',sizeBytes:100}],rights:{status:'approved',evidence:'Unit test fixture, not an assertion of real rights', reviewedBy:'Test'}});
+test('empty collection builds',()=>assert.equal(buildCatalogue(input()).assets.length,0));
+test('drafts and private rights notes are not emitted',()=>{const x=input();x.assets=[{published:false,rights:{evidence:'PRIVATE_NOTE'}}];assert.equal(JSON.stringify(buildCatalogue(x)).includes('PRIVATE_NOTE'),false);});
+test('approved complete asset builds and strips private fields',()=>{const x=input();x.assets=[{...asset(),privateNote:'SECRET'}];const a=buildCatalogue(x).assets[0];assert.equal(a.name,'Test creature');assert.equal('rights' in a,false);assert.equal('privateNote' in a,false);});
+test('unapproved published asset fails',()=>{const x=input();const a=asset();a.rights.status='pending';x.assets=[a];assert.throws(()=>buildCatalogue(x),/approved rights/);});
+test('missing evidence fails',()=>{const x=input();const a=asset();a.rights.evidence='';x.assets=[a];assert.throws(()=>buildCatalogue(x),/evidence/);});
+test('published asset needs a base URL',()=>{const x=input();x.site.assetBaseUrl='';x.assets=[asset()];assert.throws(()=>buildCatalogue(x),/assetBaseUrl/);});
+test('duplicate slugs fail',()=>{const x=input();x.assets=[asset(),asset()];assert.throws(()=>buildCatalogue(x),/unique/);});
+test('invalid dates fail',()=>{const x=input();x.assets=[{...asset(),updated:'2026-02-31'}];assert.throws(()=>buildCatalogue(x),/real YYYY-MM-DD/);});
+test('URLs cannot contain credentials or query tokens',()=>{for(const url of ['javascript:alert(1)','https://user:pass@example.com','https://example.com?token=secret']){const x=input();x.site.assetBaseUrl=url;assert.throws(()=>buildCatalogue(x));}});
+test('unsafe object paths fail',()=>{for(const key of ['../private.zip','/private.zip','https://example.org/file.zip','a//b.zip','a/../b.zip','a/%2e%2e/b.zip']){const x=input();const a=asset();a.downloads[0].key=key;x.assets=[a];assert.throws(()=>buildCatalogue(x),/relative object key/);}});
+test('negative metadata counts fail',()=>{const x=input();x.assets=[{...asset(),frameCount:-1}];assert.throws(()=>buildCatalogue(x),/non-negative/);});
+test('missing download fails',()=>{const x=input();x.assets=[{...asset(),downloads:[]}];assert.throws(()=>buildCatalogue(x),/at least one download/);});
+test('text is preserved as data, not interpreted as markup',()=>{const x=input();x.assets=[{...asset(),name:'<img src=x onerror=alert(1)>'}];assert.equal(buildCatalogue(x).assets[0].name,'<img src=x onerror=alert(1)>');});

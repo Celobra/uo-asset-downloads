@@ -1,0 +1,22 @@
+# Secrets / local state — never commit these, even to a private repository.
+.env
+.env.*
+*.pem
+*.key
+.wrangler/
+node_modules/
+.DS_Store
+Thumbs.db
+# Keep bulk client data and packed assets out of the code repository.
+*.zip
+*.7z
+*.rar
+*.mul
+*.uop
+*.idx
+asset-source/
+asset-staging/
+rights-evidence/
+
+# Audited, runtime-only gallery packages.
+!public/gallery/downloads/**/*.zip
