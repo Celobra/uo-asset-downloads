@@ -15,4 +15,9 @@ test('Homepage resolves gallery media and downloads from its subdirectory', asyn
   const html = await readFile(new URL('../public/index.html', import.meta.url), 'utf8');
   assert.ok(html.includes('<base href="./gallery/">'));
   assert.ok(html.includes('id="native-downloads"'));
+  assert.ok(html.includes('since I was 11'));
+  assert.ok(html.includes('GM for Soulless'));
+  assert.ok(html.includes('href="https://invictauo.com/"'));
+  assert.ok(html.includes('id="library"'));
+  assert.ok(!/[\u00c2\u00c3]/.test(html), 'Homepage has no broken UTF-8 punctuation');
 });
