@@ -1,0 +1,944 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Complete offline user guide for UO Asset Studio 0.26.0"><title>UO Asset Studio 0.26.0 - Complete User Guide</title><link rel="stylesheet" href="guide-0.css"></head>
+<body><a href="/studio/downloads/#guide" class="studio-return">← UO Asset Studio downloads</a><a class="skip" href="#manual">Skip to manual</a><aside><div class="brand">UO Asset Studio</div><div class="edition">Complete user guide / 0.26.0</div><label for="search">Find chapters containing...</label><input type="search" id="search" placeholder="Try armor, recovery or house"><div class="nav-actions"><button id="clear">Show all</button><button id="theme" aria-pressed="false">Light / dark</button></div><div id="count" class="search-count" aria-live="polite"></div><nav aria-label="Guide chapters"><a href="#01-start-here">01. Start here</a><a href="#02-installation-updates-and-profiles">02. Installation, updates and profiles</a><a href="#03-the-main-window-and-daily-navigation">03. The main window and daily navigation</a><a href="#04-saving-queues-backups-and-recovery">04. Saving, queues, backups and recovery</a><a href="#05-sphere-scripts-and-the-script-directory">05. Sphere scripts and the script directory</a><a href="#06-ids-file-formats-and-artwork-preparation">06. IDs, file formats and artwork preparation</a><a href="#07-item-assets-tiledata-and-the-paperdoll">07. Item Assets, TileData and the paperdoll</a><a href="#08-asset-spaces-and-choosing-destinations">08. Asset spaces and choosing destinations</a><a href="#09-add-item-reuse-art-or-export-an-import-kit">09. Add item: reuse art or export an import kit</a><a href="#10-import-items-animated-statics-and-effects">10. Import items, animated statics and effects</a><a href="#11-import-monsters-and-other-characters">11. Import monsters and other characters</a><a href="#12-mounts-rideable-objects-and-inventory-icons">12. Mounts, rideable objects and inventory icons</a><a href="#13-clothing-and-weapons">13. Clothing and weapons</a><a href="#14-complete-armor-sets-and-whole-folder-import">14. Complete armor sets and whole-folder import</a><a href="#15-the-animations-viewer-and-exports">15. The Animations viewer and exports</a><a href="#16-animation-workshop-and-layered-preview">16. Animation workshop and layered preview</a><a href="#17-gump-artwork-browse-recolour-replace-and-import">17. Gump artwork: browse, recolour, replace and import</a><a href="#18-sphere-gump-designer">18. Sphere gump designer</a><a href="#19-hues-and-colour-testing">19. Hues and colour testing</a><a href="#20-sound-workshop-and-attachments">20. Sound workshop and attachments</a><a href="#21-test-scene-an-in-app-visual-sandbox">21. Test Scene: an in-app visual sandbox</a><a href="#22-house-builder-and-housing-deeds">22. House Builder and housing deeds</a><a href="#23-find-references-and-investigate-shared-content">23. Find references and investigate shared content</a><a href="#24-remove-definitions-animations-or-whole-scripts">24. Remove definitions, animations or whole scripts</a><a href="#25-bulk-export-and-resuming-exports">25. Bulk export and resuming exports</a><a href="#26-mul-uop-conversion-and-file-checks">26. MUL / UOP conversion and file checks</a><a href="#27-compare-projects-and-create-independent-test-copies">27. Compare projects and create independent test copies</a><a href="#28-portable-content-packs-and-distribution">28. Portable content packs and distribution</a><a href="#29-troubleshooting-and-common-questions">29. Troubleshooting and common questions</a><a href="#30-task-finder-and-keyboard-reference">30. Task finder and keyboard reference</a><a href="#31-formats-glossary-and-version-boundaries">31. Formats, glossary and version boundaries</a><a href="#32-world-generator-create-a-separate-wilderness">32. World Generator: create a separate wilderness</a></nav></aside>
+<main id="manual"><header class="cover"><div class="eyebrow">The complete desktop manual</div><h1>Build your<br>Ultima Online world.</h1><p>Every Studio workspace, importer and file workflow, explained step by step. Includes the in-app Test Scene and House Builder.</p><a class="button" href="UOAssetStudio-User-Guide-0.26.0.pdf">Open the printable PDF</a><div class="route"><span>Find</span><span>Prepare</span><span>Preview</span><span>Review</span><span>Save</span><span>Verify</span></div></header><div id="empty" hidden>No matching chapters. Try another word, or choose Show all.</div><p><strong>Complete user guide | Version 0.26.0 | Windows desktop edition</strong></p>
+<p>Browse, create, test and distribute content for a Sphere shard.</p>
+<p>This manual describes the released 0.26.0 interface. It covers the main tabs, importers, workshops, House Builder, World Generator, file tools and recovery workflows. Button names match the application; a trailing <code>...</code> means that a button opens another window. Examples use generic names and do not identify free IDs on your installation.</p>
+<p>The HTML edition works offline and includes a searchable contents panel. The PDF has a linked contents page and bookmarks. Keep the Markdown edition if you want to adapt the documentation for your own distribution. No game files, accounts, profile settings or private test projects are included.</p>
+<section class="chapter" id="01-start-here"><h2>01. Start here</h2>
+<h3>What Studio does</h3>
+<p>UO Asset Studio connects your Sphere scripts to your Ultima Online client assets. You can find a definition, inspect its artwork and references, edit its script, import replacement or new assets, preview them, and review the files that will change before saving.</p>
+<p>Studio is a native desktop application. Normal editing does not require a browser or a running server. Its Test Scene and House Builder walk test run inside the application. They show visual appearance and local movement; they do not execute your Sphere scripts.</p>
+<h3>The four things to keep separate</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Thing</th><th scope="col">What it contains</th><th scope="col">How you preserve it</th></tr></thead><tbody>
+<tr><td>Working game files</td><td>Client art, animations, metadata and server scripts</td><td>A reviewed file save; a retained backup allows restoration</td></tr>
+<tr><td>Editing session</td><td>Script drafts, open script-workspace documents and reviewed pending changes</td><td>Automatic checkpoints, or Workspace &gt; Checkpoint now</td></tr>
+<tr><td>Editable project</td><td>A house design, gump design or animation sequence</td><td>That workshop's Save project, Save design or Export edited sequence</td></tr>
+<tr><td>Distribution</td><td>The content or documentation you intend to share</td><td>A deliberately prepared pack, export or distribution folder</td></tr>
+</tbody></table></div>
+<p>A session checkpoint does not save game files. A screenshot does not save an editable design. A profile does not make an independent copy of your client or server.</p>
+<h3>A first session in ten steps</h3>
+<ol><li>Install Studio, then open it from the Start menu.</li><li>Link an extracted Sphere server folder and the matching UO client-data folder.</li><li>Give the profile a clear name, such as <code>Development shard</code>.</li><li>If you need a separate working copy, use Studio tools &gt; Create test copy and select the resulting profile.</li><li>Search for a familiar item in the definition list.</li><li>Select it and inspect Definition, Sphere Script and Item Assets.</li><li>Open Test Scene to see the asset against a floor and walls.</li><li>Make a small change using the appropriate editor or importer.</li><li>Read the save review, including destination IDs, file formats, scripts and backup choice.</li><li>Save, then verify the result with the client and server that will actually use the files.</li></ol>
+<p>For a first experiment, copy existing equipment or add an item that reuses existing artwork. A new creature, wearable or house has more connected parts.</p>
+<h3>Reading this manual</h3>
+<p>Each chapter explains where a tool lives, how to use it and what is saved. Chapters 3 and 4 explain saving and recovery and apply throughout the manual. The task finder near the end helps you choose a tool. Troubleshooting covers common errors without asking you to start over blindly.</p>
+<h3>Recent additions</h3>
+<p>World Generator now includes Explore world in a new window. Pan and zoom through the generated landscape, use its minimap to travel, and jump to volcanoes, lakes and clearings. Chapter 32 explains the controls.</p>
+<p>Attach sound now shows Current sounds, including resolved creature inheritance and detected sound commands. Listen to the current audio, choose a replacement, and review the change without adding a second sound command. See chapter 20.</p>
+<p>Attach sound... links an existing client sound or ready-made PCM WAV to an item, creature, mount or script function. Choose when it plays, listen to it and review the script change before saving. Chapter 20 explains the complete workflow.</p>
+<p>Workspace now has a visible Sound in UO panel above its preview. Choose Attach sound to this asset..., then use Save to UO files in the review. Chapter 26 also covers the new MUL to UOP direction, available beside UOP to MUL in the converter.</p>
+<p>Save safety checks now test required file access before a reviewed save creates backups or starts preparing output. A second check runs before applying the changes. Direct script saves and restoration also check their destinations. Chapter 4 explains the checks and how to respond when a file is in use.</p>
+</section>
+<section class="chapter" id="02-installation-updates-and-profiles"><h2>02. Installation, updates and profiles</h2>
+<h3>Install or upgrade</h3>
+<p>Run the supplied Setup executable. The installed app includes its runtime; recipients do not need to install Python, Pillow, Inno Setup or developer tools.</p>
+<p>To upgrade, save your work and close Studio, then run the new Setup. It detects the earlier installation and reuses its installation location. The confirmation step offers Upgrade, or Repair when installing the same version. Uninstalling first is normally unnecessary.</p>
+<p>The default installation location is <code>%LOCALAPPDATA%\Programs\UO Asset Studio</code>. An older installation under Program Files may need Windows administrator permission to replace its application files. Use the same Windows account for that upgrade. The installer does not replace your linked shard/client data or saved profiles.</p>
+<p>Keep <code>UOAssetStudio.exe</code> with its <code>runtime</code> folder. The <code>docs</code> folder contains documentation; <code>licenses</code> contains dependency notices. Do not keep your artwork projects inside <code>runtime</code>.</p>
+<h3>First-run project setup</h3>
+<p>Choose the folder containing your Sphere server and its <code>scripts</code> directory. A server ZIP is supported for browsing, but its scripts are read-only: extract it before editing or generating scripts.</p>
+<p>Choose the UO data folder containing the actual client files, such as TileData, art and animation archives. The optional ClassicUO executable path is a remembered location; it is not required for Studio's in-app previews. Saving a profile does not configure a running game client to use those data files.</p>
+<p>Click Save and Open Editor. The definition list comes from the selected server; asset previews come from the selected client folder. Use Item Assets &gt; Check game files if you suspect that Sphere is reading a different folder.</p>
+<h3>Profile controls</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Control</th><th scope="col">Use</th></tr></thead><tbody>
+<tr><td>Shard profile</td><td>Switch to an existing profile</td></tr>
+<tr><td>New...</td><td>Name a profile and select its locations</td></tr>
+<tr><td>Edit paths...</td><td>Correct or change the active profile's linked locations</td></tr>
+<tr><td>Profile actions &gt; Rename...</td><td>Change the profile's display name</td></tr>
+<tr><td>Save as new profile...</td><td>Copy the profile settings under another name</td></tr>
+<tr><td>Remove profile...</td><td>Remove the saved profile entry; it does not delete the linked shard</td></tr>
+<tr><td>Linked folders...</td><td>See the active locations and open their folders</td></tr>
+</tbody></table></div>
+<p>Two profiles pointing to the same client folder edit the same client files. Use Create test copy, or prepare separate folders yourself, for independence. The last active profile opens next time. Finish open dialogs and saves before switching profiles; resolve any prompt about drafts or pending changes.</p>
+<h3>Settings and moving computers</h3>
+<p>Profiles are normally stored in <code>%APPDATA%\UOAssetStudio\project.json</code>. Back up this file if you want to preserve the profile list. On another computer, use Edit paths to update drive letters and locations. Settings are retained across application upgrades and uninstalling.</p>
+<p>Advanced users can launch with <code>--config "D:\StudioSettings\project.json"</code> to use another settings file. That is optional; normal recipients can use the default. If settings are corrupt or another Studio instance has saved a newer copy, follow the reported conflict message instead of overwriting the file manually.</p>
+</section>
+<section class="chapter" id="03-the-main-window-and-daily-navigation"><h2>03. The main window and daily navigation</h2>
+<h3>The three areas</h3>
+<p>The left area searches Sphere definitions. The centre contains Workspace, Definition, Sphere Script, Item Assets, Animations, Gumps, Hues, Asset spaces and Test Scene. The right area is the active server's script directory. Drag a divider to resize its areas. Window geometry and main pane widths are remembered.</p>
+<p>If the script directory is hidden, maximise the window and drag the right-hand divider inward. If a dialog seems incomplete, resize it and check its scrollbars. Some workspaces contain independent scrolling lists and previews.</p>
+<h3>Search definitions</h3>
+<ol><li>Enter a name, DEFNAME, identifier, path fragment or description in Search Sphere definitions.</li><li>Use the type selector to narrow the results to items or creatures.</li><li>Choose or type a Category / subsection. Empty search text browses the chosen category.</li><li>Select a row to populate the definition and script views.</li><li>Use Preview in Test Scene to open the selected content in the local scene.</li></ol>
+<p>All categories removes the category restriction. Categories come from the shard's actual CATEGORY and SUBSECTION fields. Definitions without those fields are still searchable. Numeric IDs and named identifiers are different ways to locate content; read the result's type before interpreting its number.</p>
+<h3>Definition and Workspace</h3>
+<p>Definition shows the selected section's properties, artwork and indexed references. Trigger assignments remain in the script; they are not all treated as top-level static properties. Double-click a reference to follow a resolved target. Back and Forward return through navigation history.</p>
+<p>Workspace collects the current asset's related resources, save/session status and favourite/recent selections. Preview opens the relevant asset view. Find references starts the broader reference scan. Favourite toggles the current asset in your saved list. Detach preview opens its image separately. Export PNG saves the available image. Double-click related resources to navigate where supported.</p>
+<p>Selecting a creature identifies a body animation; it does not turn that body number into an item-art ID. Use Selected creature in Animations when you want to follow a CHARDEF.</p>
+<h3>Themes</h3>
+<p>The Theme menu offers Classic Studio, Invicta, Obsidian, Midnight Blue, Forest, Crimson, Royal Violet, Copper, Parchment and Arctic. Choose one to recolour the interface immediately. The selection is remembered per project. Themes do not recolour the original artwork or replace Test Scene's lighting controls.</p>
+<h3>Shortcuts to common tools</h3>
+<p>Studio tools and Workspace &gt; Workshops open the same workshop collection. Right-click menus provide actions for the item, gump, animation or script you clicked. Select the intended asset before using an action based on the active selection.</p>
+<p>Select a definition, then use Workspace &gt; Sound in UO &gt; Attach sound to this asset... to link audio to the displayed item or creature. This panel sits above the large preview, so its button is immediately visible. It follows the asset shown in Workspace even if you later open another script. If you browse a raw asset without a linked definition, select its item or creature definition first. Right-click &gt; Attach sound... remains available in the definitions list. For an effect function, open its script and use Studio tools &gt; Attach sound.... Chapter 20 explains the sound controls.</p>
+<p>Drag-and-drop supports a project script, an exported animation body folder, or image files. A single image dropped over an active item/gump can open replacement of that ID. An image batch offers item/static import or animation-frame import. A body folder opens the animation workshop for destination setup. A dropped script must belong to the active project. Use the normal file buttons when drag-and-drop is unavailable.</p>
+</section>
+<section class="chapter" id="04-saving-queues-backups-and-recovery"><h2>04. Saving, queues, backups and recovery</h2>
+<h3>Choose the correct save command</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Command</th><th scope="col">What it does</th></tr></thead><tbody>
+<tr><td>Validate and Save in Sphere Script</td><td>Writes the displayed section or opened script document to its original .scp file</td></tr>
+<tr><td>Save scripts</td><td>Saves the current script, or reviews changed script-workspace documents when applicable</td></tr>
+<tr><td>Save game files</td><td>Saves the reviewed pending operations</td></tr>
+<tr><td>Save All</td><td>Combines pending operations with changed script text and script-workspace tabs</td></tr>
+<tr><td>Queue changes in a review</td><td>Adds that reviewed snapshot to Pending changes; does not yet write game files</td></tr>
+<tr><td>Save original files in a review</td><td>Writes that reviewed operation immediately</td></tr>
+<tr><td>Save project / Save design</td><td>Saves the workshop's editable document, separate from game files</td></tr>
+</tbody></table></div>
+<p>Before writing client/server files, close the game, Sphere and other editors using those files. Reopen or reload the relevant client/server after saving so it reads the changes. Studio saving a script does not execute that script on a running server.</p>
+<h3>Automatic checks before saving</h3>
+<p>For a reviewed game-file save, Studio first checks every destination and the other native client archives and mappings in the selected client-data folder. On Windows, it tests exclusive access to those files and the permissions needed to write the destinations and create save files in their folders. Even an open reader that normally permits shared writing can stop the check.</p>
+<p>All initial checks finish before Studio creates its save lock, backup, recovery journal or staged output. If a file is locked, missing unexpectedly, read-only or inaccessible, the Save safety check lists the affected paths and stops the operation. An initial failed check makes no backup or partial game-file change.</p>
+<ol><li>Read the reported filenames and reason for each failure.</li><li>Close the game, Sphere or editor using those files.</li><li>If access is denied, check that the active profile points to the intended writable working folder and that your Windows account has access.</li><li>Retry the save. If another editor changed the files, refresh and review your changes again when prompted.</li></ol>
+<p>The file-access check repeats after output preparation, immediately before the first replacement. Direct Sphere Script saves check the target script before making a backup, and again before replacing it. Recovery and restore check their destinations before restoring any file. Existing conflict checks and recovery protection still apply.</p>
+<p>Keep the relevant programs closed until saving finishes. A file-access check cannot detect an application that has already read its data and closed its file handles, and another program could open a file after the check. Studio does not close applications or change permissions for you. These checks do not make a multi-file save indivisible or replace retained backups.</p>
+<h3>Read a save review</h3>
+<p>Read the complete list of IDs and affected files. Where present, compare original and converted artwork, listen to converted audio, inspect frame coverage, and read the generated script. Check the chosen MUL/UOP destination and any linked mapping or resource-table changes. Back returns to the originating editor without saving.</p>
+<p>Keep a backup is optional and normally off. Turn it on before the save if you want retained originals for later restoration. Removal operations keep a backup automatically. A save journal used to recover an interrupted operation is not a substitute for deliberately retaining backups of completed saves.</p>
+<h3>Work with the queue</h3>
+<p>Open Pending changes to inspect queued operations. Remove selected drops an operation from the queue; it does not undo an already completed file save. Use the backup checkbox in the pending-save window to retain originals for the combined save.</p>
+<p>The queue holds a snapshot. Changing an import form or script after queuing it does not update that snapshot. If the new draft conflicts with the queued one, remove the old queue entry, review the current draft and queue it again. Identical script drafts can be recognised by Save All; different edits to the same binary record are not merged by guessing.</p>
+<p>Separate operations can share an archive when they change different records. Automatic allocation considers supported pending imports, so their destination IDs are reserved during subsequent allocation. This is a local planning aid, not a reservation across another program or another person's edits. Destinations are checked again when saving.</p>
+<h3>Script backups and manual backups</h3>
+<p>Sphere Script has Back up original and an optional Also create a backup when saving checkbox. The script directory also offers Back up before opening for edit. These controls concern script-file backups. Back up original copies the on-disk file, not unsaved text in the editor.</p>
+<p>Reviewed client-file backups live in <code>.uopve-save-...</code> folders beneath the client-data folder. Script-editor backups use <code>.uopve-backups</code>. Keep a reviewed-save backup folder intact, including its journal and linked originals.</p>
+<h3>Recover or restore files</h3>
+<ol><li>Open Workspace &gt; Save / recovery centre, or Item Assets &gt; Recover client save.</li><li>For a failed or interrupted operation, choose Recover interrupted save.</li><li>For an intentional rollback, select a retained completed backup and choose Restore selected backup.</li><li>Save or discard current drafts and pending edits as directed, and close programs using the files.</li><li>Read the operation details and confirm restoration.</li><li>Reload the project and inspect the restored content.</li></ol>
+<p>Restoration applies to the complete linked operation: client assets, scripts and mappings. A new script created by that operation can be removed during restoration. If a file has changed again since the backed-up save, restoration can stop to protect the later work. Do not force an old entire archive over newer content; resolve which changes to retain first.</p>
+<h3>Restore an editing session</h3>
+<p>Workspace &gt; Checkpoint now records drafts and the reviewed queue. Normal editing also schedules checkpoints. After reopening the same project, Restore session can recover them. The recovery centre also offers Open archived session and Discard saved session. Discarding a stored session does not erase game files or original-file backups.</p>
+<p>Session queues depend on the files they were reviewed against. When those files change, Studio can retain draft text while requiring imports to be reviewed again. Sessions belong to the relevant project locations; they are not portable content packs.</p>
+<p>Save unfinished animation edits with Export edited sequence and unfinished gump layouts with Save design. House Builder has its own Save project and automatic recovery. Do not assume every open workshop form or Test Scene arrangement is included in a general session checkpoint.</p>
+</section>
+<section class="chapter" id="05-sphere-scripts-and-the-script-directory"><h2>05. Sphere scripts and the script directory</h2>
+<h3>Edit one definition</h3>
+<p>Select an item or creature and open Sphere Script. This shows the chosen section, not necessarily the whole source file. Make the edit, then use Validate and Save or Ctrl+S. The source path tells you which file will be updated.</p>
+<p>Validation checks the section boundary, changed headers, accidental additional sections, supported control-block structure and whether the original has changed on disk. Warnings about legacy syntax need interpretation; Studio is not the Sphere interpreter. Keep unrelated sections out of a section-only edit.</p>
+<p>Reload reads the current disk content. Resolve an unsaved-edit prompt before discarding work. Script editing preserves supported encoding and line-ending information. If a file has been changed by another editor, reload and reapply the intended change rather than overwriting the newer version.</p>
+<h3>Find text in the displayed script</h3>
+<p>Ctrl+F focuses Find. Type literal text; matching spans are highlighted and the count is shown. F3 moves forward, Shift+F3 backward. The arrow buttons do the same. Aa makes the search case-sensitive. Clear removes the search term. In the Find entry, Enter and Shift+Enter navigate; Escape returns focus to the editor.</p>
+<p>This search covers the displayed text. To search other files, use the script workspace's Find / replace across files.</p>
+<h3>Open and create files</h3>
+<p>The right-hand Script directory follows the active profile. Double-click a .scp or select it and click Open file to edit the complete document. Refresh updates the tree. The New button or right-click menu offers New folder and New .scp file under the selected location.</p>
+<p>Use clear filenames and categories. Sphere resource filenames must remain unique across the script tree for generated content. Creating a file in an arbitrary folder is not the same as adding it to Sphere's resource loading configuration; confirm that your server loads it. Studio-generated imports register their new script when needed.</p>
+<h3>Delete a script deliberately</h3>
+<p>Right-click a .scp and choose Delete script to review deletion of the whole file. Read its contents and the removal list before choosing Remove listed content. This operation keeps a backup. It retains other scripts and client assets; references elsewhere may need updating.</p>
+<p>Remove empty .scp file is a separate action for a script with no remaining meaningful content. Use it after inspecting a leftover file. If your aim is to remove an item/creature and its assets, use Remove related content instead; chapter 24 explains its scopes and limits.</p>
+<h3>Work with multiple script tabs</h3>
+<p>Open Studio tools &gt; Sphere script workspace. Open script selects a file inside the active server. Open current brings in the current script. Open more files to work in tabs; Close tab closes the selected document after handling its edits.</p>
+<p>Ctrl+Space offers definition and Sphere-keyword completion. F12 or Go to definition follows a supported symbol; choose the correct target if there is more than one. Find references searches for the relevant symbol. Completion and reference navigation help with source editing but do not prove that code will run correctly.</p>
+<p>Use Review save all to inspect changed workspace documents together. The main Save All also includes changed workspace tabs. A reviewed or queued save leaves this workspace open; check the queue if an older draft conflicts with your current text.</p>
+<h3>Replace text across selected files</h3>
+<ol><li>Open Find / replace across files in the script workspace.</li><li>Enter Find literal text and Replace with. This is literal, case-sensitive replacement, not regular-expression matching.</li><li>Set Path filter, for example <code>scripts/**/*.scp</code>, or narrow it to the relevant folder.</li><li>Click Find changes. Select a result to inspect its before/after difference.</li><li>Select only the files you intend to change; Ctrl/Shift selects multiple rows.</li><li>Click Review selected replacements and read the complete proposed changes.</li><li>Queue or save the reviewed operation.</li></ol>
+<p>This tool reads saved script files. Save or reconcile any open drafts for those files first. A matching word can occur in comments or unrelated contexts, so inspect each selected file rather than treating an occurrence count as approval.</p>
+</section>
+<section class="chapter" id="06-ids-file-formats-and-artwork-preparation"><h2>06. IDs, file formats and artwork preparation</h2>
+<h3>Identify the kind of number</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Number</th><th scope="col">Meaning</th></tr></thead><tbody>
+<tr><td>Item art ID</td><td>Ground/backpack artwork; its TileData record contains item metadata</td></tr>
+<tr><td>Body ID</td><td>A creature, human or equipment animation body</td></tr>
+<tr><td>Raw body and MUL bank</td><td>Physical animation destination within a particular bank</td></tr>
+<tr><td>Sphere body ID</td><td>The body number used by the server, potentially mapped to another bank</td></tr>
+<tr><td>Gump ID</td><td>Interface or paperdoll artwork</td></tr>
+<tr><td>Hue ID</td><td>A colour table; game hue 0 means original colours</td></tr>
+<tr><td>Multi ID</td><td>A compiled house/structure layout</td></tr>
+<tr><td>DEFNAME</td><td>A named Sphere identifier, such as i_example or c_example</td></tr>
+</tbody></table></div>
+<p>These are separate namespaces. Item 400 and body 400 are not interchangeable. Prefer explicit <code>0x</code> prefixes when entering hexadecimal. Fields labelled hex can interpret bare input differently from fields labelled decimal. <code>0x0190</code> and decimal <code>400</code> describe the same number, but are examples rather than suggested destinations.</p>
+<h3>MUL, UOP and Auto</h3>
+<p>MUL assets commonly use a data file plus a matching index, for example art.mul with artidx.mul. UOP stores entries inside an archive. Auto selects the format supported by that tool and found in the chosen client folder; it is not an instruction to update every format present.</p>
+<p>Item artwork Auto normally prefers ArtLegacyMUL.uop when present. Animation Auto follows supported client mappings and available sources. Use an explicit source to investigate a mismatch. House compilation is a special case: it updates both MUL and UOP multi representations when both are present.</p>
+<p>Editing a MUL while your client reads the corresponding UOP can leave the game looking unchanged. Check the review's affected files and the actual data location used by the recipient's client. Loose overrides, Verdata and client-specific mappings may also take precedence.</p>
+<h3>Prepare images and animation files</h3>
+<p>Use PNG/BMP for still art and supported image sequences; use GIF where the importer offers it. Preserve transparency and avoid painting a checkerboard into the image. Native UO artwork uses reduced colour precision and, in these import workflows, binary transparency. Inspect the converted preview: it is more relevant than the original full-colour source.</p>
+<p>Keep animation frame canvases and ground origins consistent. A body VD contains supported action/direction data and palettes; a GIF or PNG sequence supplies frames, not all the behaviours of a complete creature. GIF timing does not become a MUL animation timing field.</p>
+<p>Wearables need an inventory icon, equipped movement animation and paperdoll images. Paperdoll pieces must retain the complete intended canvas and alignment. Cropping the paperdoll tightly around the clothing can move it to the wrong place on the body.</p>
+<h3>Names and capacities</h3>
+<p>Client names often have byte limits, not unlimited text length: TileData and hue names use 20-byte fields; sound-import names have a 39-byte Windows-1252 limit. Use short supported names when a converter reports an encoding or length error.</p>
+<p>Most formats use the allocation already present in your data. Equipment import has a specific opt-in expansion option, described in chapter 13. It does not make every archive or metadata table unlimited. A free candidate is evidence from the checked files, not a global promise that no world object or dynamic script uses that number.</p>
+</section>
+<section class="chapter" id="07-item-assets-tiledata-and-the-paperdoll"><h2>07. Item Assets, TileData and the paperdoll</h2>
+<h3>Inspect an item</h3>
+<p>Open Item Assets. Enter an Art ID (hex) and click Inspect, or select a Sphere item and click Use selected item. The latter follows supported item aliases, such as ID/DUPEITEM links. The view shows artwork and the client TileData record.</p>
+<p>Export PNG saves the available item image. Copy art ID copies its number for another tool. Browse slots opens the allocation browser. Right-click the image for replacement, Show in Test Scene, Open asset workspace, Find references, Favourite / unfavourite, Export PNG or Detach preview.</p>
+<p>Client metadata and Sphere properties are different layers. For example, a client tile's displayed name or flags do not establish every gameplay property of a scripted item. Check both Item Assets and Definition/Sphere Script.</p>
+<h3>Edit TileData</h3>
+<ol><li>Inspect the correct item ID and choose Edit TileData.</li><li>In Item properties, adjust the fields you understand: name, weight, height, quality/equipment layer and animation ID.</li><li>Open Choose TileData flags to inspect named flags and descriptions.</li><li>Use the other stored-fields tab only when you need the specific raw value; preserve unknown fields.</li><li>Review changes, checking the ID and changed fields, then queue or save.</li></ol>
+<p>The flag picker supports name search, descriptions, double-click or Space to toggle, a full hexadecimal mask and additive presets. Presets include equipment, containers, surfaces, blocking decorations and animated statics. Additive means existing bits stay set: inspect the final mask and remove incompatible flags explicitly.</p>
+<p>Weight 255 has special immovable conventions. Height affects geometry; equipment layer and animation affect wearing. Do not convert a decorative item into working equipment by changing only one field. Use the equipment importer when creating a complete wearable.</p>
+<h3>The small paperdoll</h3>
+<p>For supported equippable items, Item Assets shows Equipped item / paperdoll. Choose Male or Female and enter a hue; press Enter to refresh where required. This uses the linked paperdoll art, not the backpack icon.</p>
+<p>Wear in Test Scene loads the selected wearable on the human model and shows the paperdoll alongside it. The paperdoll is a one-item inspection tool. Use Equipment / mount preview for manually combining multiple animation layers.</p>
+<p>If the paperdoll is missing, inspect the item's equipment animation link and the corresponding male/female gumps. For the standard equipment link, male and female gump IDs are animation ID + 50000 and + 60000. These are linked destinations, not arbitrary empty gump slots. Queued supported TileData/gump changes can be included in the preview, so refresh after changing the queue.</p>
+</section>
+<section class="chapter" id="08-asset-spaces-and-choosing-destinations"><h2>08. Asset spaces and choosing destinations</h2>
+<p>Asset spaces is the gallery for item and animation allocations. Choose Items or Animations, then a source. Reload reads the current files. Search by name or ID and use the All, Free candidates, Used or applicable No UOP entry filter.</p>
+<p>Green cards are free candidates; gold indicates used/referenced content. Double-click a card or use Open details to inspect it. Import into slot opens the relevant importer with that destination. Selecting a slot manually does not remove later conflict checks.</p>
+<h3>Animation galleries and UOP ranges</h3>
+<p>MUL animation galleries describe their bank's body allocations. Modern UOP bodies use hashed entries and are browsed in ranges. UOP start body and Go jump to a range; scrolling can extend the loaded inventory when the search is empty and All is selected. Filters describe the loaded range. No UOP entry does not mean the app can write a modern UOP body there.</p>
+<h3>Slot browsers inside importers</h3>
+<p>Browse slots and similar buttons open a more focused candidate list. Search ID / name / reason, choose All slots, Free candidates or Used slots, and move between pages. Use selected ID copies the destination into the importer. Read the reason a slot is considered occupied.</p>
+<p>The allocation checks consider supported saved assets, client metadata, indexed script references and applicable pending imports. World saves, all map/override cases and runtime expressions are not universally covered. Reference scans add useful evidence before repurposing old content.</p>
+<h3>Automatic placement</h3>
+<p>Leave automatic placement enabled for new content. Find free space restores automatic choice after manual editing. Review the suggested range before saving:</p>
+<ul><li>Separate item/gump image batches use a consecutive range in automatic mode.</li><li>Animated statics need consecutive artwork IDs with their relative frame order preserved.</li><li>Complete VDs need a compatible whole body block.</li><li>Mounts also need riding-memory and, when importing a new icon, icon destinations.</li><li>New equipment appearances need the animation and both paperdoll destinations together.</li></ul>
+<p>If there are free individual slots but no sufficiently long block, a consecutive batch still cannot fit. Reduce a separate-image batch or choose another supported source/bank. Do not split an animated-static sequence casually. Equipment capacity expansion only solves the specific animation-index shortage covered later.</p>
+</section>
+<section class="chapter" id="09-add-item-reuse-art-or-export-an-import-kit"><h2>09. Add item: reuse art or export an import kit</h2>
+<p>The top-bar Add item wizard is useful for a basic static item. It is distinct from Import + script, which can directly prepare client-file imports.</p>
+<h3>Reuse existing artwork</h3>
+<ol><li>Choose Use existing artwork.</li><li>Enter the item name, a unique script identifier, artwork ID, category, subsection and weight.</li><li>Choose the script folder and a unique .scp filename.</li><li>If the art is newly imported and truly has no existing numeric Sphere base, use the corresponding numeric-base option; do not introduce a duplicate base.</li><li>Open Review item and inspect the preview and generated definition.</li><li>Choose Create script when correct. Studio writes and opens the new script.</li></ol>
+<p>This creates a basic item definition using the chosen graphic. It does not author creature animation or supply the movement/paperdoll parts of equipment. When the server already defines that art base, use inheritance rather than creating a competing numeric definition.</p>
+<h3>Prepare new PNG for UOFiddler</h3>
+<p>Choose that mode, select a single PNG, and enter a candidate art ID, TileData name, weight, height and flags such as Blocks movement or Surface. Review the converted image and script, then Export import kit to a separate output folder.</p>
+<p>The kit contains the image, item metadata, script and instructions for the external import. Exporting it does not patch the client's art/TileData or install the new script. Complete the kit's import steps against a working copy before enabling its script on the target server.</p>
+<p>Find a free candidate in this starter wizard has narrower coverage than every other Studio tool. Its MUL-based check needs matching art.mul, artidx.mul and tiledata.mul; UOP-containing setups may require an extracted MUL working copy. A kit does not reserve its candidate forever. Recheck it at import time.</p>
+<p>For a fully in-app direct import, use Import + script &gt; Item, described next. Keep the original PNG and kit if you intend to share or revise the artwork later.</p>
+</section>
+<section class="chapter" id="10-import-items-animated-statics-and-effects"><h2>10. Import items, animated statics and effects</h2>
+<h3>Choose the entry point</h3>
+<p>Import + script &gt; Item prepares artwork and a matching Sphere ITEMDEF. Import + script &gt; Effect prepares artwork and a callable effect function as well as its item definition. Item Assets &gt; Import images / animated item opens the art workflow when you mainly need client-file editing; inspect whether script generation is enabled on its Sphere script tab.</p>
+<h3>Import one item or several independent items</h3>
+<ol><li>Click Choose images and select PNG/BMP files. Select a row to inspect its converted preview.</li><li>Choose Art files: Auto, MUL or UOP.</li><li>Leave automatic placement enabled, or deliberately choose the first art ID and mapping mode.</li><li>Use Move up / Move down to establish import order. Read the destination list in the review.</li><li>Leave Make these frames one animated static item off for independent items.</li><li>Decide whether to Set TileData name, weight, height and flags for the listed IDs. Blank name uses the filename; other stored fields remain unchanged.</li><li>On Sphere script, enable generation if needed and set name, identifier, category, subsection, folder and filename.</li><li>Click Review files and script. Verify every proposed ID and definition before Queue changes or Save original files.</li></ol>
+<p>Consecutive IDs maps rows to a continuous range. IDs from filenames uses the file naming convention instead; use clear numeric filenames and inspect the proposed mapping. It switches away from automatic allocation. Do not assume a package's original reference IDs are vacant destinations on your shard.</p>
+<p>Replacing existing artwork is an explicit choice. Enable Replace existing artwork at the listed IDs only when those are the assets you intend to change. For one replacement, the right-click Replace ... with image action is often clearer because it starts from an inspected ID and shows before/after art.</p>
+<h3>Make an animated static</h3>
+<p>An animated static is item art driven by animdata.mul, not a creature body animation. Examples include a decorative animated object or frames for a visual effect.</p>
+<p>Choose a GIF or ordered image sequence and enable Make these frames one animated static item. Use 1-64 consecutive artwork IDs in frame order. Play frames checks order at the tool's preview rate. Set Frame interval to 1-255 client ticks. FrameStart accepts 0-255; it is an advanced stored field, not a general GIF start-time selector. Leave its default unless you are reproducing a known arrangement.</p>
+<p>The reviewed save includes the relevant art, TileData and AnimData changes. An animated item gets its main script definition at the first artwork ID; independent images get separate definitions. The native AnimData sequence has a supported frame-count/offset limit, so a long GIF may need deliberate preparation rather than direct import of every frame. Studio reports unsupported sequences before saving.</p>
+<h3>Generate an effect script</h3>
+<p>Choose Effect in Import + script. The art setup follows the animated-static workflow. On Sphere script, choose Follow character or Ground / object and set Effect speed and Loop duration. These are fields for the generated effect call; they are distinct from frame playback and image timing.</p>
+<p>Studio generates <code>f_&lt;identifier&gt;</code> and the necessary item definition, using the first artwork ID. The review shows the actual script and test command; use that command on a suitable test shard after saving/loading the files. Test Scene can preview ground, on-player and projectile visuals, but it does not run the generated function.</p>
+<p>The effect importer creates a visual effect. It does not automatically design damage, targeting rules, cooldowns, team filters or a complete spell. Add those server behaviours deliberately in Sphere scripts. If the art already has a numeric base, inspect the generated ID inheritance so the new named definition uses that base rather than duplicating it.</p>
+<h3>Generated script fields</h3>
+<p>Display name is the player-facing text. Identifier supplies the named script symbol; use letters, digits and underscores with a sensible prefix supplied by the importer. Category and Subsection organise the definition list. Script folder and New .scp filename identify the output. Scripts default to type-specific folders and are registered as resources when needed.</p>
+<p>For monsters/mounts the same panel includes basic STR/hits, DEX and INT fields. For equipment, gameplay fields come from Item and icon. Review the full generated script rather than assuming a template fits every shard's custom systems.</p>
+</section>
+<section class="chapter" id="11-import-monsters-and-other-characters"><h2>11. Import monsters and other characters</h2>
+<p>Open Import + script &gt; Monster. Despite the button name, the important distinction here is a character/body animation import. The animation layout describes how frames are stored; the generated CHARDEF supplies gameplay properties.</p>
+<h3>Choose a source and destination</h3>
+<p>Choose frames, GIF or .vd. PNG/BMP sequences and GIFs supply one action and stored direction. A compatible VD supplies its populated sequences and layout. Review the sequence list before choosing a destination.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Field</th><th scope="col">What to check</th></tr></thead><tbody>
+<tr><td>MUL bank</td><td>The physical animation files being written, banks 1 through 6</td></tr>
+<tr><td>Raw body ID</td><td>The destination inside that bank</td></tr>
+<tr><td>Action</td><td>The animation action for a frame-sequence import</td></tr>
+<tr><td>Stored direction</td><td>One of 0 through 4; the remaining display directions use mirroring</td></tr>
+<tr><td>Animation file layout</td><td>13 Animal, 22 Monster or 35 Human actions; VD determines its own format</td></tr>
+<tr><td>Sphere body ID</td><td>The server-facing number; secondary banks may require linked mappings</td></tr>
+<tr><td>Origin X / Origin Y</td><td>Frame registration for image imports; use the preview to align the ground</td></tr>
+</tbody></table></div>
+<p>Keep automatic free-block selection on for new content. Browse body slots allows deliberate selection. Bank 1 normally uses the same raw and Sphere body ID; secondary-bank imports can prepare the necessary mappings with the generated script workflow. Confirm those changes in the review.</p>
+<h3>Import a complete body</h3>
+<ol><li>Load the compatible VD.</li><li>Check its layout and populated action/direction sequences.</li><li>Choose a suitable bank and Find free space.</li><li>Preview several directions and actions, especially stand, walk, run and required combat/death actions.</li><li>Enable script generation and set a unique name, identifier and destination script.</li><li>Review all native files, mappings and the basic CHARDEF.</li><li>Queue/save, then test the character on the target shard.</li></ol>
+<h3>Import a single sequence</h3>
+<p>Choose the image sequence or GIF, assign the intended action and stored direction, and set a compatible body layout. Adjust origins, update the preview and reorder frames where necessary. Import other required directions/actions separately.</p>
+<p>A walking GIF in one direction is not a complete monster. The template can create a basic walking monster definition with combat properties and a monster brain, but missing movement/attack/death art remains missing. Preview rate does not alter the server/client movement timing.</p>
+<h3>Replace part of an existing body</h3>
+<p>Inspect the existing body and source first. Enable Replace the listed destination sequences only for an intentional update. Unlisted actions/directions remain unchanged; this is useful for targeted corrections but can also leave a body with mixed old/new artwork. Check the sequence list and the final body in multiple actions.</p>
+<p>Original VD transfer preserves its supported palettes and origins. PNG conversion can requantise colour. Modern UOP body animation is browsed/exported, while this writer targets supported MUL sequences; it does not provide automatic full modern-UOP-to-MUL conversion.</p>
+</section>
+<section class="chapter" id="12-mounts-rideable-objects-and-inventory-icons"><h2>12. Mounts, rideable objects and inventory icons</h2>
+<p>Open Import + script &gt; Mount. A working mount combines body animation, server definition, riding-memory item/mapping and inventory/shrink artwork. Each part has its own role; an icon does not supply a mounted pose.</p>
+<h3>Import a mount</h3>
+<ol><li>Choose mount .vd and inspect the supplied layout.</li><li>Select the MUL bank and leave Automatically use next free animation block and linked IDs enabled.</li><li>Find free space. Review raw/Sphere body, mount-memory and new icon destinations.</li><li>Set the memory item's short client name. Do not reuse a referenced memory record without deliberately enabling and reviewing replacement.</li><li>Choose the inventory image on Shrink icon.</li><li>On Sphere script choose Animal or Rideable object and complete the script fields.</li><li>Preview actions/directions and open Review files and script.</li><li>Save and use the generated test command to create the correct object on your test shard.</li></ol>
+<p>Compatible 35-action mounts retain the human-style layout and require the relevant unmounted walk/run/stand and mounted walk/run/stand sequences. For that layout, the required pose groups include actions 0/2/4 and 23/24/25 in five stored directions. Other supported layouts have their own checks. A layout named Human does not force the mount to behave like a human character.</p>
+<h3>Animal or Rideable object</h3>
+<p>Animal is the default template for a tameable mount. Rideable object is for a unicycle or contraption without taming/feeding. It still uses Sphere's character/mount machinery internally, with ownership and no autonomous wandering/following in the generated object workflow.</p>
+<p>For a rideable object, use the generated <code>.add i_ride_...</code> command shown in the review. Put that item in the character's backpack and double-click it to deploy and own the object, then double-click the deployed mount to ride. Check mounting, dismounting and the inventory/deploy flow on your shard. Simply spawning the creature body may bypass the intended object workflow.</p>
+<p>This choice generates the new script. It does not automatically convert earlier installed animal scripts or change an already deployed world object.</p>
+<h3>Choose a shrink or inventory icon</h3>
+<p>Shrink icon offers existing artwork, a new PNG/BMP, or a frame from the loaded mount animation. Existing artwork can be searched by name, DEFNAME, category or ID, with Figurines first / Figurines only / All artwork filters. Find horses helps locate existing horse-like figurines.</p>
+<p>For a new image, choose a separate free art slot and a short client name. The riding-memory item and the new visible icon must not be the same destination. Reusing shared icon art does not mean you should overwrite its existing Sphere definition.</p>
+<h3>Turn a pose into the icon</h3>
+<p>Select Use animation frame, then Choose pose. Choose an action/direction and a frame thumbnail. Set Fit within pixels, Trim transparent edges and Mirror pose if required. Inspect the converted still image, then Use this frame as icon.</p>
+<p>The selected frame becomes still item artwork saved with the mount; no intermediate PNG export is necessary. Changing the source VD clears the previous frame choice to avoid accidentally keeping an icon from another mount.</p>
+<h3>Check the completed mount</h3>
+<p>Test standing and travelling in every direction, the rider's seat, overlap with clothes and the inventory/shrink image. Studio's rider offsets are preview controls; changing them is not a saved animation correction. Use the animation tools or source artwork to make a persistent registration change. Ownership and feeding rules need server testing; Test Scene checks appearance only.</p>
+</section>
+<section class="chapter" id="13-clothing-and-weapons"><h2>13. Clothing and weapons</h2>
+<p>Open Import + script &gt; Clothing or Weapon. The five tabs are Item and icon, Equipped appearance, Animation preview, Bonuses and effects, and Sphere script. Use this workflow for one independently equippable piece.</p>
+<h3>Understand the required assets</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Part</th><th scope="col">Purpose</th></tr></thead><tbody>
+<tr><td>Inventory icon</td><td>The item on the ground or in a backpack</td></tr>
+<tr><td>Equipment animation</td><td>How the worn item looks on the moving world character</td></tr>
+<tr><td>Male paperdoll image</td><td>The item overlaid on the male paperdoll</td></tr>
+<tr><td>Female paperdoll image</td><td>The item overlaid on the female paperdoll</td></tr>
+<tr><td>TileData and script</td><td>Links those assets to the layer and gameplay properties</td></tr>
+</tbody></table></div>
+<p>One image cannot stand in for all of them. A whole-suit animation is one appearance; it cannot automatically be divided into a helmet, chest and boots that can be worn separately.</p>
+<h3>Item and icon</h3>
+<p>Choose existing equipment to copy when you want a starting point. Check the new destination item ID, short client name and Artwork files source. The copied appearance/icon is a source; the destination should still be deliberate.</p>
+<p>Choose the Equipment layer and set weight, required strength and durability. Clothing has Armor, Armor piece (Sphere t_armor) and Dyeable in Sphere. Weapons have Weapon type, minimum/maximum damage and Sphere weapon speed. Partial hue limits colouring to grey pixels where supported; it is separate from the preview hue selector.</p>
+<p>Icon source Import reads a PNG/BMP. Copy reads another item ID. Preview icon shows the backpack/ground artwork after conversion. Check that a helmet's icon is not accidentally being reused for every piece of a set.</p>
+<h3>Reuse an equipped appearance</h3>
+<p>On Equipped appearance, choose Reuse and select the existing equipment animation ID. Studio reads its animation and linked male/female gumps. This is useful when making a new scripted item with an established appearance.</p>
+<p>Choose the paperdoll source matching the recipient's files. Load appearance and check action coverage, then inspect the male/female images. Reuse does not mean the existing shared animation is copied to a new body or rewritten.</p>
+<h3>Import a new equipped appearance</h3>
+<p>Choose Import. Supply a compatible 35-action human/equipment VD and both paperdoll PNG/BMP files. Preserve the full canvas and transparency of the paperdoll pieces. The equipment animation links to male gump <code>50000 + animation ID</code> and female gump <code>60000 + animation ID</code>.</p>
+<p>Keep Next free animation and paperdoll bundle enabled, or use Free animation + gumps for an intentional destination. Both linked paperdoll slots must be available as well as the animation body. Load piece folder can fill the icon, VD and paperdolls together from a correctly named folder; chapter 14 gives the file convention.</p>
+<h3>Action coverage and gameplay fields</h3>
+<p>Open Animation preview and Load / refresh appearance. Select an action, direction and preview rate, then Show sequence or Play. The table shows which of the five stored directions are present. The shared cross marks the registration origin; the equipment layer is shown alone here.</p>
+<p>Allow incomplete action set is an advanced option after you have reviewed missing sequences. It does not waive required walk/run/stand coverage or a weapon's required attack. For a release-quality wearable, inspect movement, riding, attack and both character/paperdoll variants as applicable.</p>
+<h3>Optional bonuses, penalties and on-hit spells</h3>
+<p>Before Review complete import, open Bonuses and effects. Select a preset, enter its Amount or Chance %, then choose Add / update effect. Selecting an existing row loads its values for editing. Adding the same preset updates it instead of stacking duplicate rows. Remove selected deletes one choice; Clear effects returns to ordinary equipment. The script preview shows the additions, and the final review shows them in the complete item definition.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Preset</th><th scope="col">Example and behaviour</th></tr></thead><tbody>
+<tr><td>Strength, Dexterity or Intelligence</td><td>-5 Strength lowers the wearer's strength while equipped; +5 increases it</td></tr>
+<tr><td>Luck</td><td>+100 Luck while equipped; the shard's loot rules determine its benefit</td></tr>
+<tr><td>Physical, Fire, Cold, Poison or Energy resistance</td><td>+10 increases that resistance while equipped; damage rules and caps belong to the server</td></tr>
+<tr><td>Damage increase, Hit chance or Defence chance</td><td>Add an equipment combat modifier; the shard still controls the formula and caps</td></tr>
+<tr><td>Skill bonus</td><td>Enter 5 for +5.0 effective skill or 2.5 for +2.5; up to five skills per item</td></tr>
+<tr><td>On hit: Flamestrike, Fireball, Lightning, Harm, Magic Arrow, Energy Bolt or Explosion</td><td>Weapons only: choose 1-100% and spell power 1-1000</td></tr>
+</tbody></table></div>
+<p>For example, choose On hit: Flamestrike, enter 15 in Chance %, and leave Spell power at 500. This adds a separate 15% roll to each successful weapon hit. Power is Sphere spell strength in tenths: 500 means 50.0. It is not guaranteed damage; the selected spell and shard rules determine the outcome. Each selected spell rolls independently, so more than one can activate on the same hit. The ordinary weapon damage continues.</p>
+<p>These presets target Sphere X. Stats, Luck and resistances use its native equipment properties, which the engine adds and removes as equipment changes. Elemental resistance requires the server's elemental combat rules; Studio does not change server configuration. Skill bonuses use temporary effective-skill modifiers with matching unequip and item-removal cleanup. They preserve trained skill values and stack with other equipped preset items. Avoid editing a generated skill helper while its item is worn; unequip it before updating scripts.</p>
+<p>The choices belong to the individual piece. In Armor set, Edit selected piece opens its saved effects. Copy selected piece's effects to all pieces replaces every piece's effect list with the selected list. This applies a bonus per piece, not once for wearing the complete set: copying +5 to eight pieces can total +40. Review that total before saving. Folder-imported pieces start with no optional effects.</p>
+<p>Generated scripts remain editable in the normal Sphere Script workspace after the reviewed import. The Test Scene and paperdoll display artwork; they do not execute these combat effects. Test equip, unequip, repeated swaps, skill stacking and spell balance on a separate server before distributing equipment.</p>
+<p>On Sphere script, inspect the identifier, category and destination. Review complete import combines the new icon, TileData, imported appearance assets where applicable and script. It does not create missing artwork or automatically generate female animation substitutions.</p>
+<h3>Expand equipment capacity if needed</h3>
+<p>If no suitable primary equipment block exists, enable Expand equipment capacity if needed before finding space. Studio can append blank primary animation-index records for otherwise unused equipment IDs up to 2047. The expansion is shown in the review and occurs only when saving.</p>
+<p>Existing references, mappings and occupied records stay protected. This option does not expand TileData, every animation bank or paperdoll allocations, and it does not author missing frames. You still need a free icon and both paperdoll destinations. Recovery of the reviewed operation restores the original index length when applicable.</p>
+</section>
+<section class="chapter" id="14-complete-armor-sets-and-whole-folder-import"><h2>14. Complete armor sets and whole-folder import</h2>
+<p>Open Import + script &gt; Armor set. A set groups independently wearable pieces into one reviewed save. Each piece still needs its own icon, animation appearance and paperdolls, or an explicitly reused compatible appearance.</p>
+<h3>Build a set manually</h3>
+<ol><li>Enter Set name.</li><li>Choose a piece such as Helmet, Gorget, Chest, Arms, Gloves, Legs, Boots, Cloak or Robe.</li><li>Click Add piece. The equipment editor opens with an appropriate layer and armor category.</li><li>Fill in its icon, appearance and properties. Check animation coverage.</li><li>Choose Check and add piece to set to return to the set list.</li><li>Repeat for the remaining pieces.</li><li>Select any row to Edit selected piece or Remove selected piece.</li><li>Choose Review complete set and inspect all destinations and scripts before saving.</li></ol>
+<p>Adding or removing a row only changes the pending set form. It does not write or delete game files. Suggestions exclude pieces already in the set. Duplicate destinations, layers, animation IDs, identifiers and filenames are checked before accepting the combined import. Piece scripts normally use <code>scripts/armor</code>, Category Armor and the set name as Subsection.</p>
+<h3>Load a whole set at once</h3>
+<p>Choose Open set / collection folder and select an extracted folder, not its ZIP. Select the set from the list, then Add whole set. Studio loads matching files and proposes fresh destinations for all pieces. Edit the resulting rows and Review complete set.</p>
+<p>A collection can describe multiple sets in manifest.json. Select the intended set; Add whole set does not mean install every collection entry. If a layer is already present in the current form, remove or edit that piece before adding another set with the same layer.</p>
+<p>Enable Expand equipment capacity if needed in the set builder before loading pieces when the existing primary equipment allocation is too small. The option is carried into the piece requests and remains subject to the checks described in chapter 13.</p>
+<h3>Simple folder convention</h3>
+<p>A manifest is optional when the folder contains recognised named piece subfolders. Each piece folder needs exactly one of each of these assets; PNG image names may use BMP equivalents:</p>
+<pre><code>ExampleArmor/
+  head/
+    equipment.vd
+    inventory-icon.png
+    paperdoll-male.png
+    paperdoll-female.png
+  torso/
+    equipment.vd
+    inventory-icon.png
+    paperdoll-male.png
+    paperdoll-female.png
+  gloves/
+    equipment.vd
+    inventory-icon.png
+    paperdoll-male.png
+    paperdoll-female.png</code></pre>
+<p>Recognised folder names include head/helmet/hood, gorget/neck, torso/chest, arms, gloves, legs/pants, boots/shoes, cloak, robe, waistcloth/belt, skirt and shirt. An unknown piece folder requires a manifest with its suggested layer or manual addition.</p>
+<h3>Manifest structure for a collection</h3>
+<p>The manifest contains a sets list; each set has a name and pieces. Each piece names its suggested_layer and four relative file paths. For example, this describes one helmet using layer 6:</p>
+<pre><code>{
+  &quot;sets&quot;: [
+    {
+      &quot;name&quot;: &quot;Example Armor&quot;,
+      &quot;pieces&quot;: [
+        {
+          &quot;name&quot;: &quot;Helmet&quot;,
+          &quot;suggested_layer&quot;: 6,
+          &quot;files&quot;: {
+            &quot;inventory&quot;: &quot;head/inventory-icon.png&quot;,
+            &quot;animation&quot;: &quot;head/equipment.vd&quot;,
+            &quot;male_paperdoll&quot;: &quot;head/paperdoll-male.png&quot;,
+            &quot;female_paperdoll&quot;: &quot;head/paperdoll-female.png&quot;
+          }
+        }
+      ]
+    }
+  ]
+}</code></pre>
+<p>Paths must stay inside the selected folder. Each manifest set supports 1 to 16 pieces and valid equipment layers. Do not put absolute personal paths in a distributed manifest. Original source/reference IDs are not automatically used as installation destinations.</p>
+<h3>Before distributing a set</h3>
+<p>Check each individual piece, then the intended combination: backpack icons, male/female paperdolls, world standing/walking/running, mounted poses and attacks where applicable. Confirm that the files represent separate pieces, not the same complete-suit VD copied repeatedly. Keep the source files and manifest so recipients can reallocate for their client.</p>
+</section>
+<section class="chapter" id="15-the-animations-viewer-and-exports"><h2>15. The Animations viewer and exports</h2>
+<p>Open Animations to inspect saved body sequences. Enter a body ID in decimal or 0x hex, or use Selected creature to follow the selected CHARDEF. Choose the source, action and direction, then Load body.</p>
+<p>Auto uses supported routing; an explicit bank helps diagnose which physical animation is being displayed. Source/status text explains available resolution information. A missing action can mean the chosen body/layout does not contain it, rather than a broken entire archive.</p>
+<h3>Playback controls</h3>
+<p>Play/Pause starts or stops the loaded sequence. Previous and Next step frames. The slider scrubs the sequence and the frame label identifies the current position. Loop repeats it.</p>
+<p>Base FPS and Speed combine into the effective preview rate. Changing them affects Studio playback and the timing of a saved GIF, not the native movement speed of a creature in game. Inspect both a normal-speed loop and individual frames for alignment problems.</p>
+<h3>Export choices</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Action</th><th scope="col">Result</th></tr></thead><tbody>
+<tr><td>Export frame</td><td>The current animation frame as an image</td></tr>
+<tr><td>Save GIF...</td><td>The displayed sequence as an animated GIF with preview timing</td></tr>
+<tr><td>Export body PNG / VD...</td><td>Opens bulk export with the current body selected</td></tr>
+<tr><td>Import frames / GIF / .vd...</td><td>Opens the animation importer for reviewed MUL writes</td></tr>
+<tr><td>Right-click &gt; Show in Test Scene</td><td>Sends the loaded body, source, action and direction to the local scene</td></tr>
+</tbody></table></div>
+<p>PNG/GIF exports are useful for image editing and demonstration. A complete VD export from a MUL body preserves native animation information more directly. Keep body.json/frames.json metadata with exported folders when you intend to reimport them.</p>
+<p>Modern UOP animation sequences can be previewed and exported to PNG, but they do not have a universally interchangeable action layout with MUL. Studio does not guess a whole-body VD mapping for them. Display directions 5 through 7 can be mirrored views of stored directions, not additional independent sequences to write back.</p>
+</section>
+<section class="chapter" id="16-animation-workshop-and-layered-preview"><h2>16. Animation workshop and layered preview</h2>
+<h3>Edit frames</h3>
+<p>Open Studio tools &gt; Animation frames / body reimport. Load displayed sequence takes the current Animations view. Open exported sequence reads a frames.json-based sequence. Open frame images reads supported PNG/BMP frames or GIF.</p>
+<p>Set destination bank, body, action and stored direction for an eventual MUL import. These fields identify the write destination; they do not themselves change the currently loaded source files.</p>
+<p>Use the slider to choose a frame. Origin X/Y set the registration point. Apply origin to frame changes one frame; Apply origin to all frames changes the sequence. The ground-origin guides help identify unwanted shifts. Show neighbouring frames provides an onion-skin comparison.</p>
+<p>Move frame earlier/later changes order. Crop transparent border trims the selected frame while maintaining the intended registration. Replace this frame substitutes its image. Undo reverses supported workshop edits. Play / Pause checks motion at Preview FPS.</p>
+<p>Export edited sequence preserves an editable image/metadata folder. Do this before closing unfinished work; general session restoration does not include the workshop's unsaved frame canvas. Review import to MUL prepares the native sequence write. Allow replacing existing sequences must be enabled for an occupied destination.</p>
+<h3>Reimport a body folder</h3>
+<p>Export the body first using the bulk/body exporter. Edit the PNGs while keeping the folder structure and metadata. Reimport body folder reads the body.json, Action and Direction arrangement and preserves supported origins/index information.</p>
+<p>For a new body, keep Body folder: use next free block enabled and choose a compatible bank. For an update, switch off automatic body choice, enter the intended destination and enable replacing existing sequences. Review the complete list before saving. A dropped body folder opens the workshop but still requires this destination setup and review.</p>
+<p>Mirrored directions exported for viewing are not reimported as new stored directions. A body exported from modern UOP needs deliberate action mapping; this feature is not automatic complete UOP-to-MUL conversion. Use individual supported sequences with explicit destinations if necessary.</p>
+<h3>Equipment / mount preview</h3>
+<p>Open Studio tools &gt; Equipment / mount preview to combine multiple saved animation layers. Add the mount first, then rider/body and equipment. Each layer has its own Body / equipment ID, source, action, direction, hue and X/Y offsets.</p>
+<ol><li>Enter a body and its source/action/direction, then Add layer.</li><li>Add the rider or other body using the appropriate pose.</li><li>Select a wearable in Item Assets and choose Add selected item, or enter its equipment animation ID manually.</li><li>Select rows to Remove layer, Move layer earlier, or Apply offsets / hue.</li><li>Play / Pause to inspect the combined motion.</li></ol>
+<p>The layers share a ground origin, but you control their order and poses. Add selected item reads the item's TileData animation link. It does not import a new wearable. Offsets, hues and layer order are preview settings and are not written to native assets or Sphere scripts. This is useful for checking overlap, not a full implementation of the game renderer's equipment rules.</p>
+</section>
+<section class="chapter" id="17-gump-artwork-browse-recolour-replace-and-import"><h2>17. Gump artwork: browse, recolour, replace and import</h2>
+<p>The Gumps tab edits interface artwork records. These images can be backgrounds, buttons or paperdoll pieces. The Sphere gump designer in the next chapter arranges such artwork into a dialog; the two tools have different purposes.</p>
+<h3>Browse and use a gump</h3>
+<p>Choose Auto, MUL or UOP and Reload. Search gump ID/name and use All, Free candidates or Used. Scroll thumbnail cards and select one for the full preview. The preview offers Fit and fixed zoom levels.</p>
+<p>Enter Preview hue ID and Apply, or Choose hue. Hue 0 shows original colours. Export PNG saves the displayed preview, including its selected hue. Use hue 0 if you want an uncoloured source export. Copy Sphere GUMPPIC line gives a starting command for script editing; position and surrounding dialog logic still need to suit your layout.</p>
+<p>Right-click a gump preview/card for image replacement, references, favourite actions and export where offered. Inspect equipment-linked gump IDs before replacing them: a paperdoll slot may be referenced through an equipment animation even if it is not named in a simple dialog script.</p>
+<h3>Import a batch</h3>
+<p>Click Import PNG / BMP. Choose the images and destination format. Choose automatic consecutive IDs or deliberate IDs from filenames; review their order and proposed destinations. Browse slots / choose a free range helps find candidates.</p>
+<p>Enable Replace the listed gump slots only for intended replacements. That option can include referenced IDs, so review their usage. Inspect the converted image and open the save review, then queue or save. This changes gump artwork; it does not automatically add a Sphere dialog that displays it.</p>
+<h3>Replace one existing image</h3>
+<p>Select the correct gump and use its right-click Replace ... with image action. Choose the PNG/BMP and compare the old and converted new image. Keeping the ID means existing scripts/paperdoll links can continue to refer to it, but changed dimensions or alignment can affect every place it is used. Preserve the full intended canvas for paperdoll pieces.</p>
+<p>If a gump looks absent or unchanged after saving, verify the active source format, the client's actual data folder, the ID used by the script and any overriding files. Reload the preview after disk changes.</p>
+</section>
+<section class="chapter" id="18-sphere-gump-designer"><h2>18. Sphere gump designer</h2>
+<p>Open Studio tools &gt; Sphere gump designer to arrange a dialog visually and generate Sphere source. It uses existing gump graphics from your client. Import new graphics in Gumps first when required.</p>
+<h3>Create a dialog</h3>
+<p>Set Dialog DEFNAME to a unique name beginning <code>d_</code>, such as <code>d_example_menu</code>. Choose Canvas width/height and Preview page. Supported canvas dimensions are 100 to 4096; the design supports up to 1000 controls.</p>
+<p>Choose a control type, fill its properties and click Add control. Click/drag a control on the canvas to move it. Apply properties updates the selected control after editing fields. Refresh preview redraws; Undo and Delete control manage layout edits.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Control</th><th scope="col">Main properties</th><th scope="col">Generated purpose</th></tr></thead><tbody>
+<tr><td>Image</td><td>x, y, graphic</td><td>GUMPPIC artwork</td></tr>
+<tr><td>Tiled background</td><td>x, y, width, height, graphic</td><td>Repeated gump artwork over an area</td></tr>
+<tr><td>Text</td><td>x, y, hue, text</td><td>A text label</td></tr>
+<tr><td>Button</td><td>x, y, graphic, pressed, id</td><td>Reply button with normal/pressed graphics</td></tr>
+<tr><td>Input</td><td>x, y, width, height, hue, id, text</td><td>A text-entry field</td></tr>
+</tbody></table></div>
+<p>Page assigns a control to a dialog page. Preview page chooses what you inspect; page 0 is shared content. Text is single-line. Buttons require distinct nonzero reply IDs; inputs require distinct input IDs. A reply button is not automatically a next-page navigation button.</p>
+<h3>Save the editable design</h3>
+<p>Save design writes JSON for future editing. Open design loads it. Save this separately from the generated .scp; editing the generated script does not update the JSON layout. General session recovery is not a substitute for saving the designer canvas.</p>
+<h3>View, export or install its script</h3>
+<p>View script shows the generated DIALOG and button-handler sections. Export script writes that text to a chosen output file. That export does not register the file with your server.</p>
+<p>Install script prepares a reviewed new .scp inside the active server's scripts directory and a resource entry when needed. Choose a unique filename and dialog DEFNAME; existing dialogs are not silently replaced. Queue or save the reviewed operation, then open the saved script for custom behaviour.</p>
+<p>Generated button handlers are stubs: they include a comment for your Sphere action and a return. You must implement what each button does. The desktop preview also uses desktop font metrics and cannot verify the game's exact text layout, input behaviour or your server-side handlers. Test the dialog in the target client after scripting it.</p>
+</section>
+<section class="chapter" id="19-hues-and-colour-testing"><h2>19. Hues and colour testing</h2>
+<p>Open Hues to browse the client's colour tables. Reload refreshes them. Search by name/ID, choose a hue and compare its 32-swatch palette with the image preview.</p>
+<p>Game hue 0 means no colour transformation. File palette index 0 corresponds to game hue 1. Use the game hue ID shown by Studio when copying a Sphere COLOR assignment.</p>
+<h3>Preview a saved hue</h3>
+<p>Test image shows a standard sample. Load PNG uses your image. Selected item and Selected gump use available assets from those views. Preview grey pixels only limits the comparison to grey pixels; it does not change the item's saved PartialHue flag.</p>
+<p>Copy Sphere COLOR copies a script assignment. Export preview PNG saves the coloured preview. Export hue list CSV exports the hue listing, not a replacement hues.mul. Import palette / Export palette use the supported UOFiddler palette-text interchange.</p>
+<h3>Edit or copy a palette</h3>
+<p>Select a hue and Edit hue. Change its short name, select one of the 32 swatches and use Set RGB hex or Colour picker. Create gradient fills the palette between chosen dark/light colours. Import UOFiddler palette can populate it from a file.</p>
+<p>The preview uses the unsaved working colours. Test this unsaved hue on clothing / items opens a sample comparison without saving it first. Review hue changes shows the proposed write to that hue record; then queue/save.</p>
+<p>Copy to slot prepares another palette record from the current one. Choose the destination carefully: a blank table is only a candidate and may still be used by world objects or scripts. Copying a palette does not automatically update the COLOR of items that used the source hue.</p>
+<p>Stored fields includes TableStart and TableEnd. These are stored 16-bit fields, not the indices of the first/last swatch you want to edit. Preserve them unless you have a specific reason to change or import them. The reviewed write updates the selected hue record, retaining other records and block information.</p>
+<h3>Compare clothing and items</h3>
+<p>Try clothing / items lets you select up to 24 items by searching Sphere names/categories or using Item IDs / range. Choose Item art, Male clothing or Female clothing. Choose Item flags, Full hue or Grey pixels only to control the comparison.</p>
+<p>The clothing modes show individual paperdoll pieces, not a complete animated dressed character. Choose hue switches the palette. Export comparison PNG saves the resulting board. Check more than one material: a hue that reads well on a grey robe may be poor on an already coloured weapon.</p>
+</section>
+<section class="chapter" id="20-sound-workshop-and-attachments"><h2>20. Sound workshop and attachments</h2>
+<p>Open Studio tools &gt; Sound workshop. Select Auto, MUL or UOP, then Reload. Search the table by ID or name. Selecting a sound shows its waveform and duration. Play and Stop audition it through Windows audio.</p>
+<h3>Export sounds</h3>
+<p>Export WAV saves the selected sound with a WAV header. Export all WAV writes the available sounds to a new output folder. A sound archive's internal bytes are not themselves a complete WAV file; use the exporter rather than renaming raw archive data.</p>
+<h3>Import or replace audio</h3>
+<p>The WAV import processing settings apply to the files you subsequently choose:</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Setting</th><th scope="col">Meaning</th></tr></thead><tbody>
+<tr><td>Trim start</td><td>Start position in seconds</td></tr>
+<tr><td>Trim end</td><td>End position in seconds; blank keeps the end of the source</td></tr>
+<tr><td>Volume multiplier</td><td>1 keeps level; lower reduces volume; higher may clip</td></tr>
+<tr><td>Fade in/out</td><td>Fade duration in milliseconds</td></tr>
+</tbody></table></div>
+<p>Choose Add WAV files for new candidate IDs, or Replace selected for one existing sound. New allocation considers supported archive entries, mappings/overrides, literal sound references and pending reservations. A replacement affects existing uses of that sound ID.</p>
+<p>The importer accepts uncompressed PCM WAV at supported mono/stereo 8/16/24/32-bit depths. It converts to the native signed 16-bit mono, 22050 Hz sound payload. MP3 and floating-point WAV need external conversion to supported PCM first. Resampling is simple; prepare demanding audio work in a dedicated editor.</p>
+<p>Inspect the duration and clipped-sample count in review. Play converted sound auditions the prepared payload; Stop stops it. With a batch, the review's audio audition is the first prepared sound, so inspect individual sources/results when validating a collection. Queue/save only after checking destination IDs and conversion.</p>
+<p>Shorten a source filename if the derived sound name exceeds 39 Windows-1252 bytes or contains unsupported characters. Renaming does not change the sound's gameplay assignment.</p>
+<h3>Attach a sound to an item, creature or mount</h3>
+<p>Use this workflow to connect audio to an existing definition. Finish or discard open script drafts first. Scripts in a server ZIP are read-only; extract and link the server before attaching sounds.</p>
+<ol><li>Select the item, wearable, creature or mount in the definitions list.</li><li>Open Workspace and choose Attach sound to this asset... in the Sound in UO panel. Right-click &gt; Attach sound... on a definition, or Studio tools &gt; Attach sound..., also opens this window.</li><li>Check Attach to. It identifies the exact script section and line; other supported sections in that script are available in the list.</li><li>Choose Play when using the choices below.</li><li>Choose Auto, MUL or UOP for the saved sound source. Search by name, decimal ID or <code>0x</code> hexadecimal ID, then select a sound.</li><li>Press Play new sound or double-click the sound to hear it. Stop ends playback. The waveform and duration help you inspect the selected audio.</li><li>Choose Review sound attachment.... Read the sound ID, target, event and before/after script text. Listen to the review's audio if needed.</li><li>Choose Queue changes to defer the reviewed operation, or Save to UO files to save it now. Enable Keep a backup if you want retained originals for later restoration.</li></ol>
+<p>Save to UO files writes to the client-data and server-script folders linked by the active profile, after the safety checks. You do not have to paste the sound fields into the script yourself. It does not upload to a website or reload a running server; restart or reload the intended client/server after saving so the sound is used in game. For a new WAV, players also need the updated sound archive in the client data they actually use.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Target</th><th scope="col">Play when</th><th scope="col">Script connection</th></tr></thead><tbody>
+<tr><td>Creature or mount</td><td>Idle</td><td>SOUNDIDLE</td></tr>
+<tr><td>Creature or mount</td><td>Notice / alert</td><td>SOUNDNOTICE</td></tr>
+<tr><td>Creature or mount</td><td>Attack / hit</td><td>SOUNDHIT</td></tr>
+<tr><td>Creature or mount</td><td>Get hurt</td><td>SOUNDGETHIT</td></tr>
+<tr><td>Creature or mount</td><td>Death</td><td>SOUNDDIE</td></tr>
+<tr><td>Item or wearable</td><td>Use / double-click</td><td>@DClick</td></tr>
+<tr><td>Item or wearable</td><td>Equip</td><td>@Equip</td></tr>
+<tr><td>Item or wearable</td><td>Unequip</td><td>@UnEquip</td></tr>
+<tr><td>Effect / function</td><td>When this function runs</td><td>Start of the selected FUNCTION</td></tr>
+</tbody></table></div>
+<p>A saved sound is reused without rewriting its archive. The definition or function supplies the gameplay connection: attaching to an item does not make it equipable, and attaching to a mount does not add vehicle physics or engine timing. Sound 0 is not offered because it represents no sound in Sphere.</p>
+<p>You can also select a sound in Sound workshop and choose Attach selected sound to a thing..., or right-click the sound and choose Attach sound.... Select the intended definition, or open its script, before using that route. Check Attach to again before review.</p>
+<h3>See and replace sounds already associated with an asset</h3>
+<p>Open Attach sound and select Current sounds. The list shows the event, saved sound ID and name when available, and the script location supplying the link. Creature rows include sound fields inherited through a resolvable ID and the action sounds derived from a base SOUND set. Expressions and special server-chosen sounds remain labelled instead of being guessed.</p>
+<ol><li>Select the current sound row. Play current sound auditions that saved audio without changing the replacement you have selected.</li><li>Click Choose replacement. The Change control selects Set / replace selected sound and the Choose new sound tab opens.</li><li>Select another saved sound, or choose a ready-made WAV. Play new sound lets you compare the replacement with the current sound.</li><li>Choose Review sound attachment. Check the old-to-new value and the exact script change.</li><li>Choose Save to UO files or Queue changes.</li></ol>
+<p>Replacing an item or function sound updates only the selected command, keeping its object prefix, conditions, other arguments, comments and position. Other sound commands remain. Replacing an inherited creature action creates a local override for that creature; the parent definition stays unchanged. If the local field appears before ID, Studio moves the override after that inheritance copy so it takes effect.</p>
+<p>Replacing a link does not overwrite the old shared audio slot. A WAV receives a free slot and is saved together with the changed link. Other assets that use the old sound keep it. To deliberately change shared audio everywhere, use Sound workshop &gt; Replace selected instead and review all affected uses.</p>
+<p>For an item or function, Add a sound preserves the existing commands and inserts or updates Studio's marked attachment at the selected event's start. Use Set / replace selected sound when you want to swap an existing command. External event scripts, called functions, runtime property changes and dynamic expressions are not fully evaluated here. An unresolved entry does not prove that the asset is silent; inspect its script or verify the event in game. Client sound.def or loose-file overrides can also affect playback.</p>
+<h3>Attach a ready-made WAV in one save</h3>
+<p>In Attach sound, choose Choose WAV file... instead of selecting a saved sound. Select an uncompressed PCM WAV, then use Play new sound to hear the converted audio. The supported input formats and filename limits are the same as the sound importer above. The attachment window converts the file without offering the workshop's trim, volume and fade controls; prepare those edits beforehand if needed.</p>
+<p>Studio chooses an available, unreserved sound slot for the WAV. Review shows that new ID and the script connection together. The sound data and script edit are saved or queued as one recoverable operation. Existing sounds and pending reservations are considered when choosing the destination. If no suitable slot is available, reuse a saved sound or choose another compatible archive format.</p>
+<p>Selecting a saved sound after choosing a WAV switches the attachment back to reusing that saved sound. Check the source note and review to confirm which audio will be used.</p>
+<h3>Attach a sound to an effect function</h3>
+<ol><li>Open the effect's .scp from the Script directory so the whole file is available.</li><li>Choose Studio tools &gt; Attach sound....</li><li>Under Attach to, select the intended Effect / function entry. A script can contain several functions; use the identifier and line to choose the correct one.</li><li>Choose When this function runs, select a saved sound or WAV, and review the attachment.</li><li>Save or queue it, then verify the event with the target client and Sphere after their data is reloaded.</li></ol>
+<p>The inserted sound runs at the start of that function and uses the object calling it as its source. A function invoked without a world object may need a manually chosen sound source in its script. An artwork ID or animation frame alone does not execute audio; merely placing an effect item does not call a separate effect function.</p>
+<p>Test Scene remains a visual preview. It does not execute Sphere events or automatically play attached sounds. Use Play new sound in the attachment window to audition the audio; verify event timing in the target game setup.</p>
+<h3>Existing scripts, inheritance and repeat attachments</h3>
+<p>For a creature, Studio sets only the selected sound field on that definition. Other fields, inherited links and triggers remain intact. A local sound value overrides the corresponding inherited value without rewriting the parent definition.</p>
+<p>With Add a sound for an item event or function, Studio adds a marked SOUND command before existing conditions and returns. Existing custom logic and other sound commands remain. This can play audio even if a later condition rejects the action, or produce more than one sound if the script already plays audio. If the sound should run only after a successful action, deliberately move the command to that point in Sphere Script and review the logic. Set / replace selected sound keeps the chosen command at its current position.</p>
+<p>Using Add a sound again on the same event updates Studio's unchanged marked command instead of adding another copy. That insertion mode requires manual review of duplicate triggers or edited/moved markers. To replace an existing command, select its exact row in Current sounds; Studio does not choose a custom command for you.</p>
+<p>If the script already has a queued edit, save that edit or remove it from the queue, then reopen Attach sound. A saved sound with a queued replacement also needs to be resolved first. On-disk changes invalidate the attachment review; reload the current files rather than overwriting newer work. To add several sounds to the same script, finish each save before reopening the next attachment.</p>
+<p>The browser previews the selected saved MUL/UOP archive. A game client's sound.def mapping or loose-file override can change what actually plays. Music is outside the sound workshop; verify the intended event, source and volume in the target client/server.</p>
+<h3>Copy creature sound fields manually</h3>
+<p>Creature sound fields opens SOUNDIDLE, SOUNDNOTICE, SOUNDHIT, SOUNDGETHIT and SOUNDDIE entries. Enter the intended sound IDs and Copy Sphere fields. Paste the assignments into the appropriate CHARDEF and save the script separately.</p>
+<p>This helper remains available for manual script work. For a reviewed direct attachment, use Attach sound... above. Importing audio alone does not assign it to every creature automatically.</p>
+</section>
+<section class="chapter" id="21-test-scene-an-in-app-visual-sandbox"><h2>21. Test Scene: an in-app visual sandbox</h2>
+<p>Open the Test Scene tab, Studio tools &gt; Test Scene (in-app), or Preview in Test Scene beside the definition list. Right-click item art, an Asset spaces card or the loaded animation preview for Show in Test Scene.</p>
+<p>The scene runs entirely inside Studio. It can show characters, mounts, items, equipment and effects using saved files, supported queued edits or an unimported preview file. Its movement and obstacles are local; Sphere combat, ownership, taming, feeding and script triggers are not executed.</p>
+<p>Attached sounds are not played automatically in this scene. Audition them in Attach sound or Sound workshop; check their actual gameplay event using the target client and server.</p>
+<h3>Load content</h3>
+<p>Load selected definition follows the current selection. Alternatively choose Kind, enter its ID and Source, then Load / refresh preview. Character/Mount IDs are animation bodies; Item/Equipment/Effect use their relevant item-art links. Read the source note above the scene to see what was loaded.</p>
+<p>Include queued changes overlays supported reviewed animation, item-art, effect and equipment metadata/paperdoll changes in memory. Enter the proposed destination ID when testing a queued import. Refresh after changing the queue. This preview does not commit the queue to disk.</p>
+<p>Preview VD / PNG / GIF opens supported source files before importing. Return to saved / queued files stops using that external preview file. A source-file preview cannot invent missing directions or actions.</p>
+<h3>Character and mount controls</h3>
+<p>Choose Idle, Walk, Run or Custom pose. Custom uses the Action ID. Direction selects one of eight displayed directions. Player body selects the reference/rider body where that control applies. Hue changes the preview colour; FPS and Speed change playback.</p>
+<p>Mount mode offers Mounted rider and Rider X/Y offsets. Show reference player adds an optional comparison player in other suitable modes. Equipment mode uses the item's equipped animation and retains the player needed to display it. Missing required player art may be represented by a labelled placeholder.</p>
+<p>Play/Pause controls animation. The frame buttons pause and step. Click the floor or focus the canvas and use arrow keys to move. Space toggles playback. These controls affect the preview, not native frame data or server speed.</p>
+<h3>Place an item without replacing the character</h3>
+<p>Selecting an item for Show in Test Scene prepares ground placement while retaining the character/mount already in the scene. In Room, choose Place item and click floor tiles to place copies. Use Move character when you want clicks to move the actor again. Escape returns to movement.</p>
+<p>Wear in Test Scene, available on the small paperdoll, is the clearer route for an equippable item: it shows the item on the human model with the corresponding paperdoll. Ground placement and wearing are different actions.</p>
+<h3>Effects</h3>
+<p>Effect frames 0 uses AnimData when available. A positive count previews explicit consecutive art frames. Effect style selects Ground, On player or a looping Projectile demonstration. Check hue, scale, frame order and overlap. This does not verify the generated Sphere effect function's damage or timing rules.</p>
+<h3>Room and wall controls</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Control</th><th scope="col">Use</th></tr></thead><tbody>
+<tr><td>Scene tool</td><td>Move character, Place item, Add wall or Remove placed</td></tr>
+<tr><td>Wall direction</td><td>Choose Left or Right orientation for added walls</td></tr>
+<tr><td>Lighting</td><td>Day, Dusk or Night preview brightness</td></tr>
+<tr><td>Room</td><td>Client stone, Plain grid or Custom environment</td></tr>
+<tr><td>Walls / local collision</td><td>Toggle the room walls/local obstruction behaviour</td></tr>
+<tr><td>Floor grid</td><td>Show the floor tile grid</td></tr>
+<tr><td>Place selected item</td><td>Prepare the selected item's art as a prop</td></tr>
+<tr><td>Selected item as floor / wall</td><td>Use selected art for that environment role</td></tr>
+<tr><td>Reset room</td><td>Clear the local arrangement and reset the room</td></tr>
+</tbody></table></div>
+<p>The default walls follow the two back edges. Add wall lets you place test obstacles by clicking tiles; Remove placed clears placed items/test walls at the clicked tile. Environment art uses available client pieces, with a plain-grid fallback. Floor art is fitted to the scene's ground diamonds.</p>
+<h3>Zoom, snapshots and persistence</h3>
+<p>Auto zoom fits smaller windows and limits enlargement; Fit fills the available space. Fixed zoom choices provide closer inspection. Snapshot exports the rendered image as PNG.</p>
+<p>The scene arrangement, movement, rider offsets and lighting do not change scripts, game files or queued imports. A snapshot is a demonstration image, not a saved playable world or editable house. Use House Builder when you want a design that can be compiled into a house/deed.</p>
+</section>
+<section class="chapter" id="22-house-builder-and-housing-deeds"><h2>22. House Builder and housing deeds</h2>
+<p>Open Studio tools &gt; House Builder + deed. This is a separate in-app editor for a fixed house assembled from existing item artwork. It saves editable .house.json designs and can compile a native multi with a matching Sphere house and placement deed.</p>
+<h3>Start a design</h3>
+<p>In House settings, set House name, Plot width/depth, Storage limit and Deed value. Apply plot settings applies validated changes. Plot sizes range from 3 by 3 to 31 by 31; piece heights range from -20 to 100. A design can contain up to 10000 pieces.</p>
+<p>Choose Building pieces to search native art by name or ID and filter by role. The material selector offers matching groups such as timber, stone, brick or logs with associated roof/floor/door pieces, plus All building pieces, Favourites and Recent. Available results depend on the client's artwork. The star button toggles the chosen art in favourites.</p>
+<h3>Pick the correct role</h3>
+<p>Artwork ID selects the image; Role tells the builder what that piece does in the design. Inferred roles are a starting point, so check them. Floor, wall, roof, stairs and decoration are static pieces. Door and sign are functional components for the compiled house; the selected native art must support that function.</p>
+<p>Every compiled design needs floor content, at least one working door and exactly one house sign. The interface suggests a standard brass sign, but the selected server must actually have a compatible inherited sign definition. A sign-like image assigned Decoration is not a house sign.</p>
+<h3>Drawing and editing tools</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Tool/control</th><th scope="col">Action</th></tr></thead><tbody>
+<tr><td>Paint</td><td>Click or drag to add the chosen art at the active height</td></tr>
+<tr><td>Line</td><td>Drag between endpoints to draw a line of pieces</td></tr>
+<tr><td>Rectangle</td><td>Drag to fill a rectangular area</td></tr>
+<tr><td>Perimeter</td><td>Drag to draw the rectangle's boundary</td></tr>
+<tr><td>Erase</td><td>Remove the hit piece; right-click also erases a hit piece</td></tr>
+<tr><td>Select</td><td>Click a piece, or drag a selection area at the active height</td></tr>
+<tr><td>Eyedropper</td><td>Pick a piece's art, role and height</td></tr>
+<tr><td>Copy / Paste</td><td>Copy selected pieces, then place their relative arrangement</td></tr>
+<tr><td>Delete</td><td>Remove selected pieces from the design</td></tr>
+<tr><td>X-/X+/Y-/Y+</td><td>Move selected pieces one tile in the chosen axis</td></tr>
+<tr><td>Lower / Raise</td><td>Move selected pieces one height unit</td></tr>
+<tr><td>Undo / Redo</td><td>Step through design changes</td></tr>
+</tbody></table></div>
+<p>The translucent ghost shows prospective placement, including copied groups. Cursor text gives tile X/Y and height. An out-of-bounds paste preview is marked differently; the design still has to pass validation. Large previews may show only an initial portion of the placement group, so review the finished selection too.</p>
+<h3>Floors, visibility and selected-piece properties</h3>
+<p>Height chooses the active building plane. Presets include Ground 0, Main floor 7, First floor 27, Second floor 47 and Roof 67. The -20/+20 buttons move the plane quickly. These are convenient heights, not an automatic multi-storey generator.</p>
+<p>Roofs toggles roof visibility. Upper floors controls whether pieces above the active height are shown. Use Fit or a fixed zoom, middle-drag to pan, and Centre view to reset pan and fit the plot.</p>
+<p>Open Selection after selecting pieces. Artwork ID, X, Y, Height and Role describe the selection. For a group, coordinates reposition the first piece while preserving the other pieces' relative arrangement. Blank artwork or role preserves each piece's value. Apply to selected pieces validates the result and records an undoable change.</p>
+<h3>Save, open and recover editable work</h3>
+<p>Save project writes .house.json; subsequent saves reuse its path. House settings &gt; Save project as creates another editable file. New and Open project handle unsaved work before replacing the current design. Import blueprint reads supported unhued CentrED CSV into the current project; check inferred roles afterward. Export blueprint writes the supported tile data as CSV.</p>
+<p>CSV is interchange data, not a fully registered Sphere house. It does not carry the project's ownership link or every editor setting. Per-piece hues and unsupported visibility flags are rejected for fixed-house import. Share a .house.json when you want to preserve the editable roles and settings.</p>
+<p>House Builder writes automatic recovery copies while you work. House settings &gt; Recover a project opens those copies; then Save project chooses a permanent filename. Recovery is a convenience, not a reason to stop keeping deliberate project files.</p>
+<p>Save/Queue in the compile review leaves the builder open. Save the editable project afterward to retain its compiled-house link. Undo and redo preserve that destination link; they do not undo an already completed game-file save. Use reviewed-save recovery for a file rollback.</p>
+<h3>Check and walk through the house</h3>
+<p>Check building reports low headroom, unreachable floors/entrances and enclosed floor gaps. Problem pieces are selected where applicable. A compile also presents architectural warnings for review. Some openings may be intentional; read the warnings in context.</p>
+<p>Start walk test places a reference character outside the plot. Use arrows/WASD or click a destination for a local route. E or Space opens/closes a nearby door. Step out of its tile before closing it. Open doors appear faded in the preview. Stop walking cancels movement.</p>
+<p>The walk test uses native heights, stairs, doors, headroom and blocked-corner checks within a bounded flat-ground simulation. It is not a proof of actual terrain placement or Sphere permissions. Test roof visibility and different floor levels to see what the character is doing.</p>
+<h3>Compile house + deed</h3>
+<ol><li>Save the editable project and verify its roles, entrances, stairs and sign.</li><li>Choose Compile house + deed and review any architectural warnings.</li><li>Read the chosen free multi ID, affected client files and complete Sphere script.</li><li>Confirm the house name, deed, storage/value and resource registration.</li><li>Queue or save. When both native multi representations are present, the compiler updates MUL and UOP together.</li><li>Save the editable project again to retain its link to the compiled house.</li><li>Load the changes on a compatible test shard, create the generated deed and test placement, entry, ownership and redeeding.</li></ol>
+<p>Scripts go into scripts/housing/custom. The selected server must already provide compatible housing systems. Compiling is not a complete replacement for Sphere's housing code, and the editor does not place the house in the live world for you.</p>
+<h3>Update a compiled house</h3>
+<p>Open the saved linked .house.json, make changes and compile again. Studio retains the same multi ID, script filename and named house/deed identity, even when the displayed house name changes. The review shows previous and updated script text.</p>
+<p>The saved link verifies the destination script and native multi payloads. If they changed externally, belong to another project or no longer match, the update stops. Save queued changes before compiling another update to the same house. Keep the matching project with the target that owns that allocation.</p>
+<p>For a house compiled in 0.23.0, open its original unchanged design and use House settings &gt; Link an earlier compiled house. Studio requires an exact script/art match before reviewing the link. Save that link and the editable project before editing further. A changed old house cannot be adopted merely by giving a new design the same name.</p>
+<p>Already placed houses retain saved fixtures and region information. Redeed and place a fresh house to apply structural changes. Back up and plan deployment with the shard operator when houses have owners or stored belongings. Studio does not automatically migrate occupied world houses.</p>
+<h3>Share houses</h3>
+<p>Share the editable design and a preview image, plus required nonstandard tile assets and setup notes. A linked project targets its recorded compiled house; it is not a universal allocation for another shard. Preserve your linked original. For a fresh destination, create a new unlinked design, exchange the supported blueprint and recheck roles/settings, then compile against that destination's current data.</p>
+<p>Generic .uoasset content-pack remapping does not support compiled houses in this version. House Builder is for fixed house designs, not full map editing, a networked CentrED server or the complete custom-housing protocol.</p>
+</section>
+<section class="chapter" id="23-find-references-and-investigate-shared-content"><h2>23. Find references and investigate shared content</h2>
+<p>Workspace &gt; Find references and applicable asset right-click menus open a report for the selected asset. Script workspace also offers symbol-oriented reference navigation. Use these tools before changing a shared appearance or deleting old content.</p>
+<p>The report lists file, line/record and evidence. Double-click a resolvable script/definition row to jump to it. Export reference report writes the report with its coverage description so you can retain or share the findings after removing private details.</p>
+<p>Definition's reference list focuses on supported indexed relationships. The broader report scans script and mapping mentions; item scans also inspect supported unambiguous classic multi layouts and statics. Large scans run in the background and can be cancelled between units of work.</p>
+<h3>Interpret results carefully</h3>
+<p>The same number can mean an item, body, coordinate or unrelated value. Read the line instead of deleting every numeric match. A dynamic Sphere expression may use an asset without a simple literal ID. World-save objects, UOP multis, every override and complete runtime behaviour are not universally resolved.</p>
+<p>A clean report is therefore not proof that an ID is unused. Combine it with allocation evidence, source inspection and knowledge of the shard's world data. If several definitions intentionally share an animation, choose a new destination for a visual change that should affect only one of them.</p>
+</section>
+<section class="chapter" id="24-remove-definitions-animations-or-whole-scripts"><h2>24. Remove definitions, animations or whole scripts</h2>
+<p>Select a definition and use Remove related content, or its right-click equivalent. Choose the removal scope before preparing the final review.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Scope</th><th scope="col">Intended result</th></tr></thead><tbody>
+<tr><td>Selected definition only</td><td>Remove that definition while keeping animations, art and companions; outside references may remain</td></tr>
+<tr><td>Definition and related content</td><td>Consider its linked mount/figurine definitions and removable unused assets while protecting shared content</td></tr>
+<tr><td>Entire animation group</td><td>Include other definitions using the same animation and their linked removable content</td></tr>
+</tbody></table></div>
+<h3>Review a removal</h3>
+<ol><li>Choose the intended scope.</li><li>Read REMOVE and KEEP / REVIEW MANUALLY in the review.</li><li>Check every listed definition, art/animation slot, mapping and script-file change.</li><li>Resolve reported external references before requesting a larger removal again.</li><li>Choose Remove listed content only when the list matches your intent.</li><li>Refresh the directory/definition view and inspect the result. Keep the automatically retained backup until you have verified it.</li></ol>
+<p>Removal is deliberately reviewed and keeps a backup; it is not an unreviewed one-click purge. A larger animation-group scope is useful for genuinely shared custom content, but does not authorise deletion of arbitrary unrelated scripts that mention it.</p>
+<h3>Why a .scp may remain</h3>
+<p>A file may contain other definitions, functions or meaningful content. Removing one section does not necessarily delete the whole file. Cleanup can remove a now-empty script and related exact resource references when applicable, but shared content remains.</p>
+<p>Open the remaining file and inspect it. Use Remove empty .scp file for genuinely empty content, or Delete script for an intentional reviewed whole-file deletion. Deleting a whole script keeps client assets and other scripts; it can leave references that you must update. The two operations serve different purposes.</p>
+<h3>What is not automatically removed</h3>
+<p>Dynamic references and existing world objects are not comprehensively cleaned up. Sounds, gumps and additional effect frames are not all inferred and removed automatically. Shared/ambiguous item uses or static placements may cause assets to be kept. Read the review's actual list rather than assuming “related” means every conceivable dependency.</p>
+<p>If Studio reports an outside reference, open the named file/line. Decide whether to update the reference, retain shared content, or choose definition-only removal. Do not erase a whole decoration/worldgen file just to silence a reference warning. Use a retained backup to restore a mistaken completed removal as described in chapter 4.</p>
+</section>
+<section class="chapter" id="25-bulk-export-and-resuming-exports"><h2>25. Bulk export and resuming exports</h2>
+<p>The top-bar Bulk export tool exports saved item art and animation bodies. Animations &gt; Export body PNG / VD opens it with the current body range selected. Pending edits are not included; save them first if they must be part of the export.</p>
+<h3>Choose export content</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Option</th><th scope="col">Result</th></tr></thead><tbody>
+<tr><td>Item artwork as PNG</td><td>Exports static item images from the selected source</td></tr>
+<tr><td>Item source Auto / MUL / UOP / Both</td><td>Controls which item representations are exported</td></tr>
+<tr><td>Animation bodies</td><td>Exports bodies within the specified range</td></tr>
+<tr><td>Animation source</td><td>All available, all MUL banks, a particular bank, or UOP</td></tr>
+<tr><td>Individual PNG frames</td><td>Image files for supported action/direction frames</td></tr>
+<tr><td>One .vd per MUL body</td><td>A complete compatible native body export</td></tr>
+<tr><td>Include mirrored directions 5-7</td><td>Extra display-direction PNGs, not new stored sequences</td></tr>
+<tr><td>Align PNG frames on a shared canvas</td><td>Consistent canvas within each action/direction</td></tr>
+</tbody></table></div>
+<p>Set the body range using decimal or 0x values. The range can include bodies without Sphere definitions; empty slots are skipped. A full export may contain hundreds of thousands of files, so begin with a small relevant range when checking settings.</p>
+<h3>Run and inspect an export</h3>
+<p>Choose an existing output parent folder and click Export. Studio creates a new organised UO-Export folder. Item images are arranged by source/category/subsection and ID/name. Animations are arranged by source, body type, body, action and direction. Metadata records origins and source IDs beside the images.</p>
+<p>Open export folder reveals the result. Check the completion status and error report; an export containing some successful files may still have skipped/unreadable assets. Original archives are not modified.</p>
+<p>Keep body.json and frames.json information with their associated PNGs for editing/reimport. A VD preserves original compatible MUL data; modern UOP exports are PNG-based and do not silently receive guessed VD action mappings.</p>
+<h3>Cancel and resume</h3>
+<p>Cancel export requests cancellation between units of work. Retain the incomplete folder if you intend to resume it. Studio tools &gt; Resume bulk export asks for the incomplete supported export folder and verifies its metadata and completed outputs.</p>
+<p>Resumption reuses completed images only after verification. Changed source archives or manually edited exported images can stop resumption. Keep a separate copy for artwork editing rather than editing the folder you still plan to resume. If the inputs have intentionally changed, start a fresh export.</p>
+<p>Bulk export is for saved artwork/animation images, not a dependency-complete server content package. Use Content packs for explicitly queued imports and their linked scripts, and House Builder project/blueprint files for editable houses.</p>
+</section>
+<section class="chapter" id="26-mul-uop-conversion-and-file-checks"><h2>26. MUL / UOP conversion and file checks</h2>
+<h3>Convert supported UOP archives</h3>
+<p>Open MUL / UOP... from the main toolbar and choose Direction: UOP to MUL, or open Studio tools &gt; UOP to MUL.... Add UOP files lets you select archives; Add from linked client finds supported archives in the active client's data. Select an unwanted row and Remove selected to leave it out.</p>
+<p>Choose an output parent folder, then Convert. Studio creates a new UO-MUL folder with the converted files and a conversion report. Open output folder shows the result. Original UOP files stay unchanged; output is not automatically installed over the active client.</p>
+<p>Supported conversion families include item art, gumps, sounds, maps and multis. Multi conversion uses the High Seas format. The original application's modern animation UOP viewer is separate: those animation archives are not converted by this utility.</p>
+<p>Check the report and use the matching generated MUL/index pairs. Do not copy only a new index over unrelated data, or assume conversion updates the client's source preference. If both MUL and UOP are present, confirm which one the game and each Studio tool are reading.</p>
+<p>Cancel conversion stops between supported work units. Inspect status before using any output; a partially populated output folder is not a completed conversion. Conversion is not map editing, a patching service or automatic client-version migration.</p>
+<h3>Convert MUL files to UOP</h3>
+<ol><li>Open Studio tools &gt; MUL to UOP..., or choose MUL to UOP in the main converter's Direction list.</li><li>Choose Add MUL files... and select the supported data files. Keep each matching index in the same folder; you select the data file, not its index. Add from linked client can find the supported data files for you.</li><li>Read the listed output filenames and remove any unwanted entries. A batch cannot contain two data files that would produce the same archive.</li><li>For multi.mul, choose High Seas (16-byte) under MUL multi format only when that is the source's verified format. Keep its original housing.bin and multi-components.txt beside it, as explained below.</li><li>Browse to an output parent folder separate from the working game installation, then choose Convert.</li><li>Wait for packing and verification. Studio reads every completed archive entry back and checks its payload before exposing the completed folder.</li><li>Choose Open output folder. The new UO-UOP folder contains the archives and conversion-report.json; read the report before using the results.</li></ol>
+<div class="table-wrap"><table><thead><tr><th scope="col">Selected data file</th><th scope="col">Required companion</th><th scope="col">Generated archive</th></tr></thead><tbody>
+<tr><td>art.mul</td><td>artidx.mul</td><td>artLegacyMUL.uop</td></tr>
+<tr><td>gumpart.mul</td><td>gumpidx.mul</td><td>gumpartLegacyMUL.uop</td></tr>
+<tr><td>sound.mul</td><td>soundidx.mul</td><td>soundLegacyMUL.uop</td></tr>
+<tr><td>mapN.mul / mapNx.mul</td><td>None</td><td>mapNLegacyMUL.uop / mapNxLegacyMUL.uop</td></tr>
+<tr><td>multi.mul</td><td>multi.idx, housing.bin, multi-components.txt</td><td>MultiCollection.uop</td></tr>
+</tbody></table></div>
+<p>Occupied asset IDs and payloads are preserved. Empty index slots are not stored as assets in UOP, and archive compression, offsets and framing can differ from an earlier archive. Art is stored without compression; the other supported families use zlib. The output is verified as a readable archive, not as a byte-identical recreation of an original client's packer.</p>
+<p>Only terrain is included when packing maps. Map statics, map differences, scripts, TileData, hues and other separate metadata remain separate. anim.mul and modern AnimationFrame/AnimationSequence conversions are not supported here. Changing the container does not create missing artwork, expand the client's capabilities or establish compatibility with every client build.</p>
+<h3>Preserve multi housing data</h3>
+<p>MultiCollection UOP needs information that is not contained in multi.mul alone. Extract the matching original MultiCollection.uop with UOP to MUL first and keep housing.bin and multi-components.txt together with the resulting High Seas multi.mul and multi.idx. The housing file contains the housing catalogue; the sidecar preserves component IDs used by structures and boats. Keep even an empty, header-only sidecar produced by the extractor.</p>
+<p>The reverse converter requires both companion files and an explicit High Seas (16-byte) format choice. It rejects unsupported flag bits, mismatched sidecar artwork/positions, duplicate sidecar entries or references to missing tiles instead of discarding them. Older 12-byte multi.mul data is not supported. Do not choose High Seas simply to bypass the format check or invent empty companion files for an unknown source.</p>
+<h3>Conversion safety and using the result</h3>
+<p>Both directions check access to the required source files and output folder before creating temporary output. Sources must remain stable throughout conversion; another file-access check and source-revision comparison run before publishing the completed folder. Missing indexes, busy files, damaged records, changed sources or cancellation stop the batch without installing a partial result. Close programs using the reported files and retry when they are stable.</p>
+<p>The converter always creates a new result directory. It does not overwrite the selected MULs/UOPs, switch the active profile to the output or install it into a live client. Changing Direction clears the selection and completed-result link; choose the new direction's inputs before converting again. Retain the original complete client data and test the result in an independent copy. Keep a local conversion report private if it includes personal source paths.</p>
+<h3>Check game files</h3>
+<p>Item Assets &gt; Check game files is a read-only structural diagnostic. It inspects supported client file arrangements and reports issues such as recognised layout, inconsistent files and whether Sphere's MulFiles setting points to a different location than Studio's client folder.</p>
+<p>Save the report when troubleshooting. It does not save pending edits or repair files. Include the exact Studio version, relevant action and the latest associated client/server error when asking for support; remove personal paths or private content from public reports.</p>
+<p>If the check finds a mismatch, correct the profile or intended server configuration deliberately, then rerun it. Do not combine indexes/data from different installations or apply wholesale archived files merely because one program starts successfully afterward.</p>
+</section>
+<section class="chapter" id="27-compare-projects-and-create-independent-test-copies"><h2>27. Compare projects and create independent test copies</h2>
+<h3>Compare saved files or logical assets</h3>
+<p>Open Studio tools &gt; Compare project files. Choose the other folder and the comparison type. Compare with linked client compares against the active client's saved data; Compare with server scripts performs a file comparison for the server source.</p>
+<p>Files compares file-level differences and is read-only. Items, Gumps, Sounds and TileData compare supported logical records, so moved archive offsets alone do not necessarily count as changed content. This helps identify actual asset changes after an archive has been rebuilt.</p>
+<p>Select a populated record in a supported asset comparison and use Review selected assets from other folder to prepare its import into the active client. Read the review carefully: the other folder is the source; the active profile is the destination. It does not replace a whole archive as a general synchronisation operation.</p>
+<p>Export comparison report retains the results. File comparisons do not provide a universal merge tool for scripts, maps or entire client installations. Use the script editor for deliberate source changes and the appropriate importer for supported assets.</p>
+<h3>Make a test copy</h3>
+<ol><li>Finish pending work and ensure the source files are stable; close programs that keep changing them.</li><li>Choose Studio tools &gt; Create test copy.</li><li>Choose a parent folder outside the existing client and server folders.</li><li>Enter a new simple folder/profile name.</li><li>Wait for the verified copy and profile registration.</li><li>Select that new Shard profile when ready.</li><li>Read TEST_COPY.txt before launching anything from the copy.</li></ol>
+<p>The tool copies server/client data, excluding certain application backup/cache folders and linked-path cases, and checks for changing sources. It updates recognised MulFiles and ScpFiles entries in copied INI files to the copy. It does not rewrite every custom absolute save/log/database path or configure all network settings.</p>
+<p>The optional client executable path is still shared as a remembered executable location. Verify its data-directory setup separately. Do not assume launching it automatically uses the copied assets.</p>
+<p>A copied server can contain accounts, saves and configuration from the source. Keep the test copy private; it is not a cleaned public distribution or a provisioned virtual server. Review custom external paths before starting Sphere so testing does not write outside the intended copy. Studio does not start the copied server for you.</p>
+</section>
+<section class="chapter" id="28-portable-content-packs-and-distribution"><h2>28. Portable content packs and distribution</h2>
+<p>Open Studio tools &gt; Content packs to move explicitly reviewed content between projects. A .uoasset pack contains the pending bundle you chose to prepare, including supported linked scripts/mappings. It is not an automatic export of every dependency used by a selected definition.</p>
+<h3>Export a content pack</h3>
+<ol><li>Prepare the required imports/edits and Queue changes instead of immediately saving them.</li><li>Inspect Pending changes and remove unrelated operations from this bundle.</li><li>Include the required icons, animations, gumps, hues, sounds and script changes deliberately.</li><li>Open Content packs and choose Export pending bundle.</li><li>Save the .uoasset outside your working client/server files.</li><li>Test importing it against a separate suitable project before distribution.</li></ol>
+<p>Exporting the pack does not save the queued changes to your game files. If you already saved and cleared the queue, the pack exporter cannot reconstruct an entire bundle just from the current definition. Prepare a deliberate supported export/import bundle again or distribute source assets with clear instructions.</p>
+<h3>Import a pack</h3>
+<p>Open content pack loads its inventory. Double-click an asset row to set an explicit destination ID in decimal or 0x hex. Review every remap, especially connected equipment IDs and consecutive effect frames. Enable Allow replacement of occupied asset IDs only for an intended replacement.</p>
+<p>Review pack import shows destination mappings and linked scripts. Resolve conflicts, then queue/save using the normal workflow. Existing script filenames/definitions are not silently overwritten just because binary replacement was enabled.</p>
+<h3>Supported remapping and limits</h3>
+<p>Supported mappings include compatible MUL animation bodies, item/TileData links, known numeric Sphere fields and equipment paperdoll relationships. Animated-item frames must retain their relative consecutive arrangement.</p>
+<p>The pack importer does not perform implicit MUL/UOP conversion, arbitrary TileData-layout conversion or universal rewriting of dynamic expressions, macros, custom functions and complex dialog code. Changed body IDs with body-mapping files may require the normal importer. Destination capacities and dependencies still have to match supported formats.</p>
+<p>Compiled houses are not supported by generic pack remapping in this version. Use the editable House Builder workflow described in chapter 22. A pack also does not include all saved-world objects or prove that every runtime dependency was captured.</p>
+<h3>Prepare a recipient-friendly release</h3>
+<p>Distribute only the intended content and documents. Include a short start-here file explaining the tested Studio version, required client/server formats, dependencies, how to import, what to inspect and how to restore the reviewed operation if needed. Provide previews and original editable source files when you have the rights to distribute them.</p>
+<p>For armor, a clean set folder/manifest lets recipients allocate fresh destinations. For animations, keep exported registration metadata with the frames. For houses, include the unlinked design/interchange instructions and any required custom tile art, rather than assuming your multi ID is free elsewhere.</p>
+<p>Do not distribute project.json, sessions, account files, world saves, private logs, personal absolute paths or an entire private test-copy folder. Review generated scripts/manifests for dependencies and location assumptions. Include applicable licences for anything you redistribute. Studio's installed licenses folder describes its bundled software dependencies; it does not grant rights to unrelated content.</p>
+<h3>A release acceptance checklist</h3>
+<ul><li>The recipient can follow the instructions without your folder layout or accounts.</li><li>The pack opens or source folder loads on a separate compatible project.</li><li>Destination IDs are reviewed against that project's current data.</li><li>Required scripts and resource entries are included and correctly loaded.</li><li>Both inventory/paperdoll and world appearance are checked where applicable.</li><li>Movement, riding and relevant actions are present for worn or rideable content.</li><li>The retained-backup/recovery route is understood before production installation.</li><li>Version, formats, known limitations and content licences are stated plainly.</li></ul>
+</section>
+<section class="chapter" id="29-troubleshooting-and-common-questions"><h2>29. Troubleshooting and common questions</h2>
+<h3>I cannot see all the panels or buttons</h3>
+<p>Maximise or resize the window and inspect its scrollbars. Drag the main pane dividers so the script directory and central editor each have space. House settings has a scrollable area; Test Scene has a sidebar with Preview and Room tabs. The current release keeps save-review actions separate from its scrollable details. Check the title-bar version if your installed app still shows an older layout.</p>
+<h3>I keep having to uninstall before upgrading</h3>
+<p>Use the current Setup directly. It should detect the earlier installation and offer an upgrade/repair in the same location. Save and close Studio first. An older Program Files installation may need Windows elevation using the same account. Check that a shortcut is not launching another old copy elsewhere.</p>
+<h3>No free block fits, even though I see empty slots</h3>
+<p>The import may need a consecutive range or a whole compatible body block. Individual free cells scattered through an index do not form such a block. Check source/bank, layout, pending reservations and the batch size. Use another supported range or reduce an independent-image batch. New equipment can opt into its specific capacity expansion, but still requires icon and both paperdoll destinations.</p>
+<p>Do not use Replace existing to get past an allocation error unless you actually intend to replace those records. A No UOP entry label is not permission to write unsupported UOP body animation.</p>
+<h3>The app says a file changed after review</h3>
+<p>The plan was prepared against an earlier revision. Another editor, a previous save or a queued/draft conflict may have changed its dependencies. Keep the current files, reload/review the intended operation and resolve older queue entries. A house update also needs its matching compiled-project link. Do not disable the check by copying stale archives over the target.</p>
+<h3>My asset looks correct in Studio but unchanged in game</h3>
+<p>Check the active profile's linked client folder, the game's actual data folder, and Sphere's MulFiles location. Check whether the client uses UOP while you edited MUL, or another override is taking precedence. Confirm the numeric art/body/gump ID used by the script. Save the queue, reload/restart the relevant program and test again. Use Check game files to gather evidence.</p>
+<h3>The character disappears, slides or faces the wrong way</h3>
+<p>Inspect the body bank, raw versus Sphere body ID, layout and action/direction. A single image sequence does not create all directions. Check ground origins and compare stand/walk/run. Display directions 5-7 may be mirrored. For a persistent correction, edit/export/import the frames; preview offsets do not modify the saved animation.</p>
+<h3>My mount is a vehicle, not an animal</h3>
+<p>Choose Mount &gt; Sphere script &gt; Mount behaviour &gt; Rideable object when generating the new import. Use the generated inventory-item command and deployment flow, not just the character body. Existing animal scripts are not automatically converted. Test ownership and mounting behaviour on the actual shard.</p>
+<h3>A wearable shows in my backpack but not on the model</h3>
+<p>An inventory icon is only one asset. Check TileData's layer/animation, the actual equipment VD, male/female paperdoll gumps and their source format. Load appearance and check action coverage. Use Wear in Test Scene for wearing; Show in Test Scene can prepare ground placement. Preserve full paperdoll canvases and provide each armor piece's own assets.</p>
+<h3>Can I split one complete armor VD into separate pieces?</h3>
+<p>The set builder does not split a whole-suit VD. Supply separately authored piece animations, individual inventory icons and male/female paperdoll pieces. If the source is intentionally one full-body costume, treat it as one wearable appearance rather than pretending it contains independent equipment layers.</p>
+<h3>The definition is still referenced outside the removal group</h3>
+<p>Open the reported script and line, read the use and decide whether it belongs in the removal. Entire animation group can include other definitions that share that animation, but unrelated external code still requires review. Update the reference or keep the shared content. Definition-only removal leaves assets/references for manual handling.</p>
+<h3>Removal did not delete the .scp file</h3>
+<p>Inspect the whole file. It may still contain unrelated sections or functions. Use Remove empty .scp file only when appropriate, or Delete script to review intentional whole-file deletion. That does not automatically delete the script's entire transitive asset set. Read REMOVE and KEEP instead of relying on the filename alone.</p>
+<h3>A script reports a 'charmap' decoding or encoding error</h3>
+<p>Keep the original bytes and identify the file named in the error. Reload with the current Studio version; supported script reads preserve normal UTF-8/Windows-1252 handling, but not every external file is guaranteed valid. For generated names, shorten them and remove unsupported characters where the client field requires Windows-1252. Do not resave an entire script collection with characters discarded. Include the exact error and a minimal non-private sample when seeking help.</p>
+<h3>A generated script says the filename or identifier already exists</h3>
+<p>Choose a unique named definition and filename across the script tree. Reusing an art base through ID inheritance is different from defining that numeric base again. For a linked House Builder project, use its update workflow; for an ordinary existing .scp, edit it deliberately in Sphere Script. Do not create another conflicting copy simply by changing folders.</p>
+<h3>Save fails with access denied or a file-lock message</h3>
+<p>The Save safety check lists unavailable files before a reviewed save creates backups or prepares output. It can also detect another native archive in the selected client folder being used, even when that archive is not part of the edit. Close the client, Sphere and other editors using the reported files, confirm the profile points to a writable working location, then retry. Studio preserves Windows permissions; it does not reset them globally or close programs for you.</p>
+<p>An initial failed check has made no partial game-file save. A second check can stop the operation after preparation but before replacement. If the message instead reports an interrupted save or requests recovery, keep its journal and follow Save / recovery centre before retrying. Chapter 4 explains the difference.</p>
+<h3>Attach sound asks me to save or discard edits</h3>
+<p>Finish open script drafts before opening the attachment window. If the same script has a queued change, save it or remove it, then reopen Attach sound against the current file. Finish a queued replacement of the selected saved sound first too. This avoids silently combining a new attachment with an older reviewed snapshot.</p>
+<h3>My attached sound does not play, or plays twice</h3>
+<p>Test Scene does not run sound events. First use Play in Attach sound to check the selected audio, then verify the actual item event, creature field or function in the target client/server after reloading. Check the selected script section and event, inherited overrides, sound.def mappings and loose audio overrides. An effect function needs to be called; an art ID alone is not a sound trigger.</p>
+<p>An item event or function may already contain custom SOUND commands. Studio preserves those and adds its marked command at the start, so both can play. Review the script and deliberately adjust timing or duplicates. Do not delete unrelated event logic.</p>
+<h3>Sphere will not start after a save</h3>
+<p>Keep the latest Sphere startup error. Run Item Assets &gt; Check game files and save its report. Compare the affected files and generated script/resource registration with the reviewed operation. Check client/server data paths and compatible formats. Restore the retained linked backup if rollback is appropriate and there have been no intervening changes. Do not repair an unknown problem by mixing unrelated archives and indexes.</p>
+<h3>My backup refuses to restore</h3>
+<p>A later edit may have changed one of the operation's files. Recovery stops rather than discarding that newer work. Keep both the backup and current files, identify the intervening changes and plan a merge or deliberate rollback. A whole-file recovery affects all changes inside that archive, not just one visible asset.</p>
+<h3>My house will not compile or update</h3>
+<p>Check the required floor, working door and exactly one compatible house sign. Check plot bounds, height, native artwork and matching server housing support. Review headroom/entrance warnings. For an update, use the saved linked project and save queued changes first. If linking a 0.23.0 house, start from its exact original design/name/settings before modifying it.</p>
+<h3>The updated house in the world still has old fixtures</h3>
+<p>The compiled definition can change while a placed world house retains its saved door/sign/region state. Redeed and place a fresh instance for structural changes, with appropriate handling of ownership and belongings. House Builder does not migrate occupied world objects automatically.</p>
+<h3>Does Test Scene prove my spell, pet or house works?</h3>
+<p>It proves only the aspects you actually inspect in that visual simulation. It does not execute Sphere events or fully reproduce terrain, collisions, equipment sorting or permissions. House Builder's local checks are also approximations. Use the target client/server for gameplay acceptance after visual preparation.</p>
+<h3>How do I ask for useful support?</h3>
+<p>Include the Studio version, tool/button used, asset type, selected source format and a clear reproduction sequence. Copy the exact error, state whether changes were queued or saved, and mention any other editors in use. Add the read-only file-check report where relevant. Remove credentials, accounts, world saves and personal paths before posting publicly.</p>
+</section>
+<section class="chapter" id="30-task-finder-and-keyboard-reference"><h2>30. Task finder and keyboard reference</h2>
+<h3>Choose the right tool</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">I want to...</th><th scope="col">Start here</th></tr></thead><tbody>
+<tr><td>Find an item or creature definition</td><td>Left search and Category / subsection</td></tr>
+<tr><td>Inspect linked assets and references</td><td>Workspace and Definition</td></tr>
+<tr><td>Change a definition or whole script</td><td>Sphere Script; Script directory for full files</td></tr>
+<tr><td>Edit several scripts or replace text</td><td>Studio tools &gt; Sphere script workspace</td></tr>
+<tr><td>Inspect an icon, TileData or paperdoll</td><td>Item Assets</td></tr>
+<tr><td>Find candidate art/body space</td><td>Asset spaces or the importer's slot browser</td></tr>
+<tr><td>Make a basic item using existing art</td><td>Add item &gt; Use existing artwork</td></tr>
+<tr><td>Prepare an external Fiddler import kit</td><td>Add item &gt; Prepare new PNG for UOFiddler</td></tr>
+<tr><td>Import static/animated item art</td><td>Import + script &gt; Item</td></tr>
+<tr><td>Import an effect and visual function</td><td>Import + script &gt; Effect</td></tr>
+<tr><td>Import a monster body</td><td>Import + script &gt; Monster</td></tr>
+<tr><td>Make a mount or rideable object</td><td>Import + script &gt; Mount</td></tr>
+<tr><td>Import one wearable or weapon</td><td>Import + script &gt; Clothing / Weapon</td></tr>
+<tr><td>Import a complete armor set</td><td>Import + script &gt; Armor set</td></tr>
+<tr><td>Play or export body animation</td><td>Animations</td></tr>
+<tr><td>Edit frames or reimport a body folder</td><td>Studio tools &gt; Animation frames / body reimport</td></tr>
+<tr><td>Combine rider, mount and equipment</td><td>Studio tools &gt; Equipment / mount preview</td></tr>
+<tr><td>Replace/import interface images</td><td>Gumps</td></tr>
+<tr><td>Design a Sphere dialog</td><td>Studio tools &gt; Sphere gump designer</td></tr>
+<tr><td>Edit/test colour tables</td><td>Hues</td></tr>
+<tr><td>Import, trim or export sound</td><td>Studio tools &gt; Sound workshop</td></tr>
+<tr><td>Link a saved sound or WAV to a thing</td><td>Workspace &gt; Attach sound to this asset...</td></tr>
+<tr><td>Play a sound when an effect function runs</td><td>Open its script, then Studio tools &gt; Attach sound...</td></tr>
+<tr><td>Preview assets in a room</td><td>Test Scene</td></tr>
+<tr><td>Build a fixed house and placement deed</td><td>Studio tools &gt; House Builder + deed</td></tr>
+<tr><td>Generate a separate wilderness map</td><td>Studio tools &gt; World Generator...</td></tr>
+<tr><td>Remove a definition and related content</td><td>Definition selection &gt; Remove related content</td></tr>
+<tr><td>Delete a complete script</td><td>Script directory &gt; right-click &gt; Delete script</td></tr>
+<tr><td>Export many saved images or VDs</td><td>Bulk export</td></tr>
+<tr><td>Resume an interrupted export</td><td>Studio tools &gt; Resume bulk export</td></tr>
+<tr><td>Convert UOP archives to MUL/index files</td><td>MUL / UOP... &gt; UOP to MUL</td></tr>
+<tr><td>Pack MUL/index files into UOP archives</td><td>Studio tools &gt; MUL to UOP...</td></tr>
+<tr><td>Diagnose file/path mismatches</td><td>Item Assets &gt; Check game files</td></tr>
+<tr><td>Compare records between clients</td><td>Studio tools &gt; Compare project files</td></tr>
+<tr><td>Create a separate development copy</td><td>Studio tools &gt; Create test copy</td></tr>
+<tr><td>Share reviewed imports/scripts</td><td>Studio tools &gt; Content packs</td></tr>
+<tr><td>Restore drafts or a file backup</td><td>Workspace &gt; Save / recovery centre</td></tr>
+</tbody></table></div>
+<h3>Keyboard and mouse actions</h3>
+<p>Shortcuts act on the focused control. Click the script editor or scene canvas first; typing in an entry field should not be confused with moving a character.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Context</th><th scope="col">Action</th><th scope="col">Result</th></tr></thead><tbody>
+<tr><td>Main window</td><td>Ctrl+P</td><td>Open Workspace</td></tr>
+<tr><td>Sphere Script</td><td>Ctrl+S</td><td>Validate/save the current script context</td></tr>
+<tr><td>Script Find</td><td>Ctrl+F</td><td>Focus Find</td></tr>
+<tr><td>Script Find</td><td>F3 / Shift+F3</td><td>Next / previous match</td></tr>
+<tr><td>Find entry</td><td>Enter / Shift+Enter</td><td>Next / previous match</td></tr>
+<tr><td>Find entry</td><td>Escape</td><td>Return focus to script text</td></tr>
+<tr><td>Script workspace</td><td>Ctrl+Space</td><td>Completion suggestions</td></tr>
+<tr><td>Script workspace</td><td>F12</td><td>Go to definition</td></tr>
+<tr><td>Multiple-selection lists</td><td>Ctrl/Shift-click</td><td>Select multiple rows where supported</td></tr>
+<tr><td>Flag picker</td><td>Double-click / Space</td><td>Toggle selected flag</td></tr>
+<tr><td>Item Assets ID</td><td>Enter</td><td>Inspect the entered art ID</td></tr>
+<tr><td>Test Scene canvas</td><td>Arrow keys</td><td>Local movement</td></tr>
+<tr><td>Test Scene canvas</td><td>Space</td><td>Play/pause</td></tr>
+<tr><td>Test Scene canvas</td><td>Escape</td><td>Return to movement tool</td></tr>
+<tr><td>House Builder canvas</td><td>Middle-drag</td><td>Pan view</td></tr>
+<tr><td>House Builder canvas</td><td>Right-click</td><td>Erase hit piece</td></tr>
+<tr><td>House Builder canvas</td><td>Delete</td><td>Delete selected pieces</td></tr>
+<tr><td>House Builder canvas</td><td>Ctrl+Z / Ctrl+Y</td><td>Undo / redo design changes</td></tr>
+<tr><td>House walk test</td><td>Arrows / WASD</td><td>Continuous local movement</td></tr>
+<tr><td>House walk test</td><td>E / Space</td><td>Open/close a nearby door</td></tr>
+<tr><td>House walk test</td><td>Escape</td><td>Stop walking</td></tr>
+</tbody></table></div>
+<h3>Generated script destinations</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Import kind</th><th scope="col">Default script folder</th></tr></thead><tbody>
+<tr><td>Monster</td><td>scripts/monsters</td></tr>
+<tr><td>Mount / rideable object</td><td>scripts/mounts</td></tr>
+<tr><td>Item</td><td>scripts/items</td></tr>
+<tr><td>Clothing</td><td>scripts/clothing</td></tr>
+<tr><td>Weapon</td><td>scripts/weapons</td></tr>
+<tr><td>Effect</td><td>scripts/effects</td></tr>
+<tr><td>Armor set piece</td><td>scripts/armor</td></tr>
+<tr><td>Compiled house and deed</td><td>scripts/housing/custom</td></tr>
+</tbody></table></div>
+<p>These defaults organise new files; they do not automatically move older scripts. Inspect the destination during review and keep filenames unique. The gump designer asks you to choose a new .scp inside scripts.</p>
+</section>
+<section class="chapter" id="31-formats-glossary-and-version-boundaries"><h2>31. Formats, glossary and version boundaries</h2>
+<h3>Files you will encounter</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">File/family</th><th scope="col">Role in Studio</th></tr></thead><tbody>
+<tr><td>.scp</td><td>Sphere definitions, functions, dialogs and resource configuration</td></tr>
+<tr><td>art.mul + artidx.mul</td><td>Indexed item artwork</td></tr>
+<tr><td>ArtLegacyMUL.uop</td><td>UOP item artwork</td></tr>
+<tr><td>tiledata.mul</td><td>Item/land metadata; Studio's editor focuses on supported item records</td></tr>
+<tr><td>anim.mul/anim.idx and numbered banks</td><td>Supported creature/equipment animation sequences</td></tr>
+<tr><td>AnimationFrame UOP family</td><td>Modern body-animation viewing/export sources</td></tr>
+<tr><td>animdata.mul</td><td>Animated-static frame offsets/timing data</td></tr>
+<tr><td>gumpart.mul + gumpidx.mul / gump UOP</td><td>Interface and paperdoll artwork</td></tr>
+<tr><td>hues.mul</td><td>Colour-table records</td></tr>
+<tr><td>sound.mul + soundidx.mul / sound UOP</td><td>Native sound effects</td></tr>
+<tr><td>multi.mul + multi.idx / MultiCollection.uop</td><td>Compiled fixed structures/houses</td></tr>
+<tr><td>.vd</td><td>Compatible UOFiddler animation-body transfer</td></tr>
+<tr><td>PNG/BMP/GIF</td><td>Image and animation-frame source/export formats, according to the tool</td></tr>
+<tr><td>PCM WAV</td><td>Sound import/export interchange</td></tr>
+<tr><td>frames.json / body.json</td><td>Animation export registration and structure metadata</td></tr>
+<tr><td>.uoworld.json</td><td>World Generator seed, settings and painted biome regions</td></tr>
+<tr><td>mapN.mul / staticsN.mul / staidxN.mul</td><td>Matching native terrain and scenery set from World Generator</td></tr>
+<tr><td>.house.json</td><td>Editable House Builder document, including an optional destination link</td></tr>
+<tr><td>Gump design JSON</td><td>Editable visual dialog layout</td></tr>
+<tr><td>Blueprint CSV</td><td>Supported unhued CentrED tile interchange</td></tr>
+<tr><td>manifest.json</td><td>Set/collection description for supported armor-folder import</td></tr>
+<tr><td>.uoasset</td><td>Portable bundle of deliberately queued assets and linked content</td></tr>
+<tr><td>project.json</td><td>Local profiles/settings; not public content</td></tr>
+</tbody></table></div>
+<p>Keep data and index files as matching pairs. Preserve metadata next to exported frame folders. Recognising a filename does not mean every historical/client-specific variant can be rewritten by every tool.</p>
+<h3>Glossary</h3>
+<p><strong>Allocation:</strong> the existing range of records a format exposes. A compatible free body block can be larger than one visible slot.</p>
+<p><strong>Art ID:</strong> the number selecting item artwork and its metadata, distinct from a character body or gump ID.</p>
+<p><strong>CHARDEF / ITEMDEF:</strong> Sphere character and item definition sections. A named definition can inherit from an existing numeric base using supported links.</p>
+<p><strong>DEFNAME:</strong> a stable script symbol used to refer to content by name.</p>
+<p><strong>Gump:</strong> UO interface artwork, or informally a complete dialog using that artwork. Studio separates the artwork browser from the dialog designer.</p>
+<p><strong>Hue / Partial hue:</strong> a palette transformation; partial hue limits colouring to applicable grey pixels. A preview toggle is not necessarily a saved item flag.</p>
+<p><strong>Layer:</strong> an equipment slot on a character, or an independently composited image in the layered preview. Context determines which meaning applies.</p>
+<p><strong>Mapping:</strong> a file/relationship directing a logical ID to its actual asset or bank. Changing a raw record does not necessarily change the mapping that selects it.</p>
+<p><strong>Multi:</strong> a native collection of item components used for a fixed structure such as a house. Functional door/sign objects can be supplied separately by server definitions.</p>
+<p><strong>Origin:</strong> the registration point used to align frames with their ground/body anchor. Stable origins reduce sliding and jumping between frames.</p>
+<p><strong>Paperdoll:</strong> the equipment view of a character in the UO interface. Its clothing images are separate from moving world-character art.</p>
+<p><strong>Queue / reviewed plan:</strong> a snapshot of prepared changes waiting for a game-file save, with dependency and conflict checks.</p>
+<p><strong>Recovery journal:</strong> the information and originals used to recover a linked save. Keep its complete folder intact.</p>
+<p><strong>Session checkpoint:</strong> stored editing state; it does not install the reviewed queue into game files.</p>
+<p><strong>Static / animated static:</strong> item artwork placed in the world; animated statics use frame metadata rather than a creature-body action layout.</p>
+<p><strong>TileData:</strong> client metadata describing properties such as art name, height, flags and equipment links. Sphere can supply additional or overriding behaviour.</p>
+<h3>What this release does not promise</h3>
+<p>The World Generator creates separate wilderness maps and does not edit an existing map in place or create server regions, NPC spawns, towns or bridges.</p>
+<p>Version 0.26.0 does not contain a complete Sphere interpreter, full UO game-client emulator, networked CentrED service or general world-map editor. Its visual scenes do not establish server gameplay correctness or execute attached sound events. File-access checks reduce save conflicts but cannot detect every program that has loaded data or prevent all later file opens. The house tool targets fixed compiled houses, not every custom-housing protocol or automatic migration of occupied houses.</p>
+<p>Static reference and free-space checks do not resolve every dynamic expression, saved world object or client override. Modern UOP animation does not automatically convert to complete MUL bodies. Ordinary imports do not grow every allocation; the equipment expansion option is a specific reviewed capability. Content packs do not collect every dependency transitively or remap compiled houses.</p>
+</section>
+<section class="chapter" id="32-world-generator-create-a-separate-wilderness"><h2>32. World Generator: create a separate wilderness</h2>
+<p>Open <strong>Studio tools &gt; World Generator...</strong>, or choose World Generator from the Workspace Workshops menu. The generator builds a new landscape from the selected client's existing terrain and scenery artwork. You can create a whole supported facet, preview it inside Studio and save its files separately. The linked client and server files are not replaced.</p>
+<h3>First generated world</h3>
+<ol><li>Choose Small test world to explore the controls quickly, or select the intended full map size.</li><li>Choose the Map number that the exported files will use. Check Width and Height before generating.</li><li>Enter a World seed. The same seed and settings reproduce the same planned landscape. New random seed gives another starting point.</li><li>Choose Land shape, Sea %, Mountains, Climate and Forest %.</li><li>Set river, lake, volcano and path-link targets, then tree density, tree size and foliage density. Choose the reserved Black area, dungeon/cave counts and Interior size.</li><li>Choose Generate world. The progress window can cancel generation.</li><li>Click a point in the overview to inspect its actual UO terrain and scenery. Use X, Y and Go to inspect a known position. Find volcano jumps to the first volcano that fitted the world.</li><li>Adjust the controls and generate again, or choose Export new map folder when the preview is ready.</li></ol>
+<p>The UO terrain preview shows a local 21 by 21 tile area with the linked client's artwork, terrain heights and planned scenery. It is a visual inspection tool; it does not run a game server or prove that every tile will behave identically with every shard's movement rules. The world overview shows the complete generated regions. A white marker locates the area being inspected.</p>
+<h3>Explore the world in a separate window</h3>
+<p>After generating, choose Explore world in a new window above the preview tabs. This opens a separate isometric view of the generated landscape. Resize it or choose Maximise / restore to use more screen space. The window starts at the location selected in the generator. Closing it leaves the generator and its world available.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Control</th><th scope="col">What it does</th></tr></thead><tbody>
+<tr><td>Drag the map with any mouse button</td><td>Pan across the landscape</td></tr>
+<tr><td>Mouse wheel or Zoom</td><td>Choose 25%, 50%, 75%, 100%, 150% or 200%</td></tr>
+<tr><td>Arrow keys or WASD</td><td>Travel in the corresponding screen direction while the map has focus</td></tr>
+<tr><td>Shift with movement keys</td><td>Move three times as far per step</td></tr>
+<tr><td>X, Y and Go</td><td>Travel to a tile coordinate inside this world</td></tr>
+<tr><td>Click World map</td><td>Jump to that location in the whole-world minimap</td></tr>
+<tr><td>Jump to a feature</td><td>Visit a volcano, lake, clearing, entrance, interior or reserved black area</td></tr>
+<tr><td>Follow entrance / return</td><td>After choosing an entrance/interior, inspect the other end of its connection</td></tr>
+<tr><td>Scenery</td><td>Show or hide trees, foliage, shoreline pieces and interior walls</td></tr>
+<tr><td>Tile grid</td><td>Show terrain tile edges</td></tr>
+<tr><td>Home or Starting location</td><td>Return to the initial location at 100% zoom</td></tr>
+</tbody></table></div>
+<p>Click the main map before using movement keys. While typing coordinates, arrow keys remain available for editing the field. The minimap's white outline shows the approximate visible area, and the marker shows the view centre. The status line gives the centre coordinates, terrain height and zoom. At a map edge, empty space beyond the generated world is expected.</p>
+<p>Only nearby tiles are drawn. Movement requests replace older unfinished views, so large maps remain navigable. Trees, shoreline pieces and ground selection use the same planned placement as export. The view remains an approximation of client rendering and is useful for inspecting slopes, shores, scenery spacing and routes.</p>
+<p>The explorer displays the last generated world. Changing generator controls alone does not change it; Generate world refreshes an open explorer when generation succeeds. Opening different saved settings closes the old explorer. Pan, zoom, grid and scenery controls only affect the display. They do not edit terrain, export files, move a player character or connect to a server.</p>
+<h3>Size, map number and seed</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Control</th><th scope="col">Meaning</th></tr></thead><tbody>
+<tr><td>Small test world</td><td>512 by 512 tiles for quick experiments</td></tr>
+<tr><td>Britannia</td><td>7168 by 4096 tiles</td></tr>
+<tr><td>Britannia (legacy)</td><td>6144 by 4096 tiles</td></tr>
+<tr><td>Ilshenar</td><td>2304 by 1600 tiles</td></tr>
+<tr><td>Malas</td><td>2560 by 2048 tiles</td></tr>
+<tr><td>Tokuno</td><td>1448 by 1448 tiles</td></tr>
+<tr><td>Ter Mur</td><td>1280 by 4096 tiles</td></tr>
+<tr><td>Custom width and height</td><td>Multiples of 8, from 64 to 8192 per side, with at most 32 million tiles</td></tr>
+<tr><td>Map number</td><td>0 through 5; controls the names of the exported map, statics and index files</td></tr>
+<tr><td>World seed</td><td>A name or number of 1 to 80 characters used to reproduce the result</td></tr>
+</tbody></table></div>
+<p>Map dimensions and map number are separate choices. Selecting a size does not configure your server or change its existing maps. A small test export needs a separate test setup with matching dimensions; do not substitute it for a larger facet without configuring that setup.</p>
+<p>The generator version, settings, painted regions and client artwork all matter for exact reproduction. A later generator version or a client with different native art can produce a different result. Keep the saved settings and exported native files together when archiving a finished world.</p>
+<h3>Terrain restrictions and logical regions</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Mountains setting</th><th scope="col">Maximum height</th><th scope="col">Maximum adjacent height change</th></tr></thead><tbody>
+<tr><td>Gentle</td><td>28</td><td>2</td></tr>
+<tr><td>Rolling</td><td>52</td><td>3</td></tr>
+<tr><td>Rugged</td><td>80</td><td>4</td></tr>
+</tbody></table></div>
+<p>These are hard limits checked on the full native terrain before export. Heights are shared across adjoining tile corners and interpolated into slopes. Mountains and volcanoes receive graded approaches instead of independent random height spikes. A result exceeding its limit cannot be exported.</p>
+<p>Climate connects temperature with latitude and elevation. Dry regions favour warmer land, and snowy regions favour cold or high areas. Coastlines receive sand shelves. Snow receives earth margins, and craters receive rock margins. Ground brushes select matching native transition tiles between supported terrain pairs.</p>
+<p>Sea % is a target from 25 to 80, and Forest % is a target from 0 to 85. Actual coverage changes when islands, coasts, mountain cores, intermediate ground and protected features are applied. These controls are not promises that exactly that percentage of the final tiles will have one appearance.</p>
+<p>Rivers follow a drainage route toward the sea. The generator cuts level water channels and grades their banks instead of laying water uphill across the original slope. Lakes connect into the drainage network. Water surfaces use height zero. Volcanoes need enough surrounding land for their rocky slopes; a small, cold or fragmented island world may have fewer volcanoes than requested.</p>
+<h3>Rivers, lakes, volcanoes and paths</h3>
+<p>Rivers accept a target of 0 to 24, lakes 0 to 12, volcanoes 0 to 8, and path links 0 to 16. The result summary gives the actual number successfully placed. A requested feature is skipped when there is no suitable location or route. Try another seed, a larger landmass or less sea when a feature does not fit.</p>
+<p>Paths connect suitable clearings across reachable land. They avoid water, lava and mountain cores and favour gentler terrain. This release does not construct bridges, towns or buildings. A path target of zero also disables the clearing network. River and path placement is part of generation, not a script installed in Sphere.</p>
+<h3>Reserved black area, dungeons and caves</h3>
+<p>Under Dungeons and caves, Black area reserves the right edge of the map for interiors and unused space. Small uses approximately one eighth of the width, Medium one quarter, and Large three eighths. At least 64 tiles remain for the outdoor region. New worlds start with Medium, two dungeons and two caves; older saved projects retain their original outdoor-only settings. Sea % applies to the outdoor region. A reserved world needs a width of at least 72 tiles.</p>
+<p>Dungeons and Natural caves accept targets from 0 to 12 each. Interior size selects Small (48 tiles), Medium (80) or Large (128) planning areas. Stone dungeons have connected chambers and corridors. Natural caves have rounded chambers and wider passages. Native walls surround the floor, and black space separates the layouts. Interior floors are level at height zero.</p>
+<p>Each placed interior receives a dry entrance on the outdoor map, preferably near rocky ground. A small entrance chamber has an open approach, and its central tile links to the interior. Its inside return trigger is two tiles north of the arrival point. Landing points are separated from triggers so arriving does not immediately send the player back. Entrance platforms grade into the surrounding terrain and keep water level.</p>
+<p>Requested counts are targets. When the black area is too narrow, the selected layouts do not fit, or there is insufficient dry land, the status message reports the actual number. Increase the map or reserved area, choose smaller interiors, lower the counts, reduce sea coverage or try another seed. Unused space stays black. Biome painting cannot replace it. Set both counts to zero to reserve an empty area for later map editing; also set Black area to None for a completely outdoor map.</p>
+<p>In the separate explorer, choose a named entrance or interior in Jump to a feature. Follow entrance / return switches to its other end. Interior jumps choose 50% zoom. Use the wheel to see the whole layout, and switch Scenery off to inspect floor routes without walls. This is an in-app camera preview of the connection, not a running server.</p>
+<h3>Trees, foliage and saved biome regions</h3>
+<p>Tree density and Foliage each offer None, Sparse, Medium and Dense. Tree size offers Small, Medium, Large and Mixed. Size and density are independent: Medium trees with Sparse density gives occasional medium trees. Complete tree groups keep the correct canopy with their trunk; separate fragments are not scattered as if they were whole trees.</p>
+<p>Vegetation varies with the ground region. Trees and plants are kept away from paths, shorelines, water, lava and mountain cores. Increasing foliage changes scenery density without raising terrain or changing the cliff limits.</p>
+<p>Choose a biome under Paint biome regions, set Brush radius in tiles, then click the overview. The radius can be 4 to 2048 tiles. Undo last region removes the most recent stroke. Inspect switches back to selecting preview locations. Painted biome regions stay when the seed changes, allowing you to keep a desired desert or forest in the same broad area while changing the generated landscape. Resizing an already generated world scales its saved brush positions with the map.</p>
+<p>A painted region changes the surface biome, not the elevation. Water, shoreline shelves, paths and crater cores remain protected. Regions do not lock every underlying terrain tile, river or mountain in place. The generator applies its normal intermediate ground around painted regions, so an abrupt snow-to-desert brush stroke still receives a buffer.</p>
+<p>Save world settings writes a .uoworld.json containing the controls and painted regions. Open world settings reloads it and generates the preview. Save settings is separate from exporting native files. If you change a control after generating, Export asks you to generate the updated preview first, ensuring the exported result matches what you have reviewed.</p>
+<h3>Export contents and checks</h3>
+<p>Choose Export new map folder and select an existing folder outside your linked client and server. Studio checks required source files for open handles, destination write access, free disk space and terrain limits. It writes into a temporary folder, verifies native block sizes and scenery indexes, then publishes one uniquely named result folder. Cancellation removes that operation's temporary output. Existing files in the selected output directory are not overwritten.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Exported file</th><th scope="col">Purpose</th></tr></thead><tbody>
+<tr><td>mapN.mul</td><td>Native terrain tile IDs and signed heights</td></tr>
+<tr><td>staticsN.mul</td><td>Trees, foliage, shore pieces and interior walls</td></tr>
+<tr><td>staidxN.mul</td><td>Native index locating each scenery block</td></tr>
+<tr><td>overview.png</td><td>Complete world overview</td></tr>
+<tr><td>heightmap.bmp</td><td>Grayscale height plus 128, compatible with CentrED height import</td></tr>
+<tr><td>world.uoworld.json</td><td>Reproducible seed, controls and saved biome strokes</td></tr>
+<tr><td>world-report.json</td><td>Dimensions, height checks, feature counts and scenery totals</td></tr>
+<tr><td>dungeon-links.json</td><td>Entrance, exit and landing coordinates when interiors exist</td></tr>
+<tr><td>server-scripts/maps/generated</td><td>Companion Sphere entrance-link script when interiors exist</td></tr>
+<tr><td>READ-ME.txt</td><td>File-set and separate testing instructions</td></tr>
+<tr><td>SHA256SUMS.txt</td><td>Checksums for the completed output files</td></tr>
+</tbody></table></div>
+<p>Keep the terrain, statics and index together. A client requiring mapLegacyMUL.uop can use Studio tools &gt; MUL to UOP on the generated mapN.mul. Statics and their index remain separate. The converter uses directly readable terrain chunks and the native internal entry names for alternate map files.</p>
+<h3>Activate entrance links in a separate test server</h3>
+<p>When interiors exist, keep dungeon-links.json and the companion server-scripts/maps/generated script with the exported map. The script uses Sphere's [Teleporters] section for entrance and return coordinates. Review its map number and positions, copy it to scripts/maps/generated in a separate test server, and add its path to that server's spheretables.scp include list. Load the matching map, statics and index with the same facet dimensions. Map files alone do not activate these links.</p>
+<p>Walk through every entrance and return point in that separate setup. Check wall corners, collision, the clear approach and landing positions using your own client/server rules. Studio does not install the script or change live files. No creatures, loot, lighting regions or server behaviour are supplied by the dungeon layout.</p>
+<h3>Further editing and deployment</h3>
+<p>For further editing in CentrED, create a separate workspace containing the generated native file set and your own matching client artwork. Use the exact tile dimensions from the report. CentrED's block dimensions are the tile dimensions divided by eight. The exported height image uses the height-plus-128 convention expected by its grayscale height importer.</p>
+<p>Inspect coastline corners, routes, mountain approaches and biome junctions before deploying a world. Stock single-tile brushes cannot represent every three-material junction; the report counts these locations for final editor polish. The preview uses native artwork but is not a complete client renderer or movement simulator.</p>
+<p>World Generator creates outdoor terrain, optional interiors and companion entrance-link scripts. It does not create NPC spawns, towns, server regions, housing deeds, player start locations or a new server configuration. Existing map patches, regions and saved object positions belong to the old world and need separate review. Test matching client and server copies before replacing any live map; exporting from Studio performs no deployment.</p>
+</section><footer>UO Asset Studio 0.26.0 | Versioned user documentation | This guide contains no game files or personal profiles.</footer></main><script src="guide-0.js" defer></script></body></html>
