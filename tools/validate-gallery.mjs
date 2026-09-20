@@ -22,6 +22,7 @@ export async function validateGallery(root = fileURLToPath(new URL('../public/ga
     return target;
   }
   const packages = new Map();
+  let paperdolls = 0;
   for (const item of items) {
     await checkFile(item.thumbnail);
     for (const preview of item.previews) await checkFile(preview.file);
@@ -33,6 +34,19 @@ export async function validateGallery(root = fileURLToPath(new URL('../public/ga
     if (packages.get(d.file) !== d.sha256 || checked.get(d.file) !== d.sizeBytes) throw Error('Download checksum/size mismatch: ' + item.id);
     if (item.parentSet && !ids.get(item.parentSet)?.pieces?.some(p => p.id === item.id)) throw Error('Unlinked armour piece');
     for (const p of item.pieces || []) if (ids.get(p.id)?.parentSet !== item.id) throw Error('Incomplete armour set');
+    if (item.category === 'Equipment') {
+      const paper = item.paperdoll;
+      if (!paper || paper.width !== 260 || paper.height !== 237 || !Array.isArray(paper.parts)) throw Error('Missing equipped paperdoll: ' + item.id);
+      for (const sex of ['male', 'female']) await checkFile(paper.bodies?.[sex]);
+      const expected = item.pieces || [{ id: item.id, partIndex: 0 }];
+      if (paper.parts.length !== expected.length) throw Error('Incomplete paperdoll set: ' + item.id);
+      for (let i = 0; i < expected.length; i++) {
+        const part = paper.parts[i];
+        if (part.id !== expected[i].id || part.partIndex !== expected[i].partIndex) throw Error('Paperdoll piece does not match animation: ' + item.id);
+        for (const sex of ['male', 'female']) await checkFile(part[sex]);
+      }
+      paperdolls++;
+    }
   }
-  return { items: items.length, listings: items.filter(x => !x.parentSet).length, sets: items.filter(x => x.pieces).length, packages: packages.size };
+  return { items: items.length, listings: items.filter(x => !x.parentSet).length, sets: items.filter(x => x.pieces).length, packages: packages.size, paperdolls };
 }

@@ -9,6 +9,7 @@ test('Every published item and armour piece has an intact native download and re
   assert.equal(result.listings, 341);
   assert.equal(result.sets, 32);
   assert.equal(result.packages, 431);
+  assert.equal(result.paperdolls, 326);
 });
 
 test('Homepage resolves gallery media and downloads from its subdirectory', async () => {

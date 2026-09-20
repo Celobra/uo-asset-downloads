@@ -28,7 +28,7 @@ Use a development copy, check the chosen IDs and file access, close asset users 
 
 ## Website
 
-Open public/index.html locally, or serve public as a static site. The site has search, category filters, complete armour sets with selectable pieces, and action/facing previews. No accounts, analytics or third-party browser libraries are needed.
+Open public/index.html locally, or serve public as a static site. The site has search, category filters, complete armour sets with selectable pieces, and action/facing previews. Every equippable item opens with an equipped male/female paperdoll; switch to Animations for walking, running, riding and other actions. Armour checkboxes remove the same piece from both views, with Clear and Full set controls. Paperdoll images are also available in the preview downloads. No accounts, analytics or third-party browser libraries are needed.
 
 Build: node tools/build.mjs
 Tests: node --test tests/*.test.mjs
