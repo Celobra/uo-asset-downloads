@@ -2,7 +2,7 @@
 
 Browse the gallery and use the small Download link on an item to get its files. Open an armour set to inspect or download the complete set or an individual piece.
 
-The library contains 333 listings with 419 ZIP packages. Shared collections stay together when their import tools require the full set.
+The library contains 341 listings with 431 ZIP packages. Shared collections stay together when their import tools require the full set.
 
 - Equipment: native 35-action VDs, inventory icons and male/female paperdoll images.
 - Creatures and mounts: native VDs and available setup files.
@@ -46,3 +46,10 @@ The isolated tests passed 226 movement/cargo checks, 20 connected-player access 
 Fixed decimal terrain-coordinate lookup, including placement on flat Green Acres grass. The placer can stand in the footprint and is moved to the rear landing on success; other players, objects and uneven ground still block placement with an explanation. Continuous travel also retains the first-step result reliably. Both deeds were tested on the actual Green Acres map with a connected non-GM player: placement, boarding, driving, passenger position and parking pass. The movement/collision matrix passes 232 checks.
 
 For an existing caravan installation, back up and replace only `scripts/items/travelling_caravan.scp` from the new ZIP, then restart Sphere or resynchronise its scripts. Existing deeds remain valid; no client-art update is needed. The full installer remains for first installation.
+
+
+## New equipment and timber caravan
+
+The Jedi & Sith collection adds five lightsabers and two complete robe-and-hood outfits. Open an outfit to show or download its robe and hood separately. All nine equipment pieces include 35-action native VDs, male/female paperdolls and inventory icons, with walking, running and riding GIFs plus an eight-view interactive player. Destination IDs are unassigned and in-game fitting remains required; blades are permanently lit artwork without sound, dynamic light or Force abilities.
+
+[Timber Travelling Caravan](https://uo-asset-library.farthrex.workers.dev/gallery/#timber-travelling-caravan) is a separate vehicle with a working native door, walk-through stairs and seated-owner driving, in horse and horseless versions. It includes the tested Sphere installer, scripts, runtime frames and setup guide. It preserves the earlier caravan. Exact client seated appearance, clothing overlap and roof cutaway still need visual checking.
