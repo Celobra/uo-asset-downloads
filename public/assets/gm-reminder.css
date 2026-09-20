@@ -1,0 +1,6 @@
+.gm-reminder{box-sizing:border-box;display:flex;align-items:flex-start;justify-content:center;gap:4px;max-width:1450px;margin:0 auto;padding:10px 20px 0;color:#f1e5cb;background:transparent;border:0;border-radius:0}
+.gm-reminder img{display:block;flex:0 0 auto;width:84px;height:100px;object-fit:contain}
+.gm-reminder .gm-speech{position:relative;max-width:280px;margin:19px 0 0;padding:13px 18px;background:#202933;border:1px solid #a68b60;border-radius:14px;font:600 15px/1.4 system-ui,sans-serif;box-shadow:0 4px 16px #0003}
+.gm-reminder .gm-speech::before{content:"";position:absolute;left:-7px;top:21px;width:12px;height:12px;background:#202933;border-left:1px solid #a68b60;border-bottom:1px solid #a68b60;transform:rotate(45deg)}
+.gm-reminder+header{padding-top:24px}
+@media(max-width:400px){.gm-reminder{padding-right:14px;padding-left:14px;gap:0}.gm-reminder img{width:70px;height:92px}.gm-reminder .gm-speech{margin-top:14px;padding:12px 13px;font-size:14px;max-width:calc(100% - 70px)}}
