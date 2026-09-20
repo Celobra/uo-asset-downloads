@@ -14,17 +14,3 @@
 /gallery/downloads/*
   Content-Type: application/zip
   Content-Disposition: attachment
-
-/gallery/catalog.js
-  Cache-Control: public, max-age=0, must-revalidate
-
-/gallery/catalog.js
-  Cache-Control: public, max-age=0, must-revalidate
-
-/gallery/downloads/*
-  Content-Type: application/zip
-  Content-Disposition: attachment
-
-/gallery/downloads/*
-  Content-Type: application/zip
-  Content-Disposition: attachment
