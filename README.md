@@ -4,11 +4,11 @@
 
 [Explore UO Asset Studio](https://uo-asset-library.farthrex.workers.dev/studio/) — a connected Windows workshop for UO artwork, animations, paperdolls, Sphere scripts, sound, houses and generated worlds.
 
-**[Download the Windows installer](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.27.0/UOAssetStudio-Setup-0.27.0.exe)** · [Complete PDF guide](https://uo-asset-library.farthrex.workers.dev/studio/guide/UOAssetStudio-User-Guide-0.27.0.pdf) · [Separate application source](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.27.0/UOAssetStudio-Source-0.27.0.zip)
+**[Download the Windows installer](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.28.0/UOAssetStudio-Setup-0.28.0.exe)** · [Complete PDF guide](https://uo-asset-library.farthrex.workers.dev/studio/guide/UOAssetStudio-User-Guide-0.28.0.pdf) · [Separate application source](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.28.0/UOAssetStudio-Source-0.28.0.zip)
 
 The dedicated section contains an overview, a detailed workflow tour with actual app screenshots and animated walkthroughs, and a downloads/guide page. The release bundles a ready-to-run installer; source and offline documentation are separate downloads. This repository contains the website, while the named Studio source ZIP contains the application code.
 
-Version 0.27.0 adds creature spells, healing, taming, custom attack effects and temporary summons, with eight editable presets and generated Sphere scripts. The guide now contains 62 pages.
+Version 0.28.0 adds Sphere, RunUO and ServUO script targets, whole-set target selection and a workshop for generating scripts for existing artwork. Both C# targets have separate templates; the definition editor remains Sphere-specific. The complete guide now contains 65 pages.
 
 ## Asset library
 
