@@ -2,3 +2,6 @@
 .underground-gallery{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding-bottom:70px}@media(max-width:760px){.underground-gallery{grid-template-columns:1fr;gap:25px;padding-bottom:45px}}
 .hero-media:before{inset:-70px 0}
 .extra-screen{padding-bottom:70px}.extra-screen>.screen{max-width:1120px;margin:auto}
+
+/* Keep the complete Studio navigation usable on narrow screens. */
+@media(max-width:760px){.site-head nav{flex-wrap:wrap;row-gap:8px}}

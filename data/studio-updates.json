@@ -1,0 +1,479 @@
+{
+  "releases": [
+    {
+      "version": "0.28.0",
+      "date": "2026-09-25",
+      "title": "Sphere, RunUO and ServUO scripts",
+      "added": [
+        "Choose Sphere, official RunUO 2.x or ServUO pub57 when importing monsters, mounts, items, effects, clothing and weapons.",
+        "Choose one script target for a complete armor set, including whole-folder imports.",
+        "Generate scripts for artwork already installed through Workspace → Workshops → Generate server script.",
+        "C# templates include spellcasting, healing, taming, triggered effects, temporary summons, equipment bonuses and weapon hit effects."
+      ],
+      "improved": [
+        "Review the generated source, destination and GM creation command before saving. Check existing filenames and C# class names, including combined or restored queues.",
+        "Updated the complete guide to 65 pages with target-specific export instructions."
+      ],
+      "note": "RunUO and ServUO both use C#, with separate templates for their APIs. Existing definition editing, sound-link editing, removal, house/deed and world entrance scripts remain Sphere workflows. Generated scripts still need gameplay testing on the chosen server.",
+      "release": true
+    },
+    {
+      "version": "0.27.0",
+      "date": "2026-09-20",
+      "title": "Creature behaviour and abilities",
+      "added": [
+        "Eight editable creature presets in Monster and Mount imports.",
+        "Configure damage, skills, resistances, normal spells, healing, taming, follower slots and food.",
+        "Add abilities with a trigger, percentage chance, cooldown, health threshold and range: spell effects, self-healing, custom attack visuals, sound, temporary summons or a compatible Sphere function.",
+        "Configure summoned creatures, quantity, living limit and lifetime, with cleanup when the summoner dies or is deleted."
+      ],
+      "improved": [
+        "Full generated-script review and an expanded creature-behaviour guide. Rideable objects retain their separate no-taming/no-feeding mode."
+      ],
+      "release": true
+    },
+    {
+      "version": "0.26.0",
+      "date": "2026-09-20",
+      "title": "Dungeons, caves and equipment bonuses",
+      "added": [
+        "Reserve a black off-world area for connected stone dungeons and natural caves.",
+        "Generate graded cave openings in the main map, paired interior locations and optional two-way Sphere entrance/return scripts.",
+        "Follow entrances and return locations in World Explorer.",
+        "Add weapon and armor stat bonuses or penalties, Luck, five resistances, combat modifiers, skill bonuses and percentage-based on-hit spells.",
+        "Copy a piece’s equipment effects to the rest of an armor set."
+      ],
+      "improved": [
+        "Real terrain elevation, slightly uneven ground and bounded slopes remain consistent between the explorer and exported map. Sea water stays at height zero.",
+        "Guide expanded to cover underground areas, sound replacement and equipment effects."
+      ],
+      "note": "Generated maps are separate exports. Regions, spawns, loot and server activation remain separate work; Test Scene does not execute combat scripts.",
+      "release": true
+    },
+    {
+      "version": "0.25.1",
+      "title": "World Explorer and current sound links",
+      "added": [
+        "Open the generated world in a separate, resizable explorer window.",
+        "Pan by dragging or using the keyboard, zoom with the mouse wheel, navigate with the minimap and jump to volcanoes, lakes and clearings.",
+        "See and listen to sounds already associated with an asset, including resolved creature inheritance."
+      ],
+      "improved": [
+        "Replace a selected sound link without adding a second command. A newly imported sound can keep the old shared audio available to other assets.",
+        "Scenery and grid switches help inspect terrain; the explorer draws nearby tiles as you travel."
+      ]
+    },
+    {
+      "version": "0.25.0",
+      "title": "World Generator",
+      "added": [
+        "Generate seeded continents, islands and archipelagos with deserts, icy regions, rivers, lakes, mountains, paths, trees and foliage.",
+        "Add volcanic cones and craters, adjust tree size/density and foliage, and paint biome regions.",
+        "Save generation settings, inspect native terrain previews and export a separate map set with overview, heightmap and checksums."
+      ],
+      "improved": [
+        "Terrain limits constrain elevation and neighbouring height differences; coastlines and biome boundaries blend through native transition artwork.",
+        "Water remains level, and trees avoid paths and restricted ground."
+      ],
+      "fixed": [
+        "Corrected map UOP output to use directly readable terrain chunks and the proper internal names for alternate map files."
+      ]
+    },
+    {
+      "version": "0.24.2",
+      "title": "Workspace sounds and MUL to UOP",
+      "added": [
+        "Attach sound directly from the visible Sound in UO panel above the Workspace preview.",
+        "Convert supported MUL art, gumps, sounds and terrain maps to UOP, alongside the existing UOP-to-MUL direction.",
+        "Convert High Seas multis with their matching housing and component companion files."
+      ],
+      "improved": [
+        "Sound attachment follows the asset shown in Workspace, independently of another open script.",
+        "Converters verify output in a new folder and preserve source files. Animations and separate metadata are outside this conversion workflow."
+      ]
+    },
+    {
+      "version": "0.24.1",
+      "title": "Sound attachments and checks before saving",
+      "added": [
+        "Attach an existing client sound or ready-made PCM WAV from a definition’s context menu or the Sound workshop.",
+        "Choose creature idle/notice/hit/hurt/death, item use/equip/unequip or supported function sound links, then listen and review."
+      ],
+      "improved": [
+        "Check destinations, relevant client archives and write access before creating backups or staging a save; check again before replacement.",
+        "Apply destination checks to direct script saves and backup restoration.",
+        "Save new sound data and its script link together while retaining existing script conditions and inheritance."
+      ]
+    },
+    {
+      "version": "0.24.0",
+      "title": "House Builder refinements and complete guide",
+      "added": [
+        "Automatic house-project recovery, Save project as and links to earlier compiled houses.",
+        "Material palettes, favourites, recent pieces, readable tile names, Line and Perimeter tools, placement previews, floor-height presets and editable selection properties.",
+        "Walk testing with keyboard or click-to-walk, stairs and nearby door interaction; checks for low headroom, unreachable floors and enclosed floor gaps.",
+        "The first comprehensive distribution guide, covering the complete application."
+      ],
+      "improved": [
+        "Saving or queueing a compiled house leaves its editable project open.",
+        "Compiled projects remember their house ID and script, allowing reviewed updates to the same house with changed-destination checks."
+      ],
+      "fixed": [
+        "Invalid house projects now report an error without replacing the current design."
+      ],
+      "note": "Already placed houses retain their saved structure. Redeed and place a fresh house to apply structural changes."
+    },
+    {
+      "version": "0.23.0",
+      "title": "House Builder and generated housing deeds",
+      "added": [
+        "Build with native floors, walls, roofs and decorations in an isometric editor.",
+        "Paint, rectangle, erase, select, copy/paste, move, adjust heights, undo/redo and toggle roof visibility.",
+        "Save editable house projects and exchange unhued CentrED CSV blueprints.",
+        "Compile a fixed native multi with its Sphere house/deed script through one reviewed save, supporting MUL and UOP multi files."
+      ]
+    },
+    {
+      "version": "0.22.3",
+      "title": "More equipment space and permission verification",
+      "added": [
+        "Opt-in Expand equipment capacity if needed in Armor set and Equipped appearance.",
+        "Extend the primary animation index with blank records for otherwise unused equipment IDs up to 2047 when existing capacity is exhausted."
+      ],
+      "improved": [
+        "Show expansion in the save review and retain original index length for recovery; existing animation mappings and paperdolls remain protected."
+      ],
+      "fixed": [
+        "Verify and restore the original Windows access rules after replacement, including older permission descriptors. This strengthens the permission-preservation fix from 0.22.1."
+      ]
+    },
+    {
+      "version": "0.22.2",
+      "title": "Import a whole armor set from a folder",
+      "added": [
+        "Open a set or collection folder and add every piece’s icon, VD and male/female paperdolls together.",
+        "Load all four files for an individual piece from its folder.",
+        "Recognise supported collection manifests and named piece subfolders."
+      ],
+      "improved": [
+        "Suggest free destination IDs while excluding queued pieces. Package reference IDs are not treated as installation destinations.",
+        "Keep every piece editable before the combined save review."
+      ]
+    },
+    {
+      "version": "0.22.1",
+      "title": "Preserve Windows file permissions",
+      "fixed": [
+        "Addressed client saves carrying temporary-file permissions onto the destination and losing normal folder inheritance.",
+        "Preserve existing access permissions through reviewed saves, script editing and recovery; record permissions for files that may need recreation."
+      ],
+      "note": "Version 0.22.3 adds further verification for older Windows permission descriptors. The current installer includes both changes."
+    },
+    {
+      "version": "0.22.0",
+      "title": "Complete armor-set imports",
+      "added": [
+        "Build a complete set from independently wearable pieces, each with its own inventory icon, animation and male/female paperdolls.",
+        "Allocate destinations and generate matching scripts under scripts/armor.",
+        "Review and save the whole set in one recoverable operation."
+      ],
+      "improved": [
+        "Check duplicate layers, IDs and identifiers, and exclude earlier pieces from automatic slot suggestions."
+      ],
+      "note": "Each piece still needs its own artwork and equipped appearance. A single whole-suit VD cannot be split automatically into independent pieces."
+    },
+    {
+      "version": "0.21.8",
+      "title": "Organised script folders",
+      "improved": [
+        "Place new generated scripts into relevant folders for monsters, mounts, items, clothing, weapons, effects and assets.",
+        "Register new resource paths when needed, while preserving existing script locations."
+      ]
+    },
+    {
+      "version": "0.21.7",
+      "title": "Equipment paperdoll preview",
+      "added": [
+        "Preview a selected equippable item on a small paperdoll.",
+        "Show selected equipment on the player model in Test Scene, linking the inventory item to its equipped appearance."
+      ]
+    },
+    {
+      "version": "0.21.6",
+      "title": "Ten interface themes",
+      "added": [
+        "Choose from ten interface colour themes."
+      ],
+      "improved": [
+        "Apply a theme throughout the app and remember the selected appearance between sessions."
+      ]
+    },
+    {
+      "version": "0.21.5",
+      "title": "Delete scripts from the directory",
+      "added": [
+        "Right-click a script in the script directory to review its deletion."
+      ],
+      "improved": [
+        "Include script removal in the recoverable save workflow, with directory/editor refresh and protection against changed files."
+      ]
+    },
+    {
+      "version": "0.21.4",
+      "title": "Send assets to Test Scene",
+      "added": [
+        "Right-click in Item Assets, Animations or Asset spaces and choose Show in Test Scene.",
+        "Open the selected asset directly in the scene without entering its ID again."
+      ]
+    },
+    {
+      "version": "0.21.3",
+      "title": "Place items without replacing the character",
+      "fixed": [
+        "Selecting and placing an item in Test Scene no longer needs to turn the character into that item."
+      ],
+      "added": [
+        "Place selected items as separate scene props.",
+        "Room walls cover both back edges, with extra test walls for checking movement and overlap."
+      ]
+    },
+    {
+      "version": "0.21.2",
+      "title": "Scene walls and walking directions",
+      "fixed": [
+        "Corrected the Test Scene wall presentation.",
+        "Aligned character facing with the direction of travel in the isometric scene."
+      ]
+    },
+    {
+      "version": "0.21.1",
+      "title": "Tidy Test Scene controls",
+      "improved": [
+        "Organised the sidebar into Preview and Room controls.",
+        "Show controls relevant to the selected asset kind and make scene setup easier to navigate."
+      ]
+    },
+    {
+      "version": "0.21.0",
+      "title": "The in-app Test Scene",
+      "added": [
+        "Preview characters, mounts, equipment, items and effects in a native isometric room.",
+        "Try eight directions, actions, playback speed, frame stepping, hue, lighting and zoom.",
+        "Move locally, test wall collision, place props, change floors/walls and export PNG snapshots.",
+        "Preview queued changes or external VD, PNG and GIF files before importing them."
+      ],
+      "note": "A visual sandbox inside Studio; it does not run a server, execute gameplay scripts or write scene changes to game files."
+    },
+    {
+      "version": "0.20.2",
+      "title": "Custom mounts, layout and removal fixes",
+      "added": [
+        "Import compatible 35-action custom mount VDs with the required mounted and unmounted poses.",
+        "Choose Rideable object for inventory-activated mounts without animal taming or feeding.",
+        "Review removal of a definition, its linked assets, or a wider animation-related group, while checking external references."
+      ],
+      "improved": [
+        "The installer detects an existing installation, reuses its folder and supports same-version repair.",
+        "Keep all three main panes usable at startup and save-review actions accessible when the details area needs scrolling."
+      ],
+      "fixed": [
+        "Read and preserve legacy script bytes that previously caused charmap decoding errors.",
+        "Distinguish item and creature references with the same numeric ID, reducing false removal blockers.",
+        "Clean up eligible empty .scp files and their exact resource registrations after removal; refresh the script directory.",
+        "Handle mount remnants from earlier partial removals, including linked figurine aliases, while retaining shared or externally referenced content."
+      ],
+      "note": "Several follow-up builds kept the 0.20.2 version number. Their verified changes are collected here; unrelated references still require review."
+    },
+    {
+      "version": "0.20.1",
+      "title": "Create mount icons from animation poses",
+      "added": [
+        "Choose an action, direction and frame from the mount animation as its shrink icon.",
+        "Trim transparent edges, mirror the pose and choose its maximum size without exporting an intermediate PNG."
+      ],
+      "improved": [
+        "Save the new icon, TileData and Sphere ICON link together in a separate free item slot.",
+        "Clear an old pose selection when switching to another VD."
+      ]
+    },
+    {
+      "version": "0.20.0",
+      "title": "Connected Workspace and workshops",
+      "added": [
+        "Connected Workspace and Studio tools for animation editing, layered previews, sounds, a visual Sphere gump designer and multiple script tabs.",
+        "Save/session recovery, project comparison, test copies, favourites and portable content packs."
+      ],
+      "improved": [
+        "Combine non-conflicting archive edits and reserve queued import IDs during automatic placement.",
+        "Persist drafts and queued recipes per project, show converted before/after images, cache thumbnails and resume bulk exports."
+      ]
+    },
+    {
+      "version": "0.19.0",
+      "title": "Bulk export and quick artwork replacement",
+      "added": [
+        "Bulk-export item artwork and animation frames to organised PNG folders with progress, cancellation and frame-alignment metadata.",
+        "Export complete MUL animation bodies as individual VD files.",
+        "Right-click item or gump previews to replace their artwork through the existing save review."
+      ],
+      "note": "Modern UOP body animations export to PNG; their VD mapping is not guessed."
+    },
+    {
+      "version": "0.18.1",
+      "title": "Save verification and file checks",
+      "added": [
+        "Check game files to inspect structure and identify mismatched editor/server UO folders without changing files."
+      ],
+      "fixed": [
+        "Corrected quoted comments in equipconv.def, decimal Sphere item IDs, equipment gump reservations and mixed binary-preview folders."
+      ],
+      "improved": [
+        "Verify complete fixed-record copies, protect retained backups from overwriting later edits and improve preview-worker cleanup."
+      ]
+    },
+    {
+      "version": "0.18",
+      "title": "Automatic free-space placement",
+      "added": [
+        "Automatically suggest compatible free destinations for item/effect frames, gumps, creature animations, mounts and equipment bundles."
+      ],
+      "improved": [
+        "Review the selected range, switch to manual IDs or find another free space, and recheck destinations before saving.",
+        "Require a complete compatible block instead of splitting an import or silently overwriting content."
+      ]
+    },
+    {
+      "version": "0.17",
+      "title": "Clothing and weapon imports",
+      "added": [
+        "Import clothing and weapons with inventory icons, TileData layers, equipped animation and male/female paperdolls.",
+        "Reuse an existing equipped appearance or import a compatible 35-action equipment VD.",
+        "Choose weapon families and edit combat properties, clothing layers, dyeability and armor values."
+      ],
+      "improved": [
+        "Review icon, paperdoll, animation coverage and generated Sphere script as one linked change."
+      ]
+    },
+    {
+      "version": "0.16",
+      "title": "Save controls, navigation and UOP conversion",
+      "added": [
+        "Save scripts, Save game files, Save All and a Pending changes queue.",
+        "Back/Forward navigation with Alt+Left and Alt+Right shortcuts.",
+        "Batch UOP-to-MUL conversion for supported art, gumps, sounds, maps and multis into a separate folder."
+      ],
+      "improved": [
+        "Checkpoint pending imports with sessions; prompt about unsaved changes before closing or switching profiles."
+      ]
+    },
+    {
+      "version": "0.15",
+      "title": "Continuous asset galleries",
+      "added": [
+        "Continuous scrolling galleries for item/animation spaces and gumps, with search and used/free filters.",
+        "Load more UOP animation bodies as browsing reaches the end of the current range."
+      ],
+      "improved": [
+        "Load nearby thumbnails through a bounded cache.",
+        "Simplify profiles to the server, client-data folder and optional client executable."
+      ]
+    },
+    {
+      "version": "0.14",
+      "title": "Shard profiles and installer builds",
+      "added": [
+        "Named shard profiles with create, rename, copy, remove and switch actions.",
+        "Linked-folder shortcuts and remembered startup profile.",
+        "Windows installer packaging with bundled runtime, Start menu entry, optional desktop shortcut and uninstaller."
+      ],
+      "improved": [
+        "Protect unsaved edits and retain the current profile if the new locations cannot be opened."
+      ]
+    },
+    {
+      "version": "0.13",
+      "title": "Mount shrink icons",
+      "added": [
+        "Choose an existing icon with search and thumbnails, or import a PNG/BMP into a free item slot.",
+        "Generate the Sphere icon/figurine links and save them with the mount and riding memory."
+      ],
+      "fixed": [
+        "Corrected UOP artwork imports that also update TileData in the same save."
+      ]
+    },
+    {
+      "version": "0.12.1",
+      "title": "Compressed gump previews",
+      "fixed": [
+        "Decode Mythic-compressed UOP gumps that previously failed to preview.",
+        "Recognise compressed empty placeholders and include higher UOP gump IDs."
+      ],
+      "improved": [
+        "Start the gump browser with Used selected and improve platform-specific build checks."
+      ]
+    },
+    {
+      "version": "0.12",
+      "title": "UO Asset Studio and visual asset spaces",
+      "added": [
+        "Introduced the UO Asset Studio name and neutral generated-script naming.",
+        "Visual Asset spaces with thumbnails, IDs, source selection and used/free candidates.",
+        "Dedicated Mount import with linked animation, riding memory, metadata and script review.",
+        "Compare hues across selected clothing/item artwork."
+      ],
+      "improved": [
+        "Double-click a definition to open its relevant asset viewer, with properties, references and script ready alongside it."
+      ]
+    },
+    {
+      "version": "0.11",
+      "title": "Gumps and hues",
+      "added": [
+        "Browse, search, preview and export native MUL/UOP gumps, and import image batches through save review.",
+        "Browse hue palettes, compare original/recoloured artwork and edit swatches, gradients and names.",
+        "Exchange UOFiddler hue text palettes, export hue lists and copy Sphere colour/gump helper lines."
+      ]
+    },
+    {
+      "version": "0.10",
+      "title": "Linked asset and Sphere script imports",
+      "added": [
+        "Guided Monster, Item and Effect imports with generated Sphere scripts.",
+        "Inspect slots, set identifiers/categories and review client assets and registered scripts together."
+      ],
+      "improved": [
+        "Validate compatible VD layouts, animation routing and destination references before a linked save."
+      ]
+    },
+    {
+      "version": "0.9",
+      "title": "Direct client editing and recovery",
+      "added": [
+        "Edit TileData and flags, import static artwork, create animated items and import creature animations.",
+        "Batch image ordering, consecutive or filename-based IDs, converted previews and replacement checks.",
+        "Recoverable multi-file saves with staging verification, optional retained backups, rollback and interrupted-save recovery."
+      ]
+    },
+    {
+      "version": "0.8",
+      "title": "Script creation and animation exports",
+      "added": [
+        "Create script folders and .scp files from the directory context menu.",
+        "Animation playback-speed presets and GIF export with frame alignment.",
+        "Guided Add item form with artwork preview, categories, identifier checks and script review."
+      ]
+    },
+    {
+      "version": "0.7",
+      "title": "Animation browsing and script directory",
+      "added": [
+        "Preview MUL/UOP body animations by action and direction, with playback, frame stepping, zoom and frame export.",
+        "Browse the script directory and edit whole script files alongside individual definitions.",
+        "Back up original scripts manually or before opening them for editing."
+      ],
+      "improved": [
+        "Protect unsaved edits during navigation and preserve script encoding and line endings."
+      ]
+    }
+  ]
+}

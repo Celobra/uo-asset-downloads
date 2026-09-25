@@ -7,7 +7,7 @@ import { createHash } from 'node:crypto';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../public');
 const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.28.0/';
-const pages = ['/studio/', '/studio/workflows/', '/studio/downloads/'];
+const pages = ['/studio/', '/studio/workflows/', '/studio/downloads/', '/studio/updates/'];
 const localPath = pathname => resolve(root, '.' + pathname + (pathname.endsWith('/') ? 'index.html' : ''));
 
 test('Studio pages have working local assets, destinations and section anchors', async () => {

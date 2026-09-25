@@ -3,8 +3,10 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 import { buildCatalogue } from './catalog.mjs';
 import { validateGallery } from './validate-gallery.mjs';
+import { buildStudioUpdates } from './build-studio-updates.mjs';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 try {
+  await buildStudioUpdates();
   console.log('Validated gallery:', await validateGallery());
   const input = JSON.parse(await readFile(resolve(root, 'data/catalog.json'), 'utf8'));
   const output = buildCatalogue(input);
