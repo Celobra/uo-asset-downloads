@@ -33,7 +33,18 @@ export async function validateGallery(root = fileURLToPath(new URL('../public/ga
     if (!packages.has(d.file)) packages.set(d.file, createHash('sha256').update(await readFile(target)).digest('hex'));
     if (packages.get(d.file) !== d.sha256 || checked.get(d.file) !== d.sizeBytes) throw Error('Download checksum/size mismatch: ' + item.id);
     if (item.parentSet && !ids.get(item.parentSet)?.pieces?.some(p => p.id === item.id)) throw Error('Unlinked armour piece');
-    for (const p of item.pieces || []) if (ids.get(p.id)?.parentSet !== item.id) throw Error('Incomplete armour set');
+    for (const p of item.pieces || []) {
+      if (ids.get(p.id)?.parentSet !== item.id) throw Error('Incomplete armour set');
+      if (p.icon) await checkFile(p.icon);
+    }
+    if (item.outfits) {
+      const indices = new Set(item.pieces.map(p => p.partIndex));
+      if (!Array.isArray(item.defaultParts) || !item.defaultParts.length) throw Error('Missing default outfit');
+      for (const choice of [item.defaultParts, ...item.outfits.map(o => o.parts), ...(item.exclusiveParts || [])]) {
+        if (!Array.isArray(choice) || new Set(choice).size !== choice.length || choice.some(i => !indices.has(i))) throw Error('Invalid outfit pieces');
+      }
+      for (const preset of item.outfits) for (const group of item.exclusiveParts || []) if (group.filter(i => preset.parts.includes(i)).length > 1) throw Error('Conflicting outfit layers');
+    }
     if (item.category === 'Equipment') {
       const paper = item.paperdoll;
       if (!paper || paper.width !== 260 || paper.height !== 237 || !Array.isArray(paper.parts)) throw Error('Missing equipped paperdoll: ' + item.id);
@@ -45,6 +56,7 @@ export async function validateGallery(root = fileURLToPath(new URL('../public/ga
         if (part.id !== expected[i].id || part.partIndex !== expected[i].partIndex) throw Error('Paperdoll piece does not match animation: ' + item.id);
         for (const sex of ['male', 'female']) await checkFile(part[sex]);
       }
+      if (paper.drawOrder && (paper.drawOrder.length !== expected.length || new Set(paper.drawOrder).size !== expected.length || paper.drawOrder.some(i => !Number.isInteger(i) || i < 0 || i >= expected.length))) throw Error('Invalid paperdoll draw order');
       paperdolls++;
     }
   }

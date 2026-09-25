@@ -16,7 +16,7 @@ Version 0.28.0 adds Sphere, RunUO and ServUO script targets, whole-set target se
 
 Browse the gallery and use the small Download link on an item to get its files. Open an armour set to inspect or download the complete set or an individual piece.
 
-The library contains 341 listings with 431 ZIP packages. Shared collections stay together when their import tools require the full set.
+The library contains 346 listings with 481 ZIP packages. Shared collections stay together when their import tools require the full set.
 
 - Equipment: native 35-action VDs, inventory icons and male/female paperdoll images.
 - Creatures and mounts: native VDs and available setup files.
@@ -73,3 +73,8 @@ The Jedi & Sith collection adds five lightsabers and two complete robe-and-hood 
 [Client download and screenshots](https://uo-asset-library.farthrex.workers.dev/client/) — Standard edition for Windows x64, without bundled Invicta gumps. Includes the built-in assistant, counters bar, hotkeys, macro library and separate Razor/Orion script modes. The 32-page PDF covers updates, installation, player use and server administration. The master policy and two staff helpers are available together as a separate server-scripts download and are also included beside the client in its ZIP.
 
 The assistant requires the shard's policy reply; GM Tools additionally requires server-confirmed PLEVEL 4 or higher. Scripting implements the documented command subset rather than complete external engines. The download contains no personal settings, UO archives, accounts or world saves.
+
+
+## Formalwear: five coordinated suit and dress collections
+
+[Black Tie](https://uo-asset-library.farthrex.workers.dev/gallery/#formalwear-black-tie-set), [Royal Navy](https://uo-asset-library.farthrex.workers.dev/gallery/#formalwear-royal-navy-set), [Oxblood Velvet](https://uo-asset-library.farthrex.workers.dev/gallery/#formalwear-oxblood-velvet-set), [Emerald Brocade](https://uo-asset-library.farthrex.workers.dev/gallery/#formalwear-emerald-brocade-set) and [Ivory Wedding](https://uo-asset-library.farthrex.workers.dev/gallery/#formalwear-ivory-wedding-set). Each wardrobe has a long coat, shirt, waistcoat, trousers, neck-slot tie/cravat, shoes, gloves, matching gown and choker. Suit/Dress choices synchronize paperdoll and animation; individual checkboxes and downloads remain available. Coats and gowns have folded backpack icons. Every item includes both human paperdolls and all 35 action groups, with walking/running/riding GIFs and eight-view playback. Destination IDs are unassigned; recipient in-game fitting remains required.

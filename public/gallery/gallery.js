@@ -1,6 +1,7 @@
 'use strict';
 const $=id=>document.getElementById(id),all=window.GALLERY.items.filter(x=>!x.parentSet),images=new Map();let page=0,selected=null,motion=null,paperdoll=null,tick=0,playing=true,last=0,visibleParts=null,previewMode='animation',openRevision=0;
 window.MOTION=window.MOTION||{};
+const outfits=window.GALLERY_OUTFITS;let outfitChoice=null;
 for(const c of [...new Set(all.map(x=>x.category))].sort())$('category').add(new Option(c,c));
 for(const p of [...new Set(all.map(x=>x.project))].sort())$('project').add(new Option(p.replaceAll('-',' '),p));
 $('totals').textContent=`${all.length} listings · ${all.filter(x=>x.pieces).length} complete armour sets · ${all.filter(x=>x.kind==='effect').length} effects`;
@@ -14,9 +15,15 @@ function loadMotion(x){if(window.MOTION[x.id])return Promise.resolve(window.MOTI
 function downloadLinks(item){$('native-downloads').replaceChildren();if(item.download){$('native-downloads').append(nativeLink(item));const p=document.createElement('p');p.className='download-status';p.textContent=item.download.status;$('native-downloads').append(p)}$('downloads').replaceChildren();for(const p of item.previews){const a=document.createElement('a');a.href=p.file;a.download=p.file.split('/').pop();a.textContent=p.label+' · '+p.file.split('.').pop().toUpperCase();$('downloads').append(a)}}
 function setupDownloads(item,pieceId){const hasPieces=!!item.pieces;$('download-choice-label').hidden=!hasPieces;$('download-note').hidden=!hasPieces;$('download-choice').replaceChildren();if(hasPieces){$('download-choice').add(new Option('Full set',item.id));for(const p of item.pieces)$('download-choice').add(new Option(p.label,p.id));$('download-choice').value=pieceId||item.id}downloadLinks(window.GALLERY.items.find(x=>x.id===(pieceId||item.id)))}
 $('download-choice').onchange=()=>downloadLinks(window.GALLERY.items.find(x=>x.id===$('download-choice').value));
-function pieceStatus(){if(selected?.pieces)$('piece-count').textContent=`${visibleParts.size} of ${selected.pieces.length} pieces shown`}
-function setupPieces(item,pieceId){$('armor-pieces').replaceChildren();visibleParts=item.pieces?new Set(item.pieces.filter(p=>!pieceId||p.id===pieceId).map(p=>p.partIndex)):null;$('armor-controls').hidden=!item.pieces;for(const p of item.pieces||[]){const label=document.createElement('label'),input=document.createElement('input');input.type='checkbox';input.value=p.partIndex;input.checked=visibleParts.has(p.partIndex);input.dataset.piece=p.id;input.onchange=()=>{if(input.checked)visibleParts.add(p.partIndex);else visibleParts.delete(p.partIndex);pieceStatus();render();renderPaperdoll()};label.append(input,document.createTextNode(p.label));$('armor-pieces').append(label)}pieceStatus()}
-function choosePieces(show){if(!selected?.pieces)return;visibleParts=new Set(show?selected.pieces.map(p=>p.partIndex):[]);for(const input of $('armor-pieces').querySelectorAll('input'))input.checked=show;pieceStatus();render();renderPaperdoll()}
+function pieceStatus(){if(selected?.pieces){$('piece-count').textContent=`${visibleParts.size} of ${selected.pieces.length} pieces shown`;for(const button of $('outfit-choices').querySelectorAll('button')){const preset=selected.outfits.find(o=>o.id===button.dataset.outfit);button.setAttribute('aria-pressed',String(preset.parts.length===visibleParts.size&&preset.parts.every(i=>visibleParts.has(i))));}}}
+function refreshPieces(){for(const input of $('armor-pieces').querySelectorAll('input'))input.checked=visibleParts.has(Number(input.value));pieceStatus();render();renderPaperdoll();}
+function setupPieces(item,pieceId){
+ $('armor-pieces').replaceChildren();$('outfit-choices').replaceChildren();visibleParts=outfits.initial(item,pieceId);outfitChoice=item.outfits?.[0]?.id||null;
+ $('armor-controls').hidden=!item.pieces;$('outfit-choices').hidden=!item.outfits;$('pieces-all').textContent=item.outfits?'Restore outfit':'Full set';
+ for(const preset of item.outfits||[]){const button=document.createElement('button');button.type='button';button.dataset.outfit=preset.id;button.textContent=preset.label;button.onclick=()=>{outfitChoice=preset.id;visibleParts=outfits.preset(item,preset.id);refreshPieces();};$('outfit-choices').append(button);}
+ for(const p of item.pieces||[]){const label=document.createElement('label'),input=document.createElement('input');input.type='checkbox';input.value=p.partIndex;input.checked=visibleParts.has(p.partIndex);input.dataset.piece=p.id;input.onchange=()=>{visibleParts=outfits.toggle(item,visibleParts,p.partIndex,input.checked);refreshPieces();};label.append(input);if(p.icon){const im=new Image();im.src=p.icon;im.alt='';im.width=40;im.height=36;label.append(im);}label.append(document.createTextNode(p.label));$('armor-pieces').append(label);}pieceStatus();
+}
+function choosePieces(show){if(!selected?.pieces)return;visibleParts=show?outfits.preset(selected,outfitChoice):new Set();refreshPieces();}
 $('pieces-all').onclick=()=>choosePieces(true);$('pieces-none').onclick=()=>choosePieces(false);
 function setPreviewMode(mode){
  previewMode=selected?.paperdoll&&mode==='paperdoll'?'paperdoll':'animation';
@@ -69,7 +76,8 @@ function renderPaperdoll(){
  views.forEach((s,i)=>{
   const x=i*paperdoll.width;
   if(sex!=='none')ctx.drawImage(images.get(paperdoll.bodies[s]).im,x,0);
-  for(const part of paperdoll.parts)if(!visibleParts||visibleParts.has(part.partIndex))ctx.drawImage(images.get(part[s]).im,x,0);
+  const ordered=paperdoll.drawOrder?paperdoll.drawOrder.map(i=>paperdoll.parts[i]):paperdoll.parts;
+  for(const part of ordered)if(!visibleParts||visibleParts.has(part.partIndex))ctx.drawImage(images.get(part[s]).im,x,0);
  });
  const label=views.length===2?'Male on the left, female on the right.':views[0]==='male'?'Male paperdoll.':'Female paperdoll.';
  $('paperdoll-note').textContent=label+(sex==='none'?' Body hidden.':'')+(selected.pieces?' Untick a piece below to remove it.':'');
