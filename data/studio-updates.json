@@ -1,6 +1,28 @@
 {
   "releases": [
     {
+      "version": "0.29.0",
+      "date": "2026-09-26",
+      "title": "Static tile packs, ModernUO preview and better worlds",
+      "added": [
+        "Import static walls, floors and items from PNG/BMP folders or ZIPs, with optional subfolders, sorted previews and reviewed free-slot placement.",
+        "ModernUO preview script target for official 0.15.6.198, using native generated serialization and UOContent destinations.",
+        "Find area shortcuts for coast, forest, desert, snow, mountain, volcano and path previews."
+      ],
+      "improved": [
+        "Smoother biome boundaries and distance-aware river routing in generator version 2.",
+        "Tree spacing accounts for canopy size while keeping trunk and canopy pieces paired.",
+        "World exports report missing shoreline-art matches; the guide covers the new imports and target limits."
+      ],
+      "fixed": [
+        "Changed world settings now mark the preview outdated and require regeneration before export.",
+        "Non-dyeable C# armor no longer generates an unsupported Dye override.",
+        "Script workshop instructions and world summaries fit better in smaller windows."
+      ],
+      "note": "ModernUO passed source and syntax checks; a full ModernUO build and shard testing remain required. Existing definition, sound-link, removal, house/deed and world entrance script workflows remain Sphere. Older world settings regenerate with the new rules; keep previous native exports for exact layouts.",
+      "release": true
+    },
+    {
       "version": "0.28.0",
       "date": "2026-09-25",
       "title": "Sphere, RunUO and ServUO scripts",

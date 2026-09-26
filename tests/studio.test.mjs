@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../public');
-const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.28.0/';
+const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.29.0/';
 const pages = ['/studio/', '/studio/workflows/', '/studio/downloads/', '/studio/updates/'];
 const localPath = pathname => resolve(root, '.' + pathname + (pathname.endsWith('/') ? 'index.html' : ''));
 
@@ -33,13 +33,13 @@ test('The installer is the primary download; application source is separate', as
     const html = await readFile(localPath(page), 'utf8');
     const primary = [...html.matchAll(/<a class="button primary" href="([^"]+)"/g)].map(m => m[1]);
     assert.ok(primary.length > 0);
-    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.28.0.exe');
+    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.29.0.exe');
     assert.ok(primary.every(url => !url.includes('Source-')));
   }
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.28.0.zip'));
+  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.29.0.zip'));
   assert.ok(downloads.includes(release + 'SHA256SUMS.txt'));
-  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.28.0.pdf'));
+  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.29.0.pdf'));
 });
 
 test('Studio navigation is available from the existing website sections', async () => {
@@ -51,10 +51,10 @@ test('Studio navigation is available from the existing website sections', async 
 
 test('Public guide is complete and uses scripts/styles allowed by CSP', async () => {
   const guide = root + '/studio/guide/';
-  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.28.0.html', 'utf8');
-  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.28.0.pdf');
+  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.29.0.html', 'utf8');
+  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.29.0.pdf');
   assert.equal(pdf.subarray(0, 5).toString(), '%PDF-');
-  assert.equal(createHash('sha256').update(pdf).digest('hex'), '74bdc46014e377e1dc67095cae0d806870b7b0d432e0565e7e1234b2daef90c5', 'PDF must match the published guide without newline conversion');
+  assert.equal(createHash('sha256').update(pdf).digest('hex'), '6776252ab28b583d981e09e4ec03049f622b624552ee7ac0b047156c0b86a55a', 'PDF must match the published guide without newline conversion');
   assert.ok(pdf.length > 100000);
   assert.doesNotMatch(html, /<style\b|<script(?![^>]*src=)[^>]*>\s*\S/i);
   for (const match of html.matchAll(/(?:href|src)="(guide-[^"]+)"/g)) assert.ok((await stat(guide + match[1])).isFile());

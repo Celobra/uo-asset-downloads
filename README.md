@@ -4,13 +4,13 @@
 
 [Explore UO Asset Studio](https://uo-asset-library.farthrex.workers.dev/studio/) — a connected Windows workshop for UO artwork, animations, paperdolls, Sphere scripts, sound, houses and generated worlds.
 
-**[Download the Windows installer](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.28.0/UOAssetStudio-Setup-0.28.0.exe)** · [Complete PDF guide](https://uo-asset-library.farthrex.workers.dev/studio/guide/UOAssetStudio-User-Guide-0.28.0.pdf) · [Separate application source](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.28.0/UOAssetStudio-Source-0.28.0.zip)
+**[Download the Windows installer](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.29.0/UOAssetStudio-Setup-0.29.0.exe)** · [Complete PDF guide](https://uo-asset-library.farthrex.workers.dev/studio/guide/UOAssetStudio-User-Guide-0.29.0.pdf) · [Separate application source](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.29.0/UOAssetStudio-Source-0.29.0.zip)
 
 The dedicated section contains an overview, a detailed workflow tour with actual app screenshots and animated walkthroughs, a downloads/guide page and a searchable [Updates page](https://uo-asset-library.farthrex.workers.dev/studio/updates/). The release bundles a ready-to-run installer; source and offline documentation are separate downloads. This repository contains the website, while the named Studio source ZIP contains the application code.
 
 Maintain release history in `data/studio-updates.json`, newest first. Add verified user-facing changes under `added`, `fixed` or `improved`; use `date` only for a known publication date and `release: true` only when its GitHub release exists. The normal website build generates the static Updates page and keeps its navigation link on the Studio pages. Older entries were reconstructed from application release notes and verified development records; repeated 0.20.2 builds are grouped under that version. Filtering is optional: the complete history is readable without JavaScript.
 
-Version 0.28.0 adds Sphere, RunUO and ServUO script targets, whole-set target selection and a workshop for generating scripts for existing artwork. Both C# targets have separate templates; the definition editor remains Sphere-specific. The complete guide now contains 65 pages.
+Version 0.29.0 adds folder/ZIP imports for static tiles and a ModernUO preview script target. It improves biome boundaries, river routing and tree spacing, with feature navigation and stale-preview checks. ModernUO has source/syntax checks; a full native build and shard testing remain required. The complete guide contains 65 pages.
 
 ## Asset library
 
