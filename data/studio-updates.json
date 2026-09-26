@@ -1,6 +1,28 @@
 {
   "releases": [
     {
+      "version": "0.30.0",
+      "date": "2026-09-26",
+      "title": "A redesigned workspace and Sphere Map Regions",
+      "added": [
+        "Home task cards, permanent editor navigation and a searchable All tools page with 26 workflows.",
+        "Map Regions for Sphere: select, draw, move, add and remove AREADEF / ROOMDEF boundaries.",
+        "Guarded, safe, spell, recall, gate, teleport, PvP and other region-rule controls with reviewed script saves.",
+        "Appearance page with ten themes, Standard/Larger text and a panel-layout reset."
+      ],
+      "improved": [
+        "Editors remember optional Definitions and Script files panels; save and profile controls are grouped.",
+        "Tile imports now separate artwork previews from properties and animation; equipment stats use a compact layout.",
+        "The complete PDF and offline guide now cover 33 chapters across 68 pages."
+      ],
+      "fixed": [
+        "Restored and switched editor layouts keep useful panel widths on smaller windows.",
+        "Region saves preserve custom tags/events and encoding, with script conflicts checked before writes."
+      ],
+      "note": "Map Regions targets Sphere only. Terrain is read-only; custom events, region ordering and final guard/travel behaviour require shard testing. Keep a covering world region and stop Sphere before saving. Packaged executable launch remains unverified; source runtime, GUI, frozen archive and installer compilation are checked.",
+      "release": true
+    },
+    {
       "version": "0.29.0",
       "date": "2026-09-26",
       "title": "Static tile packs, ModernUO preview and better worlds",
