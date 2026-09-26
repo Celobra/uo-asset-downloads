@@ -16,7 +16,7 @@ Version 0.30.0 adds a redesigned Home, navigation sidebar and searchable tool li
 
 Browse the gallery and use the small Download link on an item to get its files. Open an armour set to inspect or download the complete set or an individual piece.
 
-The library contains 346 listings with 481 ZIP packages. Shared collections stay together when their import tools require the full set.
+The library contains 452 listings with 629 ZIP packages. Shared collections stay together when their import tools require the full set.
 
 - Equipment: native 35-action VDs, inventory icons and male/female paperdoll images.
 - Creatures and mounts: native VDs and available setup files.
@@ -78,3 +78,8 @@ The assistant requires the shard's policy reply; GM Tools additionally requires 
 ## Formalwear: five coordinated suit and dress collections
 
 [Black Tie](https://uo-asset-library.farthrex.workers.dev/gallery/#formalwear-black-tie-set), [Royal Navy](https://uo-asset-library.farthrex.workers.dev/gallery/#formalwear-royal-navy-set), [Oxblood Velvet](https://uo-asset-library.farthrex.workers.dev/gallery/#formalwear-oxblood-velvet-set), [Emerald Brocade](https://uo-asset-library.farthrex.workers.dev/gallery/#formalwear-emerald-brocade-set) and [Ivory Wedding](https://uo-asset-library.farthrex.workers.dev/gallery/#formalwear-ivory-wedding-set). Each wardrobe has a long coat, shirt, waistcoat, trousers, neck-slot tie/cravat, shoes, gloves, matching gown and choker. Suit/Dress choices synchronize paperdoll and animation; individual checkboxes and downloads remain available. Coats and gowns have folded backpack icons. Every item includes both human paperdolls and all 35 action groups, with walking/running/riding GIFs and eight-view playback. Destination IDs are unassigned; recipient in-game fitting remains required.
+
+
+## September 26 complete non-Invicta publication
+
+Added the Dunce Hat, twelve animated spellbooks, seven Wilds & Alchemy wearable sets, four healing companions, twenty architecture styles, twenty-four outdoor terrain families, thirty floor families plus four raised terrain-edge families, and four Sky & Shore transition families. Wearable cards include male/female paperdolls, movement previews, full-set piece toggles and individual downloads. All destination IDs remain unassigned and the packages require development import and in-game verification. Invicta-exclusive material, creation prompts, accounts, saves and private workspace records are excluded.
