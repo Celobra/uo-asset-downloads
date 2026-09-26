@@ -4,13 +4,13 @@
 
 [Explore UO Asset Studio](https://uo-asset-library.farthrex.workers.dev/studio/) — a connected Windows workshop for UO artwork, animations, paperdolls, Sphere scripts, sound, houses and generated worlds.
 
-**[Download the Windows installer](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.30.0/UOAssetStudio-Setup-0.30.0.exe)** · [Complete PDF guide](https://uo-asset-library.farthrex.workers.dev/studio/guide/UOAssetStudio-User-Guide-0.30.0.pdf) · [Separate application source](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.30.0/UOAssetStudio-Source-0.30.0.zip)
+**[Download the Windows installer](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.30.1/UOAssetStudio-Setup-0.30.1.exe)** · [Complete PDF guide](https://uo-asset-library.farthrex.workers.dev/studio/guide/UOAssetStudio-User-Guide-0.30.1.pdf) · [Separate application source](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.30.1/UOAssetStudio-Source-0.30.1.zip)
 
 The dedicated section contains an overview, a detailed workflow tour with actual app screenshots and animated walkthroughs, a downloads/guide page and a searchable [Updates page](https://uo-asset-library.farthrex.workers.dev/studio/updates/). The release bundles a ready-to-run installer; source and offline documentation are separate downloads. This repository contains the website, while the named Studio source ZIP contains the application code.
 
 Maintain release history in `data/studio-updates.json`, newest first. Add verified user-facing changes under `added`, `fixed` or `improved`; use `date` only for a known publication date and `release: true` only when its GitHub release exists. The normal website build generates the static Updates page and keeps its navigation link on the Studio pages. Older entries were reconstructed from application release notes and verified development records; repeated 0.20.2 builds are grouped under that version. Filtering is optional: the complete history is readable without JavaScript.
 
-Version 0.30.0 adds a redesigned Home, navigation sidebar and searchable tool library, with remembered side panels and text-size choices. Map Regions edits Sphere boundaries and guarded, magic and travel rules through reviewed saves. The complete guide contains 68 pages across 33 chapters.
+Version 0.30.1 fixes legacy UOP terrain loading, handles trailing map padding and detects standard map dimensions automatically. Version 0.30.0 added a redesigned Home, navigation sidebar and searchable tool library, with remembered side panels and text-size choices. Map Regions edits Sphere boundaries and guarded, magic and travel rules through reviewed saves. The complete guide contains 68 pages across 33 chapters.
 
 ## Asset library
 

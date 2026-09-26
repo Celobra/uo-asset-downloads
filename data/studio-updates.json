@@ -1,6 +1,22 @@
 {
   "releases": [
     {
+      "version": "0.30.1",
+      "date": "2026-09-26",
+      "title": "Legacy UOP maps load correctly in Map Regions",
+      "improved": [
+        "Standard facet sizes are detected automatically, including 6144 × 4096 and 7168 × 4096 Britannia maps; custom maps retain manual dimensions.",
+        "Loaded dimensions are displayed above the terrain preview; the 68-page guide explains map loading."
+      ],
+      "fixed": [
+        "Corrected legacy UOP terrain chunk addressing, fixing the incorrect map-dimensions error for map0LegacyMUL.uop and other standard maps.",
+        "Accepted the standard optional trailing padding block while retaining checks for missing, truncated or mismatched terrain data.",
+        "Cancelling custom dimensions keeps the current preview and its coordinate scale unchanged."
+      ],
+      "note": "450 unittests passed. All six standard client-map overviews and independent terrain samples were checked without changing the inputs. Packaged launch remains unverified; source runtime, GUI, frozen archive and installer compilation passed.",
+      "release": true
+    },
+    {
       "version": "0.30.0",
       "date": "2026-09-26",
       "title": "A redesigned workspace and Sphere Map Regions",
