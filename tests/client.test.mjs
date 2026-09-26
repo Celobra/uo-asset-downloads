@@ -8,7 +8,7 @@ const page = await readFile(resolve(root,'client/index.html'),'utf8');
 test('Client download is Standard and all release assets use Update 3', () => {
   const downloads = [...page.matchAll(/href="(https:\/\/github.com\/Celobra\/uo-asset-downloads\/releases\/download\/[^\"]+)"/g)].map(m=>m[1]);
   assert.equal(downloads.length,4);
-  assert.ok(downloads.every(url=>url.includes('/classicuo-update3-20260925/')));
+  assert.ok(downloads.every(url=>url.includes('/classicuo-update3-20260926/')));
   assert.ok(downloads.some(url=>url.endsWith('ClassicUO-Standard-Update3-Windows-x64.zip')));
   assert.ok(downloads.some(url=>url.endsWith('ClassicUO-Sphere-Server-Scripts.zip')));
   assert.ok(downloads.every(url=>!url.includes('Invicta')));
