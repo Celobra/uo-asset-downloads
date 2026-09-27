@@ -1,5 +1,5 @@
 'use strict';
-const $=id=>document.getElementById(id),all=window.GALLERY.items.filter(x=>!x.parentSet),images=new Map();let selected=null,motion=null,paperdoll=null,tick=0,playing=true,last=0,visibleParts=null,previewMode='animation',openRevision=0;
+const $=id=>document.getElementById(id),all=window.GALLERY.items.filter(x=>!x.parentSet),images=new Map();let selected=null,motion=null,paperdoll=null,tick=0,playing=true,last=0,visibleParts=null,previewMode='animation',openRevision=0,effectTime=0,effectLast=0;
 window.MOTION=window.MOTION||{};
 const outfits=window.GALLERY_OUTFITS;let outfitChoice=null;
 function nativeLink(item,compact=false){const d=item.download,label=d.label.replace(/\u00c2(?=[\u00b7\u00a0])/g,''),a=document.createElement('a');a.className=compact?'card-download':'native-download';a.href=d.file;a.download=d.file.split('/').pop();a.textContent=compact?'↓ Download':`↓ Download ${label} · ZIP · ${fileSize(d.sizeBytes)}`;a.setAttribute('aria-label',`Download ${item.name}: ${label}`);a.title=`${label} · ${fileSize(d.sizeBytes)} · ${d.status}`;return a}
@@ -37,7 +37,7 @@ async function openAsset(id){
  const requested=window.GALLERY.items.find(x=>x.id===id);if(!requested)return;
  const revision=++openRevision,pieceId=requested.parentSet?requested.id:null;
  selected=requested.parentSet?all.find(x=>x.id===requested.parentSet):requested;
- const x=selected;motion=null;paperdoll=null;visibleParts=null;tick=0;playing=true;
+ const x=selected;motion=null;paperdoll=null;visibleParts=null;tick=0;effectTime=0;playing=true;
  $('paperdoll-canvas').width=$('canvas').width=1;
  $('armor-controls').hidden=true;$('body').value='both';$('play').textContent='Pause';
  $('name').textContent=x.name;$('notes').textContent=x.notes;
@@ -50,6 +50,7 @@ async function openAsset(id){
   try{
    const data=await loadMotion(x);if(revision!==openRevision)return;
    const files=[...data.parts,...Object.values(data.bodies||{})].map(p=>p.file);
+   if(data.attachedEffect)files.push(data.attachedEffect.file);
    if(x.paperdoll)files.push(...Object.values(x.paperdoll.bodies),...x.paperdoll.parts.flatMap(p=>[p.male,p.female]));
    await Promise.all([...new Set(files)].map(loadImage));if(revision!==openRevision)return;
    motion=data;paperdoll=x.paperdoll||null;setupPieces(x,pieceId);
@@ -78,7 +79,7 @@ function renderPaperdoll(){
  c.setAttribute('aria-label',selected.name+' equipped paperdoll. '+label);
 }
 function drawPack(ctx,p,g,t,ox,oy){const fs=p.groups[g];if(!fs?.length)return;const [i,w,h,cx,cy]=fs[t%fs.length],im=images.get(p.file).im;ctx.drawImage(im,(i%p.columns)*p.tile,Math.floor(i/p.columns)*p.tile,w,h,ox-cx,oy-h-cy,w,h)}
-function frameCount(){if(!motion)return 1;const d=+$('facing').value,g=+$('action').value*5+(d>4?8-d:d);return Math.max(1,...motion.parts.map(p=>p.groups[g]?.length||0))}
-function render(){if(!motion)return;const [w,h,ox,oy]=motion.viewport,d=+$('facing').value,g=+$('action').value*5+(d>4?8-d:d),sex=$('body').value,bodies=motion.bodies,views=!bodies||sex==='none'?[null]:sex==='both'?['male','female']:[sex],c=$('canvas');c.width=w*views.length*2;c.height=h*2;const ctx=c.getContext('2d');ctx.imageSmoothingEnabled=false;ctx.fillStyle='#161b20';ctx.fillRect(0,0,c.width,c.height);ctx.scale(2,2);tick%=frameCount();views.forEach((s,i)=>{ctx.save();ctx.translate(i*w,0);if(d>4){ctx.translate(w,0);ctx.scale(-1,1)}if(s)drawPack(ctx,bodies[s],g,tick,ox,oy);motion.parts.forEach((p,index)=>{if(!visibleParts||visibleParts.has(index))drawPack(ctx,p,g,tick,ox,oy)});ctx.restore()});$('frame').max=frameCount()-1;$('frame').value=tick;$('frame-count').textContent=`${tick+1} / ${frameCount()}`}
-for(const id of ['action','facing'])$(id).onchange=()=>{tick=0;render()};$('body').onchange=()=>{tick=0;render();renderPaperdoll()};$('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'Pause':'Play'};$('frame').oninput=()=>{playing=false;$('play').textContent='Play';tick=+$('frame').value;render()};
-function animate(now){if(motion&&previewMode==='animation'&&playing&&now-last>=+$('speed').value){tick++;render();last=now}requestAnimationFrame(animate)}requestAnimationFrame(animate);
+function frameCount(){if(!motion)return 1;const d=+$('facing').value,g=+$('action').value*5+(d>4?8-d:d);return Math.max(1,...(motion.attachedEffect?[...motion.parts,...Object.values(motion.bodies||{})]:motion.parts).map(p=>p.groups[g]?.length||0))}
+function render(){if(!motion)return;const [w,h,ox,oy]=motion.viewport,d=+$('facing').value,g=+$('action').value*5+(d>4?8-d:d),sex=$('body').value,bodies=motion.bodies,views=!bodies||sex==='none'?[null]:sex==='both'?['male','female']:[sex],c=$('canvas');c.width=w*views.length*2;c.height=h*2;const ctx=c.getContext('2d');ctx.imageSmoothingEnabled=false;ctx.fillStyle='#161b20';ctx.fillRect(0,0,c.width,c.height);ctx.scale(2,2);tick%=frameCount();views.forEach((s,i)=>{ctx.save();ctx.translate(i*w,0);if(d>4){ctx.translate(w,0);ctx.scale(-1,1)}if(s)drawPack(ctx,bodies[s],g,tick,ox,oy);motion.parts.forEach((p,index)=>{if(!visibleParts||visibleParts.has(index))drawPack(ctx,p,g,tick,ox,oy)});ctx.restore();const fx=window.GALLERY_ATTACHED_EFFECT.state(motion.attachedEffect,+$('action').value,effectTime);if(fx){ctx.save();ctx.globalCompositeOperation='lighter';ctx.drawImage(images.get(motion.attachedEffect.file).im,fx.sx,fx.sy,fx.width,fx.height,i*w+ox+fx.x,oy+fx.y,fx.width,fx.height);ctx.restore()}});$('frame').max=frameCount()-1;$('frame').value=tick;$('frame-count').textContent=`${tick+1} / ${frameCount()}`}
+for(const id of ['action','facing'])$(id).onchange=()=>{tick=0;render()};$('body').onchange=()=>{tick=0;render();renderPaperdoll()};$('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'Pause':'Play'};$('frame').oninput=()=>{playing=false;$('play').textContent='Play';tick=+$('frame').value;effectTime=tick*130;render()};
+function animate(now){const elapsed=effectLast?Math.min(100,now-effectLast):0;effectLast=now;if(motion&&previewMode==='animation'&&playing){let dirty=false;if(motion.attachedEffect){effectTime+=elapsed*130/+$('speed').value;dirty=true}if(now-last>=+$('speed').value){tick++;last=now;dirty=true}if(dirty)render()}requestAnimationFrame(animate)}requestAnimationFrame(animate);

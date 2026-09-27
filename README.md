@@ -16,7 +16,11 @@ Version 0.30.1 fixes legacy UOP terrain loading, handles trailing map padding an
 
 Browse the gallery and use the small Download link on an item to get its files. Open an armour set to inspect or download the complete set or an individual piece.
 
-The library contains 452 listings with 629 ZIP packages. Shared collections stay together when their import tools require the full set.
+The library contains 588 listings with 803 ZIP packages. Shared collections stay together when their import tools require the full set.
+
+The latest additions cover 26 projects: wearable cloth, demon and necromancer collections, the Crown of Fire, creatures and skeletal mounts, spell and boss effects, animated scenery, walls, furniture, storage and 20 standalone houses. Wearable sets include equipped paperdolls, removable pieces and walking, running and riding previews. The Crown of Fire uses a separate rotating effect that continues while the wearer is idle.
+
+[Standard ClassicUO Update 4](https://uo-asset-library.farthrex.workers.dev/client/) includes the Windows client, illustrated setup guide and optional Sphere scripts. Client and asset downloads retain their own import and gameplay requirements.
 
 - Equipment: native 35-action VDs, inventory icons and male/female paperdoll images.
 - Creatures and mounts: native VDs and available setup files.
