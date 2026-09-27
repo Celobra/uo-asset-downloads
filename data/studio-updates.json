@@ -1,6 +1,28 @@
 {
   "releases": [
     {
+      "version": "0.31.0",
+      "date": "2026-09-27",
+      "title": "Classic UO landscapes, script recipes and ethereal mounts",
+      "added": [
+        "Save and reopen portable script recipes, and preview generated source and creation commands before saving.",
+        "Classic UO mountain edges with craggy rock faces, uneven ridges and separate bounded slope limits.",
+        "World overview Height, Slope and Shoreline / blends views, plus Terrain review with clickable inspection coordinates."
+      ],
+      "improved": [
+        "Raised terrain previews use square client terrain textures and optional TexTerr.def mappings, with artwork fallback when textures are absent.",
+        "Natural cave entrances use native black rock-mouth artwork and a clear dirt approach, with a trigger in front of the wall pieces.",
+        "Paths seek any reachable earlier clearing and avoid cutting diagonally through blocked shore corners.",
+        "The complete manual now has 71 pages covering the new controls."
+      ],
+      "fixed": [
+        "Sphere Rideable object mounts now mount directly from their backpack item and return that same item on dismount, without leaving a loose creature.",
+        "Generated mount helpers join related-content removal only when unchanged; external references and customized helpers remain protected."
+      ],
+      "note": "471 unittests passed. Three sample exports and a full-size 7168 × 4096 terrain review passed. Connected-player Sphere checks cover mounting, dismounting, repeat clicks, denied mounting and cleanup. Custom shard hooks, death and restart still need shard-specific testing. Packaged startup remains unverified; source runtime, frozen archive and installer compilation were checked.",
+      "release": true
+    },
+    {
       "version": "0.30.1",
       "date": "2026-09-26",
       "title": "Legacy UOP maps load correctly in Map Regions",

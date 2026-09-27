@@ -4,7 +4,7 @@
 
 [Explore UO Asset Studio](https://uo-asset-library.farthrex.workers.dev/studio/) — a connected Windows workshop for UO artwork, animations, paperdolls, Sphere scripts, sound, houses and generated worlds.
 
-**[Download the Windows installer](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.30.1/UOAssetStudio-Setup-0.30.1.exe)** · [Complete PDF guide](https://uo-asset-library.farthrex.workers.dev/studio/guide/UOAssetStudio-User-Guide-0.30.1.pdf) · [Separate application source](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.30.1/UOAssetStudio-Source-0.30.1.zip)
+**[Download the Windows installer](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.31.0/UOAssetStudio-Setup-0.31.0.exe)** · [Complete PDF guide](https://uo-asset-library.farthrex.workers.dev/studio/guide/UOAssetStudio-User-Guide-0.31.0.pdf) · [Separate application source](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.31.0/UOAssetStudio-Source-0.31.0.zip)
 
 The dedicated section contains an overview, a detailed workflow tour with actual app screenshots and animated walkthroughs, a downloads/guide page and a searchable [Updates page](https://uo-asset-library.farthrex.workers.dev/studio/updates/). The release bundles a ready-to-run installer; source and offline documentation are separate downloads. This repository contains the website, while the named Studio source ZIP contains the application code.
 
@@ -83,3 +83,5 @@ The assistant requires the shard's policy reply; GM Tools additionally requires 
 ## September 26 complete non-Invicta publication
 
 Added the Dunce Hat, twelve animated spellbooks, seven Wilds & Alchemy wearable sets, four healing companions, twenty architecture styles, twenty-four outdoor terrain families, thirty floor families plus four raised terrain-edge families, and four Sky & Shore transition families. Wearable cards include male/female paperdolls, movement previews, full-set piece toggles and individual downloads. All destination IDs remain unassigned and the packages require development import and in-game verification. Invicta-exclusive material, creation prompts, accounts, saves and private workspace records are excluded.
+
+Studio 0.31 adds reusable script recipes, code previews, Classic UO rock faces, native slope textures and cave mouths, terrain inspection and ethereal-style inventory mounts. The complete guide is 71 pages.
