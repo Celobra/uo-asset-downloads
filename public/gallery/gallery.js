@@ -1,15 +1,9 @@
 'use strict';
-const $=id=>document.getElementById(id),all=window.GALLERY.items.filter(x=>!x.parentSet),images=new Map();let page=0,selected=null,motion=null,paperdoll=null,tick=0,playing=true,last=0,visibleParts=null,previewMode='animation',openRevision=0;
+const $=id=>document.getElementById(id),all=window.GALLERY.items.filter(x=>!x.parentSet),images=new Map();let selected=null,motion=null,paperdoll=null,tick=0,playing=true,last=0,visibleParts=null,previewMode='animation',openRevision=0;
 window.MOTION=window.MOTION||{};
 const outfits=window.GALLERY_OUTFITS;let outfitChoice=null;
-for(const c of [...new Set(all.map(x=>x.category))].sort())$('category').add(new Option(c,c));
-for(const p of [...new Set(all.map(x=>x.project))].sort())$('project').add(new Option(p.replaceAll('-',' '),p));
-$('totals').textContent=`${all.length} listings · ${all.filter(x=>x.pieces).length} complete armour sets · ${all.filter(x=>x.kind==='effect').length} effects`;
-function filtered(){const q=$('search').value.trim().toLowerCase();return all.filter(x=>(!$('category').value||x.category===$('category').value)&&(!$('project').value||x.project===$('project').value)&&(!q||(x.name+' '+x.project+' '+x.category).toLowerCase().includes(q)))}
-function nativeLink(item,compact=false){const d=item.download,a=document.createElement('a');a.className=compact?'card-download':'native-download';a.href=d.file;a.download=d.file.split('/').pop();a.textContent=compact?'↓ Download':`↓ Download ${d.label} · ZIP · ${fileSize(d.sizeBytes)}`;a.setAttribute('aria-label',`Download ${item.name}: ${d.label}`);a.title=`${d.label} · ${fileSize(d.sizeBytes)} · ${d.status}`;return a}
+function nativeLink(item,compact=false){const d=item.download,label=d.label.replace(/\u00c2(?=[\u00b7\u00a0])/g,''),a=document.createElement('a');a.className=compact?'card-download':'native-download';a.href=d.file;a.download=d.file.split('/').pop();a.textContent=compact?'↓ Download':`↓ Download ${label} · ZIP · ${fileSize(d.sizeBytes)}`;a.setAttribute('aria-label',`Download ${item.name}: ${label}`);a.title=`${label} · ${fileSize(d.sizeBytes)} · ${d.status}`;return a}
 function fileSize(n){return n>=1048576?(n/1048576).toFixed(1)+' MB':Math.max(1,Math.ceil(n/1024))+' KB'}
-function grid(){const items=filtered(),pages=Math.max(1,Math.ceil(items.length/30));page=Math.min(page,pages-1);$('grid').replaceChildren();for(const x of items.slice(page*30,page*30+30)){const card=document.createElement('article');card.className='card';card.dataset.id=x.id;const b=document.createElement('button');b.className='card-preview';b.type='button';const im=new Image();im.src=x.thumbnail;im.alt=x.name;im.loading='lazy';const text=document.createElement('span');text.className='text';const title=document.createElement('strong');title.textContent=x.name;const small=document.createElement('small');small.textContent=x.project.replaceAll('-',' ');const badge=document.createElement('span');badge.className='badge';badge.textContent=x.kind==='motion'?`${x.actions} actions · 8 views`:x.kind==='effect'?'Animated effect':x.kind==='animated'?'Animated preview':'Still artwork';text.append(title,small,badge);b.append(im,text);b.onclick=()=>openAsset(x.id);card.append(b);if(x.download)card.append(nativeLink(x,true));$('grid').append(card)}$('result-count').textContent=`${items.length} assets`;$('page-number').textContent=`${page+1} / ${pages}`;$('previous').disabled=page===0;$('next').disabled=page>=pages-1}
-for(const id of ['search','category','project'])$(id).addEventListener('input',()=>{page=0;grid()});$('previous').onclick=()=>{page--;grid()};$('next').onclick=()=>{page++;grid()};
 function loadImage(src){if(!images.has(src)){const im=new Image();const promise=new Promise((resolve,reject)=>{im.onload=()=>resolve(im);im.onerror=()=>reject(Error('Unable to load '+src))});im.src=src;images.set(src,{im,promise})}return images.get(src).promise}
 function loadMotion(x){if(window.MOTION[x.id])return Promise.resolve(window.MOTION[x.id]);return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=x.motion;s.onload=()=>resolve(window.MOTION[x.id]);s.onerror=reject;document.head.append(s)})}
 function downloadLinks(item){$('native-downloads').replaceChildren();if(item.download){$('native-downloads').append(nativeLink(item));const p=document.createElement('p');p.className='download-status';p.textContent=item.download.status;$('native-downloads').append(p)}$('downloads').replaceChildren();for(const p of item.previews){const a=document.createElement('a');a.href=p.file;a.download=p.file.split('/').pop();a.textContent=p.label+' · '+p.file.split('.').pop().toUpperCase();$('downloads').append(a)}}
@@ -51,7 +45,7 @@ async function openAsset(id){
  setupDownloads(x,pieceId);$('still').hidden=x.kind==='motion';$('still-controls').hidden=x.kind==='motion';
  setPreviewMode(x.paperdoll?'paperdoll':'animation');
  if(!$('detail').open)$('detail').showModal();
- document.body.classList.add('modal-open');history.replaceState(null,'',location.pathname+location.search+'#'+id);
+ document.body.classList.add('modal-open');window.GALLERY_BROWSE?.rememberAsset(id);
  if(x.kind==='motion'){
   try{
    const data=await loadMotion(x);if(revision!==openRevision)return;
@@ -66,7 +60,7 @@ async function openAsset(id){
  }else{$('preview').replaceChildren(...x.previews.map((p,i)=>new Option(p.label,i)));showStill()}
 }
 function showStill(){const p=selected.previews[+$('preview').value];$('still').src=p.file;$('still').alt=selected.name+' — '+p.label}$('preview').onchange=showStill;
-function close(){++openRevision;$('detail').close();document.body.classList.remove('modal-open');selected=null;motion=null;paperdoll=null;history.replaceState(null,'',location.pathname+location.search)}$('close').onclick=close;$('detail').addEventListener('cancel',e=>{e.preventDefault();close()});
+function close(updateRoute=true){++openRevision;$('detail').close();document.body.classList.remove('modal-open');selected=null;motion=null;paperdoll=null;if(updateRoute)window.GALLERY_BROWSE?.closeItem()}$('close').onclick=()=>close();$('detail').addEventListener('cancel',e=>{e.preventDefault();close()});
 function renderPaperdoll(){
  if(!paperdoll)return;
  const sex=$('body').value,views=sex==='both'||sex==='none'?['male','female']:[sex],c=$('paperdoll-canvas');
@@ -87,4 +81,4 @@ function drawPack(ctx,p,g,t,ox,oy){const fs=p.groups[g];if(!fs?.length)return;co
 function frameCount(){if(!motion)return 1;const d=+$('facing').value,g=+$('action').value*5+(d>4?8-d:d);return Math.max(1,...motion.parts.map(p=>p.groups[g]?.length||0))}
 function render(){if(!motion)return;const [w,h,ox,oy]=motion.viewport,d=+$('facing').value,g=+$('action').value*5+(d>4?8-d:d),sex=$('body').value,bodies=motion.bodies,views=!bodies||sex==='none'?[null]:sex==='both'?['male','female']:[sex],c=$('canvas');c.width=w*views.length*2;c.height=h*2;const ctx=c.getContext('2d');ctx.imageSmoothingEnabled=false;ctx.fillStyle='#161b20';ctx.fillRect(0,0,c.width,c.height);ctx.scale(2,2);tick%=frameCount();views.forEach((s,i)=>{ctx.save();ctx.translate(i*w,0);if(d>4){ctx.translate(w,0);ctx.scale(-1,1)}if(s)drawPack(ctx,bodies[s],g,tick,ox,oy);motion.parts.forEach((p,index)=>{if(!visibleParts||visibleParts.has(index))drawPack(ctx,p,g,tick,ox,oy)});ctx.restore()});$('frame').max=frameCount()-1;$('frame').value=tick;$('frame-count').textContent=`${tick+1} / ${frameCount()}`}
 for(const id of ['action','facing'])$(id).onchange=()=>{tick=0;render()};$('body').onchange=()=>{tick=0;render();renderPaperdoll()};$('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'Pause':'Play'};$('frame').oninput=()=>{playing=false;$('play').textContent='Play';tick=+$('frame').value;render()};
-function animate(now){if(motion&&previewMode==='animation'&&playing&&now-last>=+$('speed').value){tick++;render();last=now}requestAnimationFrame(animate)}grid();requestAnimationFrame(animate);const initial=decodeURIComponent(location.hash.slice(1));if(window.GALLERY.items.some(x=>x.id===initial))openAsset(initial);
+function animate(now){if(motion&&previewMode==='animation'&&playing&&now-last>=+$('speed').value){tick++;render();last=now}requestAnimationFrame(animate)}requestAnimationFrame(animate);
