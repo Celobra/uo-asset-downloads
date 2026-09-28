@@ -20,9 +20,11 @@ function setupPieces(item,pieceId){
 function choosePieces(show){if(!selected?.pieces)return;visibleParts=show?outfits.preset(selected,outfitChoice):new Set();refreshPieces();}
 $('pieces-all').onclick=()=>choosePieces(true);$('pieces-none').onclick=()=>choosePieces(false);
 function setPreviewMode(mode){
- previewMode=selected?.paperdoll&&mode==='paperdoll'?'paperdoll':'animation';
- const isPaper=!!selected?.paperdoll&&previewMode==='paperdoll';
- $('equipment-preview').hidden=!selected?.paperdoll;
+ const hasPaper=!!(selected?.paperdoll||selected?.portrait);
+ previewMode=hasPaper&&mode==='paperdoll'?'paperdoll':'animation';
+ const isPaper=hasPaper&&previewMode==='paperdoll';
+ $('equipment-preview').hidden=!hasPaper;
+ $('body-label').hidden=!!selected?.portrait;
  $('paperdoll-canvas').hidden=!isPaper;
  $('paperdoll-note').hidden=!isPaper;
  $('canvas').hidden=selected?.kind!=='motion'||isPaper;
@@ -52,8 +54,11 @@ async function openAsset(id){
    const files=[...data.parts,...Object.values(data.bodies||{})].map(p=>p.file);
    if(data.attachedEffect)files.push(data.attachedEffect.file);
    if(x.paperdoll)files.push(...Object.values(x.paperdoll.bodies),...x.paperdoll.parts.flatMap(p=>[p.male,p.female]));
+   if(x.portrait)files.push(x.portrait.file);
    await Promise.all([...new Set(files)].map(loadImage));if(revision!==openRevision)return;
    motion=data;paperdoll=x.paperdoll||null;setupPieces(x,pieceId);
+   const pace=data.frameMs||130;
+   $('speed').replaceChildren(new Option('Slow',Math.round(pace*200/130)),new Option('Normal',pace),new Option('Fast',Math.round(pace*80/130)));$('speed').value=String(pace);last=0;
    $('action').replaceChildren(...data.actions.map((s,i)=>new Option(s,i)));$('action').value='0';
    $('facing').replaceChildren(...Array.from({length:8},(_,i)=>new Option('View '+(i+1)+(i>4?' · mirrored':''),i)));$('facing').value='1';
    render();renderPaperdoll();
@@ -63,6 +68,13 @@ async function openAsset(id){
 function showStill(){const p=selected.previews[+$('preview').value];$('still').src=p.file;$('still').alt=selected.name+' — '+p.label}$('preview').onchange=showStill;
 function close(updateRoute=true){++openRevision;$('detail').close();document.body.classList.remove('modal-open');selected=null;motion=null;paperdoll=null;if(updateRoute)window.GALLERY_BROWSE?.closeItem()}$('close').onclick=()=>close();$('detail').addEventListener('cancel',e=>{e.preventDefault();close()});
 function renderPaperdoll(){
+ if(selected?.portrait){
+  const p=selected.portrait,c=$('paperdoll-canvas'),image=images.get(p.file)?.im;if(!image)return;
+  c.width=p.width*2;c.height=p.height*2;
+  const ctx=c.getContext('2d');ctx.imageSmoothingEnabled=false;ctx.fillStyle='#161b20';ctx.fillRect(0,0,c.width,c.height);ctx.scale(2,2);ctx.drawImage(image,0,0);
+  $('paperdoll-note').textContent='Matching whole-body paperdoll. Clothing and tools are part of the portrait.';
+  c.setAttribute('aria-label',selected.name+' matching paperdoll.');return;
+ }
  if(!paperdoll)return;
  const sex=$('body').value,views=sex==='both'||sex==='none'?['male','female']:[sex],c=$('paperdoll-canvas');
  c.width=paperdoll.width*views.length*2;c.height=paperdoll.height*2;

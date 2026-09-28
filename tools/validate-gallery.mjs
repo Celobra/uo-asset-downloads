@@ -27,6 +27,10 @@ export async function validateGallery(root = fileURLToPath(new URL('../public/ga
     await checkFile(item.thumbnail);
     for (const preview of item.previews) await checkFile(preview.file);
     if (item.motion) await checkFile(item.motion);
+    if (item.portrait) {
+      if (item.portrait.width !== 260 || item.portrait.height !== 237) throw Error('Invalid monster portrait: ' + item.id);
+      await checkFile(item.portrait.file);
+    }
     const d = item.download;
     if (!d || !d.file.startsWith('downloads/') || !d.file.endsWith('.zip') || !d.label || !d.status) throw Error('Missing game download: ' + item.id);
     const target = await checkFile(d.file);

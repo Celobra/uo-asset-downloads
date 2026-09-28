@@ -16,7 +16,9 @@ Version 0.30.1 fixes legacy UOP terrain loading, handles trailing map padding an
 
 Browse the gallery and use the small Download link on an item to get its files. Open an armour set to inspect or download the complete set or an individual piece.
 
-The library contains 588 listings with 803 ZIP packages. Shared collections stay together when their import tools require the full set.
+The library contains 591 listings with 804 ZIP packages. Shared collections stay together when their import tools require the full set.
+
+[Dwarf Monsters](https://uo-asset-library.farthrex.workers.dev/?category=creatures&collection=Dwarf-Monsters): Stoneguard Warrior, Deepdelver Miner and Runesmith. Each has 350 frames across 15 actions, eight displayed facings and a matching whole-body paperdoll. Switch between Animations and Paperdoll in each preview; the download includes all three native VD sets, PNG frames, paperdolls and import instructions. Body and gump IDs remain unassigned; receiving-client tests are required.
 
 The latest additions cover 26 projects: wearable cloth, demon and necromancer collections, the Crown of Fire, creatures and skeletal mounts, spell and boss effects, animated scenery, walls, furniture, storage and 20 standalone houses. Wearable sets include equipped paperdolls, removable pieces and walking, running and riding previews. The Crown of Fire uses a separate rotating effect that continues while the wearer is idle.
 
