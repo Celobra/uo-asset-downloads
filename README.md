@@ -20,7 +20,9 @@ Version 0.30.1 fixes legacy UOP terrain loading, handles trailing map padding an
 
 Browse the gallery and use the small Download link on an item to get its files. Open an armour set to inspect or download the complete set or an individual piece.
 
-The library contains 591 listings with 804 ZIP packages. Shared collections stay together when their import tools require the full set.
+The library contains 592 listings with 805 ZIP packages. Shared collections stay together when their import tools require the full set.
+
+[Rideable Owlbear](https://www.uoassets.com/?category=creatures&collection=Rideable-Owlbear#rideable-owlbear) adds the newly approved artwork as a separate listing. Its native VD has 300 frames across 13 animal actions and five stored directions, displayed as eight views. Includes all-action GIFs, an interactive action/facing viewer, a mounted-walk GIF, male/female rider-fit boards, native PNGs, import notes and checksums. The original Owlbear remains available. Offline rider previews do not replace recipient mount routing and equipped-rider, terrain, targeting, hue, corpse and playback checks; no body ID, server script or client patch is installed by the download.
 
 [Dwarf Monsters](https://uo-asset-library.farthrex.workers.dev/?category=creatures&collection=Dwarf-Monsters): Stoneguard Warrior, Deepdelver Miner and Runesmith. Each has 350 frames across 15 actions, eight displayed facings and a matching whole-body paperdoll. Switch between Animations and Paperdoll in each preview; the download includes all three native VD sets, PNG frames, paperdolls and import instructions. Body and gump IDs remain unassigned; receiving-client tests are required.
 
