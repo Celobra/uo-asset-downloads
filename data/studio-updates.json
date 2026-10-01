@@ -1,6 +1,26 @@
 {
   "releases": [
     {
+      "version": "0.32.1",
+      "title": "Whole-body VD export and complete UOP Animal bundles",
+      "added": [
+        "Animations now has Save entire body as .vd: enter a body ID, choose Source Auto, Load body and save all available native MUL actions and stored facings.",
+        "Supported UOP ANIMAL bodies use their AnimationSequence mode/action tables to create a standard 13-action Animal VD.",
+        "A collision-free complete ZIP preserves all physical UOP groups in archival 35-action-layout VDs, with a separate riding 13-action VD when mode 2 exists, mapping JSON and a public README."
+      ],
+      "improved": [
+        "Export uses the typed body and selected source rather than the current preview, verifies staged output and marks results from a previous project.",
+        "The complete 83-page guide explains Auto source routing, five stored facings and eight mirrored display directions, ordinary imports and archival preservation files."
+      ],
+      "fixed": [
+        "Empty bulk scans now say No files exported and identify the selected range/source with alias and UOP guidance, instead of reporting a zero-file success.",
+        "VD-only exports still report success when VD files were produced without PNG frames."
+      ],
+      "note": "Archival 35-action files preserve physical UOP groups and are not ordinary Animal imports. A generic source fidget may be reused for native Eat/Fidget slots; no distinct eating pose is generated. Unsupported native Animal slots 4 and 11 remain empty. Native MUL source gaps are retained and reported. UOP conversion requires visible frames in all five stored facings of every source group and rejects a blank facing or unsupported layout before saving. Server definitions, icons, sounds and riding setup remain separate distribution assets.",
+      "release": true,
+      "date": "2026-10-01"
+    },
+    {
       "version": "0.32.0",
       "date": "2026-10-01",
       "title": "Simple and Advanced modes, clearer navigation and direct VD conversion",
