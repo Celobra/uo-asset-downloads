@@ -22,7 +22,7 @@ test('Every visible listing has exactly one populated category and collection',(
       assert.ok(items.length);ids.push(...items.map(x=>x.id));
     }
   }
-  assert.equal(ids.length,591);assert.equal(new Set(ids).size,591);
+  assert.equal(ids.length,592);assert.equal(new Set(ids).size,592);
   assert.ok(model.items.every(x=>!x.parentSet));
 });
 test('Search accepts armour/armor, multiple words and individual piece names without duplicate armour pieces',()=>{
