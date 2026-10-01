@@ -1,6 +1,25 @@
 {
   "releases": [
     {
+      "version": "0.32.0",
+      "date": "2026-10-01",
+      "title": "Simple and Advanced modes, clearer navigation and direct VD conversion",
+      "added": [
+        "Simple and Advanced modes with shared preferences: use automatic free-slot selection and conversion defaults, or reveal manual formats, IDs, alignment and replacement choices.",
+        "Detailed hover help explains controls, their output and relevant native-format limits.",
+        "Save GIF, PNG/BMP or exported animation sequences directly as verified native VD files without installing them.",
+        "Convert all supplied stored sequences in an exported body folder into one verified VD, retaining action IDs and ground origins."
+      ],
+      "improved": [
+        "Home focuses on common tasks, the Simple sidebar is shorter, and All tools or Ctrl+K retains access to every editor.",
+        "Switching between modes preserves manual values and restores them when returning to Advanced.",
+        "Shared save controls and task descriptions reduce repeated routes and make the first workflow easier to follow.",
+        "The complete PDF, browser and offline guide cover the new modes and direct conversion steps."
+      ],
+      "note": "507 tests passed in separate historical and current-feature runs. The frozen-runtime self-test and installer compilation passed; interactive installed startup remains unverified. A sequence VD contains one action/facing; body-folder conversion includes only supplied stored sequences and skips mirrored previews. Conversion does not create missing movement, riding or server behaviour.",
+      "release": true
+    },
+    {
       "version": "0.31.0",
       "date": "2026-09-27",
       "title": "Classic UO landscapes, script recipes and ethereal mounts",
