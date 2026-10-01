@@ -22,7 +22,7 @@ export async function buildStudioUpdates() {
     .replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
     .replace(/(<meta (?:name="description"|property="og:description") content=")[^"]*/g, '$1' + description)
     .replace(/(<meta property="og:title" content=")[^"]*/, '$1' + title)
-    .replaceAll('https://uo-asset-library.farthrex.workers.dev/studio/"', 'https://uo-asset-library.farthrex.workers.dev/studio/updates/"')
+    .replaceAll('https://www.uoassets.com/studio/"', 'https://www.uoassets.com/studio/updates/"')
     .replace(' href="/studio/" aria-current="page"', ' href="/studio/"')
     .replace(' href="/studio/updates/"', ' href="/studio/updates/" aria-current="page"')
     .replace('</head>', '<link rel="stylesheet" href="/studio/updates/updates.css"><script src="/studio/updates/updates.js" defer></script></head>');
