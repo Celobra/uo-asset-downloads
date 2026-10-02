@@ -11,6 +11,10 @@
 /gallery/catalog.js
   Cache-Control: public, max-age=0, must-revalidate
 
+/studio/update.json
+  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: application/json; charset=utf-8
+
 /gallery/downloads/*
   Content-Type: application/zip
   Content-Disposition: attachment

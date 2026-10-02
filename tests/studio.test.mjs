@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../public');
-const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.32.2/';
+const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.32.3/';
 const pages = ['/studio/', '/studio/workflows/', '/studio/downloads/', '/studio/updates/'];
 const localPath = pathname => resolve(root, '.' + pathname + (pathname.endsWith('/') ? 'index.html' : ''));
 
@@ -33,13 +33,13 @@ test('The installer is the primary download; application source is separate', as
     const html = await readFile(localPath(page), 'utf8');
     const primary = [...html.matchAll(/<a class="button primary" href="([^"]+)"/g)].map(m => m[1]);
     assert.ok(primary.length > 0);
-    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.32.2.exe');
+    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.32.3.exe');
     assert.ok(primary.every(url => !url.includes('Source-')));
   }
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.32.2.zip'));
+  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.32.3.zip'));
   assert.ok(downloads.includes(release + 'SHA256SUMS.txt'));
-  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.32.2.pdf'));
+  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.32.3.pdf'));
 });
 
 test('Studio navigation is available from the existing website sections', async () => {
@@ -51,10 +51,10 @@ test('Studio navigation is available from the existing website sections', async 
 
 test('Public guide is complete and uses scripts/styles allowed by CSP', async () => {
   const guide = root + '/studio/guide/';
-  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.32.2.html', 'utf8');
-  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.32.2.pdf');
+  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.32.3.html', 'utf8');
+  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.32.3.pdf');
   assert.equal(pdf.subarray(0, 5).toString(), '%PDF-');
-  assert.equal(createHash('sha256').update(pdf).digest('hex'), '7cd90e7ba0393b28c2d688881ef5aba7d296dd8f07b709a4770f9144978c404f', 'PDF must match the published guide without newline conversion');
+  assert.equal(createHash('sha256').update(pdf).digest('hex'), 'f4bcd7c716088185188a99ad53d6c6406d65a64d2a4f2368934f09ab5c4ff44f', 'PDF must match the published guide without newline conversion');
   assert.ok(pdf.length > 100000);
   assert.doesNotMatch(html, /<style\b|<script(?![^>]*src=)[^>]*>\s*\S/i);
   for (const match of html.matchAll(/(?:href|src)="(guide-[^"]+)"/g)) assert.ok((await stat(guide + match[1])).isFile());
@@ -62,15 +62,15 @@ test('Public guide is complete and uses scripts/styles allowed by CSP', async ()
   for (const match of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.has(match[1]), `missing guide section ${match[1]}`);
 });
 
-test('Studio 0.32.2 explains export repairs and saved-file refresh while retaining release history', async () => {
+test('Studio 0.32.3 explains chosen updates while retaining export repairs and full release history', async () => {
   const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
-  assert.equal(releases[0].version, '0.32.2');
+  assert.equal(releases[0].version, '0.32.3');
   assert.equal(releases[0].release, true);
   assert.equal(releases[0].date, '2026-10-02');
-  assert.equal(releases[1].version, '0.32.1');
+  assert.equal(releases[1].version, '0.32.2');
   assert.equal(createHash('sha256').update(JSON.stringify(releases.slice(1))).digest('hex'),
-    '26c77182d9218e8b0fe3a52bdde38151630837bce01374504cef61f027d1538d',
-    'All 46 earlier release records must survive this update unchanged');
+    '983746715a71f6c1fedbde79ccfc4098e09d01ea63862a18d61c9a5a1aa558a7',
+    'All 47 earlier release records must survive this update unchanged');
   const workflow = await readFile(localPath('/studio/workflows/'), 'utf8');
   const updates = await readFile(localPath('/studio/updates/'), 'utf8');
   assert.match(workflow, /NEW IN 0\.32\.1 \/ A COMPLETE BODY EXPORT/);
@@ -80,7 +80,14 @@ test('Studio 0.32.2 explains export repairs and saved-file refresh while retaini
   assert.match(workflow, /Files saved\. Refreshing/);
   assert.match(workflow, /no cancellation midway/);
   assert.match(workflow, /files were already saved/);
+  assert.match(updates, /id="v0-32-3"/);
   assert.match(updates, /id="v0-32-2"/);
+  assert.match(workflow, /NEW IN 0\.32\.3 \/ KEEP STUDIO CURRENT/);
+  assert.match(workflow, /Later/);
+  assert.match(workflow, /Updates &gt; Check now/);
+  assert.match(workflow, /cancelled before installation/);
+  assert.match(workflow, /published size and SHA256/);
+  assert.match(workflow, /remains usable offline/);
   assert.match(updates, /id="v0-32-1"/);
 });
 

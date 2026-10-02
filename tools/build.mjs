@@ -4,10 +4,12 @@ import { dirname, resolve } from 'node:path';
 import { buildCatalogue } from './catalog.mjs';
 import { validateGallery } from './validate-gallery.mjs';
 import { buildStudioUpdates } from './build-studio-updates.mjs';
+import { buildStudioRelease } from './build-studio-release.mjs';
 import { validateStaticAssets } from './validate-static-assets.mjs';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 try {
   await buildStudioUpdates();
+  await buildStudioRelease();
   console.log('Validated static assets:', await validateStaticAssets(resolve(root, 'public')));
   console.log('Validated gallery:', await validateGallery());
   const input = JSON.parse(await readFile(resolve(root, 'data/catalog.json'), 'utf8'));
@@ -29,6 +31,10 @@ try {
 
 /gallery/catalog.js
   Cache-Control: public, max-age=0, must-revalidate
+
+/studio/update.json
+  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: application/json; charset=utf-8
 
 /gallery/downloads/*
   Content-Type: application/zip
