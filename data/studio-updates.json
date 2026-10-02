@@ -1,6 +1,23 @@
 {
   "releases": [
     {
+      "version": "0.32.3",
+      "title": "Website update checks and an installer you choose",
+      "added": [
+        "Studio checks the current version on the UO Workshop website after startup and offers an update when a newer stable version is available.",
+        "Updates > Check now lets you check again whenever you choose. The remembered startup-check option applies across profiles.",
+        "The update download shows progress and can be cancelled before installation. The installer is checked against its published byte count and SHA256 before it can run."
+      ],
+      "improved": [
+        "You decide whether to update. Continue working with Later, and save or resolve pending work before Studio closes for installation.",
+        "Website checks and downloads run in the background; Studio remains usable when the website is unavailable or you are offline.",
+        "The installer updates the existing application while retaining your profiles and keeping client data, scripts, accounts and saves separate."
+      ],
+      "note": "Install 0.32.3 once to receive the updater. Older installations can use the website installer. Downloading an update does not install it automatically. The complete guide covers update checks, download cancellation, verification and manual installation.",
+      "release": true,
+      "date": "2026-10-02"
+    },
+    {
       "version": "0.32.2",
       "title": "Corrected UOP body exports and visible saving progress",
       "added": [
