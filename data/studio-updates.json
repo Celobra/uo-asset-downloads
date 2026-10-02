@@ -1,6 +1,27 @@
 {
   "releases": [
     {
+      "version": "0.32.2",
+      "title": "Corrected UOP body exports and visible saving progress",
+      "added": [
+        "Reviewed game-file saves and Save All show a moving activity bar, the current file and its position in the bundle, plus elapsed minutes and seconds.",
+        "After files are saved, a visible refresh phase reports script-reading counts, reference resolution and folder refresh."
+      ],
+      "fixed": [
+        "Whole-body UOP export reads the same last valid recognized mobtypes.txt definition as the viewer, fixing duplicate entries such as body 1729.",
+        "Supported Animal conversion accepts the additional 0x2000 animation flag, including body 1638’s combined 0x12000 flags.",
+        "A second native death slot reuses the first pose only when AnimationSequence explicitly aliases that second source action to the same pose."
+      ],
+      "improved": [
+        "Script indexing and folder reads run in the background once after a save; binary-only saves skip unnecessary script indexing.",
+        "A refresh error after writing explains that the files were already saved. The completed queue is cleared while open script drafts remain intact.",
+        "The complete 83-page guide covers corrected body lookup, conditional riding variants and saving/refresh feedback."
+      ],
+      "note": "The complete ZIP preserves every physical UOP group. A separate riding VD requires an available mapped riding mode; physical groups alone do not establish one. Absent native slots 4 and 11 remain empty. The save activity bar shows ongoing work rather than a time-remaining estimate. Game-file save controls remain disabled until saving and refresh finish; there is no midway cancellation. Receiving-client and shard checks remain necessary.",
+      "release": true,
+      "date": "2026-10-02"
+    },
+    {
       "version": "0.32.1",
       "title": "Whole-body VD export and complete UOP Animal bundles",
       "added": [
