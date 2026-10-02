@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../public');
-const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.32.1/';
+const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.32.2/';
 const pages = ['/studio/', '/studio/workflows/', '/studio/downloads/', '/studio/updates/'];
 const localPath = pathname => resolve(root, '.' + pathname + (pathname.endsWith('/') ? 'index.html' : ''));
 
@@ -33,13 +33,13 @@ test('The installer is the primary download; application source is separate', as
     const html = await readFile(localPath(page), 'utf8');
     const primary = [...html.matchAll(/<a class="button primary" href="([^"]+)"/g)].map(m => m[1]);
     assert.ok(primary.length > 0);
-    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.32.1.exe');
+    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.32.2.exe');
     assert.ok(primary.every(url => !url.includes('Source-')));
   }
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.32.1.zip'));
+  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.32.2.zip'));
   assert.ok(downloads.includes(release + 'SHA256SUMS.txt'));
-  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.32.1.pdf'));
+  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.32.2.pdf'));
 });
 
 test('Studio navigation is available from the existing website sections', async () => {
@@ -51,15 +51,37 @@ test('Studio navigation is available from the existing website sections', async 
 
 test('Public guide is complete and uses scripts/styles allowed by CSP', async () => {
   const guide = root + '/studio/guide/';
-  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.32.1.html', 'utf8');
-  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.32.1.pdf');
+  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.32.2.html', 'utf8');
+  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.32.2.pdf');
   assert.equal(pdf.subarray(0, 5).toString(), '%PDF-');
-  assert.equal(createHash('sha256').update(pdf).digest('hex'), '7c976e573b4a5ba92a2077514cfefb903eb86317bef8fca47ce9de7221a3eedf', 'PDF must match the published guide without newline conversion');
+  assert.equal(createHash('sha256').update(pdf).digest('hex'), '7cd90e7ba0393b28c2d688881ef5aba7d296dd8f07b709a4770f9144978c404f', 'PDF must match the published guide without newline conversion');
   assert.ok(pdf.length > 100000);
   assert.doesNotMatch(html, /<style\b|<script(?![^>]*src=)[^>]*>\s*\S/i);
   for (const match of html.matchAll(/(?:href|src)="(guide-[^"]+)"/g)) assert.ok((await stat(guide + match[1])).isFile());
   const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]));
   for (const match of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.has(match[1]), `missing guide section ${match[1]}`);
+});
+
+test('Studio 0.32.2 explains export repairs and saved-file refresh while retaining release history', async () => {
+  const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
+  assert.equal(releases[0].version, '0.32.2');
+  assert.equal(releases[0].release, true);
+  assert.equal(releases[0].date, '2026-10-02');
+  assert.equal(releases[1].version, '0.32.1');
+  assert.equal(createHash('sha256').update(JSON.stringify(releases.slice(1))).digest('hex'),
+    '26c77182d9218e8b0fe3a52bdde38151630837bce01374504cef61f027d1538d',
+    'All 46 earlier release records must survive this update unchanged');
+  const workflow = await readFile(localPath('/studio/workflows/'), 'utf8');
+  const updates = await readFile(localPath('/studio/updates/'), 'utf8');
+  assert.match(workflow, /NEW IN 0\.32\.1 \/ A COMPLETE BODY EXPORT/);
+  assert.match(workflow, /last valid recognized/);
+  assert.match(workflow, /0x2000/);
+  assert.match(workflow, /second death slot.*explicitly aliases/);
+  assert.match(workflow, /Files saved\. Refreshing/);
+  assert.match(workflow, /no cancellation midway/);
+  assert.match(workflow, /files were already saved/);
+  assert.match(updates, /id="v0-32-2"/);
+  assert.match(updates, /id="v0-32-1"/);
 });
 
 test('Media stays within static hosting limits and animated files have GIF headers', async () => {
