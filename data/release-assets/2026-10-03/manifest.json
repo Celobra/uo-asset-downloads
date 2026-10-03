@@ -1,0 +1,4140 @@
+{
+  "version": 1,
+  "bundles": [
+    {
+      "file": "assets-01.zip",
+      "bytes": 12567781,
+      "sha256": "3321b5a642fc85aa428e699c53941f22f0b4cbb6b8fafe650a1c1e5c756718ef"
+    },
+    {
+      "file": "assets-02.zip",
+      "bytes": 20198498,
+      "sha256": "99429f272ab1ff324b28bceeff794f53de133b488ddecc5b5299a255f0b5853b"
+    },
+    {
+      "file": "assets-03.zip",
+      "bytes": 19680475,
+      "sha256": "d8016199ad0b7216e11c744f378782907952dc927e5a7625d2afea1c5249f09a"
+    },
+    {
+      "file": "assets-04.zip",
+      "bytes": 11375178,
+      "sha256": "fd7e83b029c2d63ede1aadaa46572679638ec89e2f7e29f32a8df656d21bec02"
+    },
+    {
+      "file": "assets-05.zip",
+      "bytes": 18929129,
+      "sha256": "662ec3dbe3dfdda8b84f707644f2cee36916a71003d84afc3e60dc8c6dbe05a7"
+    },
+    {
+      "file": "assets-06.zip",
+      "bytes": 14433570,
+      "sha256": "be853f32570dc07b6263a3b92663eb43ebcfdad301f765d35132eb1e67845575"
+    },
+    {
+      "file": "assets-07.zip",
+      "bytes": 14297186,
+      "sha256": "9c85a6151e304243f69c99a695edd398d5d3931adfa0c5ade86afa593462f085"
+    },
+    {
+      "file": "assets-08.zip",
+      "bytes": 13061490,
+      "sha256": "62293724d4b51ae1a8d2c5423ab189656c1065428880bb34be3f240659fc45aa"
+    },
+    {
+      "file": "assets-09.zip",
+      "bytes": 17594869,
+      "sha256": "6768530cc939121fe8490d98227b8381262ad50940bc73291c57a7bbf996dbe5"
+    },
+    {
+      "file": "assets-10.zip",
+      "bytes": 20252473,
+      "sha256": "bf95b39f74bc30ffda0d9b51fbfff88af740c49ad9ca0ab84cca7bea062c838a"
+    },
+    {
+      "file": "assets-11.zip",
+      "bytes": 19986992,
+      "sha256": "df42c5429ff6e6da742e4a40e44ad873be9c7d1c01c9c8b94656a18a956bf9e0"
+    },
+    {
+      "file": "assets-12.zip",
+      "bytes": 19538679,
+      "sha256": "db24470a4162f79a1ca467d1ec8bf5fdc3bb8cc514448b50ea22519fe25596fa"
+    },
+    {
+      "file": "assets-13.zip",
+      "bytes": 20135719,
+      "sha256": "795fd8748a2d0e24de70f70904c47fedd14f858e35f5282b7500fb95d6d935f5"
+    },
+    {
+      "file": "assets-14.zip",
+      "bytes": 19708435,
+      "sha256": "aaf5d83f194914a99185417528c7127fb2e3a19475b4043171f960302d00c1ef"
+    },
+    {
+      "file": "assets-15.zip",
+      "bytes": 20012092,
+      "sha256": "fa7c8ee9785b2573d3ca71ef7cdf9f8b4155de98f9c1aa6ee6c46ecb06782e9d"
+    },
+    {
+      "file": "assets-16.zip",
+      "bytes": 19707364,
+      "sha256": "b14a97b8b6e68b3ac0852cfba094044f6d95dfef0e339893edf8f45f5674e8ab"
+    },
+    {
+      "file": "assets-17.zip",
+      "bytes": 19592131,
+      "sha256": "f2a72a28a7a5026871bdcf3236357770e6a83293a94d9b065cb232614feed1dd"
+    },
+    {
+      "file": "assets-18.zip",
+      "bytes": 20301703,
+      "sha256": "b8de66d21528921b1f0d1a19f0b0e62411dd39e659ae1d60c8d332d5edc8b7d2"
+    },
+    {
+      "file": "assets-19.zip",
+      "bytes": 10536678,
+      "sha256": "780e971095adefff7e05fdfcafa1f7c7244a80e0feea2301cf3e8eaf3acc5e0f"
+    }
+  ],
+  "files": [
+    {
+      "path": "gallery/downloads/creatures/ashhorn-tiefling-study.zip",
+      "bytes": 310234,
+      "sha256": "f73175a2f3887b55b36cb5bf0931677000829ac9abea7c4b32c8461fb4b3af76",
+      "bundle": "assets-01.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/blight-daemon.zip",
+      "bytes": 12311464,
+      "sha256": "403ecefb601e9b9aef4142db861c67d53319559d5cea587e8cf8821fea0d19dd",
+      "bundle": "assets-01.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/cinder-daemon.zip",
+      "bytes": 12708711,
+      "sha256": "0723094eaf5dc9592af91e706d7d1aaba52867a00bae1c3332f46441ecebb1d8",
+      "bundle": "assets-02.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-ankheg.zip",
+      "bytes": 2206758,
+      "sha256": "4d750c9b00c9983e66275782170c27100197dfa2f80e5cb340899ea08712d806",
+      "bundle": "assets-02.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-axe-beak.zip",
+      "bytes": 2044254,
+      "sha256": "da65a6b67ca5168c363d693994f7e2676ce4c1f94ca4c16f92a67b9dca6ba44c",
+      "bundle": "assets-02.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-bulette.zip",
+      "bytes": 3422034,
+      "sha256": "ad05ab8d3adac6f8410be97cbd7d92c43e79dd6235d1cc5d86d303ab2b2bfe68",
+      "bundle": "assets-02.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-carrion-crawler.zip",
+      "bytes": 3649765,
+      "sha256": "0e2f1acbd954d72e85f4c8d87a234f6a460ef3dfa1a84817e9e884fbfcaa919d",
+      "bundle": "assets-03.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-displacer-beast.zip",
+      "bytes": 6386906,
+      "sha256": "d107ce09d12c968d93495948a9553048013ef907186c2325e0a5e5943b99c83d",
+      "bundle": "assets-03.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-giant-elk.zip",
+      "bytes": 2521287,
+      "sha256": "d0b8aa4ecb885aa5a9495ed6d878039e91f50ce8d2261667795e440b6d64f800",
+      "bundle": "assets-03.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-giant-lizard.zip",
+      "bytes": 2953862,
+      "sha256": "927b6a239eabded4d903493abd61c1150f2627e3e580f49920450b3a0f601f3a",
+      "bundle": "assets-03.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-giant-spider.zip",
+      "bytes": 4373666,
+      "sha256": "8407a58c4456a97fd17ac3fcf75400f6d171e82d4cf8b9464d4fc71e75982442",
+      "bundle": "assets-03.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-gibbering-mouther.zip",
+      "bytes": 3330471,
+      "sha256": "9038eee128e13de1cbf40aba6ee9230532e8730700830335e84f25c2a58f5e3d",
+      "bundle": "assets-04.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-gorgon.zip",
+      "bytes": 1715912,
+      "sha256": "44272b7c83dd6923231c7844a6f63d958c434adef9808884c2613e97aa31e5ae",
+      "bundle": "assets-04.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-griffon.zip",
+      "bytes": 3282786,
+      "sha256": "ae3635685159f2708ddc23d998816caab4983c68f032763a1546effd16f8b3ce",
+      "bundle": "assets-04.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-hippogriff.zip",
+      "bytes": 3226513,
+      "sha256": "2a8a7c5bbe25038a8b7be02e39b0b0e34c70b319310c53a335416ae5e60cc864",
+      "bundle": "assets-04.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-hook-horror.zip",
+      "bytes": 12223518,
+      "sha256": "f9a02961afaab2664147674e3e9b24471a286decf92fa5cfea68b9352c1f0351",
+      "bundle": "assets-05.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-mimic.zip",
+      "bytes": 6788583,
+      "sha256": "e19f2f0e70d738a2a2ced21d0cf3aabe0a463f217c08e83ae86258d2c12ed334",
+      "bundle": "assets-05.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-peryton.zip",
+      "bytes": 3504164,
+      "sha256": "14fb68f2ef3793c9d39af84e7234a542906a20c275d0b4717d340ec7d082045b",
+      "bundle": "assets-06.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-roper.zip",
+      "bytes": 6121750,
+      "sha256": "670b298df752d389ceb8023331587ae7e038cea756981c5839eaf9c50da99803",
+      "bundle": "assets-06.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-rust-monster.zip",
+      "bytes": 3104733,
+      "sha256": "66d36c4d8d3750a7c96e87370a0d2832b7b1a3a1b7ae0fcfb5a427ee600fef64",
+      "bundle": "assets-06.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-saber-toothed-tiger.zip",
+      "bytes": 1870463,
+      "sha256": "c6ea74f8cbf4f478264f55f77d2913e4e3f029cddc698e36dcc569855134c18e",
+      "bundle": "assets-06.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-umber-hulk.zip",
+      "bytes": 12755689,
+      "sha256": "bb7659fd87a03ac0d0c777bad7850dd034960ab567ed8bc671b40efed92fc823",
+      "bundle": "assets-07.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/dnd-native-worg.zip",
+      "bytes": 1634756,
+      "sha256": "f1dcf369826cc1b5515c86042e8d482ff0fbedff62d51535abee06b9512d174d",
+      "bundle": "assets-07.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/grave-ivory-daemon.zip",
+      "bytes": 13114202,
+      "sha256": "de4c0a6cd70884fe2e8847e0daa756cc5167ee8d7d2c2607f09219463d4c5a92",
+      "bundle": "assets-08.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/ironmaw.zip",
+      "bytes": 7896869,
+      "sha256": "2d94e9ee9af6ec6c8d387a2dfa3975dd128f2f82d4c6213806b25fecf0d4a164",
+      "bundle": "assets-09.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/pegasus-mount.zip",
+      "bytes": 2633359,
+      "sha256": "be2f241bf23b6fb250fcd6d55a5fb951190f1fdec35da71ff1cc296096235a0b",
+      "bundle": "assets-09.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/riftwing.zip",
+      "bytes": 7210611,
+      "sha256": "47ba8a62fd89d919cd4b51e854e2ba1dcec8c89fc28d10010e26233732c9b8e2",
+      "bundle": "assets-09.zip"
+    },
+    {
+      "path": "gallery/downloads/tools/britannia-architect-windows.zip",
+      "bytes": 15904899,
+      "sha256": "4d817faf6267448e5967311e6fe01134524889df0b1b5aba7cc23331b32ed5e9",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-autumn-crooked-walnut-glade.zip",
+      "bytes": 1558,
+      "sha256": "68b4c784bf53118b35f054df802f6d0a9f010659b8366af12127c3a0b58e28f0",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-autumn-old-oak-glade.zip",
+      "bytes": 1541,
+      "sha256": "cab2143a898d101e8fe2edbd46f2c309727184662ff2cad10c664bca9af6667c",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-autumn-spreading-oak-glade.zip",
+      "bytes": 1550,
+      "sha256": "7758d55ca29291a128f08ec5ca302d9b60520ebe9158f54303c2fa84fafe03f5",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-autumn-walnut-glade.zip",
+      "bytes": 1538,
+      "sha256": "c54fcb8af2167b5140486f3b18091e8a40a40ea55cf2d92baf63cdcacd4c2880",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-autumn-willow-glade.zip",
+      "bytes": 1543,
+      "sha256": "3e797db8554cfaf4e95140c9a43dd3757f724ac42dbed8f95a5a7581991ef436",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-autumn-woodland-debris.zip",
+      "bytes": 1516,
+      "sha256": "460e4b5ab042ad037ed5bf6bb3dff236d2a3ed181fe8d120f2d3ab3936f2b366",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-bare-crooked-walnut-glade.zip",
+      "bytes": 1542,
+      "sha256": "e41ba8e382a843715613b39de385902a4fe096f1fd9cfa889f90afde00eed157",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-bare-old-oak-glade.zip",
+      "bytes": 1522,
+      "sha256": "657c49e83f610a3495c4e99dfec5e4134c7485491549194bda2c1074e9bd66d6",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-bare-spreading-oak-glade.zip",
+      "bytes": 1536,
+      "sha256": "c13b465f6638c8dfb313867851e4bbbc450e61eb9acf03683176e368ba6d01b4",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-bare-walnut-glade.zip",
+      "bytes": 1528,
+      "sha256": "894a0065baf3515fe1c1c8c368568284239cbed152499a208ab12cb166b799d1",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-bare-willow-glade.zip",
+      "bytes": 1527,
+      "sha256": "f26da66185d1ee7f06da3dcaa01a03e54d40b646cfe96f0d02b8ea52cedb2251",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-broken-courtyard-edge.zip",
+      "bytes": 1610,
+      "sha256": "c7a26ce67fac2b36b139b1a478c36f7116ccb70ac7b5593fda673d07ac1fd4f4",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-broken-stone-fan.zip",
+      "bytes": 1563,
+      "sha256": "29cfd25d937575770388a0a0e615cd5dab81885ab033de48e3c450ea55a0adaa",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-campion-bank.zip",
+      "bytes": 1508,
+      "sha256": "2454b745d5cb765e5c086d9e073ba9311c5da84f8930b2c7f9a5ab0032267a81",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-fern-bed.zip",
+      "bytes": 1510,
+      "sha256": "deb0a68fc2273a60f3e9015b355a54993a32494b316a0e182d893dbc25d721bb",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-fern-covered-fallen-log.zip",
+      "bytes": 1521,
+      "sha256": "2706871cb24f783d8965c91ed4e3cbdcb7aeaf8e19a7311f6fcb22deb85be5ff",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-fern-wrapped-foundation.zip",
+      "bytes": 1604,
+      "sha256": "e7b5ac75e342ef15f8e61c78222b77d7be9872a9a4e17e1df256ff38d5c09460",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-forgotten-boundary.zip",
+      "bytes": 1626,
+      "sha256": "684247790abd69bb365dcb4eb312798a992d207caeaddd45b931216ca62e9ebc",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-foxglove-patch.zip",
+      "bytes": 1522,
+      "sha256": "1d944cf3e382d80abe5d7c5838bc1d8faab1eea3cfbc2564df6de7991935234b",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-granite-outcrop.zip",
+      "bytes": 1557,
+      "sha256": "def89cef72d0cbceae42556620ced6daecdf9c38ce53d59c51834ef0b1fac974",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-juniper-border.zip",
+      "bytes": 1522,
+      "sha256": "2c3a63f2ee1dcc40ae7d8289d6ec3332627e28d65708d39c771258aa325713fe",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-lost-garden-corner.zip",
+      "bytes": 1586,
+      "sha256": "d3db408664ad42db7d6053313cf681f73b2c035fd49aa739554bfaecb39e6072",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-low-boulder-trail.zip",
+      "bytes": 1568,
+      "sha256": "f7edfb2687100fbcc125ac8d9d3d95ca11ca44d58a94475275cee946bfcb6ea9",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-mushroom-deadfall.zip",
+      "bytes": 1498,
+      "sha256": "e9d422d5854bea110e5d38d533c3ab21ccb6741d6c89a1d0aee3601f04238cb9",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-mushroom-enclosure.zip",
+      "bytes": 1646,
+      "sha256": "95cbe6d0b6314438f055764655ac5235dc03dee9b1885f1cec4ddb0d3fe84b61",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-mushroom-ring.zip",
+      "bytes": 1558,
+      "sha256": "0f687402be1241ddf56f6a1ed5e60808dc13e49c31f56f5a2f8df235088c14e2",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-old-watchpost-footing.zip",
+      "bytes": 1605,
+      "sha256": "4183186a572f62eb7ae62a2a209263e35ec1ce3bd636c88527e72ae5970a6719",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-pampas-thicket.zip",
+      "bytes": 1522,
+      "sha256": "b94779b6e19df25fe67cec5abfa808f34abe39d1dc48b4617e87340571a5564d",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-reclaimed-stone-walk.zip",
+      "bytes": 1584,
+      "sha256": "e7b783f85001005f9f855f8ed8d698a0acf5d1b876f96c47b2be082c365bdb79",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-reed-clump.zip",
+      "bytes": 1516,
+      "sha256": "f8a3cdfc40650883e4ab76434cf7ca341229ec043633b3a513e09caead9892fd",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-reedbank-masonry.zip",
+      "bytes": 1596,
+      "sha256": "3d695a0cbcdf0a5cc1cc5a311d1ddba0e6f77508d5e73b6646cc8a56b88d846c",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-reedy-fallen-trunk.zip",
+      "bytes": 1505,
+      "sha256": "ffd46b001a6f5052755eba597028364a9721d5ac17a213e5ea2236b1be576a1d",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-rockside-driftwood.zip",
+      "bytes": 1500,
+      "sha256": "ea97e7e41c8be2c223d3ba27c2855b41f732e40a731a4fd0e515ab47ce4d4cdd",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-rocky-reed-bank.zip",
+      "bytes": 1544,
+      "sha256": "6a765a66b7c0c267838c7c6e29ac583c4ef455968503097adec0dd5acf564207",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-sandstone-knoll.zip",
+      "bytes": 1550,
+      "sha256": "26583a07c1130911d25ce2c2b6f4c6c12070e150aa152ed3a2ba60b07fa36012",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-sapling-nursery.zip",
+      "bytes": 1527,
+      "sha256": "923a762e61ceb843c7321506f5575fec58902f1c4ac1bfac41e258e6dd2df742",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-split-grey-ridge.zip",
+      "bytes": 1555,
+      "sha256": "ba053f51f962a94dbb82bcd8937700aa0a688d3b6fd16e25e1acdb662c129c17",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-stony-fern-hollow.zip",
+      "bytes": 1600,
+      "sha256": "03bed357b0faf3b23e647a6378a7c4bde38fee70cc35c21b00faef04a47b3534",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-summer-crooked-walnut-glade.zip",
+      "bytes": 1559,
+      "sha256": "5deed603d9cbbd4ca7f5a4b8bd2378a9aac4a58666f02c84ce95852dece7e566",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-summer-old-oak-glade.zip",
+      "bytes": 1541,
+      "sha256": "c616df9a7511f01be8117020f6f3404070cc9c2655bc1c410b9dfa97ce70e8a9",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-summer-spreading-oak-glade.zip",
+      "bytes": 1550,
+      "sha256": "65092acaed482c20f83aefb8856de036d4e04f7fcb7bece81a53604086ea349b",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-summer-walnut-glade.zip",
+      "bytes": 1533,
+      "sha256": "efc3828e9b4a7a56cd7a8d80888e9e1e6dc46467a3648e0da67acd97c84fa71c",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-summer-willow-glade.zip",
+      "bytes": 1540,
+      "sha256": "c3b744af1fc294d47eb9aacb3f7d2e6155ba1f63393de387411aec7601ef5907",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-twin-standing-rocks.zip",
+      "bytes": 1553,
+      "sha256": "38c196ec9d32e0b2cf4c56d7e15cadfe278b19d5696b625ba0b95587ea5bdd3f",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-white-scree.zip",
+      "bytes": 1548,
+      "sha256": "f15503d9fcf1bb38a1b13af2f781bea8c638e59d27e2dfd06f8cc1d67e09f2ae",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-whiteflower-drift.zip",
+      "bytes": 1523,
+      "sha256": "79e5112deadc8f74d519448c3d656b1c7f723682ba946402ab21f4cc73d4467d",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-wild-grass-verge.zip",
+      "bytes": 1532,
+      "sha256": "f385ba5ce12e596825db6b28c227faca9cc65bc10660842db819038b86ad7fb4",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-wildflower-crag.zip",
+      "bytes": 1558,
+      "sha256": "72560cde42ff3c02b6ca303d750b8fb4c29fe8d693ad9395176b43acf9253a07",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-wildflower-wall-remnant.zip",
+      "bytes": 1596,
+      "sha256": "91740ec063861d98ea4f68e40587ede5a3083db2a89a61bc7642f5c255aff87d",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/downloads/world/landscape-woodland-gate-remains.zip",
+      "bytes": 1628,
+      "sha256": "f34a31ad4d8e3163ff7da0ddf56ff61f7c33da1970ca581e90d6800ae5042a41",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ashhorn-tiefling-study-frames.png",
+      "bytes": 68870,
+      "sha256": "5b468b9dc8dbe7d614070f63cdb8ec6b22e58ac88cb931178263809eab335323",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ashhorn-tiefling-study-walk.gif",
+      "bytes": 111987,
+      "sha256": "291be1025c3a95fc6fe272147d95f71535d7d5b80dd73b9f57b1dd319b157db6",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-00.gif",
+      "bytes": 416501,
+      "sha256": "69a2b524f1e215e9b8c337f5b5f36b27c2b95fc6ba5009280ebdde4f7ed1714f",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-01.gif",
+      "bytes": 47517,
+      "sha256": "678010645c8710898b3172933b155e0f1040f21b13ebdb0438ff56bbdde2b25c",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-02.gif",
+      "bytes": 196021,
+      "sha256": "152d24f952159ed1a554c50afce87d12b7ac3167878ab463d94aa77ba23a498a",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-03.gif",
+      "bytes": 169803,
+      "sha256": "fe984712fccd4ccdd6ceeda9528c48ca980f5d7a584875aa1ff83fd956eb74ab",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-04.gif",
+      "bytes": 177119,
+      "sha256": "a13579c9146588f854a8767337188639e1c8d9f78e52b1a8e25884d0d8a618f5",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-05.gif",
+      "bytes": 178229,
+      "sha256": "da188b7c0e4bb076a9fa8bfa65165ab7322773b3872360afbdd269c9e27c8807",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-06.gif",
+      "bytes": 182757,
+      "sha256": "17416dd120b278144eab69addc8b1f57cbc7d8f8280d68165c0d43156b733f42",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-10.gif",
+      "bytes": 187269,
+      "sha256": "4d4f12415a9f19bf556c4c8615d1640fab78d069e6aa7bca2ada783d11ffc080",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-11.gif",
+      "bytes": 248941,
+      "sha256": "8d1bd8a2745dbbed633285e1feb3b8fefb9250917707f1494f9994c9c26b710a",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-12.gif",
+      "bytes": 355893,
+      "sha256": "6bfa575d902335b9f6820b3224339d4a06f6bf6321ef86919de83f2b71ffb3aa",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-13.gif",
+      "bytes": 348881,
+      "sha256": "5617bbf01fa6d3ff846b0b9c04ead99da561130326acb621ade19bd08485120f",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-15.gif",
+      "bytes": 133804,
+      "sha256": "9f03938d9cd23c1d89adc613722a88063218546693dbc9d6361bbb86eb4f5f53",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-16.gif",
+      "bytes": 131846,
+      "sha256": "4136464484e6a8495e9a9fa76a4e995791aadab67a13bbf294cad8911f46fa5f",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-17.gif",
+      "bytes": 233931,
+      "sha256": "5d378b860464cd9e6845b552ee2b53146583677d75c798728d323a1dba2e6658",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-18.gif",
+      "bytes": 227736,
+      "sha256": "e0459e0482a8128d538466fbc436403d09975efc32e412e0b1c1b8f6c7a4d41c",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-19.gif",
+      "bytes": 455270,
+      "sha256": "af6114e1091095d2379ee8ba663464e8d27fe17c2ce3c48382037a1f5e38d4c7",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-20.gif",
+      "bytes": 142936,
+      "sha256": "5e428674504f5a029c7cd5d49278095b4d7cdc7e7943ea6934ebd30665dd6bb3",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-action-21.gif",
+      "bytes": 301375,
+      "sha256": "88b3b5fff5237c260a079cbe55b176149bb7726111423b8bb741341e30220503",
+      "bundle": "assets-10.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-all-actions.png",
+      "bytes": 2058263,
+      "sha256": "a391be3dca15de7316decb9ca52c0d77e9145c8db9439fdc3eb45fa6ae834e50",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-motion.js",
+      "bytes": 9604,
+      "sha256": "c37392f9fe5374cbad6903f9e6040860cbf77c0de8f627260bc3628d0757a051",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/blight-daemon-thumbnail.png",
+      "bytes": 23240,
+      "sha256": "b2d1396826304c4cfbd145817df3295c978592b842a36b90d0edacabdd89e4bb",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/britannia-architect-preview.jpg",
+      "bytes": 181547,
+      "sha256": "d4754edbada0de7e6b2a3bd6be4619797dd2f3658b7d63bd509824a242e4b0a1",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-00.gif",
+      "bytes": 428314,
+      "sha256": "a4d2c5be079208e32289415fe4fa97e10691378cfd7efe15751300e0bfb19c42",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-01.gif",
+      "bytes": 48930,
+      "sha256": "6ac9b2ca8864a5974f8023b191e049e22353c7c5bb1e1749fa58487227bd89be",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-02.gif",
+      "bytes": 201174,
+      "sha256": "bdd554bc9d15a7784a9aef1df53e54a0f0d3d03f55e0e4f9df26a7520012ea39",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-03.gif",
+      "bytes": 174597,
+      "sha256": "02659429438500704e0005bc28e71a11fb3da4b8a4537ca2f7c4354f63e52a39",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-04.gif",
+      "bytes": 182453,
+      "sha256": "abc4b72cc1caaf6f1a46dc9831207f9698cb4cfeb36366b32881ad30e09df582",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-05.gif",
+      "bytes": 182719,
+      "sha256": "60c6e9c1ac3312169c997bc218a42e0a014affd89bca0c4a5bb46220a05c6b21",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-06.gif",
+      "bytes": 188026,
+      "sha256": "417c4493e2fb967be52f1917f266a0fb96ba62ebeec78229a998994474aca438",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-10.gif",
+      "bytes": 192768,
+      "sha256": "868cc6f6d86a455de6a0eedbf9480107afe27cb95a7fc11fdd5ac88b149777f9",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-11.gif",
+      "bytes": 256988,
+      "sha256": "ebfda8036ac883338d1e99143706d80e6bf08fb5b58d80f1e74fd728af1f7f97",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-12.gif",
+      "bytes": 366143,
+      "sha256": "07ab3e7740841fb42e6d85ca9ae7e95d7608c5074978f789b7def5ce31c29b01",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-13.gif",
+      "bytes": 359384,
+      "sha256": "99456777b1e547076f444dd8ca145c315078a4a8a11481220c65411daeeeabf2",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-15.gif",
+      "bytes": 137599,
+      "sha256": "24d84e91d4fa5de02200889bf953d77650666ec1690cd256adfb5c98a6c28e35",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-16.gif",
+      "bytes": 135542,
+      "sha256": "c7a1e0a1c865c8fe9da3cb19be7168a5c09317c59b6323d35c058fd2990d703e",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-17.gif",
+      "bytes": 240382,
+      "sha256": "8b906379eb048d6648d1e42dfaa1c86e01ecdb7f10854d0677bf248b23731244",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-18.gif",
+      "bytes": 234528,
+      "sha256": "b7107ea574c97fc5fe2781c66a519a9a5e92161087b15dd60a447345203de3b0",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-19.gif",
+      "bytes": 465894,
+      "sha256": "b96a8b8ef9437c62713c482bc6d86148088ec989769f3018c99ee60f55649634",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-20.gif",
+      "bytes": 146937,
+      "sha256": "aff06504743cdff46b904881e4557d659489b6c74fc5925610aa4e3233703566",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-action-21.gif",
+      "bytes": 309153,
+      "sha256": "67a65978d20a880f957ab90bd66cadee7a667cbbc20c4f28fccaf30a7ce1908f",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-all-actions.png",
+      "bytes": 2163051,
+      "sha256": "816ee0bdbb39e28e3bc991884713e1532ba568ab02cead1658b4c53565bf2c4d",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-motion.js",
+      "bytes": 9604,
+      "sha256": "6cbf011f228448c98cd43f69abae4b2f019fe17db2836090224fa40f2d07a8fe",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/cinder-daemon-thumbnail.png",
+      "bytes": 24493,
+      "sha256": "2294fc88bb108714b70bdaf491368ac557d44a36f75e9cf339d082d2b9468308",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-ankheg-action-00.gif",
+      "bytes": 83359,
+      "sha256": "7ae686bcf5667f4733536d449f14a9943b3d2a9502d1122698d302f76df74f95",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-ankheg-action-01.gif",
+      "bytes": 81171,
+      "sha256": "50a0f03ed5faa8f6fa20030063acd4526debcb6c61f7cc8e12e277f6d1c5a0c0",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-ankheg-action-02.gif",
+      "bytes": 16655,
+      "sha256": "b7ac8232c88bae0bde978c341ea12ec1395cff2239888df9f91bddd9bd640338",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-ankheg-action-03.gif",
+      "bytes": 81646,
+      "sha256": "b968131b4baa2895e6542573a1d51a24e8c6dc71387ac28b80125e6746f2f55b",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-ankheg-action-04.gif",
+      "bytes": 49887,
+      "sha256": "164aeb3584f6b4dc08bb24c28ef69450fc59dd629b319114087703be922589d3",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-ankheg-action-05.gif",
+      "bytes": 83424,
+      "sha256": "fe9f51687f0db58f25a8d5067880eb8dc30d68da3c81b27779178770834de073",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-ankheg-action-06.gif",
+      "bytes": 78733,
+      "sha256": "16f2a5c1ae7524d0f6d3691bd3b3d428a88b2a91a21fbf30e375c52c97990955",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-ankheg-action-07.gif",
+      "bytes": 80208,
+      "sha256": "48651f0b4e6288a2f4be8defbe9b95d4be6a75d5d8478c2ef3b8218310b871b6",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-ankheg-action-08.gif",
+      "bytes": 86326,
+      "sha256": "9a9d3254744d52132d8bc6ecd608a89dbaf30f9545bbefc602f4b3af24a8189d",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-ankheg-action-09.gif",
+      "bytes": 83064,
+      "sha256": "0c34dbf5689bdabc9a3d8250b6a3dbf360eb5aa632b7e8ee931fb6ed536bfc53",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-ankheg-action-10.gif",
+      "bytes": 51081,
+      "sha256": "473fd52c17a098c051c31dce27ec42c32abbc7dad64a291b50e01032bbc13a88",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-ankheg-action-11.gif",
+      "bytes": 90955,
+      "sha256": "0097875a890f1eab2e22a1b6ba98012cf21f609e83a43c347ff09efc0018e4c5",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-ankheg-action-12.gif",
+      "bytes": 86304,
+      "sha256": "2e3b1cce8a41c111036a137393f0dd0d13b731883299901749e70262260eae92",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-ankheg-all-actions.png",
+      "bytes": 416534,
+      "sha256": "152fc79d214c93ba873aeed706e81320962145f2bf29381988491c55a65a3138",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-ankheg-motion.js",
+      "bytes": 5581,
+      "sha256": "cdfca685f81abf3d16639c0e47b0a1e852d36c3c1c9682728c1b7059123cf2a5",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-ankheg-thumbnail.png",
+      "bytes": 6873,
+      "sha256": "b419b602536ab2287931dea79a082b81ac65f3de2c099d47f829f5c334de0803",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-action-00.gif",
+      "bytes": 63772,
+      "sha256": "587aecebb1fc9dd6fd6ce072458cb616d00b77bafad82da6ce121d4abfb64f3f",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-action-01.gif",
+      "bytes": 62442,
+      "sha256": "7f3e48c6035fe365dc00c4e4b1acc2ffbbc17bf98560de19814e2b06b7f844a8",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-action-02.gif",
+      "bytes": 12311,
+      "sha256": "3fe019006d9b3a9bc4e6f172df5ecde5a09b250b68ba976d7fadc84ae5db94ba",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-action-03.gif",
+      "bytes": 71699,
+      "sha256": "1671f0c682ba9dac0f326dfecbd2c58909b3c153a429503fdc241ce65c886ef0",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-action-04.gif",
+      "bytes": 44419,
+      "sha256": "d7646e7b9d63454fff62407da50374c54672d870132ff483d415a025da8bc561",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-action-05.gif",
+      "bytes": 70035,
+      "sha256": "b1876a07307c779bf80ac87e4482584e48d0bc7c946a0276f579f002584ff831",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-action-06.gif",
+      "bytes": 71788,
+      "sha256": "8820f8a0d92a449921673c8e4de85afbe8ecacd9b0700381f7a87f8dbbb2673b",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-action-07.gif",
+      "bytes": 77838,
+      "sha256": "45ff49e0e46f1a6d1feae7f2d6a49c27359b40d9a380d6aeadaef0e92295b335",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-action-08.gif",
+      "bytes": 90166,
+      "sha256": "fe8d77511005bd6dffadbe13250460a7698a4b2925964ad558edc8530c552036",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-action-09.gif",
+      "bytes": 80065,
+      "sha256": "5066f8e1adee45cd232818ceecbf16fd9fa08b32d346750ef22cc8792957a163",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-action-10.gif",
+      "bytes": 47702,
+      "sha256": "b59434fc6d4ce7d1737902ade5621160605b29b44c9c41623f711652e2de86a5",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-action-11.gif",
+      "bytes": 85055,
+      "sha256": "7391dcfc799a0c2560c5da1dc6cb6f45cf2f9883eeccf374eb2ab34c3b2aa292",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-action-12.gif",
+      "bytes": 79273,
+      "sha256": "1ad55eb68ef6801be4d3de93b3b916dfae61c273a0aa82f8c699b36e5a1f2920",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-all-actions.png",
+      "bytes": 376373,
+      "sha256": "acc5f86cdc4b99f6327268339719f4005bc6009c05810f2075f18d85615adab7",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-motion.js",
+      "bytes": 5566,
+      "sha256": "edad566f1ce0b64fa0e0a2d569630a94bb0fdfd870701392131d90861cb6a944",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-rider-female-0.gif",
+      "bytes": 71912,
+      "sha256": "356d5bac017fa14c73c294e082ec4290a4e992c3d16daf6829f910c1e25ef75f",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-rider-female-1.gif",
+      "bytes": 69939,
+      "sha256": "79c83a8f5a38811c7e611297ef9fa4b65451a00dd1af12268f9aa068306a2ca5",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-rider-female.png",
+      "bytes": 48237,
+      "sha256": "a0e9b6b8079e58dbddb6fcc4b2a4b1c960ab84e613196ea16953bf6d1be332a6",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-rider-male-0.gif",
+      "bytes": 71810,
+      "sha256": "60034444e40f22ccc0cd39b033c00cd11b0b2cb92f67cd3129b130cbe784c72b",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-rider-male-1.gif",
+      "bytes": 69932,
+      "sha256": "d35464266179dd21787fae626bba6121521f7dd9b38f473045ea696ffc2d301a",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-rider-male.png",
+      "bytes": 47555,
+      "sha256": "3a5fc5506c612dc56a04f533764d2461e1c433ae9e95494d4e8452976ffcd032",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-axe-beak-thumbnail.png",
+      "bytes": 5437,
+      "sha256": "1b693174a254d9a048ef8933f17fb409b02e51cd4477545e39f7b39f7891b941",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-action-00.gif",
+      "bytes": 96680,
+      "sha256": "c5dc5619ccc4537ecda2d65cec579f2d1de0d1c6cb6884a075acba9336ea6b9e",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-action-01.gif",
+      "bytes": 93090,
+      "sha256": "a9b7b32a0f6f33846a5b20e8478bd320f5539939ac1ae82ab6e22fa2e6af45ba",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-action-02.gif",
+      "bytes": 20739,
+      "sha256": "d61e5ee9be4c4b20d3e07ce4bf4da831f43cca6c8b32c5378d6c83b89bc75c29",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-action-03.gif",
+      "bytes": 150713,
+      "sha256": "82ee33bfb8307ccc47c2875e085d8aee61c44639fd3262618a843844c4fbf3db",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-action-04.gif",
+      "bytes": 71147,
+      "sha256": "19c917f3abbd8bf28153306abc8fffd7053926ad5712bda3a5e14cc831271cf0",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-action-05.gif",
+      "bytes": 112131,
+      "sha256": "bb99c4e6ea25a30623886b3ff33c2eb2bcc3fb5256a60ef7e5d10dda0e87dd7d",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-action-06.gif",
+      "bytes": 111924,
+      "sha256": "ead3e8ad1d8876e8b8a9746d602bc62afbe641d56e403bae922aa4f9a6387b69",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-action-07.gif",
+      "bytes": 117541,
+      "sha256": "983d8994fd26c69d942f9d7bf411da38c4b2f415039b3e0fd402b5a02dc784c9",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-action-08.gif",
+      "bytes": 158335,
+      "sha256": "481388477fa7c47f4d600439f2a6e24c0cad3d0e87c116a9bc785be2802e966b",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-action-09.gif",
+      "bytes": 121327,
+      "sha256": "249d8c5534320f8f5a38240af2c5b439994502716bcb545b18a2e36c46004e85",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-action-10.gif",
+      "bytes": 64899,
+      "sha256": "fd18a907fa6b32f7302292ca211dbb0623e4b4e6049ff09b7da35c5c5440aa50",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-action-11.gif",
+      "bytes": 129326,
+      "sha256": "8f995f4dc90a1ec07cd356c9d10468b8444d03f4d00c3f1bf2e232ab8ddc3f88",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-action-12.gif",
+      "bytes": 141039,
+      "sha256": "ee37b8a03a9a525f1f0c244d1c8f1628f153c2c24df7033eb4cd34895ae09c0b",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-all-actions.png",
+      "bytes": 595854,
+      "sha256": "68e0f1fb9da6821224bc15ab50e767915e25a53dc6384bccdb9dfb7a1f3e147d",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-motion.js",
+      "bytes": 5833,
+      "sha256": "722687a4cf79a8dff8bf25a7f37aee03a98a1344cce4006c483038dfd5474093",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-rider-female-0.gif",
+      "bytes": 103371,
+      "sha256": "1bd757639eaecb7bf78e73eabf5ba5ab237e8c4e9747b1993d1662d2f505f996",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-rider-female-1.gif",
+      "bytes": 98674,
+      "sha256": "62b045c1eef1358a084ac27cb96dcdf4a8ff96577c758dcf86fe49f5bd6b754a",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-rider-female.png",
+      "bytes": 72375,
+      "sha256": "2cd92d2c81d3830509e3c3cac2e3db0b6c478195fa3fbceaf84fd792508cd1bc",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-rider-male-0.gif",
+      "bytes": 103237,
+      "sha256": "76842bac54283096285afa0e57a3c753c5ef5b879f481ee1ebcec329b359f5fb",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-rider-male-1.gif",
+      "bytes": 98586,
+      "sha256": "5a317bb2b3519ff8e9568b5f5a491627e4d42698b5195f8428427091a748bd7e",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-rider-male.png",
+      "bytes": 71805,
+      "sha256": "39554b92ceae90d97d85049febe283fae094b75c8cd85a34f6c3645d9384d644",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-bulette-thumbnail.png",
+      "bytes": 7867,
+      "sha256": "0b0e05cf9001ada976b53b35346dfd379caa7e5250add2012edd23aa1de04de7",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-carrion-crawler-action-00.gif",
+      "bytes": 122800,
+      "sha256": "cea1420d99c2d699da1622e162d0528da39d980919586cd8a06189835524afb3",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-carrion-crawler-action-01.gif",
+      "bytes": 127560,
+      "sha256": "0a693569542e4c91b772191fd20720a564e210c137991148ca763755515e58c9",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-carrion-crawler-action-02.gif",
+      "bytes": 22209,
+      "sha256": "02992e6ad2cc432cdc13685dada810a9a9357e439ab79b8a2796ba67c6947460",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-carrion-crawler-action-03.gif",
+      "bytes": 110654,
+      "sha256": "90d04d9060509a4127610a3e67e1ecf570883d8b10720ce1abc6194fea44a8e5",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-carrion-crawler-action-04.gif",
+      "bytes": 75861,
+      "sha256": "ca5704b81d58f7ba9e78df0c4879a2b27ac738af5d190dcaab68fb42220f243e",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-carrion-crawler-action-05.gif",
+      "bytes": 116724,
+      "sha256": "32093e6982241028b0c4785aaf44fdb9a3910c31e2e6c92c5f7ded7011cb7a8b",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-carrion-crawler-action-06.gif",
+      "bytes": 118214,
+      "sha256": "c69e351d16a8f12872e9db701166f4e52b147568c3fb7abeda82498de5990861",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-carrion-crawler-action-07.gif",
+      "bytes": 130256,
+      "sha256": "1b3527e06e7dc81be46730a37923d870a3a04dd57468792408f8156587715596",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-carrion-crawler-action-08.gif",
+      "bytes": 143106,
+      "sha256": "ebdd37e2dda0c4b51fbba75b812d4135d55a849aa5a43c3d445ceae09bd7ebfa",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-carrion-crawler-action-09.gif",
+      "bytes": 127509,
+      "sha256": "913f5646e9c31b8de4f420a67f48a14a828fccd3da4d72e2d4e028397204ef75",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-carrion-crawler-action-10.gif",
+      "bytes": 77589,
+      "sha256": "47f6f7c35c513e557d089d30a9af15a5c23376d13bbefaa97b475f850ed23ac5",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-carrion-crawler-action-11.gif",
+      "bytes": 136665,
+      "sha256": "5bb7194d0e57ea0bde8829e56d3a4e2a43af58204087584406d8089bb6299927",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-carrion-crawler-action-12.gif",
+      "bytes": 125889,
+      "sha256": "72064c26113bdea5e02ae42fba060b8f35e402761d3746ec3e24217c34d71b50",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-carrion-crawler-all-actions.png",
+      "bytes": 636697,
+      "sha256": "f3d6086f45c8865363292834b87e4a3e8058d4268e2069d2bb911f2d12254050",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-carrion-crawler-motion.js",
+      "bytes": 6120,
+      "sha256": "5f45dd9b1a28679563d65ef445ae76ebf4401dea59dc3a7ea91f81b340edf336",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-carrion-crawler-thumbnail.png",
+      "bytes": 10817,
+      "sha256": "73882d8efba28131ecb38744b0fd9cfc02c0171d1e67880d598e02b2d91c3b75",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-displacer-beast-action-00.gif",
+      "bytes": 206335,
+      "sha256": "6e2d11480158e9981db2486797e086c355f9fc30521c2d47fc9051893775fb22",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-displacer-beast-action-01.gif",
+      "bytes": 225475,
+      "sha256": "390c51a6e2caef130320a1039bfdbea433c77f29d96d7b57cee44073f62f5510",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-displacer-beast-action-02.gif",
+      "bytes": 38339,
+      "sha256": "99cce5d2e8532591f4bdbe5efdeb7b8a34567e24327b36ab82b370b63cd44a7e",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-displacer-beast-action-03.gif",
+      "bytes": 225421,
+      "sha256": "44edecf2eaabdd762c2c4bb34557c5ed83c8a8d18650978b59a45bea6f84240e",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-displacer-beast-action-04.gif",
+      "bytes": 148856,
+      "sha256": "76de9e42f3f70067613839022829bac2ccc185f797205cb05e417a1eb44397b2",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-displacer-beast-action-05.gif",
+      "bytes": 214717,
+      "sha256": "3b287c36b267c1ddb5df2faf17e4966ccae637d972bc41d2c00a5ff5f067046a",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-displacer-beast-action-06.gif",
+      "bytes": 224211,
+      "sha256": "8a79ff56f9589baa921f766c4615ed45b3fadb2d836905690fac5c63c05ba13e",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-displacer-beast-action-07.gif",
+      "bytes": 205515,
+      "sha256": "e7284b512cb9016a9f441fe86ed946cfe504efb5f46b13e140db17fa0cac447a",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-displacer-beast-action-08.gif",
+      "bytes": 242392,
+      "sha256": "0be51f0bf4f4a45aa0222e37f6c99de339f352d3efc2be77f64418930a8fb1e9",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-displacer-beast-action-09.gif",
+      "bytes": 231283,
+      "sha256": "78251149289f08767afcbd05442feed68cc5b817b0e1911b4d6ec0069ebd7e1d",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-displacer-beast-action-10.gif",
+      "bytes": 147186,
+      "sha256": "a2baf95fb707bdf4a89529685a15cf27b1bab6a534a8323c5e0e0c19eff511b5",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-displacer-beast-action-11.gif",
+      "bytes": 248178,
+      "sha256": "de0b088ddb0ca0f3b8dd34a43c5830a82cc38f922d5af42cd32b7db4d6aaed43",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-displacer-beast-action-12.gif",
+      "bytes": 242331,
+      "sha256": "1d9779ead2bb496ef0f1f22a47cd214fc57560ed64f5ca6dd0f918faae757a3c",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-displacer-beast-all-actions.png",
+      "bytes": 1141298,
+      "sha256": "65708e1587fc1836418c7000ba19c276addd5dcbd13d9d82a1a4b3cfc3e0afd8",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-displacer-beast-motion.js",
+      "bytes": 6099,
+      "sha256": "1be7dac4fdc9b0cb4bd7057759d1e5c36df08cd975f6faf60d0ec87356ad65b9",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-displacer-beast-thumbnail.png",
+      "bytes": 16888,
+      "sha256": "054ff04c1d8bc8b60d25678fa3cb3f377d392b20b5ef94d32062c3006afb4ba4",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-action-00.gif",
+      "bytes": 79239,
+      "sha256": "c95af5141414c4c454bf9ffc6b09c9a19bd72684442c272222a028a1984e7f41",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-action-01.gif",
+      "bytes": 79661,
+      "sha256": "1c5e0dd99c77f1a9319649878912298ded946a9c0289dd8e03f69bfaae8e0569",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-action-02.gif",
+      "bytes": 17076,
+      "sha256": "c829d2d85310a1fd5635f39a87c2218dd34c87f9d9d92f16e39d7b4df836b130",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-action-03.gif",
+      "bytes": 84536,
+      "sha256": "5642f3cd2398f3b55a742b926ea2103c523d7a9861374f434f65bc3477bf7c61",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-action-04.gif",
+      "bytes": 57857,
+      "sha256": "3e8da7b06a96cb6ef178d030ada9e81aa562132f7a3a482d4a0c96c61bdb26ec",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-action-05.gif",
+      "bytes": 91520,
+      "sha256": "cad19eb1b1d084291571c7d44071fdfffbda9ea605605135ec1fc2dbfbe42b98",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-action-06.gif",
+      "bytes": 90941,
+      "sha256": "f01fe5c6e7aa1f318e6f912ad1fd066092551e18317a4693375c2d9a96d32d81",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-action-07.gif",
+      "bytes": 82138,
+      "sha256": "72c76c5174e02b19d079d7f8fa451819d13de72c3d3ca3e87aad513a56e99837",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-action-08.gif",
+      "bytes": 112503,
+      "sha256": "a221022e20892a79bc7b8b08ea01e18019293f97c269bbfba0967e4804f01df6",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-action-09.gif",
+      "bytes": 95860,
+      "sha256": "2739eb6a3b0f5a021cf8eca73124f89eb80230e87033a6b36b581287418daeee",
+      "bundle": "assets-11.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-action-10.gif",
+      "bytes": 55633,
+      "sha256": "c1a89d2a7c1baebd6a35eb00f4e084bcb781977a397cdcb6c512cdc0b7ea5068",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-action-11.gif",
+      "bytes": 108083,
+      "sha256": "46a5b432755b2be3a3c1993fc8b2b780103154e3c9b1e60d822d6e414410fadd",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-action-12.gif",
+      "bytes": 97126,
+      "sha256": "7c7e8b933e413717a108f61127240ef15636f40c24963cb76d2b9f1b71566182",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-all-actions.png",
+      "bytes": 471157,
+      "sha256": "709df89b48556d063a3980d82882ecbc0a3869987c2ca2707c95ce712b3e6055",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-motion.js",
+      "bytes": 5579,
+      "sha256": "ea83e8cdbc067e350ac23408c547732a17325d17f47264def64abb003d586899",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-rider-female-0.gif",
+      "bytes": 83842,
+      "sha256": "2c3009f0a5d24f72baad5457ece305a22b72b2c1fd7591e0285bdb789e26621c",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-rider-female-1.gif",
+      "bytes": 84307,
+      "sha256": "a91b878276372dd50d96b5fb715de9b7d57fd64b121a7a4f40f9f2df257fbb2e",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-rider-female.png",
+      "bytes": 63049,
+      "sha256": "46aac163fe40c8a4253e01e54030a2e8694bab31c1dc360fb3953230b27cdcf7",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-rider-male-0.gif",
+      "bytes": 83783,
+      "sha256": "ef5af1c0c3bc823c063719e5e18e73366fe569a91acf2e8f143ce1b8f94aba90",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-rider-male-1.gif",
+      "bytes": 84393,
+      "sha256": "67fb0d8d9602ed373151c87d507eed66af7dc60c3a49a55f98688102ba09de9e",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-rider-male.png",
+      "bytes": 60902,
+      "sha256": "03cb13ca7e6086ed8c92a6cff62768d76490437aff6a0fba795e21b8335c7808",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-elk-thumbnail.png",
+      "bytes": 8030,
+      "sha256": "2e9d95b242983f3fd1de8829d1b89ccce9798005f5a69700ea19504620ef5e4e",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-action-00.gif",
+      "bytes": 104025,
+      "sha256": "8cf75f97b9fbb816b4e84c2ab1b32c1da1563b8088ed46413f566a61091d547e",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-action-01.gif",
+      "bytes": 108024,
+      "sha256": "68f62c0fa6eacbb437a5bdc8809f4bf9fae6265b12f221906cfae9d8094b1850",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-action-02.gif",
+      "bytes": 27302,
+      "sha256": "2653b386d9e8c9d05aa5c7c35f961c9a0b9a9089141ae2fd54e3cae502dbf4e9",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-action-03.gif",
+      "bytes": 112754,
+      "sha256": "479b43398a35a33757211dfb066020fd15847a063d55eb4d53d62926f3bab417",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-action-04.gif",
+      "bytes": 55959,
+      "sha256": "303474806eaf50bded234758f8f38584fa98b2011d3d774998cd369fcfce0417",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-action-05.gif",
+      "bytes": 106523,
+      "sha256": "16641d1bc0971aa8b6bd8d6b25c390cc84e1bd1146657f2b96572038dafbecdf",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-action-06.gif",
+      "bytes": 120528,
+      "sha256": "53dccbfefb79d1efad74354f8d17c54b69af349872ac84587ddfad1d0b1d594a",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-action-07.gif",
+      "bytes": 110432,
+      "sha256": "b459a6a0a856650506b9974754665bd0513034068ccd2ce69201e92bb354e25e",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-action-08.gif",
+      "bytes": 106489,
+      "sha256": "59d8aa17932e70198a4c1e23d876a15b16b677e6adfb8c1c2911e1df44ef0fbb",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-action-09.gif",
+      "bytes": 106750,
+      "sha256": "d41901b780bd7d4900aff4aaecb2b5c812d168c8145d39934374d842b9f912e6",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-action-10.gif",
+      "bytes": 62895,
+      "sha256": "109763f959038f23fd0a0d71f35c713e2c1729d4889807c3d29e66622b99b5bc",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-action-11.gif",
+      "bytes": 127890,
+      "sha256": "c7ac3c53f4c8ec51cc8ebd21085667fd908de1197c31f784daa3b65e195c0116",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-action-12.gif",
+      "bytes": 106617,
+      "sha256": "0513a610beee4dcdc0c87facd5b2f1ff3dfef3a6c12b64dd1579ea0e880e1a4c",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-all-actions.png",
+      "bytes": 558983,
+      "sha256": "86fff93d2bdba23f027917abd7732abf8781ffeb92ee88f465b31c4dff3b21c7",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-motion.js",
+      "bytes": 5765,
+      "sha256": "c608f8cd0b3b7c45b3db98337b27aa9514fb5f98f35a88558c143a2e3fb6dc18",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-rider-female-0.gif",
+      "bytes": 111424,
+      "sha256": "e72008b63c423e1448b62e6a5c12395262f4359b3bbb588193aee5893b54ab3c",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-rider-female-1.gif",
+      "bytes": 115820,
+      "sha256": "40a64d0305b5b61e60db3641de2af68d4a408bef0e99eb60f023ee8b08e5ee8a",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-rider-female.png",
+      "bytes": 92621,
+      "sha256": "99c377201d66e3c244ebff22b7a8435ef855c5ac8da3ce5fd5c5374d9fee2b75",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-rider-male-0.gif",
+      "bytes": 111415,
+      "sha256": "af350a89ae8a8d54731df9159bf4302f5b5b206ddfccb2e98d611105bf20e20b",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-rider-male-1.gif",
+      "bytes": 115888,
+      "sha256": "a8ef8e7880d691243e50992e580ef52851b3534b041db901421366630eea67a2",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-rider-male.png",
+      "bytes": 92434,
+      "sha256": "3cce049261e6cff715986875f166cf74b770b1ea00eac88a0f9cfe27f0cd4ada",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-lizard-thumbnail.png",
+      "bytes": 11165,
+      "sha256": "cf8a05c743124e2f9f80190822fee91bf587f056ccc6557e8f5b17b49352bb94",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-action-00.gif",
+      "bytes": 156454,
+      "sha256": "e7e67d6786276e87bc23983117dc4953fa8ac9b2aa6ca99c7143c6475446ab3c",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-action-01.gif",
+      "bytes": 153546,
+      "sha256": "86e8eedbdf73d914696f922c29544d71672664e56a27c2e65829c85cd2f88c04",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-action-02.gif",
+      "bytes": 32423,
+      "sha256": "4c0c21097ce50ccfdcd67957dc311794b2f3a211741754f327fe9adddf8aecc3",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-action-03.gif",
+      "bytes": 164584,
+      "sha256": "91503769870e365c2a06583d861975701242ecfdb1a7ef75a4c0791d09f499f5",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-action-04.gif",
+      "bytes": 104722,
+      "sha256": "7e02dd428f2ce638105a95ed23f744c5e97850ed8d5810f959c2f0f855963586",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-action-05.gif",
+      "bytes": 148818,
+      "sha256": "411e467f0432c7a7d330f4ca6ce9d9df2ac5f65e3dbd9396f7466d868bdfa231",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-action-06.gif",
+      "bytes": 155105,
+      "sha256": "b634e94ea305c17d49004558f26822cfd1e1fa21013515065cb625b9d154b8b4",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-action-07.gif",
+      "bytes": 146560,
+      "sha256": "597abf0937c0e75c94242cece85acfcf96c13f5084879f0a7d2bb88bb3a0d2e7",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-action-08.gif",
+      "bytes": 175698,
+      "sha256": "e288d2812a7cca5f1cc5f646da94902eecfa8957572cee60277eeea196625f93",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-action-09.gif",
+      "bytes": 156240,
+      "sha256": "1be4f45e7516e2cc050151d3b70a5c38f40c020f65791bd5b96cfe3b0771a3c7",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-action-10.gif",
+      "bytes": 103296,
+      "sha256": "f1dd973a9b1d21256e75c67bd00156b0a3060f897440c91bfa27f314230d946a",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-action-11.gif",
+      "bytes": 169358,
+      "sha256": "d22b6a4ad999057d09f9a5cc888bcc27bfa5a7106ef3bb14d6c3df5b3e35f7d5",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-action-12.gif",
+      "bytes": 163607,
+      "sha256": "7f75e25fecfbfd1ecdbdcd98858221da587eebd35a9b1441f8f26293b4ac74db",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-all-actions.png",
+      "bytes": 783977,
+      "sha256": "ea772fe3b64c95f1f0d912cc565bead7006fae6ee5905c7135e564ebc3e20111",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-motion.js",
+      "bytes": 6020,
+      "sha256": "f62d010b6b7e24fec6b80816553fdd70c527c42ce8ebef3afe3afa7830e75bea",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-rider-female-0.gif",
+      "bytes": 163014,
+      "sha256": "04ec0bd89d6e8f4c3240d69ce8fcd52190d2468d9a2f54140d19f6bad6cb55e7",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-rider-female-1.gif",
+      "bytes": 159579,
+      "sha256": "0dc7237228366d3d0212472b5192eec3ac354b0b8ec0ef26842cc90f4540fc5a",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-rider-female.png",
+      "bytes": 104629,
+      "sha256": "9a35b6ee6c584f4c641e93eb3860b684588ea13fc337d521067ab20955984fc1",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-rider-male-0.gif",
+      "bytes": 162857,
+      "sha256": "22d65c78677b972ac220385cb3fe79ab14323277b1b33e83eb2f712fbc3c5207",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-rider-male-1.gif",
+      "bytes": 159320,
+      "sha256": "9ae27a35a9339cc669d150ae56f10bd2f04946d8d17f9f35906b1fbb0ad9df08",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-rider-male.png",
+      "bytes": 104155,
+      "sha256": "f7c593521d863ca1b15f1ec90461684ddca80d51084830e3b14a06754750f205",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-giant-spider-thumbnail.png",
+      "bytes": 12506,
+      "sha256": "42e314550707ce9d22bc6a2b05bf2fa0a942f1d9b8e1ae283646c6ba47766a4d",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gibbering-mouther-action-00.gif",
+      "bytes": 117600,
+      "sha256": "a44683ef25d7ad753848ebc48f1a1531dfeeb43f9ed6acaabcc9cc9081f3f0e3",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gibbering-mouther-action-01.gif",
+      "bytes": 123657,
+      "sha256": "88ba60291bddc18a536968b1b22b28ae2aeddf4f25e85de10b44cba50e526520",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gibbering-mouther-action-02.gif",
+      "bytes": 25417,
+      "sha256": "d3ef274eedf8153775df6f3e98abca497df025bc1882ab36e7a7c742514980a4",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gibbering-mouther-action-03.gif",
+      "bytes": 110167,
+      "sha256": "32a7ddc29da404d9ed504636b5a7c4e7486628b578acf969a77d2caec294a425",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gibbering-mouther-action-04.gif",
+      "bytes": 79639,
+      "sha256": "a573568e8b97fe447822d904fc57705407230770c3b9073afda7deeb0501f392",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gibbering-mouther-action-05.gif",
+      "bytes": 119398,
+      "sha256": "1043ea30dd5cecf72e27887212013e12c5eed025caf7242479a45669d0004e6f",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gibbering-mouther-action-06.gif",
+      "bytes": 118989,
+      "sha256": "bcad62bbd5fb7553d37fa3e70d40ded10f29f63ea0e16599db8a3cca3fa9f947",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gibbering-mouther-action-07.gif",
+      "bytes": 116220,
+      "sha256": "4b257d9d3fe17a6d6f7b88de0148019117a71603c3671e04c0d1d45d06b65eda",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gibbering-mouther-action-08.gif",
+      "bytes": 119094,
+      "sha256": "7b3dd344edf5b9cfb2f53c0dd443fecec7ecd0f4124b0716d48edf3e80e8ec36",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gibbering-mouther-action-09.gif",
+      "bytes": 122622,
+      "sha256": "2d0801d335301895014ab38cccd88406e2c9d83f56fad41f136ffcfe11eb02c9",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gibbering-mouther-action-10.gif",
+      "bytes": 69938,
+      "sha256": "949f891fc4e0d7570ec086574f624a958d3b06b2c1d1ced892454129eca10c39",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gibbering-mouther-action-11.gif",
+      "bytes": 123514,
+      "sha256": "8a2f5bdfe5c683126a3808f00a4f497d24cd71c82a8253c78ab21a621a36fda3",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gibbering-mouther-action-12.gif",
+      "bytes": 104424,
+      "sha256": "3693d2cdc487bf52abcfdcd31f6536b0f5d7c13fab963b38a3f5ea5d4741835b",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gibbering-mouther-all-actions.png",
+      "bytes": 611652,
+      "sha256": "b40597eae07aff67401cf7b6b18729fa19a93a2e5853d102e396e32414129d23",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gibbering-mouther-motion.js",
+      "bytes": 5642,
+      "sha256": "fa9306bb2eabbbef69c6aad55da69a988345164a072cecda272ea6b6932af852",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gibbering-mouther-thumbnail.png",
+      "bytes": 10528,
+      "sha256": "ed3c34e5447d2ffaf8e2678a8695a9ee84b47c543cc7e1e0c052bb6ba5637ccf",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-action-00.gif",
+      "bytes": 59984,
+      "sha256": "46e83d79ee3b2150ed7b1716566e2ce0f42e1514003b042b855e21ca76c66a3d",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-action-01.gif",
+      "bytes": 57557,
+      "sha256": "dccba8a82be35a59f884cbfda67de8fca28d29176e503f6b871054615df2d5b1",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-action-02.gif",
+      "bytes": 12639,
+      "sha256": "b7e8b3ee1b3de4e38812bf4762541cdb5deaafd8126f75b9df6e54891c8657fb",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-action-03.gif",
+      "bytes": 62428,
+      "sha256": "774aa570b648e20ff80275f9c7a32da1f069e2e7681bc2b3c7921e0d1b77b6c1",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-action-04.gif",
+      "bytes": 36789,
+      "sha256": "5995870b69941a0cae6d968974ec108ed575412baa4b8dd9835e2cc6d3a7b9d4",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-action-05.gif",
+      "bytes": 61935,
+      "sha256": "52200d6f4f6c83d7ef925887f54853a76b11cd7f331c3596d13f9ceb53b024c5",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-action-06.gif",
+      "bytes": 61030,
+      "sha256": "d0c8c32cda4263443331f215bf8e1db5ebf893b6b1847bf200d3b8dd005c33db",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-action-07.gif",
+      "bytes": 59036,
+      "sha256": "b7aebbd5b7d2e0367fbd996eec2aed9da632bda6cac820e38bd982227b17ce3e",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-action-08.gif",
+      "bytes": 59383,
+      "sha256": "2de1061eeb03bd3c0bf39fc0e2e6a02dc0e81db6f67f0ddf1ccf0fec93f33413",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-action-09.gif",
+      "bytes": 56541,
+      "sha256": "92ee3e9409a5a57313561afa9d2825f19509aa1f16d1f090dddc549b57e5a538",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-action-10.gif",
+      "bytes": 35790,
+      "sha256": "6d306072d005ee99bda8a673601493e1179b5380e1238bf143750ab23aba1db7",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-action-11.gif",
+      "bytes": 68063,
+      "sha256": "8136258873dfae0da055f3f14fa0b2d5ea30ad1a3abb636385bd79c32fd6ce00",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-action-12.gif",
+      "bytes": 66006,
+      "sha256": "656207a3907dd8bdad69e20b9f72305f1f7901cea408de223bb58a12eda42b3d",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-all-actions.png",
+      "bytes": 322036,
+      "sha256": "d5aee0bc3e0273f82af550131099d7e7eb1c6fddc4a0ffb44e7134d0f55f7590",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-motion.js",
+      "bytes": 5558,
+      "sha256": "ed0be36a78211961fe8e186e1b43026a833b9ae459f80971d614475476d0c581",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-rider-female-0.gif",
+      "bytes": 69499,
+      "sha256": "74603f49e1afdd547b06ac20041f7081537ac6d0b6074f3da181b86312545264",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-rider-female-1.gif",
+      "bytes": 67531,
+      "sha256": "36fea9a5a6297392686b3271dd6cefc59458b4fd689c08df0bb14667ab89d7f8",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-rider-female.png",
+      "bytes": 52143,
+      "sha256": "6ccdda2ff9b3f9790bcf6608e29edcfabcbab72e6bbdbc94cecd48399bb1709d",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-rider-male-0.gif",
+      "bytes": 69538,
+      "sha256": "3260757e9029d4c0f08b9cec76cc99187184cf0ea68b2bba60e2972dc3b4d1b2",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-rider-male-1.gif",
+      "bytes": 67691,
+      "sha256": "d7086cc1bcf5b4e83c863815101ca8896523d19a3ae68be0cbbebbecfdda939f",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-rider-male.png",
+      "bytes": 52044,
+      "sha256": "b823aad3fdba127fe97210a2ff6ab2312d221d7d41d421c5e701194ac5d0e7e8",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-gorgon-thumbnail.png",
+      "bytes": 5944,
+      "sha256": "f84a1434c13accb31a58c9e077404ab86259ded67f1faabf474f26c0a0bb9967",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-action-00.gif",
+      "bytes": 112504,
+      "sha256": "ffcc2a6b0134c672a9ba97a58ad26f01980f8b3ff7865b0f1e3713c8e0dc100f",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-action-01.gif",
+      "bytes": 118093,
+      "sha256": "4fd19b6b16693ae4c4e36c18e8ec64ca8dec42cc28eee1db7d681515370f8a39",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-action-02.gif",
+      "bytes": 23749,
+      "sha256": "28aa151ece3a29affeb6908b4bfbc1b5a1b583e8c8db166cc183c652e48b3b24",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-action-03.gif",
+      "bytes": 124058,
+      "sha256": "6ca52139c97d176b2e1b04fbbd65ae8e6f48910d18a82c7f8b8ffe466cf94af4",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-action-04.gif",
+      "bytes": 59884,
+      "sha256": "b74036e878d1617f98517942b5e00dfd0b60776ebf74b3cce532f2f881d609cd",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-action-05.gif",
+      "bytes": 114838,
+      "sha256": "2f4fa067a625a67f934bc4f4b8e6968286f9912227138f0cf4d1288b5d6c4cfb",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-action-06.gif",
+      "bytes": 116436,
+      "sha256": "30624cd1afc127e676c1a9e474c160af6753aeebea690b6076c106eb90102557",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-action-07.gif",
+      "bytes": 111481,
+      "sha256": "9d3022c2aab6170c74791bf64981c99eff0b3bdd0e9a9ccb9c1fadf2a7947a5a",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-action-08.gif",
+      "bytes": 127728,
+      "sha256": "518ee5f83c88a105e82f0beb8ba53b3a6cb052419ff8a1d36ebbb2b155e7c059",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-action-09.gif",
+      "bytes": 114509,
+      "sha256": "314be63afb3e5401678321efe30ba4d1536a00c75649a93f39c24270ab3687fd",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-action-10.gif",
+      "bytes": 69796,
+      "sha256": "6aede16b4ae7eee479f312477cd3c21c46461a5df5bbcdfd719dca5e8ae7c8c3",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-action-11.gif",
+      "bytes": 126857,
+      "sha256": "e936455dc3eb4e399638df7f497dd457e8e68a60815cdb2ca73397a80c9f8992",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-action-12.gif",
+      "bytes": 126066,
+      "sha256": "9aa679a1f82be93dc531d4677b78b01eee77d90db487a3825c44d52f947135da",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-all-actions.png",
+      "bytes": 617098,
+      "sha256": "f81f16e629f808945ee80d29084424f9d8a7529af7bd6150afd2b3ad00844dbe",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-motion.js",
+      "bytes": 5711,
+      "sha256": "2c5bbf242c7a839b46431ec7009c324bac9804db3c5ea5dd1b3081402842a3aa",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-rider-female-0.gif",
+      "bytes": 117095,
+      "sha256": "171fec2b4db38e78d2d0d0292f96741cd614dcb308cc1c00053c072dd777e790",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-rider-female-1.gif",
+      "bytes": 121646,
+      "sha256": "64cc048c3f84b526d421e927bd3f2912278c93f90474fe24b9a9011348d7c146",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-rider-female.png",
+      "bytes": 85245,
+      "sha256": "ec3855bd1503c23603fe00106afc9392c63dec4139b2e756d1cc7dc6ae6cbc06",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-rider-male-0.gif",
+      "bytes": 116624,
+      "sha256": "7ce4233d06be48bd2168cce23a41dab772181ad16e9eb3e3a35204dd8c9613b1",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-rider-male-1.gif",
+      "bytes": 121342,
+      "sha256": "d908adf0d9cb46d2900d4d7d43a1261f5e8b8cd4bb16a119e27fa1b73aaf690d",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-rider-male.png",
+      "bytes": 84512,
+      "sha256": "ce421abd20edf59e587c549e4ac224a84e13f65749d5e32f9f72c67efc0328d6",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-griffon-thumbnail.png",
+      "bytes": 11509,
+      "sha256": "c19a614fc2e90737a7a1bc4cf084703e3c1694034125cb327365c1b445c9dedc",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-action-00.gif",
+      "bytes": 117116,
+      "sha256": "e0c9e29ed80d5feb54f295c3de1ff5975e4402a23af4535148de57888a9edff0",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-action-01.gif",
+      "bytes": 117166,
+      "sha256": "f0da665b691071f1d130155974c0abaaa5ee6182450387d1505ccfc5a7bb7216",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-action-02.gif",
+      "bytes": 23991,
+      "sha256": "7b1cc0f041eacaf52f03bd42e5fdfdfa611ffd5b8efe112aaa72bc7cc0b92e87",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-action-03.gif",
+      "bytes": 104717,
+      "sha256": "db7972d25c5fe98a5e7c6c8a7f30b5809419ccae8d7200ab628fbb5eddc198b1",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-action-04.gif",
+      "bytes": 70138,
+      "sha256": "b756d499c6ed48e53f45761f2536180a149be152bdc394c30b6b0e04277e1d36",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-action-05.gif",
+      "bytes": 110060,
+      "sha256": "ab43423444e88d42b4ae1c1b4cf9d7d3afe24d7a6221a0115de42c5e7b46416f",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-action-06.gif",
+      "bytes": 117840,
+      "sha256": "8cba9f8cfcf82ef7a0f8bd9605ce5a645ed15602e20d792adc0f55e8e06729f1",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-action-07.gif",
+      "bytes": 119367,
+      "sha256": "ccbcbe7b0505dfd29778355d7d8c98ee03bd3646601ee63105dd75d90bb99969",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-action-08.gif",
+      "bytes": 128819,
+      "sha256": "52116725bfaf92094b4cb9fa762b36fa3d5d0654fb0c3e80123f7d01d4e77443",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-action-09.gif",
+      "bytes": 111565,
+      "sha256": "d436474e1a2e276b7eeb88ce5252496ab874f14b6f1bd23adde3a4fe9f4e0644",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-action-10.gif",
+      "bytes": 71036,
+      "sha256": "bf1a1efee93a9ef4952ca4c29668fa5975649d744fd3dda85b68e72e6ccd766f",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-action-11.gif",
+      "bytes": 128448,
+      "sha256": "185a1c69213326ee8d2e6a8da8c0c271631d9a7df2989902e8749ae48e43ab21",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-action-12.gif",
+      "bytes": 124628,
+      "sha256": "0335c9e21e5fb902538947968d4377571904c9d2ef8783496ebb2b25c1a09021",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-all-actions.png",
+      "bytes": 601222,
+      "sha256": "2899b725b0475815ff4f5f2e4d02fef1aab59c4e69b69604deb167e0a6f4c85c",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-motion.js",
+      "bytes": 5765,
+      "sha256": "5246b426c4904265ff1bb8048deee1ebfcc1d9b638f5a5a21c6af791b5b3ca2d",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-rider-female-0.gif",
+      "bytes": 121843,
+      "sha256": "87a0b6c49d42fb9c9453463058697a9923d7ee4a5e6824e531258cdd02836861",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-rider-female-1.gif",
+      "bytes": 120206,
+      "sha256": "4d3982d2aa20715bb6f173c22bb2388c3dcd5dbc2fd194d2d39ec27480d4ebef",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-rider-female.png",
+      "bytes": 84314,
+      "sha256": "7725bf870605108f07220af74cf1604fd0d68262abed2a5a30efbccb2df832f5",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-rider-male-0.gif",
+      "bytes": 121676,
+      "sha256": "e9e786d03b89daa2b3eae35ebde6d8ff3267421b54302f75ebeee7165f18e433",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-rider-male-1.gif",
+      "bytes": 119925,
+      "sha256": "7917623b55bd7cff9c058fd865b47ca04d6a514a044e065f2a72ea62f5075781",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-rider-male.png",
+      "bytes": 84160,
+      "sha256": "0a4f9ce60b6a84d5da3a5cce90df686a9b5cf8c44f8f94478fe009e2e9ae67ff",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hippogriff-thumbnail.png",
+      "bytes": 11291,
+      "sha256": "9ed8c0e7d9d95a0208c118b4df043f4b536349bf4e2146696992a0655549bfaa",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-00.gif",
+      "bytes": 551762,
+      "sha256": "af87656a15a57ecb3058b9fffbd90a36585e596049dcbc327a1972258f661ccf",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-01.gif",
+      "bytes": 58800,
+      "sha256": "bf2c4efdeadd59510f46ba5361c02634fab592313d2141523aef4ab4f06fc0b0",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-02.gif",
+      "bytes": 311681,
+      "sha256": "1715cb15c66cfe5c99875bf5c20ab2eec0758b6e002b4f030ad1cc2d04bb58e9",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-03.gif",
+      "bytes": 302574,
+      "sha256": "25e2a5c52d775bef6b82908ba1405f7a645993b35de2fc7bbfd2e9b8bfb8958a",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-04.gif",
+      "bytes": 301773,
+      "sha256": "289cb4b2de8bf55a86e125c3b26e1096ef580406ed98546ab13709adef50ca97",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-05.gif",
+      "bytes": 301888,
+      "sha256": "3b194047ef9b431b9ac2839f9214677860b54bfe55b83cc84aac9e4ddd72d256",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-06.gif",
+      "bytes": 334076,
+      "sha256": "53a9ee3911709f056730a2d37e652b6d29140e3381623cd9356140f92195d133",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-07.gif",
+      "bytes": 246883,
+      "sha256": "d4beac00c49d264d0a87e0bcf4dac840b44e14e496400d40d5c2960609d8b704",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-08.gif",
+      "bytes": 233922,
+      "sha256": "bea61d0685755a908b8843de6b0b9b5038c7ece5b670abfb0f90e68ec5b95c73",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-09.gif",
+      "bytes": 240676,
+      "sha256": "5e8712736800fc1317ccfed3ffde2a538e03f0c714df3b53b5df9dadc93c616b",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-10.gif",
+      "bytes": 240223,
+      "sha256": "c41bc3818f1d1c54348c9e10913ae1efebf5d5bd9f53ad498520ec2ffb8af60f",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-11.gif",
+      "bytes": 302525,
+      "sha256": "56baa2c0510b8e0765fc49b9f77a491d9b1be2b43696db1648cefd4d67b3c383",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-12.gif",
+      "bytes": 335270,
+      "sha256": "fc2bf9aa07ccdbdbf7896bafbdd78f1339caf03819b0371e7cd3882d86d3de7a",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-13.gif",
+      "bytes": 243030,
+      "sha256": "8bfd2906d0287211419e2e13193ed6630fb3d62f9d4294320de91c6acdb7b3b5",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-14.gif",
+      "bytes": 226509,
+      "sha256": "d0fb417994ab0efc74ec2361120fb6ab6e964cb720d97e4baa7775d65f207b3c",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-15.gif",
+      "bytes": 184511,
+      "sha256": "3e08fe2f427563e562061df4667f892b606c9f7808514541132468016f891ec9",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-16.gif",
+      "bytes": 186456,
+      "sha256": "4aa351e7c88f8b9c99276273c0d5dabdb73a11ca5f1e27994aeedcaec7f78b42",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-17.gif",
+      "bytes": 305586,
+      "sha256": "57f1b37f9a2cb47ec43cb29f2b03f64b7fc901245855328e13fc3bbe7cb6dff6",
+      "bundle": "assets-12.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-action-18.gif",
+      "bytes": 328501,
+      "sha256": "94d6e14e0fe4c2550ae644223ce8b8d4d60520a5e6561251da37ee35a461d8e0",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-all-actions.png",
+      "bytes": 2121374,
+      "sha256": "d0fc1b5ddfef7278f97ff1816b79302647015863d386db660f1ca9cce99cce49",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-motion.js",
+      "bytes": 8904,
+      "sha256": "4c168d0962e32b1d5f7b40893bb33451f89f77689d995ebc06e2bc69e755ca8d",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-hook-horror-thumbnail.png",
+      "bytes": 22771,
+      "sha256": "1412eb30893c21a642ce5c7c1ac034cc570bf9d2fd0dad84f5cb6d68dc23bb04",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-mimic-action-00.gif",
+      "bytes": 246562,
+      "sha256": "f06f7fb8d1141d16d872e85f1dad28365b1ee4ec321c334def60058e53f14348",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-mimic-action-01.gif",
+      "bytes": 227820,
+      "sha256": "e127c06fccc3fb545e20e64a387cb715f41b12aeb74a42432f5e4635bd94dc88",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-mimic-action-02.gif",
+      "bytes": 49492,
+      "sha256": "ebe1ea82a12ceea3e5ae1e64b14a55edd2a71f33eab4e5a8b57c85ef784c00d3",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-mimic-action-03.gif",
+      "bytes": 233696,
+      "sha256": "efa86fd9a626503fabaf711a3dac93b2a4186ed79b6c45a6bf16a39fd406023f",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-mimic-action-04.gif",
+      "bytes": 158226,
+      "sha256": "88cc788d4b65fe9d445fbca73c8e7d3d35b8762817e38bd022ba52c791faa226",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-mimic-action-05.gif",
+      "bytes": 277179,
+      "sha256": "48efdec47c202d25fe0e0c1b1cc8ab25b7162b5a7f9f06da55e91818c5913565",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-mimic-action-06.gif",
+      "bytes": 241211,
+      "sha256": "031ecda582fc2f3ecdca5d515e57312ffccb3fb60ca9fe048882a551fb537a22",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-mimic-action-07.gif",
+      "bytes": 264972,
+      "sha256": "f7fb1361297328e35e6bb88c7b4a5c107841c03b9cc1f13fdab7d387451718c4",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-mimic-action-08.gif",
+      "bytes": 261565,
+      "sha256": "496d558a31b04c64e7946c08c05a5955b99deac8cea9cadd89acbe815c9d1600",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-mimic-action-09.gif",
+      "bytes": 261016,
+      "sha256": "92eeadc5a6aa87be34ebde168de03fd1178f841d3d3d55fe70993b646c788151",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-mimic-action-10.gif",
+      "bytes": 126004,
+      "sha256": "efd8a9d5a1f9fd62450a58a25b284b87d149934a7d3e265a44a8686390ff847b",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-mimic-action-11.gif",
+      "bytes": 307135,
+      "sha256": "9d1f971f235b1134571fbddeb0fa6009dcb528e6977bb8caa469c0298ac82b2e",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-mimic-action-12.gif",
+      "bytes": 273078,
+      "sha256": "2bffe8a1e27163928636ad4442bba6890f558ff5e6fb446266b71db429e0b3a0",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-mimic-all-actions.png",
+      "bytes": 1175573,
+      "sha256": "df222fb7a52d47837248febd4eac6150cd277541d0a30db3558776b7e5a4492f",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-mimic-motion.js",
+      "bytes": 6282,
+      "sha256": "594bc77c11f493656d7cde573425c3395edc71241007adfdd0e9ba6c43f2bf47",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-mimic-thumbnail.png",
+      "bytes": 20249,
+      "sha256": "3a6aab0f3976d6c14eaadbf1a2afd3c247b219666b14ca99b5653cd89ba41357",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-peryton-action-00.gif",
+      "bytes": 109164,
+      "sha256": "d8a12c30fbde8816933e785dc7503437b0b94eb4a88ec0b8967c3b48768aee5f",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-peryton-action-01.gif",
+      "bytes": 113387,
+      "sha256": "2931b4d535a260ecbfa7111bf4d2206f4ae6c26e50a1baf4f75cf1078570a12a",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-peryton-action-02.gif",
+      "bytes": 22847,
+      "sha256": "08f3e1f8375b514e3b5f18c51de127112608f2b1b017b6a845d60c2c283d78ba",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-peryton-action-03.gif",
+      "bytes": 127471,
+      "sha256": "fd6250dc8ac9710a83bae3440431025503cc921bfc8f4ab010e69f30e170fd3c",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-peryton-action-04.gif",
+      "bytes": 69195,
+      "sha256": "31bd38eeb821dcf1c056ff055755650a0087ea2995caaafc48efc5356c4e6227",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-peryton-action-05.gif",
+      "bytes": 147378,
+      "sha256": "9a368ee25e2fbe363ae7f7e8a5a612955edecaaf0ecf7a33e109ec59dc4a6cad",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-peryton-action-06.gif",
+      "bytes": 143751,
+      "sha256": "2ed8479bce1a05d6f8ba4dfc784d6da663e6996dbd9855e7815cb4c769fa8505",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-peryton-action-07.gif",
+      "bytes": 126504,
+      "sha256": "1fdb04087fc7c1c71d99f651ad310fa7f31e3285db3ff89ea5315b54c6173f96",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-peryton-action-08.gif",
+      "bytes": 123405,
+      "sha256": "1e770d8bbbb49c713c78d8bb735833011d66efe609cebe8264ba495e63965553",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-peryton-action-09.gif",
+      "bytes": 115563,
+      "sha256": "4ab114afdeb76396a179f39db9b887093e983b2d433532ed6bc23cfd908b7add",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-peryton-action-10.gif",
+      "bytes": 64724,
+      "sha256": "3c921a5f8bff38ca4313cdcf7924816c422379f3f1ebcc85487ffad881069fdb",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-peryton-action-11.gif",
+      "bytes": 129001,
+      "sha256": "88d9a0a0c8fd5c188a08588dccc65e0ae3bb3f569d814798ea571b3a5016e971",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-peryton-action-12.gif",
+      "bytes": 132407,
+      "sha256": "fab66f7eccc2c71c28dff667873d7b97b33d2101f0bfe438c5a61d10a052e574",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-peryton-all-actions.png",
+      "bytes": 620829,
+      "sha256": "5cf791ecb3f44874195bcd27ba4581ad7cd22cf6acd67dc967119f74c3ee87d0",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-peryton-motion.js",
+      "bytes": 5724,
+      "sha256": "2f4e47b6c118705a9b6d4195114483fb4828d19fc930bd09b4d6fed5b460f0ea",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-peryton-thumbnail.png",
+      "bytes": 9697,
+      "sha256": "b8242b7b90712906a339742cdd1564032a5626f64d5bb96fa661781b2bc8410b",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-roper-action-00.gif",
+      "bytes": 203479,
+      "sha256": "c72d92aeb676e4156a37af2b6629cb16bff134a6424423dae3c8a4fb19d40b83",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-roper-action-01.gif",
+      "bytes": 234986,
+      "sha256": "988b93f73098675650c9ce84b7e219bb6ff2517cbd91f061ae8b996cf8fd368b",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-roper-action-02.gif",
+      "bytes": 58794,
+      "sha256": "b4ee5c825b837b23d92e6bfb933eca7fc31400ded4a9abe7ee2ffbc4087dc381",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-roper-action-03.gif",
+      "bytes": 195227,
+      "sha256": "763d58e54e23bbcbcc5a0f75a953e8bb09c1cf83e4bb475bafdd0499e7a0e50d",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-roper-action-04.gif",
+      "bytes": 165463,
+      "sha256": "b8f75c53e1dba2c944d997a1d32be60389aa15e222d3feaef4cf5af45d78b77d",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-roper-action-05.gif",
+      "bytes": 199688,
+      "sha256": "f6788d6afe5b038a645ea0f57f6723ae49ae1fff93f5359c7def1e277dc7f458",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-roper-action-06.gif",
+      "bytes": 284096,
+      "sha256": "2e11e0e227b4e10ebaabfa5ad02ca4e3b74eb350781265641569f8887cda1743",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-roper-action-07.gif",
+      "bytes": 222444,
+      "sha256": "b8fcbb1a3a153c34aefd95a0d811b41e0d4e6ab3e97e3a95064e7f7a98bcf1b8",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-roper-action-08.gif",
+      "bytes": 206147,
+      "sha256": "bc3809d3099ba0b7949e66f2ce293d8ce154727a69d3ec0c4031fe2388c8b7ff",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-roper-action-09.gif",
+      "bytes": 208653,
+      "sha256": "1deb3ca76c9cb12c6cddc56af6eaa53f7fe95bad51bf0041294c983cbca14d23",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-roper-action-10.gif",
+      "bytes": 131252,
+      "sha256": "49b119fb8790052a7499cd3c5f6f32fc76e45695df092431c9dcbd73a9020c74",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-roper-action-11.gif",
+      "bytes": 192515,
+      "sha256": "08bc6dc8edf000392bf970448ff63da7785c184af6eafce2366e6fc2a71ff89e",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-roper-action-12.gif",
+      "bytes": 203816,
+      "sha256": "da40bf64e656d9bd83006e88bd167978f4791828dc04ee83905d28e018bdc550",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-roper-all-actions.png",
+      "bytes": 1196064,
+      "sha256": "c450108e95eec878f62944b42c72947d0d24f88faa9dadf6d4419c0c5547d730",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-roper-motion.js",
+      "bytes": 6166,
+      "sha256": "48ee45ceda242295208f1e5581a0dfc0633be5023c369b731304bbb24f95dddb",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-roper-thumbnail.png",
+      "bytes": 23823,
+      "sha256": "9a382f57bb88c8ff8f22cfd1a57a621d13847f9675f6279caa4bdf2712135cb0",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-rust-monster-action-00.gif",
+      "bytes": 105877,
+      "sha256": "6dbfdf990df48d91ae2d1374e729f15b04d0be9f20e0590a6cd096a792e67dba",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-rust-monster-action-01.gif",
+      "bytes": 108375,
+      "sha256": "a6d3f5e32b73894a95abe81ad12114ffc61bb5809e4f24902e6f052f60d53e34",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-rust-monster-action-02.gif",
+      "bytes": 21153,
+      "sha256": "fe97f169dfa34bfff7b7d61f9c3302229015551ff4e69fd91d0cf64ca7ff52b0",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-rust-monster-action-03.gif",
+      "bytes": 106863,
+      "sha256": "fe7559a6e3713ad3e146a2567c4fe7026ad0e633c990b022b6a21523a96932d3",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-rust-monster-action-04.gif",
+      "bytes": 64921,
+      "sha256": "cb049300f6a63ca3e2fc4b1354dc32e7ce09d2dc28d14303fc1e5138a57875a8",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-rust-monster-action-05.gif",
+      "bytes": 107153,
+      "sha256": "3066f60c7d0951632b63120d588f4d4bebefc6eafab4348375b22926c524212e",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-rust-monster-action-06.gif",
+      "bytes": 106802,
+      "sha256": "360cb25503de21610d3f919b71a21755dd7001502bde8eb5fc171fa7ecec1059",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-rust-monster-action-07.gif",
+      "bytes": 102676,
+      "sha256": "e4978625401bf86834e5c6348236216d8c243276a6bb2bbcd000cdc40476fe06",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-rust-monster-action-08.gif",
+      "bytes": 119412,
+      "sha256": "e3f091683c644b96a4d8c38c76608f2268dc6fe4daaddce9e628ee2ea233b611",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-rust-monster-action-09.gif",
+      "bytes": 106636,
+      "sha256": "4570fcacc7173037e27fed86f476230a8b346e14d1e0f7badce1a00266ce2cda",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-rust-monster-action-10.gif",
+      "bytes": 63599,
+      "sha256": "2d70256defae44c43d7c3786fcbf598e296a069cf4e184e176b22be1a7491aaf",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-rust-monster-action-11.gif",
+      "bytes": 113761,
+      "sha256": "d09d25ca2616ab3db731083b4cf703d5ced2da2f311cac7adefee59750c7d3df",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-rust-monster-action-12.gif",
+      "bytes": 115382,
+      "sha256": "46ed22877d65dad72faebc9088aaae1c1315ec638032f02ec913fc14143e27b7",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-rust-monster-all-actions.png",
+      "bytes": 568896,
+      "sha256": "f18f73a54801d5948d41cb1786a84ed913f45dad8001ff0a3da44b62a877b798",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-rust-monster-motion.js",
+      "bytes": 6023,
+      "sha256": "f351daad2e455da3a13884ab8fb137ec06e8f86f9fcba58819bed465945087f0",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-rust-monster-thumbnail.png",
+      "bytes": 11549,
+      "sha256": "c485fa5e66d0c685de732f8ec68ac45b349e691aea0adf8e20af4ef6a88395ad",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-action-00.gif",
+      "bytes": 62650,
+      "sha256": "5ce527f69c989d612e529eb594e72f6c0e13f9fe6a8854725e8f469461753ca5",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-action-01.gif",
+      "bytes": 74511,
+      "sha256": "3eee2cd697dc1fe666e6685e3aa2c82c6d46445565e22c5b682098bd03266503",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-action-02.gif",
+      "bytes": 13907,
+      "sha256": "f7453d4889eb0141982567e3de18524e01ffb1e97bcefe0ac62b67d69e50520b",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-action-03.gif",
+      "bytes": 66644,
+      "sha256": "ff3194087fa7a5fa439c6bd917f3cea8a64ae55361cd77e7b61411da21afcd6e",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-action-04.gif",
+      "bytes": 39905,
+      "sha256": "63a3abf48d7c80c08211218ea4f598297f17d64ff5d8fbcf0422f0703cc279b9",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-action-05.gif",
+      "bytes": 68948,
+      "sha256": "a774ab82619283254edbd2f031eb61cfd320cbbccac65aaab9c1a24d15343a4f",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-action-06.gif",
+      "bytes": 67891,
+      "sha256": "2fc8d24b1dec2ae94ac75cb7d3e07cc6d37ac81f8a0fbf2511c038cff22414f8",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-action-07.gif",
+      "bytes": 66352,
+      "sha256": "359be65a46d018bddb26a8c3c036a3aff4defd203928f895a86330a0974ae41c",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-action-08.gif",
+      "bytes": 75544,
+      "sha256": "bf4b90292fa708feac708d60d6eea44e4b879421b326cad8b218a1345c3ba708",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-action-09.gif",
+      "bytes": 66770,
+      "sha256": "6792a21eca95079d7321f935f1fdc99190d8c4bbb26f654112604e1921112382",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-action-10.gif",
+      "bytes": 39657,
+      "sha256": "367ae3b6a66df7ef99934c3cb09b54fbdd03f72a12edc3d364ce99830a9ce552",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-action-11.gif",
+      "bytes": 73645,
+      "sha256": "ed6a8e71cdfb0aa728c11c4277c62049f407f09457e0ad8ef7984fe78f4528b4",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-action-12.gif",
+      "bytes": 74149,
+      "sha256": "9d7e641c37ac494eedaed675c26d510e6373768f9184ed43e9208eba4e3d3a6a",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-all-actions.png",
+      "bytes": 339460,
+      "sha256": "3767cc6f5bde1c0f4de85ed2a9ddd0cb4008c6f9e9ad78617cafc3082ef1a02c",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-motion.js",
+      "bytes": 5592,
+      "sha256": "e92e4bff7dd2cc5d3cf6a798a87949b0239e147593d7bdde76aecf5b4650fff8",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-rider-female-0.gif",
+      "bytes": 71248,
+      "sha256": "20b230ccf43e2b3665f4a4d3822eb4b5d13afb920821f2360acd07ce6ede24eb",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-rider-female-1.gif",
+      "bytes": 82987,
+      "sha256": "0661bd641588e4499ec4a855907eb6c19f37848466ecde0bcbd90a4a45c5c1e4",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-rider-female.png",
+      "bytes": 51833,
+      "sha256": "6948b57724486694daaf87faab7530fbfbb3e02b60acb7880b9e0efe483d18fb",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-rider-male-0.gif",
+      "bytes": 71266,
+      "sha256": "8a2cda735141fc003783b4699c9c28930ffd529fecbb9d13f8e53c2df3c6c1e7",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-rider-male-1.gif",
+      "bytes": 83044,
+      "sha256": "5f999217b6ab8791b7e41d23398a486a88b11aabe1f8380c959f7f11391aa37d",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-rider-male.png",
+      "bytes": 51648,
+      "sha256": "7f24b66c0cb858d9277717533edffcd36ad31301ae7aee39793796ff63e0edac",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-saber-toothed-tiger-thumbnail.png",
+      "bytes": 6070,
+      "sha256": "0e4a65342c40950602405c651d4b6c3ad7ef036cc841c0774aefbe1aa81eacb9",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-00.gif",
+      "bytes": 553228,
+      "sha256": "41c1f090061c6ff905799a0b89d544680fb027a770df8366df03e5b0ea6615ce",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-01.gif",
+      "bytes": 63908,
+      "sha256": "a0da5518603f6fb0bcf0db1f24148723b09fae0a774b57d84990c21069ecfe8e",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-02.gif",
+      "bytes": 335419,
+      "sha256": "37ed1b7508f688bfaaa810b1be41f2ff0879c918036ac34f1a4c7afbb148f502",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-03.gif",
+      "bytes": 348303,
+      "sha256": "6cd9c1ada05511e1f2f2a2a570c5f51242a47565851a9127d252163c10e76b0e",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-04.gif",
+      "bytes": 310915,
+      "sha256": "23f2fc939c5d1dc0d9e54630ca91bb6768e7227c17546ead3c0f5fbf3137f3f4",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-05.gif",
+      "bytes": 303028,
+      "sha256": "5713c17ffd4900ee2baf0265dd1f2fa0a8b67fad1bdfc40fc65d14f78c8d3d41",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-06.gif",
+      "bytes": 314476,
+      "sha256": "e484b3b4a5b69068e3ad9b4635b73820390352bccf59a33620ae041c802e62b2",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-07.gif",
+      "bytes": 253605,
+      "sha256": "5fa7115002dcd7ed61c838ce0ef1ed647e305cfa312b15b3d520e044f2558c0b",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-08.gif",
+      "bytes": 285376,
+      "sha256": "2964f3d963b860b96438c91389b7832bedacd5a060fd2471caef13eff66ee4f3",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-09.gif",
+      "bytes": 244353,
+      "sha256": "fa23b612ddb59d03854c9dcbf59f09f5fd43e58b378c3d9948f80957e413f1b5",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-10.gif",
+      "bytes": 259476,
+      "sha256": "56cfdca02610744e94dc4a9cbe190f72086474a4478bf849d92c8421fc995196",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-11.gif",
+      "bytes": 317200,
+      "sha256": "9582b8d3d28ae7bc1bf193498c761a71566f5bc187b22579f95271775d5b2277",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-12.gif",
+      "bytes": 339671,
+      "sha256": "e1743b038207b84e5939031790323799e7d285ba49c57553b7877da4c321f0e5",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-13.gif",
+      "bytes": 252249,
+      "sha256": "23ac9055111a0115e7fb7494b7502942dd65c5b6f80a70d13504c4d3ce0d75be",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-14.gif",
+      "bytes": 245873,
+      "sha256": "0837ad1e43fa0fde2766bd6bf1c4f059ac908f91eba0e2bfb8d601fa06fce6d5",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-15.gif",
+      "bytes": 185243,
+      "sha256": "4775f19f89116462331158605359903266dc1584c4846e8fda92ecd3e2d0b348",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-16.gif",
+      "bytes": 199345,
+      "sha256": "c44426ad3a137594248a2909d16ffffe0f4e5058db2e9e16636a2500add40c2e",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-17.gif",
+      "bytes": 329104,
+      "sha256": "930c55cc95a83628de8a3f9829ed6e00f3f92d4b2c78af5ff790e9c3d4aa0e1f",
+      "bundle": "assets-13.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-action-18.gif",
+      "bytes": 341629,
+      "sha256": "bf5f8ff1f8cce7f5d0eb7386cbd7675686497c2e4742a1a766676a709c4802f5",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-all-actions.png",
+      "bytes": 2178848,
+      "sha256": "86b8e691c0ab8612485ef01c46993c409ca3fef33f3cc5ef3f6d7ec5b5b1e260",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-motion.js",
+      "bytes": 8905,
+      "sha256": "0234e60e22065b6293b4bfc8feab0d6aa6b74ead23e5f2c797fe23b13ac1561a",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-umber-hulk-thumbnail.png",
+      "bytes": 21233,
+      "sha256": "ca146b3edb9aa91cdc0da74137abd3be8e13e4717ee1d59fd81bb088ca2a5613",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-action-00.gif",
+      "bytes": 55543,
+      "sha256": "abaf91b2e1819db4bad4ac507bf278ba79f1821775e689dc8810fd8581ca35c0",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-action-01.gif",
+      "bytes": 53354,
+      "sha256": "ced709a56378c1735c5572871f8598ad97471f12db3a37df2b2f7a2aaf9c43bd",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-action-02.gif",
+      "bytes": 12764,
+      "sha256": "b69ab5d9cc3fe51e1ab411492a3f78a2bfaa5027dbb04d46080882f1a967bbc7",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-action-03.gif",
+      "bytes": 53023,
+      "sha256": "be59aa632e21f753b3071d7d212efa20061d83efd9d4e76e2245cc51199f3cfd",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-action-04.gif",
+      "bytes": 36454,
+      "sha256": "aa31a63eb752c7d26c8489e2c87c9cffcdd3158f4ed001da962928cd78b62c75",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-action-05.gif",
+      "bytes": 61542,
+      "sha256": "ead8c1fec9bc710cfe2556fe2571c37c2054a6efd79bfcaef2f91ac5c0b254d4",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-action-06.gif",
+      "bytes": 63028,
+      "sha256": "f99ae3f86ab89e5e4da7ada9ea7bf8d4b6c75b467d36d1c4fe9237fb9bd150a7",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-action-07.gif",
+      "bytes": 61193,
+      "sha256": "19ab2a07f76670b41ac4ff46c54a101d0f273f8e84098460b390acf237b64d76",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-action-08.gif",
+      "bytes": 67611,
+      "sha256": "e03aa38d60eb660732306774f12b2caae5a0206c1741f578c28063656953abe2",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-action-09.gif",
+      "bytes": 62419,
+      "sha256": "c7e1094827e127161bbaa97e46ad664f0104907bea6dc692ded5c926a1d5ca61",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-action-10.gif",
+      "bytes": 33260,
+      "sha256": "89c7c7c804301fe864381a0bd9484846694e9d18f70029f2a491d3747929f286",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-action-11.gif",
+      "bytes": 68307,
+      "sha256": "0dc94c7529fed54b7badcb430fcf2b7d286ecd81084363126ca9688572955fe6",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-action-12.gif",
+      "bytes": 66038,
+      "sha256": "9ca8610d4b38a9375d251dee4972d045cfa83e75f0e251be59824099f7d1abe6",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-all-actions.png",
+      "bytes": 301622,
+      "sha256": "3b0d712a4a175286324d8fa51aa2f7167025252a326570311b12539d1d26387c",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-motion.js",
+      "bytes": 5556,
+      "sha256": "01625159458475580cfde8aa40f6bb34461bfb77536bd132e7cf21949be1e4d9",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-rider-female-0.gif",
+      "bytes": 66147,
+      "sha256": "a97d0984da1252f2811600b96013871c47d83bba83f24c1aef9795bef9e87a7a",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-rider-female-1.gif",
+      "bytes": 63703,
+      "sha256": "e08b6556bf9ea00d1793229f1b74238dc9ca8d78d026a791afe4db5dde47559e",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-rider-female.png",
+      "bytes": 51282,
+      "sha256": "dc89a77625fc990a340d4a9c5da1e025a81d0b8f34980cf75e32911f18f1b0b7",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-rider-male-0.gif",
+      "bytes": 66246,
+      "sha256": "5a7d4c0d0a08fdd17a2ceb1cd5347688fd58802618ad7a6f421e1831bf5fa845",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-rider-male-1.gif",
+      "bytes": 63931,
+      "sha256": "82f162070fbf554194d279fd05f32744c2135614e4eb653b0400185aea7c5152",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-rider-male.png",
+      "bytes": 51272,
+      "sha256": "5ae825a240887dd19a3b435405f3726bb80af9a5fc5031e79e387bc3c3c726d9",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/dnd-native-worg-thumbnail.png",
+      "bytes": 5626,
+      "sha256": "24fdaa8ff2b517ff22eba4b2e2f447be67259e42cecd328822e8035ddfb21ac1",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-00.gif",
+      "bytes": 434985,
+      "sha256": "c187d7faee266b907c715467e6c3313196e9faa50410dee3c5e05a7941b61979",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-01.gif",
+      "bytes": 49852,
+      "sha256": "4c36cb4567e5152dbae8eeec94a2640708e08dc6f95c12aaab0e25be669ed82f",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-02.gif",
+      "bytes": 204511,
+      "sha256": "78f6ddd1829b4d56d7fa7655ad9d0896e22887969f6f33d9e1ae5f1e4fda8686",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-03.gif",
+      "bytes": 177057,
+      "sha256": "66923a76dd28968138a2d740b38daf5b6a34986af821fb95e44ac18cb9c302e9",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-04.gif",
+      "bytes": 185099,
+      "sha256": "d06965f938645f92d4cda357111fd2b6045780ce3c95bc75ff7c01e2224e6e42",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-05.gif",
+      "bytes": 185998,
+      "sha256": "4958c26cb29728b3bbc47a75fb64b67eb173bde65837ac0107a4112e69703b22",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-06.gif",
+      "bytes": 190290,
+      "sha256": "f327613b4c38ff154a25a7ff581a34848220cf3b8c33c1dc71e28f7710cefdb1",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-10.gif",
+      "bytes": 195468,
+      "sha256": "4b7317970c765223b9dff37bc927064e36d8fae92b01561cfb4645494eb3ae55",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-11.gif",
+      "bytes": 260319,
+      "sha256": "54cae3610f821c45d26f941a3040893a8e48ab6dd05b4b236338051ff3c4a274",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-12.gif",
+      "bytes": 370598,
+      "sha256": "89ce71a0e4937f3e9c0d69246ffd86e495844a96d1d846209ccce449da363f5a",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-13.gif",
+      "bytes": 363868,
+      "sha256": "4c0cefce27bd09517ea50432e4a6619cd4cc0411ffdcff7af857a678b2784a8b",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-15.gif",
+      "bytes": 139482,
+      "sha256": "8753ee102e0d6410934f44270164562e8be1b73d754823f88dedc86e59e3c8cc",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-16.gif",
+      "bytes": 137074,
+      "sha256": "58dc1ddd4bda907b25a111a6b50554e1e868aa117b828cfa0b23c3211172591f",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-17.gif",
+      "bytes": 244636,
+      "sha256": "bdc50bd14a2bbb0e72dd7c0d55e0a0332b9dbb9dd6af927304f87a448c398d95",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-18.gif",
+      "bytes": 237622,
+      "sha256": "c77d38ff4b4156b3f29a9bd83d7f5f8c34855ddf439c83d2b14cae343c952ec1",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-19.gif",
+      "bytes": 473905,
+      "sha256": "be98db75cba54d3918038464fafa4ae1c7e40a4aab7d5dc081e51bbc80ea63ab",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-20.gif",
+      "bytes": 148891,
+      "sha256": "e38d5a3b48f3a5f2ad010d207bf01b73a661c5ac09dffddd21a2d4d9f800c1fa",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-action-21.gif",
+      "bytes": 313776,
+      "sha256": "89d957e54434de305f869f5ed0de31088bdc6f061651de0cc8c11f707684d478",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-all-actions.png",
+      "bytes": 2218593,
+      "sha256": "bf756721113c979e041a0476fb558524ac0fac1aa68a167715dc3f2d6c4f3871",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-motion.js",
+      "bytes": 9614,
+      "sha256": "efd21138d75ed50ed913e6fae934487ce0e40587be6f76a8e4c2732c3b0f635e",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/grave-ivory-daemon-thumbnail.png",
+      "bytes": 25370,
+      "sha256": "b9ab40c8dcebd93b2a4949d85a3e670c1de46009d2785d8dbb40fe19ec7cf4e4",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-action-00.gif",
+      "bytes": 432349,
+      "sha256": "29d305448b7ca98aa560682b1bd57606df7133af282ba0f0fb0337174f0c6e28",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-action-01.gif",
+      "bytes": 47912,
+      "sha256": "17fc6d13ccf8e3dcee1d161c796d8b8c9dafea4805e59f477e63c8485c88cc3e",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-action-02.gif",
+      "bytes": 158456,
+      "sha256": "568025743f38e492168e5bcda9a923e4ca2dc893c67f628e3c400524d1b71990",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-action-03.gif",
+      "bytes": 143980,
+      "sha256": "ea0407fa2fadd4248923f8389efdbfd5f2599aefdc349366b4fd2f73141e5e2b",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-action-04.gif",
+      "bytes": 173109,
+      "sha256": "4f494e5582853c0829853ecaddb3fcc54fe9da2dd5b6476bc297c4f3e2c881af",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-action-05.gif",
+      "bytes": 155473,
+      "sha256": "74224b2ee7bcad1bde5dbedbc1abc6029d0d5fcfe048d0e9faac7314ca34c755",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-action-06.gif",
+      "bytes": 143424,
+      "sha256": "9770e224d6f9e071d9ef44d620063fc1f98f8c5b57efd554cfbbf0e8c622b002",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-action-10.gif",
+      "bytes": 155612,
+      "sha256": "edea4b29a841424bd1d933cb0d3d237fb277adaa9910066f4f2a9cf3e6095b21",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-action-11.gif",
+      "bytes": 230792,
+      "sha256": "0bb51749c84e7915cc7b63d598a8eb4ee9206c2dd4a185c545349ddcde859af5",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-action-12.gif",
+      "bytes": 295893,
+      "sha256": "4a7475506554eb1791d0a5136db630ae8abbce8d044f6b6b0d8713c8653a3393",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-action-13.gif",
+      "bytes": 339949,
+      "sha256": "ffdbf50cc08644edcf23cf67bad87df3c5253595330693962e556d148f7e0fa6",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-action-15.gif",
+      "bytes": 127382,
+      "sha256": "51175f00dcfb009420966fd2d63a7bf91a0a9e4b6b413a5683a931807b16e973",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-action-16.gif",
+      "bytes": 127965,
+      "sha256": "4dbce32423639e925fc4a4cf0727691b4e13fdd776f2697677534169c739fc96",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-action-17.gif",
+      "bytes": 236919,
+      "sha256": "7d7c0a5fcfa02c1b8c8d939376b19a6342584bfdfd2f5396d3a5275186d7983b",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-action-18.gif",
+      "bytes": 232391,
+      "sha256": "caa44641dc1a58f91b0ec6391ceceafc76d1fa3e6b2fa72e2235725df27cb7e2",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-all-actions.png",
+      "bytes": 1259565,
+      "sha256": "2d408fcc21efae9098a67bfd7831d3cc27ccb93daa8a436986ece48d06628c61",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-motion.js",
+      "bytes": 7054,
+      "sha256": "1f535c43f1160a20cc29742ae8812ea65f04997ffa65bd8264ae92d999de2452",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ironmaw-thumbnail.png",
+      "bytes": 17308,
+      "sha256": "6bd0930a6bb0abf1fa6c294332cba3837bdf8d2747302c5b10463c849b3445a0",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-autumn-crooked-walnut-glade-preview.png",
+      "bytes": 31193,
+      "sha256": "64c9b6094020a24c4c9e7a39b1d83075c9147729d647a6b25eae0419669e57f2",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-autumn-old-oak-glade-preview.png",
+      "bytes": 26306,
+      "sha256": "728c512e6561eb0b665949a214c1c36d11e0f8476292255d1b0ee8df55c60bb7",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-autumn-spreading-oak-glade-preview.png",
+      "bytes": 33715,
+      "sha256": "de829672dfb16f8b08a642740dbed9698409e732f2b9d0ef0ae52dc648882231",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-autumn-walnut-glade-preview.png",
+      "bytes": 27395,
+      "sha256": "eb0b10534e7cde7b4c5b4e8b2bd862bfe2dc1b4bd0a4b51361e686cae5d1d9db",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-autumn-willow-glade-preview.png",
+      "bytes": 31389,
+      "sha256": "2602b6497fc7551e034f3f668ddb1a28efc8f514504a6bc84756fd5febba344c",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-autumn-woodland-debris-preview.png",
+      "bytes": 3280,
+      "sha256": "1af7d6e8d4598c7538c771cb9e9698fbc1eca1dbc5e7dfa4895726b41f760500",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-bare-crooked-walnut-glade-preview.png",
+      "bytes": 18247,
+      "sha256": "9a562e5357f173fa928181973d5ca4c4799b313d24b9a0bf988301f8894eb52b",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-bare-old-oak-glade-preview.png",
+      "bytes": 15992,
+      "sha256": "50e5935d25cd19ae4c6e398c4713660a4fd3c200a04214a6094d6f9afadc1609",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-bare-spreading-oak-glade-preview.png",
+      "bytes": 20318,
+      "sha256": "9730f6b2e1171bf36392be464df827e882174bc42d8c3bf6fafe94393137d5fa",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-bare-walnut-glade-preview.png",
+      "bytes": 16368,
+      "sha256": "332ce23cb8be34801a867920c6619038d2d6379d9eb0fbfb634353d344d38174",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-bare-willow-glade-preview.png",
+      "bytes": 16440,
+      "sha256": "b08960fd6b1b65be33669b5116cd8cbb448aefe8376b16b0185560684e82a984",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-broken-courtyard-edge-preview.png",
+      "bytes": 10966,
+      "sha256": "95e8ac29b5f8b84d4f8ab5d2ac2c9d2768931e4d18924832efda0fde3a62a589",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-broken-stone-fan-preview.png",
+      "bytes": 15313,
+      "sha256": "16d4484a3f2caf06ad0071d054965cf58fb1fc84036c8999c0321891298e2b86",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-campion-bank-preview.png",
+      "bytes": 8139,
+      "sha256": "d1dd8cdf8a5e20c537d358767db88e26d9aea416c9e432b2ab1d7e91c6a91142",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-fern-bed-preview.png",
+      "bytes": 16961,
+      "sha256": "cf5861aaab0a6e3cd99a06ea829e8544a21a12eb79f249ec1c368fc47cd86fe6",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-fern-covered-fallen-log-preview.png",
+      "bytes": 8070,
+      "sha256": "7cfdb2f8987544c33a496a40ab00cdf01f266ba6a87bf86e16cd44b75fa3f5d3",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-fern-wrapped-foundation-preview.png",
+      "bytes": 11255,
+      "sha256": "aa60e38a0b28d419566ddbc8b317a63b33ce7a017d13049b63f7895db000d998",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-forgotten-boundary-preview.png",
+      "bytes": 14603,
+      "sha256": "e07d1cb6dcb5c558c67f470259b0695e0bd73abd2f528fd5fff88bdd9bd49299",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-foxglove-patch-preview.png",
+      "bytes": 7486,
+      "sha256": "07ec017dde99a041a2d6037d0a58efdbd602994a8b0dec1253d86cfd5a20fa6d",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-granite-outcrop-preview.png",
+      "bytes": 14340,
+      "sha256": "5776978ea43e9c4453680768c384b474fb51283dc1a4a58208014497622a63ba",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-juniper-border-preview.png",
+      "bytes": 13076,
+      "sha256": "ab08ad1b97d332108bd87da6c0ce1cb41665bb910cc92acf6fdcf8dd2bd80ea6",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-lost-garden-corner-preview.png",
+      "bytes": 11478,
+      "sha256": "6f438ff98d4ea1e8dbe18f86070b99426aacf4073c5bb734c804216144f401a8",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-low-boulder-trail-preview.png",
+      "bytes": 12124,
+      "sha256": "1b54930ec85455b103fd405e56232bd85fe248610c7865326820b10f06c77366",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-mushroom-deadfall-preview.png",
+      "bytes": 6979,
+      "sha256": "7b25c06b719898094d8428cd2b030673594c38d52902be60c854d2d39f5f85f6",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-mushroom-enclosure-preview.png",
+      "bytes": 16022,
+      "sha256": "da10222415c069af6bc647dd2fa28bb712da21458e4d6d15c91207917cbde56f",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-mushroom-ring-preview.png",
+      "bytes": 4053,
+      "sha256": "4835523c30bfd5146aaf840e02ffbcb9150385633d6b1ab292b505f9c11f81d2",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-old-watchpost-footing-preview.png",
+      "bytes": 12600,
+      "sha256": "a9feec733bf346271cd91a664d683aaddd3d1f3059a3fb145b24939ac626bc87",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-pampas-thicket-preview.png",
+      "bytes": 9976,
+      "sha256": "2fc68a56625eb923cfb7aca6d82ea278c84a97670658c5e471d72cdb67e8beae",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-reclaimed-stone-walk-preview.png",
+      "bytes": 10370,
+      "sha256": "c2f783ba7949b42f670f6dac69d98116a402ffa96d319228c7a6997ca4026750",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-reed-clump-preview.png",
+      "bytes": 5799,
+      "sha256": "b3a3ab4034432e6caaf9308c044a645c615e896d1d262b02d0bbc79879a598c8",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-reedbank-masonry-preview.png",
+      "bytes": 10706,
+      "sha256": "98578d50f91b3588c800572a32297daa7535ab9d25b1f87688e1cbcbfd5b6429",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-reedy-fallen-trunk-preview.png",
+      "bytes": 4928,
+      "sha256": "960143e126c536e7d4aa17d867f66176426f6d96f767997740a0e29603925f86",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-rockside-driftwood-preview.png",
+      "bytes": 2641,
+      "sha256": "5896cdcdadc9da6ceacd70434280272a724ceafd847d15c79b38d494d0a558e1",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-rocky-reed-bank-preview.png",
+      "bytes": 9222,
+      "sha256": "d7201d96638c73bece56e0cd06771667a5619241446e256bb884d3c4f7fdb29b",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-sandstone-knoll-preview.png",
+      "bytes": 10774,
+      "sha256": "65324260bda434735f7dff35830a896b034b7284173834c5e95f7fe8df3d6ef7",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-sapling-nursery-preview.png",
+      "bytes": 9935,
+      "sha256": "70f1b1bf92b2ca1da8cd7d55041206f95464079e957ddabdb1889f9a1846d3e6",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-split-grey-ridge-preview.png",
+      "bytes": 8020,
+      "sha256": "fc23789a1d73fe628228f310cc2ad3a3ecdf7b9a066f0df27f1958688b7cf6f9",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-stony-fern-hollow-preview.png",
+      "bytes": 15940,
+      "sha256": "8085a6fe449baa179565165ca5c4c9b75bbed70c645676939e9f1cea30597e52",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-summer-crooked-walnut-glade-preview.png",
+      "bytes": 29484,
+      "sha256": "7446cdb078d8d2c11bb0822e08f7585652c5ca58b95fe4c81b72922d4e7ca3ec",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-summer-old-oak-glade-preview.png",
+      "bytes": 24994,
+      "sha256": "74d18152015654c498ddeccfc879c5d87cf83d7c792d213e904cc07bfdcd2fc2",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-summer-spreading-oak-glade-preview.png",
+      "bytes": 32306,
+      "sha256": "6b87358159691fda3ae7aeb0efa6b66aee6f39bd5580451d2cccdfab133728c0",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-summer-walnut-glade-preview.png",
+      "bytes": 25303,
+      "sha256": "837710ec79ce36fce7ebd08d144911ad9cb79054be036c6094db2f6b0641fd4c",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-summer-willow-glade-preview.png",
+      "bytes": 30692,
+      "sha256": "a41fcfa6c14acdf61ce356e560f7a1357d180678dec0361708085b46ebc94e59",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-twin-standing-rocks-preview.png",
+      "bytes": 14975,
+      "sha256": "fdc26fd4d775036b977fc9ac4dea64386781ffff032cefe36a903cd2acef0ded",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-white-scree-preview.png",
+      "bytes": 12335,
+      "sha256": "16c4481a99b2b73bda90e0f13e87d166cd6219f640a25371211e2c5ef378e34a",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-whiteflower-drift-preview.png",
+      "bytes": 8389,
+      "sha256": "4cc765f90504d5df1e7796ead59f160ccb119cf885cd929bc0e14ae0132e188b",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-wild-grass-verge-preview.png",
+      "bytes": 6794,
+      "sha256": "b0e2e80162c251280a536b23a92867854f770f8668c16469a56501b23c610cf5",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-wildflower-crag-preview.png",
+      "bytes": 13738,
+      "sha256": "e2741fd27e5b37427470e251c74a01a8247309c3ef91ad12c65d22c1e6bc134d",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-wildflower-wall-remnant-preview.png",
+      "bytes": 12894,
+      "sha256": "297adfc89f0cf869f9cd15d1beebbc223ab25e5b96fe420218a3b5348aa35877",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/landscape-woodland-gate-remains-preview.png",
+      "bytes": 14187,
+      "sha256": "2fe762368091efc1340be91ebd7aab61bd1ddb2e6257504caefd9bcbefdd2563",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-action-00.gif",
+      "bytes": 90705,
+      "sha256": "c1b4008ccb804da49b431af44422f7cdcdf4bc65e0e3cb8aa506b33f94eaa14c",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-action-01.gif",
+      "bytes": 110527,
+      "sha256": "72ca596f0b7abe8d97bbe9bcc03fa44e675b392a41cb077eab92faba42c22b67",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-action-02.gif",
+      "bytes": 19788,
+      "sha256": "fe22255bf046e704c6d70d9398e8245cd050ec4b519c0dc39d36f7ac40f3341f",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-action-03.gif",
+      "bytes": 88225,
+      "sha256": "082d416a15370167c75bd92839d2e2f028e23d76b4c00cc48e07ef125f3e1802",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-action-04.gif",
+      "bytes": 57835,
+      "sha256": "dcca6d0a3e4287d8339af0c44183f5e11b4eb94f47688fdc583c8e303ff41f8a",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-action-05.gif",
+      "bytes": 95667,
+      "sha256": "82b0490652db46855dd6ad905142161c8ba326d4b97ac7050938a42ff7b11482",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-action-06.gif",
+      "bytes": 116320,
+      "sha256": "2386978da5326c80f62dec714e95317f293901541d9b340e5e113b9d03263b83",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-action-07.gif",
+      "bytes": 96137,
+      "sha256": "a570b6fcb82f2c3f2512d4bc6938e83a18224b78b211b4863a8433d883cda324",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-action-08.gif",
+      "bytes": 95808,
+      "sha256": "d15e45197630020fd9b27d4b79a0ccd8616d5915458e67ce990798fcb736f8da",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-action-09.gif",
+      "bytes": 99659,
+      "sha256": "f87116afc5aa86499146ccfdfacf0bfe54e8e73abc737622861cdb4acf496e42",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-action-10.gif",
+      "bytes": 64364,
+      "sha256": "2024676606f188fe09cddccd1bfa3ebac66cf4df3c1d91b9741a12b8164cea34",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-action-11.gif",
+      "bytes": 87911,
+      "sha256": "06b1c42f7c9872fd7e922765e29e8bc51e651334a8c8ef1b03b50f2893200b40",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-action-12.gif",
+      "bytes": 90651,
+      "sha256": "bd29a15fdbb32f0f3b71b24f67451a752d9888866a485e126b943b65f4985287",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-all-actions.png",
+      "bytes": 479013,
+      "sha256": "d1fbb1a7d77879f756ab821c7f666112d38e54bc7239b4461976c750e0c2e69f",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-motion.js",
+      "bytes": 6013,
+      "sha256": "98d7d5d370dea8cd3f830080795dc440fa79a1f4127020aa6d70e81033ff375c",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-rider-female-0.gif",
+      "bytes": 96521,
+      "sha256": "fc58dd6d68f0f8661fe1965b8f7a18b67ecafd5f91ec7fb99a8f5c10861d75c0",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-rider-female-1.gif",
+      "bytes": 118865,
+      "sha256": "7e9acfa4bd5a30590ce2373ba9c7156faccb62adf96c5d3f9345716a179e5d80",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-rider-female.png",
+      "bytes": 64281,
+      "sha256": "7ec9af9ae94ae385856e18a8c142757029c395e23e433f15b51f145ef14ad883",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-rider-male-0.gif",
+      "bytes": 96171,
+      "sha256": "f2de153b79df6901208a692d9dbfeeb347c4c0f3eb4fb6e810387018ed6d28ed",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-rider-male-1.gif",
+      "bytes": 118829,
+      "sha256": "a6ffd82ba32f4858080cf968d828f62dc53b14e520b885c6e239da1258cd673d",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-rider-male.png",
+      "bytes": 63886,
+      "sha256": "809fb1ef047e3799305f8c62e15e26e6ed545a8335441c5df3d7c66d89de2e76",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/pegasus-mount-thumbnail.png",
+      "bytes": 9484,
+      "sha256": "f4b0ebdbe881992139deb211ebcae7b89993d239da0cdd22946e08e78991a187",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-00.gif",
+      "bytes": 325006,
+      "sha256": "298adb2fe36cede61fb5d737f75f73dd576dda2af78216adfec36f9008d41a3b",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-01.gif",
+      "bytes": 35079,
+      "sha256": "0b0f398cd6411e6f0953b5702b53dcf39731d87ca2b5b65d5de66ccc1a1fdc38",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-02.gif",
+      "bytes": 121508,
+      "sha256": "5ab5930338ed00dfc8b6565fbb84b645d4e14b41d5d55be8916f5d4e93d0fdc3",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-03.gif",
+      "bytes": 90690,
+      "sha256": "1f1eed4c275340880bf8317240161c9dd2a1b5de1eb3821a7422aa986526c470",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-04.gif",
+      "bytes": 132624,
+      "sha256": "580c431ae36d149bb96ecc2500793d87e63190940126c610da1bec1b554108ab",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-05.gif",
+      "bytes": 123935,
+      "sha256": "e82f5853ab4b357bfa5a61ec3bf02dc24d1336f6582e9af127d9138084f6366b",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-06.gif",
+      "bytes": 131211,
+      "sha256": "35bff0c1365050b40915a35cea8265f8577e635156a2436ae5ba885acf3784ea",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-10.gif",
+      "bytes": 127475,
+      "sha256": "caf1ce78cacde60286a16d7fb4a891d7584c4e046b5e4dcb4c4d602a257cad59",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-11.gif",
+      "bytes": 164030,
+      "sha256": "9aabbe104ce325f1ade89afab97da023956a61814e48f1b3b53736ec72630bbd",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-12.gif",
+      "bytes": 211970,
+      "sha256": "fe7fde85694a5ca6bab34c63c4c92021dfbd64fa90d56a1e9bd3b0abd20371ec",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-13.gif",
+      "bytes": 217807,
+      "sha256": "0ec6014883aefe295f395a10458d90a5452dace07e2cecd23cea2e2d2391421e",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-15.gif",
+      "bytes": 101315,
+      "sha256": "e10cd297d04b1833595dd1ba5ba72b92698ccbc8c77ef827ed8b3dc8791b9524",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-16.gif",
+      "bytes": 103359,
+      "sha256": "c0924b5453d54cc4b395ec64aaa907e233faab451907bfe63443dbd0a4aed04f",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-17.gif",
+      "bytes": 166878,
+      "sha256": "6a2209e267d6a28cf379dced22c2facbc5ba4395d14f4189efde22382a95df4d",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-18.gif",
+      "bytes": 177722,
+      "sha256": "b6755ba54425557b568abc97ad2ccee6bc7703bec6d941be8d02610629565b51",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-19.gif",
+      "bytes": 179810,
+      "sha256": "55a4f7d830360055e5261770765c2861dc4be3fd58f934c1a1ff55bd29832366",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-20.gif",
+      "bytes": 107590,
+      "sha256": "7eb18bf05403f8b8e49918f3eaa1c268d4dd92557468f5b64665d75515bc61b2",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-action-21.gif",
+      "bytes": 159082,
+      "sha256": "51856429613e1845f702c3c678096c47535c681f5ac301b26239d41b61bc69bf",
+      "bundle": "assets-14.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-all-actions.png",
+      "bytes": 1112129,
+      "sha256": "5915b2fa19f7bb3eec137f13761fd94a3f3163509a3f5582f8e041bd9eb3458b",
+      "bundle": "assets-15.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-motion.js",
+      "bytes": 8836,
+      "sha256": "6f350a877a9334087aa303040bd6d2ae17a6f2a24427d026ed6424e4cd855ea9",
+      "bundle": "assets-15.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/riftwing-thumbnail.png",
+      "bytes": 14065,
+      "sha256": "4699ea192904ce7e23fdf73e7b32a4e66fee97b883f525c7ada5c9a846803210",
+      "bundle": "assets-15.zip"
+    },
+    {
+      "path": "gallery/sheets/blight-daemon.png",
+      "bytes": 8309962,
+      "sha256": "f6a22d3fdfccf90a5f28c01c1c90da57ddc62216e5b45850e9246af2037a8df9",
+      "bundle": "assets-15.zip"
+    },
+    {
+      "path": "gallery/sheets/cinder-daemon.png",
+      "bytes": 8651493,
+      "sha256": "d63409a9800db060ecc49f48b219203f86dd8be7db5a2185fd224a50541bb377",
+      "bundle": "assets-15.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-ankheg.png",
+      "bytes": 1350549,
+      "sha256": "1e53af2eb9cdc9f168e7693fb84964838454c69111214f1d554cf057e2adfa03",
+      "bundle": "assets-15.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-axe-beak.png",
+      "bytes": 1229669,
+      "sha256": "b35464b4e4c1dfc9d854e8117a64fba85b96b7ef284f4cff3e1a95b1be5f794b",
+      "bundle": "assets-15.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-bulette.png",
+      "bytes": 2170694,
+      "sha256": "43414018097015adfb6f6c30c2d642263058675c6c784ad46c4efe423fd16e76",
+      "bundle": "assets-16.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-carrion-crawler.png",
+      "bytes": 2360608,
+      "sha256": "1f84a288f8bce8028945259adead6561eec99f8d4b6d7e208a7b198def27ba42",
+      "bundle": "assets-16.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-displacer-beast.png",
+      "bytes": 3931156,
+      "sha256": "93a129af52bdc6b2d9a72e9f1e466b5f112239e7c4527f0f94360f132a7d221e",
+      "bundle": "assets-16.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-giant-elk.png",
+      "bytes": 1546054,
+      "sha256": "edb7a338b7de8c573b0ed393e3720da247d9a0fb4e77f4c81b544170bc92a30e",
+      "bundle": "assets-16.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-giant-lizard.png",
+      "bytes": 1932104,
+      "sha256": "e11ed03aa18e6697cd9b5638efccf5e27adfc49395dec38cad144b1d65227c42",
+      "bundle": "assets-16.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-giant-spider.png",
+      "bytes": 2666403,
+      "sha256": "47766aa4591000821094a4b27b7b40c8084c501ba3288979187e882dafc35ec2",
+      "bundle": "assets-16.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-gibbering-mouther.png",
+      "bytes": 2227590,
+      "sha256": "132582fc8de35af0f7e4c1cdaabaf82abce11b1dce8db3fc42cdd48d268695ea",
+      "bundle": "assets-16.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-gorgon.png",
+      "bytes": 1026130,
+      "sha256": "970efe624a82c84b4ff1af5b7aac505f59fd34716683c935e1b1656f42c5ce59",
+      "bundle": "assets-16.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-griffon.png",
+      "bytes": 2108178,
+      "sha256": "eb7520b8740f81d1f72f90d399044f4d77e2b3a9f385c6d9059cb239e6c97fc8",
+      "bundle": "assets-16.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-hippogriff.png",
+      "bytes": 1992597,
+      "sha256": "349b2e4ec5616672e37c3bfd8d5136b928fd8f6a6ca182d40738db5e088446da",
+      "bundle": "assets-17.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-hook-horror.png",
+      "bytes": 7524987,
+      "sha256": "26c4db80f02358a67d457de4e8909887db8e9be00da9c2f92ef90aa93cb9acbb",
+      "bundle": "assets-17.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-mimic.png",
+      "bytes": 4217407,
+      "sha256": "9a99b130ad3b6bd72b4a733fdeeecd0c78a770af59391127fcef75a1d5175d49",
+      "bundle": "assets-17.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-peryton.png",
+      "bytes": 2184712,
+      "sha256": "7227e786f77f1df1b343f9cad4b16e7978769c1234bcef50fed52fe2ebab0b3f",
+      "bundle": "assets-17.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-roper.png",
+      "bytes": 3860277,
+      "sha256": "b33406b0b5498ebe0c118d1d952d2262cd6959f342160ecee75b9e1ac57a00a5",
+      "bundle": "assets-17.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-rust-monster.png",
+      "bytes": 1944195,
+      "sha256": "1186c58e72a701057e7f6db1febe2ee04f3a477c49d2d0381e741022cf055d9b",
+      "bundle": "assets-18.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-saber-toothed-tiger.png",
+      "bytes": 1176556,
+      "sha256": "6bf476ce1e71533cfd4ff646decb2b4744a71cf8ac45be2175d39d4f25b557cc",
+      "bundle": "assets-18.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-umber-hulk.png",
+      "bytes": 7777172,
+      "sha256": "4a7d90a9c9b7093c56cc7f052f5aa943259a06a0e8f9d98261f796efd1524fa6",
+      "bundle": "assets-18.zip"
+    },
+    {
+      "path": "gallery/sheets/dnd-native-worg.png",
+      "bytes": 959162,
+      "sha256": "9ef076d80b25e1ab43fcfe4d5e1dcb50d588b58fcc24f1efcb211e38a9b98242",
+      "bundle": "assets-18.zip"
+    },
+    {
+      "path": "gallery/sheets/grave-ivory-daemon.png",
+      "bytes": 8877919,
+      "sha256": "8b42aaaea6c92c838fa63354cc555d5f23bc7b6738c999c5080b8ffebfdec9c2",
+      "bundle": "assets-18.zip"
+    },
+    {
+      "path": "gallery/sheets/ironmaw.png",
+      "bytes": 4597345,
+      "sha256": "8efcc2ffdf5d91b3ff7e5fb2cd6d288e8b7133b37506a62d8c6bebda603cf9e7",
+      "bundle": "assets-19.zip"
+    },
+    {
+      "path": "gallery/sheets/pegasus-mount.png",
+      "bytes": 1653073,
+      "sha256": "5a93c73c0bf220c7ebd04e9e4500f66e2a90dc909aa33c1159e70f2535eddf44",
+      "bundle": "assets-19.zip"
+    },
+    {
+      "path": "gallery/sheets/riftwing.png",
+      "bytes": 4380078,
+      "sha256": "d86736a4440679628bb3426365a70d6b4fb9af7a7237f8b698f2d37e8f479ce7",
+      "bundle": "assets-19.zip"
+    }
+  ]
+}
