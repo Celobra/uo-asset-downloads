@@ -22,6 +22,7 @@ rights-evidence/
 !public/gallery/downloads/**/*.zip
 !data/release-assets/**/*.zip
 
+
 # Generated publication assets; verified sources are in data/release-assets.
 tools/__pycache__/
 /public/gallery/downloads/creatures/ashhorn-tiefling-study.zip
@@ -697,3 +698,4 @@ tools/__pycache__/
 /public/gallery/sheets/ironmaw.png
 /public/gallery/sheets/pegasus-mount.png
 /public/gallery/sheets/riftwing.png
+# End generated publication assets.
