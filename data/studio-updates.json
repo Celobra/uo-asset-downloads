@@ -1,6 +1,26 @@
 {
   "releases": [
     {
+      "version": "0.32.4",
+      "title": "Tile packs import artwork instead of preview grids",
+      "added": [
+        "Advanced adds Include preview folders and Include both PNG and BMP versions. Choose these before reopening the folder or ZIP.",
+        "Remove selected removes rows from the import list without deleting the source files. Multiple selected rows can be removed together.",
+        "Source status shows the imported image count and the skipped preview-folder and BMP-alternative counts."
+      ],
+      "fixed": [
+        "Folder and ZIP imports skip folders named previews by default and prefer PNG when a BMP with the same name is in the same folder.",
+        "Review checks loaded images before allocating artwork slots. Unsupported images identify their filename and dimensions with guidance to remove preview grids or prepare compatible art."
+      ],
+      "improved": [
+        "Choose images retains explicitly selected files; opening a previews folder itself remains an explicit choice. Source dimensions and native static-art limits are retained.",
+        "The complete 84-page guide explains tile-pack selection, Advanced overrides, Remove selected and artwork-limit troubleshooting across its existing 33 chapters."
+      ],
+      "note": "Default exclusions apply to folder and ZIP imports. A previews folder is matched by name without regard to capitalization; alternate image pairs require the same folder and filename stem. Choose images is unchanged. Unsupported artwork is not resized automatically, and client files change only after the reviewed save.",
+      "release": true,
+      "date": "2026-10-03"
+    },
+    {
       "version": "0.32.3",
       "title": "Website update checks and an installer you choose",
       "added": [
