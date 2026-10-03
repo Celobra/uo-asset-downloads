@@ -6,8 +6,10 @@ import { validateGallery } from './validate-gallery.mjs';
 import { buildStudioUpdates } from './build-studio-updates.mjs';
 import { buildStudioRelease } from './build-studio-release.mjs';
 import { validateStaticAssets } from './validate-static-assets.mjs';
+import { prepareReleaseAssets } from './prepare-release-assets.mjs';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 try {
+  console.log('Prepared published release assets:', await prepareReleaseAssets(root));
   await buildStudioUpdates();
   await buildStudioRelease();
   console.log('Validated static assets:', await validateStaticAssets(resolve(root, 'public')));
