@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../public');
-const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.32.4/';
+const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.32.5/';
 const pages = ['/studio/', '/studio/workflows/', '/studio/downloads/', '/studio/updates/'];
 const localPath = pathname => resolve(root, '.' + pathname + (pathname.endsWith('/') ? 'index.html' : ''));
 
@@ -33,13 +33,13 @@ test('The installer is the primary download; application source is separate', as
     const html = await readFile(localPath(page), 'utf8');
     const primary = [...html.matchAll(/<a class="button primary" href="([^"]+)"/g)].map(m => m[1]);
     assert.ok(primary.length > 0);
-    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.32.4.exe');
+    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.32.5.exe');
     assert.ok(primary.every(url => !url.includes('Source-')));
   }
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.32.4.zip'));
+  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.32.5.zip'));
   assert.ok(downloads.includes(release + 'SHA256SUMS.txt'));
-  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.32.4.pdf'));
+  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.32.5.pdf'));
 });
 
 test('Studio navigation is available from the existing website sections', async () => {
@@ -51,10 +51,10 @@ test('Studio navigation is available from the existing website sections', async 
 
 test('Public guide is complete and uses scripts/styles allowed by CSP', async () => {
   const guide = root + '/studio/guide/';
-  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.32.4.html', 'utf8');
-  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.32.4.pdf');
+  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.32.5.html', 'utf8');
+  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.32.5.pdf');
   assert.equal(pdf.subarray(0, 5).toString(), '%PDF-');
-  assert.equal(createHash('sha256').update(pdf).digest('hex'), '0fe024bf831a246c88a7a12d5d114616b3d178fdeee9da7f41dde9c4234d1efd', 'PDF must match the published guide without newline conversion');
+  assert.equal(createHash('sha256').update(pdf).digest('hex'), 'c6d1fc0776d330e75283f0550d7ec757f808f7559b8b7a42ad970081d775709e', 'PDF must match the published guide without newline conversion');
   assert.ok(pdf.length > 100000);
   assert.doesNotMatch(html, /<style\b|<script(?![^>]*src=)[^>]*>\s*\S/i);
   for (const match of html.matchAll(/(?:href|src)="(guide-[^"]+)"/g)) assert.ok((await stat(guide + match[1])).isFile());
@@ -62,15 +62,15 @@ test('Public guide is complete and uses scripts/styles allowed by CSP', async ()
   for (const match of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.has(match[1]), `missing guide section ${match[1]}`);
 });
 
-test('Studio 0.32.4 explains tile-pack selection while retaining updater behavior, export repairs and full history', async () => {
+test('Studio 0.32.5 explains direct imports and task groups while retaining earlier safeguards and full history', async () => {
   const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
-  assert.equal(releases[0].version, '0.32.4');
+  assert.equal(releases[0].version, '0.32.5');
   assert.equal(releases[0].release, true);
   assert.equal(releases[0].date, '2026-10-03');
-  assert.equal(releases[1].version, '0.32.3');
+  assert.equal(releases[1].version, '0.32.4');
   assert.equal(createHash('sha256').update(JSON.stringify(releases.slice(1))).digest('hex'),
-    '8b308204c697ce6a5ecdede2aa45cb1b199128ac0b209d5f8d05576fe11d2c6f',
-    'All 48 earlier release records must survive this update unchanged');
+    '9cab2577f8a4f9e9d4d5f6df37fe17ec9a44f143f466e40f874199eddf3984f1',
+    'All 49 earlier release records must survive this update unchanged');
   const workflow = await readFile(localPath('/studio/workflows/'), 'utf8');
   const updates = await readFile(localPath('/studio/updates/'), 'utf8');
   assert.match(workflow, /NEW IN 0\.32\.1 \/ A COMPLETE BODY EXPORT/);
@@ -99,6 +99,22 @@ test('Studio 0.32.4 explains tile-pack selection while retaining updater behavio
   assert.match(workflow, /original dimensions/);
   assert.match(workflow, /Choose images/);
   assert.match(updates, /id="v0-32-4"/);
+  assert.match(updates, /id="v0-32-5"/);
+  assert.match(workflow, /NEW IN 0\.32\.5 \/ START WITH YOUR ARTWORK/);
+  assert.match(workflow, /34 tools/);
+  assert.match(workflow, /Import Tiles/);
+  assert.match(workflow, /Import Statics/);
+  assert.match(workflow, /Import Gumps/);
+  assert.match(workflow, /Import Animation/);
+  assert.match(workflow, /Import Mounts/);
+  assert.ok(workflow.includes("Import artwork"));
+  assert.ok(workflow.includes("Browse &amp; preview"));
+  assert.ok(workflow.includes("Server scripts"));
+  assert.ok(workflow.includes("Build worlds"));
+  assert.ok(workflow.includes("Files &amp; distribution"));
+  assert.match(workflow, /Simple and Advanced/);
+  assert.match(workflow, /native map terrain remains a separate format/);
+  assert.match(workflow, /Standalone animation-to-VD conversion/);
   assert.match(updates, /id="v0-32-3"/);
   assert.match(updates, /id="v0-32-1"/);
 });
