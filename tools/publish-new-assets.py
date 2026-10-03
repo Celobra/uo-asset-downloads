@@ -61,6 +61,7 @@ def package(relative, payload):
     for name, data in payload.items():
         assert_public(name, data)
     payload = dict(payload)
+    payload.pop('SHA256SUMS.txt', None)
     payload['SHA256SUMS.txt'] = ''.join(sha(data) + '  ' + name + '\n'
                                       for name, data in sorted(payload.items())).encode()
     target = GALLERY / relative

@@ -45,9 +45,14 @@ for index,part in enumerate(parts,1):
 ignore = root/'.gitignore'
 value = ignore.read_text(encoding='utf-8')
 marker = '# Generated publication assets; verified sources are in data/release-assets.\n'
-assert marker not in value, 'Review existing generated asset rules before repacking'
+end_marker = '# End generated publication assets.\n'
+if marker in value:
+    before,managed = value.split(marker,1)
+    _,after = managed.split(end_marker,1)
+    value = before+after
 value += '\n'+marker+'tools/__pycache__/\n'
 value += ''.join('/public/'+f['path']+'\n' for f in manifest['files'])
+value += end_marker
 ignore.write_text(value,encoding='utf-8')
 print(json.dumps({'files':len(manifest['files']),'bundles':len(manifest['bundles']),
                   'bundleBytes':sum(b['bytes'] for b in manifest['bundles'])}))
