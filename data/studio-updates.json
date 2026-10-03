@@ -1,6 +1,24 @@
 {
   "releases": [
     {
+      "version": "0.32.5",
+      "title": "Clear artwork imports and tools grouped by task",
+      "added": [
+        "Home has five direct buttons: Import Tiles, Import Statics, Import Gumps, Import Animation and Import Mounts.",
+        "The Import artwork sidebar page keeps those five choices together in both Simple and Advanced modes.",
+        "All tools shows 34 tools under visible headings: Import artwork, Browse & preview, Server scripts, Build worlds and Files & distribution."
+      ],
+      "improved": [
+        "Tiles starts with floor, wall and roof item art. Statics starts with placed items and props, then lets you review their artwork, properties and destinations.",
+        "Gumps opens PNG/BMP interface-art import directly. Animation opens the VD, GIF or frame importer, and Mounts opens the mount VD workflow with its shrink-icon and server settings.",
+        "Tool search, category filters and Enter to open the first result remain available. Creature, armor, clothing and effect imports are retained.",
+        "Standalone VD conversion and whole-body animation export remain available alongside the new direct import choices."
+      ],
+      "note": "Tiles and Statics use static item-art slots. Tile-pack preview exclusions, PNG preference, Remove selected, native format checks and reviewed saves remain available. Link a working client for imports; standalone VD conversion can still write a separate file without installing it.",
+      "release": true,
+      "date": "2026-10-03"
+    },
+    {
       "version": "0.32.4",
       "title": "Tile packs import artwork instead of preview grids",
       "added": [
