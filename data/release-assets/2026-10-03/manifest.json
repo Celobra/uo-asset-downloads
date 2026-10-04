@@ -200,6 +200,26 @@
       "file": "assets-40.zip",
       "bytes": 1286377,
       "sha256": "f14dc8f57fccd122b90a179a959aa614dc32984dc0546fba4388d62fbd87c65b"
+    },
+    {
+      "file": "assets-41.zip",
+      "bytes": 15420776,
+      "sha256": "f6aa649945d04fa52ab2d8bd2ba78f2e1e7def95281c3e2b9eaed306d40e0d02"
+    },
+    {
+      "file": "assets-42.zip",
+      "bytes": 17399801,
+      "sha256": "4cc7703edc856a4a1c60ee98e833538df1ca1568d316d015efe254a0210eb83b"
+    },
+    {
+      "file": "assets-43.zip",
+      "bytes": 986138,
+      "sha256": "571ad2190093c12bc2aa19a0346ce8ac92849a372a89741df8da43ad0f830fb9"
+    },
+    {
+      "file": "assets-44.zip",
+      "bytes": 19926341,
+      "sha256": "ee3716a453bf4b603ce885a9eba4fe65c649618fd3d8f019f96bfa84a2d3bb72"
     }
   ],
   "files": [
@@ -10732,6 +10752,1530 @@
       "bytes": 233785,
       "sha256": "c1ace4e0baf0de74c45ebee749eecec991a9c66301fe02e36a283df4777344b1",
       "bundle": "assets-40.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/ratkin-role-citizen.zip",
+      "bytes": 5025191,
+      "sha256": "0865e1cb63cf5cc2dd0609038594fe55593fdf5ee5161167f02d87fc5126a2ab",
+      "bundle": "assets-41.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/ratkin-role-leader.zip",
+      "bytes": 5642794,
+      "sha256": "b4a30c6e0cedad64b6e0aee6305461b63d6963b30da001efc24f100e4769ec68",
+      "bundle": "assets-41.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/ratkin-role-mage.zip",
+      "bytes": 5552724,
+      "sha256": "12d0976677f0e5cf93cea0b8faf03f6eb6236e7bda4fec115d74c018fd48f0f7",
+      "bundle": "assets-41.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/ratkin-role-merchant.zip",
+      "bytes": 5351376,
+      "sha256": "e3016f5cbbef10aa665a15c46d8a45ebb65caefb4ec7def941f0494d6e2d52a9",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/ratkin-role-warrior.zip",
+      "bytes": 5456542,
+      "sha256": "37336359539fe59341e884f626cb926de87b219d85b28039cb32e81d7cd9fb1d",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-00.gif",
+      "bytes": 9747,
+      "sha256": "8f057cd171f0d8770102c34d1eeb2d5094300f9bee06b9b69f368832f1411349",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-01.gif",
+      "bytes": 9962,
+      "sha256": "01f6b27bc0f004e316327d490b368053a8be1cf89f14dd00400209a40afea1b0",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-02.gif",
+      "bytes": 9999,
+      "sha256": "031ca2cdb5871f580fce7a45080c47602427cb28de13fd17ff9367b205be9a06",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-03.gif",
+      "bytes": 9951,
+      "sha256": "15aaa4363fbec096b9070b7cdba6247d2a0b83ef8a6c1ec3d8b78f8bbbdaeba6",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-04.gif",
+      "bytes": 1375,
+      "sha256": "9b75b0fd8f7175cf4684351ed236343de1603f210e2f4f7e56c37e02578a852d",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-05.gif",
+      "bytes": 5202,
+      "sha256": "bb4d4024564538afe5f1419b10f9cc3aebac0882c312ed7f7a114ed78b52ea36",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-06.gif",
+      "bytes": 5383,
+      "sha256": "ca8664181201a57c1fd0bd141446fb6ca0ff4516e262b33c1a04ed3e92c3df92",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-07.gif",
+      "bytes": 1349,
+      "sha256": "13fcf13810ab4bbbda552d42afa958e728c2c3d12e15d8ba93f519d2f3d666a2",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-08.gif",
+      "bytes": 1318,
+      "sha256": "3603726dd6aad7371d7ff7d550a2a1750f83be3c47b407b14eceb2cace8dc813",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-09.gif",
+      "bytes": 6786,
+      "sha256": "78d6f79a1faa18c8cd5225929a7fc308c4f3ac6b982ffab75fa26c6c089a1c24",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-10.gif",
+      "bytes": 6019,
+      "sha256": "e1738bc32d458206d88e06929c6244ebe214268fed94cdef4936147ac3435aaa",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-11.gif",
+      "bytes": 6133,
+      "sha256": "4f3b33eaf1be68b4575a7824df901f3127eb552f824ec66e17644dc410724a75",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-12.gif",
+      "bytes": 5946,
+      "sha256": "eb8d731097bf7309288c492b82a4fc9e02efe5ae2851ae28a3578e170aa17983",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-13.gif",
+      "bytes": 6696,
+      "sha256": "2ac0cb10b393b1eacc566303cb9ece5985b973e8aacbbaf297530d35032f845c",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-14.gif",
+      "bytes": 6147,
+      "sha256": "96d2996dc54216e215cc0470b7a6132d57d4155c1045e27ba1508bb2d72c0520",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-15.gif",
+      "bytes": 9852,
+      "sha256": "e37c05514e706e4ba389658812c207a5b9a8d1ae169870a3cbfee4f81891f59f",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-16.gif",
+      "bytes": 7619,
+      "sha256": "72ef55438d04610bbf4f49ad88d64b26f169cb95089e886badb49639e49ab6f2",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-17.gif",
+      "bytes": 7642,
+      "sha256": "fb5c37f39d6ccfb282d1a0533cdc8d8b8afcc38a7fec6fd27261eb9c193b41f4",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-18.gif",
+      "bytes": 6585,
+      "sha256": "08d83b00bfdc4ed3232e9572745d5d62402c671052e4789874191c3f6b00a93b",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-19.gif",
+      "bytes": 6913,
+      "sha256": "7c0026f07c2a103a9b0ab84e5e03388b19d2f3e597282b6b94acfca4dfde362b",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-20.gif",
+      "bytes": 5601,
+      "sha256": "84575501469f53c5038994a615bf40dfeefb4a4647373c56541cca7eb3642780",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-21.gif",
+      "bytes": 5444,
+      "sha256": "dfd2cafe614013216f582022a8ab49c77affc5760a578df1ee19bb6ec4ad33b5",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-22.gif",
+      "bytes": 6973,
+      "sha256": "40ae9a7d347eff1fa39e53fd533ed001a1138d794f2d9f70a985ee82f7cd0b3e",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-23.gif",
+      "bytes": 6002,
+      "sha256": "bb5c7ca731b24bbc702c55fc9849f0e21d4290a6e02060eac703bd4b13aec57e",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-24.gif",
+      "bytes": 5931,
+      "sha256": "8688eab34000fc0886608bed7259c051aa15518b63279afaf033dfb6dbf90273",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-25.gif",
+      "bytes": 1372,
+      "sha256": "b10a87c98021d15d45160450758298583ff7bb1704cc20e92dea48acb1a803f5",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-26.gif",
+      "bytes": 5253,
+      "sha256": "22eb02338354c2821c6e1883c5c2bcc180e11f4d32ea3374010b34b83d9d8522",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-27.gif",
+      "bytes": 4675,
+      "sha256": "c75485a57c4e42f107873098cc855491aafc1d0347f83a92f6833cfc55acc68d",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-28.gif",
+      "bytes": 6963,
+      "sha256": "7f0d9c9fc833e4d30426d5c996fa7f33ce4fd7869bb130e700efee23477f588a",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-29.gif",
+      "bytes": 5061,
+      "sha256": "bf6d599c37f4ed1ac2895d771eb18e0d8454c97e407113f9bd44680bdacf393f",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-30.gif",
+      "bytes": 5025,
+      "sha256": "1641aa390ffedf6e0e57941c04e71c8ae19b8c1289473d1c53790b60acc77d71",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-31.gif",
+      "bytes": 5776,
+      "sha256": "8be93b502146595a9f4e1e9b5da4dc2a673288572315f4891b8ff736b6f210c1",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-32.gif",
+      "bytes": 4503,
+      "sha256": "4c8d30ac5bfc76edcf01629510de199bbbbca29ead5f0957b0e5cfc9e1772152",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-33.gif",
+      "bytes": 4738,
+      "sha256": "60b5d929923ee783cbf23db8fa7c3df8d6ba758d8fb0cbbeb5a18e72e08e2c35",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-action-34.gif",
+      "bytes": 5372,
+      "sha256": "204f5bda0d1fb715e96f65d162f3447e0e867c53a61db057e2cffc9bdfad142a",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-all-actions.png",
+      "bytes": 339397,
+      "sha256": "3f438eff2da2331c79ce928d815f59d529f1a5ebe66a7d53df5aaf910a0decbc",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-eight-directions.png",
+      "bytes": 13557,
+      "sha256": "f5a6e2de346ffe0a56f7c3d95855cbcc08ab5f127080891953abe312e2b07985",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-motion.js",
+      "bytes": 19947,
+      "sha256": "89a5cfd251c1d2816cf7372feaa575b1f3203eb2ba33b45811841b05bbf9b497",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-mounted-fit-23.gif",
+      "bytes": 19493,
+      "sha256": "5e46ef44a3a7e79a78d0de35e216250d3c8c814ad4de035b64da5b51cf928e5e",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-mounted-fit-24.gif",
+      "bytes": 19778,
+      "sha256": "868355c60ceea215ddd2e8ade7845859508e6e2fec7da344c9f8a38084b27aea",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-mounted-fit-25.gif",
+      "bytes": 4236,
+      "sha256": "2b3180b275d2192cdc837ea70ad036d297f229fc84e3f6f4f48c4129aee40550",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-mounted-fit-26.gif",
+      "bytes": 18548,
+      "sha256": "05e690d7bd022d16285589ff61bcc30fdae7459ca41c358d5b397d0a0d4543e5",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-mounted-fit-27.gif",
+      "bytes": 16959,
+      "sha256": "c30e577ade52744d2e095232caa3e5c6842ab036646cfb98fd13f1362a2fc213",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-mounted-fit-28.gif",
+      "bytes": 25345,
+      "sha256": "260deec1f93971b0e63d027069c3e1cff201b77392b1c0e2a45f438360593ba1",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-mounted-fit-29.gif",
+      "bytes": 17894,
+      "sha256": "10ebf330ec6399647479f2532b6e113d16bbb44ae0ffdb66169c10074b8e05b4",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-citizen-thumbnail.png",
+      "bytes": 1883,
+      "sha256": "a4fb449121ca47141d5b6ccbc5502b3aeac28e19ccd76325d2fe614edb98ee65",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-00.gif",
+      "bytes": 12292,
+      "sha256": "971718ab88ca83712422f066ad6c21d86a4cf18ff20ff72f9507fefb985e9be2",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-01.gif",
+      "bytes": 11511,
+      "sha256": "87cd387a46a64786b7572f1672abc804acab35a5948e80cd8d769835c968bcd8",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-02.gif",
+      "bytes": 11377,
+      "sha256": "bf200e79573b1e290ae5f52ff4925c274680b3f7d12e18333a29592e30901c65",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-03.gif",
+      "bytes": 11311,
+      "sha256": "352ab576acf49091a7dec1833d270c7c21bbb671186fa76dd110a90cb167832c",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-04.gif",
+      "bytes": 1486,
+      "sha256": "e461f2e2b7ec36edb2b6d9212ac8a36b11df677bb4025ea3a48c2118ed225a49",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-05.gif",
+      "bytes": 5997,
+      "sha256": "d868d35bcdc75ce647ad0e0d8a1c1e426204f3b9e050503ae11057eaddc6bd44",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-06.gif",
+      "bytes": 6081,
+      "sha256": "d77127a1475249c9e4623ed49446f36e5a9355004565b2c5c7b9aafd4276d471",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-07.gif",
+      "bytes": 1464,
+      "sha256": "4847cefdd6b864e08aac0188a84e9fc50644c5efc92f463767d5337cd4008eb3",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-08.gif",
+      "bytes": 1485,
+      "sha256": "95dd4a1dc232e1d48d735c74884f5607130fe37ad12cf0ae9b79d4117cea3116",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-09.gif",
+      "bytes": 8142,
+      "sha256": "7fdd8d90e8305086bfabcda8fc231633b95a43888051cf952e417a73f0bd3d30",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-10.gif",
+      "bytes": 7088,
+      "sha256": "f3ad256d717c64d4e3c6e7ca420d222fa4ca91eb36a9fd6df344f626509ce672",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-11.gif",
+      "bytes": 7315,
+      "sha256": "2e93550ebf63995eb31c36aa413df8c044e22bee48581ce394f1ccce21b48779",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-12.gif",
+      "bytes": 7550,
+      "sha256": "cac52f6f9e08f48e1693c2c2ab4df67308253754d9c3a04095a0eab8e0ee8076",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-13.gif",
+      "bytes": 7902,
+      "sha256": "2112d1e81304dfe694d39cecb4b936004dd0bc47587dd31766acc0c0f2f3d840",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-14.gif",
+      "bytes": 7361,
+      "sha256": "3b318b59be28d828fe7d3319599a73ba28361dfce5b0521517280bcd8ce9938d",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-15.gif",
+      "bytes": 11311,
+      "sha256": "dd406034e1cc009b2444e57949ea2867ff47f10b8a9ac8f2ba9ffeb87bbab7bb",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-16.gif",
+      "bytes": 8399,
+      "sha256": "7815aee040343457253f00823710614400fae4966a4baab0192911465820a755",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-17.gif",
+      "bytes": 8469,
+      "sha256": "a7420a2bee4f2c8520429771ddcd2944f023f8ee957822055d7841c76d90ae54",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-18.gif",
+      "bytes": 7300,
+      "sha256": "043df65a78d5b70b116b2ab2ac41de73f590fac6f9aa6326129b98643fc3d06d",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-19.gif",
+      "bytes": 8175,
+      "sha256": "0c370baf39b2101997c10336336e2efb6947e0fbaa14ca6d86d5c5cd0de21f2f",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-20.gif",
+      "bytes": 6545,
+      "sha256": "f966b9d739e88d33f2a87f15fd49ea8fe1ac01d6d688befa6f342328a8679de3",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-21.gif",
+      "bytes": 7122,
+      "sha256": "ebf9dd45f31ca2bd0187cd9b664203b6fb5e31544961cb4859eb27625464d85b",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-22.gif",
+      "bytes": 8197,
+      "sha256": "dc552140c2751c721a47d50834bd12508e759f1c7e4d6b962586eb130860a841",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-23.gif",
+      "bytes": 6532,
+      "sha256": "20bfad67238ffd82875c817378b5047407d33a084f4d632e417ac5a3dd9128b1",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-24.gif",
+      "bytes": 6465,
+      "sha256": "e4f59811a5fbb3e0baa2bb9e4e84ec3377f1965a8bc0e67d8c8ee6cad8386290",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-25.gif",
+      "bytes": 1487,
+      "sha256": "f3f22277dc920f0a34749821224e68f496e0c377497f4a8909882e597ebac55b",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-26.gif",
+      "bytes": 5793,
+      "sha256": "634b602333430e14828c33b2dccf06e6237db21242cb6c2bd3b4e1fffccc2c13",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-27.gif",
+      "bytes": 5154,
+      "sha256": "811aa70fe9d64342ac201b7d4322375912c522f1b782f4ca9a8e75724ceb1afa",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-28.gif",
+      "bytes": 7806,
+      "sha256": "ded467e1c183c9f4a44649f23f720ae75e7f2f58479c6d8e6706e7aa1d74d889",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-29.gif",
+      "bytes": 5670,
+      "sha256": "308098a5c77bdeb13be654d1954983e46697a8b3342df6e2e281bbdd1d8ba2a3",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-30.gif",
+      "bytes": 5570,
+      "sha256": "da6ecf3da6613aaf0d88f3561c16ad59e50f2abb5bc507cad9df8a07d778c8a1",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-31.gif",
+      "bytes": 7228,
+      "sha256": "e8df1586de5d6aac8ab5b9e09f79eac937732efa6aa116d7cfc098dc179edc0b",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-32.gif",
+      "bytes": 5569,
+      "sha256": "e487456fb619a8886eecf2313c45673047bc2ae6b1a11bd567012e95d4cd3055",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-33.gif",
+      "bytes": 5280,
+      "sha256": "b796325a328f4b868e1fbf9a2985f85351434cefe4ad301848dd5b05ec6b40df",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-action-34.gif",
+      "bytes": 5980,
+      "sha256": "bdac0df64302472123688a2684f99f2acdf199263ea1dc8dd8f2577bfc7228ef",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-all-actions.png",
+      "bytes": 371928,
+      "sha256": "8a6817a5e645a373e0ef0a67b3abf93ec9cefbc0c9f2af6841c482b453dedbe9",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-eight-directions.png",
+      "bytes": 14626,
+      "sha256": "585437cd33317ffb4b8a4f841c9125fdba0d8433c321190b381f2e3742066b64",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-motion.js",
+      "bytes": 19959,
+      "sha256": "2f7df8081470fc5eab76fe9da4d88ad6aacd5d72775daa345fe5b643fd5fed81",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-mounted-fit-23.gif",
+      "bytes": 19822,
+      "sha256": "b765d7eff04eb7fe8ff3387412eaa69922cc629dcc7ca699dc41cff65f449fc3",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-mounted-fit-24.gif",
+      "bytes": 20147,
+      "sha256": "8b41dcd099b4c7db8166a463248e96dcb86c395bf914616f5373ff9a047304f4",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-mounted-fit-25.gif",
+      "bytes": 4295,
+      "sha256": "9cf8b756ed129ab1df1e3caf6d7e78f38df006ee89353c7e74cddb66e43aaed8",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-mounted-fit-26.gif",
+      "bytes": 19921,
+      "sha256": "6c83dc76ef527f2e646a63883d6b792f3e1f72e512e95943d0f986654ed2697a",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-mounted-fit-27.gif",
+      "bytes": 19936,
+      "sha256": "f4f37564b1bd5d707caf8e0aa53b3dc5785220bd2aeb570c32644658a2a123a0",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-mounted-fit-28.gif",
+      "bytes": 27609,
+      "sha256": "3e20a0d3150a4c903e93fa3bdbe841acb0fe5d90b3465dd3e58513c9daa3f98a",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-mounted-fit-29.gif",
+      "bytes": 19824,
+      "sha256": "cf03f1c503ab6f5afe55991303e78427111a7f68f729e86454b0f0c5b40aebb0",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-leader-thumbnail.png",
+      "bytes": 2064,
+      "sha256": "05486bd37dc115bd5ebab5202f87a4d558b14cf6efc11a3f9cac27cf2810a6e0",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-00.gif",
+      "bytes": 11286,
+      "sha256": "e4c47c8a9257c0e021dd361b32a716fcce7fa08847d6f8a9768d21b1f528553b",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-01.gif",
+      "bytes": 11268,
+      "sha256": "33fd7ebc55d22f46cf43b1faa23e1810969ef4bb9eb28e70c1226da96b9ab677",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-02.gif",
+      "bytes": 11465,
+      "sha256": "5102ccd36e1a327d851e27a3797a22c2b17a65d45b66bf04c93774a6f225afea",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-03.gif",
+      "bytes": 11431,
+      "sha256": "717f39c437120240f2a368e8e7de816435921c80f36d2ee07f77ec33374c6509",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-04.gif",
+      "bytes": 1452,
+      "sha256": "0347869145f6240a592673c052a92cd4870e3818c6dc8808890b842cfd41d60b",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-05.gif",
+      "bytes": 5868,
+      "sha256": "4fe33bf9715b80133c4ca82cea54e063c91f180f11b3199cc926f226845486c7",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-06.gif",
+      "bytes": 5851,
+      "sha256": "6ae6f3a1c50687d78b2a5be5fc6d1bb9c7cd811f6ce33e5fff7543cea5887d3b",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-07.gif",
+      "bytes": 1486,
+      "sha256": "e0e0927f4cb051c244a9e0c5219579c5204f0215208eba665c9ac7a2da6ae1cf",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-08.gif",
+      "bytes": 1480,
+      "sha256": "6b5192e223326dd78d02a6366487cb22d6f37fa9ff1a26b14daa62f5896ebb45",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-09.gif",
+      "bytes": 7948,
+      "sha256": "346f9c21e2b8e2d439e900d78eec806cef27b9a0062d0e8f9742de71dfcad156",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-10.gif",
+      "bytes": 7143,
+      "sha256": "91a83e951fa114d830dec75ee1cd1965fc2f00b72e2a89b82e4563f7c83fdf6b",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-11.gif",
+      "bytes": 7388,
+      "sha256": "688ad8188cffd24cd2d2e1b58f4b1a10c2524345048f9b50c32bd17618d878f5",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-12.gif",
+      "bytes": 7730,
+      "sha256": "38d552a99cd988d6f42204032c1ae963df0694beffcba701395a6213da5604d3",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-13.gif",
+      "bytes": 8068,
+      "sha256": "e0bda43e8e1de9c942272bf4fc4badbf8a3d6ded0f7f0d33941253fd29f7f991",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-14.gif",
+      "bytes": 7440,
+      "sha256": "4b97137a7bb9afcdf7d11a56a66351a65c52fb621e77b762dde3b34fda368984",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-15.gif",
+      "bytes": 11182,
+      "sha256": "bcad160a3f4b5e7248dbf130704b249b1e8ad3193b4cf374e1b26184b3408695",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-16.gif",
+      "bytes": 8264,
+      "sha256": "eca64706f6c9967213f310d41e4fe681583b28c33c724caba855e08bfe9aa348",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-17.gif",
+      "bytes": 8309,
+      "sha256": "a3e3c99eda735b9f5c99aab788b794cd1d06abdd0c2491f0c504cd408ff2430e",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-18.gif",
+      "bytes": 7507,
+      "sha256": "f63352eabcef21a62da231a85fb4022f63282ea557b70981184da06195f7f1db",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-19.gif",
+      "bytes": 8417,
+      "sha256": "36408d3ec98a0afd4804427e73b379717dda7494340d3decf1356e3323d809a3",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-20.gif",
+      "bytes": 6217,
+      "sha256": "7326bb272bff5c9c3c85a15cc73188b9a9de7c5216151f07fcd44a50a1fb3289",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-21.gif",
+      "bytes": 7024,
+      "sha256": "2ab0b4a0412bcb5040243586af94611b3bee7afa701b35cfffeb3a72f8c5aeda",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-22.gif",
+      "bytes": 8178,
+      "sha256": "55801d7cd82e77cb39c2cac427a29dde5ae7745fd7b5d1d157917e1983e2d3a6",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-23.gif",
+      "bytes": 6670,
+      "sha256": "0db8d3fa4c8ed4b27bebb607fd244bac6931cdc40d9f8fe179b4f328618f6baa",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-24.gif",
+      "bytes": 6587,
+      "sha256": "8a98a720f60b399337532c2965e377923009f96a4011c3f5fd49dd7772d06a38",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-25.gif",
+      "bytes": 1541,
+      "sha256": "d381cda42747409d0a09aeccbb780afc7a7347c736ec7c79eb6de59eb3855c20",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-26.gif",
+      "bytes": 5909,
+      "sha256": "44fde7af0b60c3c32f61ff03b327be03ee8b9fe5f02d6f55a8e65e2dc100067a",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-27.gif",
+      "bytes": 5276,
+      "sha256": "85eeb4bd090d385c7fd6eebf8d9a7b75185895b7b6e03ff2b76c38780085ab60",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-28.gif",
+      "bytes": 7979,
+      "sha256": "aea3ee2b5fe6bab03c5bd46b5ac7b1aeb9fc3f54822ac1a3098cdc90e1c24d83",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-29.gif",
+      "bytes": 5753,
+      "sha256": "a1a721ca52b1ce93e78b6f617f96f62f6f7c9d8b6067942a69c9568a47873611",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-30.gif",
+      "bytes": 5610,
+      "sha256": "169a1b7ffaa3ef9ec73421d3ff7dc677a41cef150d46469f7d27e50f4239be71",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-31.gif",
+      "bytes": 7313,
+      "sha256": "4244b59d7d0c0a6bf7ba3b4078da47188f1544533c854ce51fe245a81de4d57f",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-32.gif",
+      "bytes": 5431,
+      "sha256": "aa26a40c3e35a2fd9a3cb2737cf712b19f4f93fce9e17b26ac67f4cd5a1c0b27",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-33.gif",
+      "bytes": 4985,
+      "sha256": "18a063a961c21e5a8cda66db6851510f9cc6ee742e30c105a14037770ff68843",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-action-34.gif",
+      "bytes": 5769,
+      "sha256": "1d61391c1ce4ff6e9ed8bc07c22fdb85aa96576c6e61518d9d27a4043730b7b4",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-all-actions.png",
+      "bytes": 359575,
+      "sha256": "79e3d58cfd3d51ebffc60fd0cca8a5582114b210b934ec0385145f8a7b9647d1",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-eight-directions.png",
+      "bytes": 13998,
+      "sha256": "6ec93c9219c3edb61a8cfdad67daac76b581b5be2412acdb31d8f64d8bab8d89",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-motion.js",
+      "bytes": 19957,
+      "sha256": "ccf985eaa0ac9fd45ce5e1761168a1d918aa732cdd087f806e7451fa2e9273da",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-mounted-fit-23.gif",
+      "bytes": 19435,
+      "sha256": "0e234e5d26b942ec4636f2dd16f836db2f13c33b19528fd6f3e5dadffba505f1",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-mounted-fit-24.gif",
+      "bytes": 19700,
+      "sha256": "923aeecaabc2c0950fe60be3e034cfc090d8c07f557e199f63173ea6a64cda0f",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-mounted-fit-25.gif",
+      "bytes": 4242,
+      "sha256": "7ae38578d6c68bb6e0b4141db588a0767f1f4041fb65abd20de29252e0a0811e",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-mounted-fit-26.gif",
+      "bytes": 19549,
+      "sha256": "301cd035671d901921c86ddd11a59f2f2480b7e4acfb5f4794e0a108344d8c17",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-mounted-fit-27.gif",
+      "bytes": 17581,
+      "sha256": "7f806866a4ad56eb23eb62fa53a38cc7a30b8345b64384e511a737b39a7da625",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-mounted-fit-28.gif",
+      "bytes": 25586,
+      "sha256": "dad1262eeb6b0b719ffb0e4b1ae39b7bc02b5a86c9c6c74ca72649fd7bab3654",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-mounted-fit-29.gif",
+      "bytes": 18961,
+      "sha256": "c7b7c4379da5a187caacbc0df285a692753b82fd0db1554377ff0726363828de",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-mage-thumbnail.png",
+      "bytes": 2056,
+      "sha256": "3ed9a0ae2a58d70f0d3304d7e23688c97a7bbe7c7c30230037cb6d8f7339768b",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-00.gif",
+      "bytes": 10675,
+      "sha256": "bc20fad49101301a0c25febe23e2dece943352800f4ac75ba4a37da7a47cc6e4",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-01.gif",
+      "bytes": 10673,
+      "sha256": "b65e42e03b94b01f5086e31f13798f19e488bead7a0ab12243851a2be91d4b69",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-02.gif",
+      "bytes": 10513,
+      "sha256": "e6f9d32cdd407c8a6d00b982362c3ba0e19d349e50033de9deba1d99e7dba687",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-03.gif",
+      "bytes": 10466,
+      "sha256": "37622be5e9d82d09a13380b7ee8961924b6fb41569e078c1af9c56a992ad054f",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-04.gif",
+      "bytes": 1434,
+      "sha256": "53f099b78b662a88b40f55d677b9a45c038cf7747804d28b45cae0a64ff4c973",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-05.gif",
+      "bytes": 5681,
+      "sha256": "3dbc36285152918b0486e8a2019fc9359a2c75448888148ccba93cbf858b7a34",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-06.gif",
+      "bytes": 5848,
+      "sha256": "44ddebfa2efcb742d223e6c55dbd0310e0ecb405cb7a531a9e21e950378cbd61",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-07.gif",
+      "bytes": 1415,
+      "sha256": "5c2db1703a05ea1d6771d9e94f346f9cf6b71cbff413f28e0626914145e5a5bc",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-08.gif",
+      "bytes": 1389,
+      "sha256": "6b0338b8b29d51c7a62175b22795c40b366a836e8fbc883678f87ced1f403b15",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-09.gif",
+      "bytes": 7394,
+      "sha256": "3a7f54e5aea18b183f745c2b0b524d318210bb90e4e1f3d0aff04b4361c02b00",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-10.gif",
+      "bytes": 6536,
+      "sha256": "3caf2be3d6e16960828322dd335ee9c4d182c69deaa7bccec963548a9ec156c5",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-11.gif",
+      "bytes": 6726,
+      "sha256": "9e4af802d2abf5a2a6cf973c0fdd600b3b885d71ee2615a28fb34c3574fb18f7",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-12.gif",
+      "bytes": 7105,
+      "sha256": "4f712998db128f3d2e22015511407f1808dddd109f8db560732b8c156e835415",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-13.gif",
+      "bytes": 7515,
+      "sha256": "0667c01b5061c56af5c1f36a4b2cec1d0b3fa7c50edb08a357234c4b2e9da897",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-14.gif",
+      "bytes": 6871,
+      "sha256": "ed29d292d49938f813c5b594c2b7c08eb2d515cc2c1340ef4b10402c0ce4676f",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-15.gif",
+      "bytes": 10520,
+      "sha256": "a870172467003f6542519877b75758bc726ac2969d3ef7c7241cd9622287fbd1",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-16.gif",
+      "bytes": 8034,
+      "sha256": "939cfb32d2509cd67455c7291089aff9203f4c64b9761c442fd4cef7d66eea96",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-17.gif",
+      "bytes": 8052,
+      "sha256": "e5b950bfc9b82fbbd2a77b2d446ee60c85c50d9b51e7709da9be801faacd31d2",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-18.gif",
+      "bytes": 7017,
+      "sha256": "6153ff2d61213c1d3f5f601befa0c2cd821efdc816cde106037067328c16074e",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-19.gif",
+      "bytes": 7753,
+      "sha256": "c9fb928d7874f4a9eb4d66b83902378033556d9005574c385b51b83bdc07dc4c",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-20.gif",
+      "bytes": 5911,
+      "sha256": "2947d790a151d0ac300a454222a9e5fa790da431ff216217a412ad79ea5b548c",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-21.gif",
+      "bytes": 6799,
+      "sha256": "62b116029fdeb9d7c7a2490a8364ae401623806d661ac2c368a5602203d92d9a",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-22.gif",
+      "bytes": 7825,
+      "sha256": "54f1f45d05f912b303bbc197edffc2f34646c2a31bb2ae29b9086a3908c0570f",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-23.gif",
+      "bytes": 6344,
+      "sha256": "39950a49f6a43f447af5d4ce8fadfee0cb50a0a6497b8621ee38579354f448d8",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-24.gif",
+      "bytes": 6277,
+      "sha256": "bedf1bf8e9be046b22d12e7abf05ce1ddf9ecd5c5d031d3d74c78e8b113dffae",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-25.gif",
+      "bytes": 1433,
+      "sha256": "9291f0210d80cc1e15d8702ce725aba97cbb6b4ff2b825fe50099c7870f88a23",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-26.gif",
+      "bytes": 5608,
+      "sha256": "2d836a595284f56ccdf7b25c151c4642664b53c9ab7cfbafa424e07a25829ddc",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-27.gif",
+      "bytes": 4810,
+      "sha256": "07f355f6c86c588e6e5f162f9b0b43b80dba1711776804100f19c1ba33bc88c5",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-28.gif",
+      "bytes": 7329,
+      "sha256": "c26b8954834257ff0267a3731c274bd467841b2a1f4634f895fb922d7062794e",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-29.gif",
+      "bytes": 5430,
+      "sha256": "09f4c6bfb7ca2a7b0cfe4fcb65642c5bfd0ca7c15df2a37cb43fd85c1484696f",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-30.gif",
+      "bytes": 5398,
+      "sha256": "17488523785ca633c8e598fc98eee9cb2852ed56c66d7713173c7960db668bf7",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-31.gif",
+      "bytes": 6616,
+      "sha256": "4fdaa807e9d50908c0f11f1dd3a61619eff0ddf56a8a560553e339d4c1b3cf18",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-32.gif",
+      "bytes": 5334,
+      "sha256": "7655c5759d8ecc6da528f7cc1c0769103cc7089cc3e6c4a5ed16e3ed1b2c812c",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-33.gif",
+      "bytes": 4897,
+      "sha256": "40e2985d81183bde089529e882ad29ecd030769de6f60ec799adc5ec210ae6d2",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-action-34.gif",
+      "bytes": 5634,
+      "sha256": "7d4a7f6bcac7048c651a8af252a723554900cca2a6926ccb6b696bba3a16d57c",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-all-actions.png",
+      "bytes": 371489,
+      "sha256": "5c0f4cea92c66923c2854cacc8f856363d877b99004ddad00246e0cab5bd08e8",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-eight-directions.png",
+      "bytes": 14568,
+      "sha256": "ed4b58731799b070c32f77c31a4bd6f82608b86f9ac75fd12797d17f1e196d33",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-motion.js",
+      "bytes": 19949,
+      "sha256": "50a7cf6214f6af41e1db272e2e124d7d5b974bcbc4471f7bd2e14c1e87830a31",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-mounted-fit-23.gif",
+      "bytes": 19837,
+      "sha256": "938f87afb7d471fcac3cf160862102a54b47e46481ac39aaf26a967df341e47a",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-mounted-fit-24.gif",
+      "bytes": 20158,
+      "sha256": "10e689f5d9e40a603aa08bf101d1b690fb04e2254c852ceb7edcb980fc55cdc0",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-mounted-fit-25.gif",
+      "bytes": 4292,
+      "sha256": "3c2c1f4d229fb2674b0ea25aecef5a7aaa0d612af1622ce9400e9e704f2aa967",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-mounted-fit-26.gif",
+      "bytes": 19800,
+      "sha256": "0740502bc22b1fef141918e631f21bd21f178f931672f8d06d72617031f410d1",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-mounted-fit-27.gif",
+      "bytes": 17629,
+      "sha256": "faec4b1c1b3c62513cc84bd5c63034d0c2fbdc384ec2806faa41081a0376d416",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-mounted-fit-28.gif",
+      "bytes": 23472,
+      "sha256": "b9ada39bc03672f6fcaff3eda4713fa5945d7b5a9ad1480be05541b822f0330f",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-mounted-fit-29.gif",
+      "bytes": 18777,
+      "sha256": "a76cda92e771e8c3866d6279db81d5fa3aaa9af7f1c5ea36ea6bb37a2e79823e",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-merchant-thumbnail.png",
+      "bytes": 2031,
+      "sha256": "7e84a6f59503d190ea90e80796e3bd46b573211dce5f6da94ceb347f57514404",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-00.gif",
+      "bytes": 10949,
+      "sha256": "f056d8ae83cc699dee7f968dd5acccc4cb942e20bab25f0db2ea670b42982cce",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-01.gif",
+      "bytes": 10967,
+      "sha256": "e4dab57d8d3b32c3e37937367c5d986595dc01bff63fd50ff2f53297d23751a0",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-02.gif",
+      "bytes": 10834,
+      "sha256": "b1bc396b0e8d1b758c8f3cc995c67c425ee6fad6b27d7e208804a47278fcd38e",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-03.gif",
+      "bytes": 10830,
+      "sha256": "b0dcd4f05e7ea7f875d5bed45266de5023ef6437d13e6d283119846f0db9c2fd",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-04.gif",
+      "bytes": 1478,
+      "sha256": "2f2bc9a5f94d0456e3d029523bd2a28a09fea95e844bc7c2da1e8507a5d90f13",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-05.gif",
+      "bytes": 5808,
+      "sha256": "c69448f321d82ab6334c9f12ca13093008cbf7039e54222798f87df28fe7baa7",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-06.gif",
+      "bytes": 6038,
+      "sha256": "323fe34c7b69c8a8402f09f078c3b14c56553a5ff456a1a6531bbe8d9bcde612",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-07.gif",
+      "bytes": 1438,
+      "sha256": "d5a9aa342871c9c3c7f75e99c453286075b3a432320cfc0378c16025faf8ec9e",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-08.gif",
+      "bytes": 1411,
+      "sha256": "260fddd5a5c6118ca059f83232d0db1e48e7ddeb9e83e860c3591b78237cbe4a",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-09.gif",
+      "bytes": 7570,
+      "sha256": "40bcb4cfe7cccd1d15c4dcc0e2b6b00c06abe7af651692b76922b3e7f68ad918",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-10.gif",
+      "bytes": 6592,
+      "sha256": "6b8108fd2bd3c1488ee00d24be41b74585447a0dfca5ac54a85af51d11045cd1",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-11.gif",
+      "bytes": 6849,
+      "sha256": "c3a1674393772af56c82b04d235507dad6f16a726aa504ae0233a5fcb0ef48d7",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-12.gif",
+      "bytes": 7234,
+      "sha256": "66a45f50b93fed36551059511303cf55c8a86fd365ae39f51b4c6ab0e51fa16b",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-13.gif",
+      "bytes": 7662,
+      "sha256": "c187e12ea4a2cee5158d0e02ac8ba5fc51a700516867cb4eba3d41c93b134130",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-14.gif",
+      "bytes": 6994,
+      "sha256": "4bc0595ef72480a59d57341438d894708f5d5602c618c64b9d82d522e60ceaf9",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-15.gif",
+      "bytes": 10769,
+      "sha256": "c67c2fe0bcd436f96f3fe0d5ea86ef3c85f3cc3dc4e99264430e286688bbfdb8",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-16.gif",
+      "bytes": 8195,
+      "sha256": "5f0a486b0d7353cdad0fcafa7bdd4e3f801a0fd5b7f495060f70e8547ade0569",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-17.gif",
+      "bytes": 8277,
+      "sha256": "809bb44e9d7178c628730c4cf95b4efb9e0c52d59998371ba6c86bc431e408a7",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-18.gif",
+      "bytes": 6956,
+      "sha256": "735fc39bc5804e88b6bb2a481f1aa3a226dd8aaf54be40eb6d81b191974308c2",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-19.gif",
+      "bytes": 7930,
+      "sha256": "7ddf1afdb88684185e1489475230c7332671e68f0d6bead3d98a31a82fd72d61",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-20.gif",
+      "bytes": 6037,
+      "sha256": "6ca4febb7a258d274f294c725263360cbc47f3209d0edb29d5ec795eee104808",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-21.gif",
+      "bytes": 7026,
+      "sha256": "027ffdb39436eda0ba43d209e658a432a6feb464a95777227e8d32da2194d998",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-22.gif",
+      "bytes": 8021,
+      "sha256": "c6317a97b7b1edd88929138c35d35ad79f106104f86179f07436227918ea1e5b",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-23.gif",
+      "bytes": 6486,
+      "sha256": "5af2ef667f84f32186c9c9b756f8a8ee408aa48b42cd8ce4eaac2d616e4ad3e4",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-24.gif",
+      "bytes": 6428,
+      "sha256": "e27e347f470a9cba614b8ee40e91934cff88a9b81f4627433448cfcab94cb791",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-25.gif",
+      "bytes": 1468,
+      "sha256": "7cadf7fc6698856474589f35cc2bbfddd8c870c2063904422082a2f93cdc2324",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-26.gif",
+      "bytes": 5596,
+      "sha256": "88f26b4d9d7da3b6c9b5e10a55dc12664d676824669c3b070f1fe8f45bdd95df",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-27.gif",
+      "bytes": 4978,
+      "sha256": "9f65181fe91e99de08559c3f73aef4d5fbeda87b37f4342dc7a48ebe0be6c8fc",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-28.gif",
+      "bytes": 7364,
+      "sha256": "cdc3c643108a824c38437e24d99497d2feddb2d6526e29503caf3a5008a94fe8",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-29.gif",
+      "bytes": 5397,
+      "sha256": "53a43c55f15234dd12e67460069baf795de40661ef79c4bd85e5b2bcb7900265",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-30.gif",
+      "bytes": 5439,
+      "sha256": "b152b68d030b102d1bf47574e4132f67284738212b7740d5c021902fedf069a0",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-31.gif",
+      "bytes": 6720,
+      "sha256": "5154defc57f7e32324845a252abffe6be43779e77dde101adb0c015c46530b1f",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-32.gif",
+      "bytes": 5484,
+      "sha256": "3065db82b8f5cc226121aae70e637e90d07cfc3f81887de29fe581943bebc79a",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-33.gif",
+      "bytes": 5066,
+      "sha256": "f4a54b14abd9aac5958647254c11226ef6f1c1d3bc8eedb3d55be67a263c1ba6",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-action-34.gif",
+      "bytes": 5774,
+      "sha256": "8b313a86206cf1634538dc237b6756b02a7b8eb1dd274ec8b6e3595e300d505a",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-all-actions.png",
+      "bytes": 372524,
+      "sha256": "58057d24eb647e359d1b4b2878947df02d99bce4b1cdb0459ac958dbdd9d8872",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-eight-directions.png",
+      "bytes": 15006,
+      "sha256": "6e8fbd0db8b5469bb65e48b99eb26d1eaeb8972e4b31b5c5a21fd6c7ca23523c",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-motion.js",
+      "bytes": 19968,
+      "sha256": "c4992b3817c040a91a706b2076ae76ce8a86eee84aea4ecbdb2eb6813b145167",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-mounted-fit-23.gif",
+      "bytes": 19871,
+      "sha256": "fdb2db3b92f343ce3ef796119e4ae2594139b43d4fa7972789f301d6898141a0",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-mounted-fit-24.gif",
+      "bytes": 20189,
+      "sha256": "2a171447ea8bfb41c47745633d46ae39dd3b72883532bbb72a7bba2d50c090dd",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-mounted-fit-25.gif",
+      "bytes": 4313,
+      "sha256": "b04bb147b6ccb80fc26c7d6320cbd685d73282a78e44d42f42acf74423687c02",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-mounted-fit-26.gif",
+      "bytes": 19956,
+      "sha256": "cfcad0d7d2bb5af10413002b7d112f540694d34715526d850b5a9427acc2ba2a",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-mounted-fit-27.gif",
+      "bytes": 18861,
+      "sha256": "7e38e100323c41c1a5eef6219aa04b06243cc9ea97d157592e443ee3711e4e76",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-mounted-fit-28.gif",
+      "bytes": 27615,
+      "sha256": "c8345a732736dabcdf64d83849d1f70a012cc7282c52db916a6f5139ad9cf137",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-mounted-fit-29.gif",
+      "bytes": 19959,
+      "sha256": "0636464c3c7340c335e9b5c7602baf0c6727301aca81eb4161bdf300ad88624d",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/ratkin-role-warrior-thumbnail.png",
+      "bytes": 2127,
+      "sha256": "9d71a650a4195bd50ec540f29614966602f884fce1e32e53d15a9b0ac3b6c521",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/sheets/ratkin-role-citizen.png",
+      "bytes": 916598,
+      "sha256": "27f9c7204932b797e9dfffd80f01c0783376ceefd2d06efe114eee138084709d",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/sheets/ratkin-role-leader.png",
+      "bytes": 1106197,
+      "sha256": "05b899387f1771b02e6d037f13c9a1269be1ed508dd06f6b2aca845ab9d85864",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/sheets/ratkin-role-mage.png",
+      "bytes": 1074546,
+      "sha256": "c789e486bab34f148bbe3fe3268ec96b27a36a9c65b3afe103cef59a8eb9647c",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/sheets/ratkin-role-merchant.png",
+      "bytes": 999082,
+      "sha256": "5513097a6fc94f477b1953a7aab44119d585fbe36fdd5f0d33133c75b9dbfa77",
+      "bundle": "assets-42.zip"
+    },
+    {
+      "path": "gallery/sheets/ratkin-role-warrior.png",
+      "bytes": 1012291,
+      "sha256": "25f1cbfdfda54a0f6404ae0f9dda5040c0d52658e608f040d5978afc002bfc72",
+      "bundle": "assets-43.zip"
+    },
+    {
+      "path": "gallery/downloads/effects/abyss-summoning-portal.zip",
+      "bytes": 11534585,
+      "sha256": "c57780dabe295001b0d33d37120d36fb5c1545e452af9643d9c360399ce961f3",
+      "bundle": "assets-44.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/abyss-summoning-portal-native-size.png",
+      "bytes": 40479,
+      "sha256": "fb094ec223e0b0dac262c15452fe68115e64b4156567cbe9d815c2034f6d98ad",
+      "bundle": "assets-44.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/abyss-summoning-portal-uo-abyss-portal-active.gif",
+      "bytes": 1930454,
+      "sha256": "d11cccee1c156783718fdb7e24f22a06b804ad85f34184cd841a764bb971b688",
+      "bundle": "assets-44.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/abyss-summoning-portal-uo-abyss-portal-lifecycle.gif",
+      "bytes": 5486953,
+      "sha256": "d4b650831ff1c75d102a9a0233457515f9791f1cd830d92c7fa3638b25ecee2a",
+      "bundle": "assets-44.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/abyss-summoning-portal-active-contact-sheet.png",
+      "bytes": 209075,
+      "sha256": "9800583cc762aa325df9337ca4425167a53b6dc55419da83f1c41bac37498ca3",
+      "bundle": "assets-44.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/abyss-summoning-portal-closing-contact-sheet.png",
+      "bytes": 118834,
+      "sha256": "37fd8000ffde9b47bc86f5cdd05f6cf898f8e215295eda3d661c1092ead17999",
+      "bundle": "assets-44.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/abyss-summoning-portal-large-active.gif",
+      "bytes": 297930,
+      "sha256": "21312a841aef2f9c4828fc2967aad9d0b541352e27f4d8c6f2b68bd0478b4cb7",
+      "bundle": "assets-44.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/abyss-summoning-portal-large-closing.gif",
+      "bytes": 99717,
+      "sha256": "a86d7088f49f2fffa67f37bd4388036b7fd1bd53d64b59bcb50b960918c92bea",
+      "bundle": "assets-44.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/abyss-summoning-portal-large-opening.gif",
+      "bytes": 119122,
+      "sha256": "fc74801ff47a7aa45373cd61ec5ed89b01df1fd61acddbdc1332711c0385e866",
+      "bundle": "assets-44.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/abyss-summoning-portal-opening-contact-sheet.png",
+      "bytes": 119517,
+      "sha256": "1b302fac5db5c61507557fee98e1daecbd2a08ca81ae30d79341f9b4c156a1d5",
+      "bundle": "assets-44.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/abyss-summoning-portal-standard-active.gif",
+      "bytes": 153442,
+      "sha256": "a5c337f8b1483e464e88ec4f8f57685b4040a64737d75376bab6fe5678649e54",
+      "bundle": "assets-44.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/abyss-summoning-portal-standard-closing.gif",
+      "bytes": 54462,
+      "sha256": "5934c06306c49311fb014430654ff6af57e87ff42631d6227b380a733436959e",
+      "bundle": "assets-44.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/abyss-summoning-portal-standard-opening.gif",
+      "bytes": 64781,
+      "sha256": "9c1f0026718f351f424c8be8fa71ad1ad1ab9034824db22a88bae1ceddba7af6",
+      "bundle": "assets-44.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/abyss-summoning-portal-thumbnail.png",
+      "bytes": 17402,
+      "sha256": "9fdc9ec2aaa741bace8e3ec9096bfc31e1f7afc4a85e86d60965098ab4a94961",
+      "bundle": "assets-44.zip"
     }
   ]
 }

@@ -1,0 +1,47 @@
+{
+  "sourceArchive": "UO_Ratkin_5_Roles.zip",
+  "sourceSha256": "1fd83abfc03644e1fa9b6f9c9d5f51e78dda7571a944faa7a777ba2c4107a4f2",
+  "nativeVDs": [
+    {
+      "id": "ratkin-role-merchant",
+      "sha256": "c4258fb143ab6a926f08e28ab20745d0930b91ee2cb838b6564705b53dbe10ee"
+    },
+    {
+      "id": "ratkin-role-mage",
+      "sha256": "61ab07b4b58a472771cbab840a24a19ed2371285c6d4538eeeba78b70f2d4a37"
+    },
+    {
+      "id": "ratkin-role-warrior",
+      "sha256": "908a35d69f22280104aeda7f29548a84db65da6efac1e7e42f31d3a4f175f862"
+    },
+    {
+      "id": "ratkin-role-citizen",
+      "sha256": "388b94ac13938fe36f3d58f78e6f66619bd25913786afb473f5daa81491cc869"
+    },
+    {
+      "id": "ratkin-role-leader",
+      "sha256": "fbdf1ee6239740d858a86e32c59666ba6335fee6f8f31a7e4dabfa4b4502d5d2"
+    }
+  ],
+  "nativeFramesVerified": 5250,
+  "nativeRecordsVerified": 875,
+  "pngFramesVerified": 8400,
+  "checksumMembersVerified": 10895,
+  "clientRuntimeTested": false,
+  "riderPreviewReference": {
+    "listing": "pack-horse",
+    "vdSha256": "8b06455f2f10789ae16c28ccfb810bcf91c60743e767303fbf9c5910c3b90162",
+    "includedAsDownload": false
+  },
+  "date": "2026-10-04",
+  "items": [
+    "ratkin-role-merchant",
+    "ratkin-role-mage",
+    "ratkin-role-warrior",
+    "ratkin-role-citizen",
+    "ratkin-role-leader"
+  ],
+  "publicFiles": 240,
+  "bundleStart": 41,
+  "bundles": 3
+}
