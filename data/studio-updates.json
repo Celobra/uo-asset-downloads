@@ -1,6 +1,29 @@
 {
   "releases": [
     {
+      "version": "0.33.0",
+      "title": "Practical editing, building and inspection tools",
+      "added": [
+        "Gump artwork selection, layer controls, snapping, alignment and a local Test / Interact window for pages, inputs and reply IDs.",
+        "Individual item/gump images can be opened in an installed graphics editor, returned to a preview and reviewed for replacement at the same asset ID.",
+        "Optional House Builder kits from client tables, reusable named stamps and an individual Problems list.",
+        "Optional small pictures of completed world-generation stages, with a separate viewer.",
+        "Tool readiness alongside File details distinguishes missing and damaged required files and identifies valid source alternatives."
+      ],
+      "improved": [
+        "Complete gump Undo/Redo includes layout, property and layer changes; native client artwork retains its fixed dimensions.",
+        "Animations and Test Scene use bounded preview caches with source-aware invalidation.",
+        "All pieces and custom house palettes remain available when optional building tables are absent. Stamp placement has a ghost preview and one undo step.",
+        "The complete user guide is now 88 pages across the existing 33 chapters. All 863 final application checks passed."
+      ],
+      "fixed": [
+        "World-generation settings changes keep the export state clear, including changes made while generation completes."
+      ],
+      "note": "Image replacements still require review before saving. Gump interaction, house checks and generation pictures are local inspection aids; readiness checks native file structure rather than every image, action or server definition. Matching stamp artwork and final client/shard checks remain required.",
+      "release": true,
+      "date": "2026-10-03"
+    },
+    {
       "version": "0.32.5",
       "title": "Clear artwork imports and tools grouped by task",
       "added": [

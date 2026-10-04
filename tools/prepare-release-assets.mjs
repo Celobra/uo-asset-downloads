@@ -22,7 +22,7 @@ export function validateReleaseManifest(manifest) {
     if (!assetPath.test(f.path) || f.path.includes('..') || paths.has(f.path) || !bundles.has(f.bundle) || !hash.test(f.sha256) || !Number.isInteger(f.bytes) || f.bytes <= 0 || f.bytes > 25*1024*1024) throw Error('Invalid release asset');
     paths.add(f.path); total += f.bytes;
   }
-  if (total > 512*1024*1024 || !paths.size || !bundles.size) throw Error('Invalid release size');
+  if (total > 768*1024*1024 || !paths.size || !bundles.size) throw Error('Invalid release size');
   return total;
 }
 

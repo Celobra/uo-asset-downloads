@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-04",
+  "items": [
+    "uo-tower-base",
+    "uo-runic-stones-orbs"
+  ],
+  "sources": [
+    {
+      "archive": "UO_Tower_Base.zip",
+      "sha256": "fdeec3243ae6824b687c704ad332bd96168b42c5b4a5300339b2a75fd701fa13"
+    },
+    {
+      "archive": "UO_Runic_Stones_and_Orbs.zip",
+      "sha256": "b6c167b4710002ac245c32e7f6e027e228d4f37fab8168d596f5dd75d68ce20a"
+    }
+  ],
+  "nativeStaticRecordsVerified": 119,
+  "packageMembersVerified": 386,
+  "publicFiles": [
+    "gallery/media/new-assets/uo-tower-base-uo-tower-base-placement.png",
+    "gallery/media/new-assets/uo-tower-base-uo-tower-base-preview.png",
+    "gallery/downloads/world/uo-tower-base.zip",
+    "gallery/media/new-assets/uo-runic-stones-orbs-uo-runic-stones-native-size.png",
+    "gallery/media/new-assets/uo-runic-stones-orbs-uo-runic-stones-preview.png",
+    "gallery/downloads/world/uo-runic-stones-orbs.zip"
+  ],
+  "bundle": "assets-40.zip"
+}

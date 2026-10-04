@@ -23,6 +23,8 @@ test('Release manifest limits destinations, duplicate names and native hosting s
   }
   assert.throws(() => validateReleaseManifest({...manifest,files:[file,file]}),/Invalid release asset/);
   assert.throws(() => validateReleaseManifest({...manifest,files:[{...file,bytes:26*1024*1024}]}),/Invalid release asset/);
+  const oversized = Array.from({length:40},(_,i)=>({...file,path:`gallery/media/new-assets/item-${i}.png`,bytes:20*1024*1024}));
+  assert.throws(() => validateReleaseManifest({...manifest,files:oversized}),/Invalid release size/);
 });
 
 test('Release unpacker refuses unknown members, altered bytes, incomplete archives and oversized output', () => {

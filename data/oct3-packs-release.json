@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-03",
+  "sources": [
+    {
+      "archive": "UO_DnD_Monsters_15.zip",
+      "sha256": "3e6de307d660eae96e83ac82f9a9295b6c0c3d71db0d38b80a2dc3b312962c8a"
+    },
+    {
+      "archive": "UO_Fantasy_Races.zip",
+      "sha256": "e63a8631c51bdf0999b94a768799239b173532af02560521bad9c1f763f8a0bf"
+    },
+    {
+      "archive": "UO_Terrain_Pack.zip",
+      "sha256": "efbfbba5f1b08543bd5443cd763107d3af57a877df8d1b78d95800917ea153bb"
+    },
+    {
+      "archive": "UO_Rock_Surfaces.zip",
+      "sha256": "3c213aac46fcd485cec728151bc691046a14dd255024b5800fd048473fac7ce0"
+    },
+    {
+      "archive": "UO_Scaffolding_Metal_and_Wood.zip",
+      "sha256": "394fb49f9400fedd18a7ed905a8cf43b443d0312b04f6fe18815f2cb8cd08a8e"
+    },
+    {
+      "archive": "UO_Wilderness_Biomes_96.zip",
+      "sha256": "934c77452d32b847c6905691b37d7769557a036ff9100ba25b780df29d8153fe"
+    },
+    {
+      "archive": "UO_Underwater_96.zip",
+      "sha256": "ec1f7dc4c0655f0caaa36ce4a0d26dedff5384e7b1c9c693035c19bbc5325c9a"
+    },
+    {
+      "archive": "UO_Boatyard.zip",
+      "sha256": "cd7f1dc0e4fbc2da886cd33870553aa5822619437649fd6b1301b337196b5a85"
+    }
+  ],
+  "items": [
+    "dnd-palette-beholder",
+    "dnd-palette-shambling-mound",
+    "dnd-palette-hydra",
+    "dnd-palette-dracolich",
+    "dnd-palette-balor",
+    "dnd-palette-phase-spider",
+    "dnd-palette-oni",
+    "dnd-palette-death-knight",
+    "dnd-palette-mummy",
+    "dnd-palette-lich",
+    "dnd-palette-ettin",
+    "dnd-palette-wyvern",
+    "dnd-palette-flesh-golem",
+    "dnd-palette-iron-golem",
+    "dnd-palette-cyclops",
+    "fantasy-race-orc-grunt",
+    "fantasy-race-orc-captain",
+    "fantasy-race-orc-shaman",
+    "fantasy-race-gnome-proxy",
+    "fantasy-race-vampire-male",
+    "fantasy-race-vampire-female",
+    "fantasy-race-delphire-male",
+    "fantasy-race-delphire-female",
+    "fantasy-race-dark-elf-male",
+    "fantasy-race-dark-elf-female",
+    "fantasy-race-high-elf-male",
+    "fantasy-race-high-elf-female",
+    "fantasy-race-wood-elf-male",
+    "fantasy-race-wood-elf-female",
+    "fantasy-race-frost-elf-male",
+    "fantasy-race-frost-elf-female",
+    "fantasy-race-goblin",
+    "fantasy-race-ratkin",
+    "fantasy-race-lizardfolk",
+    "fantasy-race-troll",
+    "fantasy-race-gargoyle",
+    "fantasy-race-treefolk",
+    "fantasy-race-fae",
+    "fantasy-race-ogre",
+    "uo-terrain-pack",
+    "uo-rock-surfaces",
+    "uo-scaffolding",
+    "uo-wilderness-biomes",
+    "uo-underwater",
+    "uo-boatyard"
+  ],
+  "files": 1076,
+  "newBundles": 20,
+  "bundleStart": 20,
+  "vdFramesVerified": 19715,
+  "pngFramesVerified": 35392
+}
