@@ -9,7 +9,7 @@
     {id:'terrain', name:'Terrain & floors', description:'Trees, plants, seasonal scenery, ground tiles and flooring.', project:'Natural-Landscape'},
     {id:'interface', name:'Interface & gumps', description:'Windows, paperdolls, borders and separate buttons for your client interface.', project:'Invicta-Paperdolls'}
   ];
-  const terrain = new Set(['Natural-Landscape','Natural-Landscape-Seasons','Flooring-Collection','Outdoor-Terrain-Collection','Sky-and-Shore-Floors','Landscape-Assemblies']);
+  const terrain = new Set(['Natural-Landscape','Natural-Landscape-Seasons','Flooring-Collection','Outdoor-Terrain-Collection','Sky-and-Shore-Floors','Landscape-Assemblies','Terrain-Pack','Rock-Surfaces','Wilderness-Biomes','Underwater']);
   const categoryOf = item => terrain.has(item.project) ? 'terrain' : ({Equipment:'equipment','Creatures and mounts':'creatures',Effects:'effects',Interface:'interface','World and items':'buildings','World items and housing':'buildings'})[item.category];
   const title = project => project.replaceAll('-', ' ').replace(/\bArmor\b/g,'Armour').replace(/\bDnD\b/g,'D&D');
   const searchText = text => text.toLowerCase().replaceAll('armour','armor').replaceAll('-', ' ');
