@@ -1,6 +1,24 @@
 {
   "releases": [
     {
+      "version": "0.33.1",
+      "title": "Animated items and spell effects have clear import choices",
+      "added": [
+        "Import Animation offers Animated items, Spell / visual effects, Body / character animations and Mounts / rideable objects.",
+        "Direct Animated items and Spell / visual effects entries in Import artwork and All tools."
+      ],
+      "improved": [
+        "Animated items/effects start with native item animation enabled and retain it when loading ordered frame folders or ZIPs.",
+        "Item/effect previews and help explain consecutive artwork frames, native timing and optional visual-effect scripts.",
+        "Queue native art, TileData, AnimData and supported linked Sphere scripts, then use Content packs → Export pending bundle before saving to share a .uoasset ZIP container.",
+        "The complete 89-page guide distinguishes item/effect distribution from body VD files and retains all 33 Studio chapters."
+      ],
+      "fixed": [],
+      "note": "Item/effect .uoasset export uses the reviewed pending bundle before saving. VD carries native body animation rather than item artwork/AnimData. Optional effect scripts play visuals; combat behaviour and C# script distribution remain separate. Recipient client/server checks remain required.",
+      "release": true,
+      "date": "2026-10-04"
+    },
+    {
       "version": "0.33.0",
       "title": "Practical editing, building and inspection tools",
       "added": [
