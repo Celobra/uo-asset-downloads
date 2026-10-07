@@ -8,7 +8,7 @@ import { inflateRawSync } from 'node:zlib';
 const site = fileURLToPath(new URL('../', import.meta.url));
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 const hash = /^[a-f0-9]{64}$/;
-const assetPath = /^gallery\/(?:media\/new-assets\/[a-z0-9.-]+|sheets\/[a-z0-9-]+\.png|downloads\/(?:creatures|world|tools)\/[a-z0-9-]+\.zip)$/;
+const assetPath = /^gallery\/(?:media\/new-assets\/[a-z0-9.-]+|sheets\/[a-z0-9-]+\.png|downloads\/(?:creatures|effects|world|tools)\/[a-z0-9-]+\.zip)$/;
 
 export function validateReleaseManifest(manifest) {
   if (manifest.version !== 1 || !Array.isArray(manifest.bundles) || !Array.isArray(manifest.files)) throw Error('Invalid release manifest');
