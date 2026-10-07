@@ -155,7 +155,7 @@ test('Actual wiki and update indexes filter by all search terms and topic, resto
   ids['wiki-search'].emit('search');
   assert.equal(wiki.filter(entry => !entry.hidden).length, data.articles.filter(article => article.category === 'Adventuring').length);
   ids['wiki-category'].value = 'all';
-  ids['update-search'].value = 'client maps';
+  ids['update-search'].value = 'command window';
   window.emit('pageshow');
   assert.ok(wiki.every(entry => !entry.hidden));
   assert.equal(ids['wiki-empty'].hidden, true);
