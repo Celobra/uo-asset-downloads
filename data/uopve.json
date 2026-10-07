@@ -1,13 +1,13 @@
 {
   "release": {
-    "version": "1.0.1",
-    "tag": "client-v1.0.1",
+    "version": "1.0.3",
+    "tag": "client-v1.0.3",
     "date": "2026-10-07",
-    "url": "https://github.com/Celobra/UOPvE-Client/releases/tag/client-v1.0.1",
-    "installer": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.1/UOPvE-Setup.exe",
-    "portable": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.1/UOPvE-Launcher.exe",
-    "sizeBytes": 735744,
-    "sha256": "c62502b9e701491a2d2a91f71954b6c2fca4984a2fe73afbdd814248ea05f1b5",
+    "url": "https://github.com/Celobra/UOPvE-Client/releases/tag/client-v1.0.3",
+    "installer": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.3/UOPvE-Setup.exe",
+    "portable": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.3/UOPvE-Launcher.exe",
+    "sizeBytes": 739840,
+    "sha256": "4d108ca828e00c659a498a0dcf97a64e82ade1d2f5f450f20183239e6653562b",
     "serverHost": "live.uoassets.com",
     "serverPort": 2593,
     "clientVersion": "7.0.20.0"
@@ -33,6 +33,14 @@
       "summary": "Keep your game files current, repair an installation and use optional Razor.",
       "keywords": "patcher maps manifest client connection settings install import verify repair razor windows troubleshooting",
       "sections": [
+        {
+          "id": "upgrade-launcher",
+          "title": "Upgrade an earlier launcher",
+          "paragraphs": [
+            "Download and run the current UOPvE-Setup.exe once to upgrade the launcher itself. Release 1.0.3 opens the game without an extra command window, with or without optional Razor.",
+            "The launcher continues to check game files when it opens and before PLAY. Existing 1.0.2 players keep the same game files; this launcher update does not require downloading them again."
+          ]
+        },
         {"id": "updates", "title": "Automatic game updates", "paragraphs": ["The launcher checks for the latest game release when it opens and again before PLAY. It downloads missing or changed release files, including new maps, while keeping unlisted player files.", "Close ClassicUO before an update. If the game is already open, the startup update pauses until it can safely apply the files. Keep the launcher open while a download is running.", "Game files and maps update through the patcher. A new launcher executable is distributed through a new installer release."]},
         {"id": "repair", "title": "Verify or repair", "paragraphs": ["Choose Verify / repair if release files are missing or appear damaged. The launcher checks their sizes and SHA-256 checksums and replaces files that differ from the published release.", "Open Settings to check the installation folder or choose View log when troubleshooting. If an update fails, check your connection, make sure the game is closed and try Install / update again."]},
         {"id": "connection", "title": "Connection settings", "paragraphs": ["The default shard address is live.uoassets.com, port 2593. The configured client data version is 7.0.20.0.", "Use the UO:PvE launcher to open the game with its dedicated settings profile. Enter account details in ClassicUO; the launcher does not store your game password."]},
@@ -105,6 +113,36 @@
     }
   ],
   "updates": [
+    {
+      "id": "client-1-0-3",
+      "date": "2026-10-07",
+      "category": "Client release",
+      "title": "UO:PvE 1.0.3 opens the game without an extra command window",
+      "summary": "PLAY opens the custom ClassicUO game window directly, with or without optional Razor.",
+      "changes": [
+        "Run the new UOPvE-Setup.exe once to upgrade an earlier launcher.",
+        "All 790 game files are unchanged from 1.0.2; existing players do not need to download them again.",
+        "The custom client, UO:PvE login artwork and optional Razor remain available."
+      ],
+      "link": "https://github.com/Celobra/UOPvE-Client/releases/tag/client-v1.0.3",
+      "linkLabel": "Read the 1.0.3 release notes"
+    },
+    {
+      "id": "client-1-0-2",
+      "date": "2026-10-07",
+      "category": "Client release",
+      "title": "UO:PvE 1.0.2 adds the custom client and login artwork",
+      "summary": "ClassicUO Standard Update4 uses the branded UO:PvE login screen, with optional Razor and more reliable updates.",
+      "changes": [
+        "Optional Razor Community Edition 1.9.77.0 includes matching GPL source and a compatibility build recipe.",
+        "Verified downloads survive interruptions and are reused on retry; transient GitHub failures receive bounded retries.",
+        "Repeated game-port status probes were removed to avoid triggering the server connection limit.",
+        "Existing player profiles and unlisted files are retained. Close ClassicUO before updating.",
+        "Branded login-screen and optional Razor startup checks passed; player account login was not tested."
+      ],
+      "link": "https://github.com/Celobra/UOPvE-Client/releases/tag/client-v1.0.2",
+      "linkLabel": "Read the 1.0.2 release notes"
+    },
     {
       "id": "client-1-0-1",
       "date": "2026-10-07",
