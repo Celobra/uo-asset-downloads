@@ -41,7 +41,7 @@
         if (matches) visible += 1;
       }
 
-      if (results) results.textContent = `${visible} ${noun}${visible === 1 ? "" : "s"}${terms.length || (selectedCategory && selectedCategory !== "all") ? " found" : " available"}`;
+      if (results) results.textContent = `${visible} ${visible === 1 ? noun : noun === 'entry' ? 'entries' : noun + 's'}${terms.length || (selectedCategory && selectedCategory !== "all") ? " found" : " available"}`;
       if (empty) empty.hidden = visible !== 0;
     };
 
@@ -53,6 +53,11 @@
   };
 
   const initialize = () => {
+    enableFilter({ inputId: 'bestiary-search', entrySelector: '[data-bestiary-entry]', resultsId: 'bestiary-results', emptyId: 'bestiary-empty', categoryId: 'bestiary-category', noun: 'creature' });
+    for (const input of document.querySelectorAll('[data-reference-filter]')) {
+      const prefix = input.dataset.referenceFilter;
+      enableFilter({ inputId: input.id, entrySelector: `[data-reference-entry="${prefix}"]`, resultsId: `${prefix}-results`, emptyId: `${prefix}-empty`, noun: 'entry' });
+    }
     enableFilter({
       inputId: "wiki-search",
       entrySelector: "[data-wiki-entry]",
