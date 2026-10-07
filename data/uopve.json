@@ -1,16 +1,17 @@
 {
   "release": {
-    "version": "1.0.3",
-    "tag": "client-v1.0.3",
+    "version": "1.0.4",
+    "tag": "client-v1.0.4",
     "date": "2026-10-07",
-    "url": "https://github.com/Celobra/UOPvE-Client/releases/tag/client-v1.0.3",
-    "installer": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.3/UOPvE-Setup.exe",
-    "portable": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.3/UOPvE-Launcher.exe",
+    "url": "https://github.com/Celobra/UOPvE-Client/releases/tag/client-v1.0.4",
+    "installer": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.4/UOPvE-Setup.exe",
+    "portable": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.4/UOPvE-Launcher.exe",
     "sizeBytes": 739840,
     "sha256": "4d108ca828e00c659a498a0dcf97a64e82ade1d2f5f450f20183239e6653562b",
     "serverHost": "live.uoassets.com",
     "serverPort": 2593,
-    "clientVersion": "7.0.20.0"
+    "clientVersion": "7.0.20.0",
+    "launcherVersion": "1.0.3"
   },
   "articles": [
     {
@@ -63,8 +64,8 @@
           "id": "upgrade-launcher",
           "title": "Upgrade an earlier launcher",
           "paragraphs": [
-            "Download and run the current UOPvE-Setup.exe once to upgrade the launcher itself. Release 1.0.3 opens the game without an extra command window, with or without optional Razor.",
-            "The launcher continues to check game files when it opens and before PLAY. Existing 1.0.2 players keep the same game files; this launcher update does not require downloading them again."
+            "Download and run the current UOPvE-Setup.exe once to upgrade the launcher itself. Launcher 1.0.3 opens the game without an extra command window, with or without optional Razor.",
+            "Client release 1.0.4 corrects character-name and starting-city text. If you already use launcher 1.0.3, close ClassicUO and reopen the launcher to receive the small game update automatically; reinstalling the launcher is unnecessary."
           ]
         },
         {
@@ -42371,6 +42372,21 @@
     }
   ],
   "updates": [
+    {
+      "id": "client-1-0-4",
+      "date": "2026-10-07",
+      "category": "Client release",
+      "title": "UO:PvE 1.0.4 makes character-creation text readable",
+      "summary": "Character names and starting-city descriptions now appear in white over the custom navy artwork.",
+      "changes": [
+        "Typed names, the caret and selected name text remain readable during character creation.",
+        "Close ClassicUO and reopen the launcher to receive the update automatically. Only one client file downloads, about 4.5 MiB.",
+        "Launcher 1.0.3 remains current. Existing players using it do not need to reinstall the launcher.",
+        "The corrected client was checked with ClassicUO alone and optional Razor; the custom artwork and game files are retained."
+      ],
+      "link": "https://github.com/Celobra/UOPvE-Client/releases/tag/client-v1.0.4",
+      "linkLabel": "Read the 1.0.4 release notes"
+    },
     {
       "id": "player-reference-and-class-fixes-2026-10-07",
       "date": "2026-10-07",
