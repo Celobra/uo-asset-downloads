@@ -4,6 +4,7 @@ import { readFile, stat } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
+import { renderBestiary } from '../tools/uopve-bestiary.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const publicRoot = resolve(root, 'public');
@@ -66,7 +67,7 @@ test('The wiki and updates retain every maintained article, related route and co
   for (const html of [wiki, updates]) {
     assert.match(html, /<noscript>/);
     for (const match of html.matchAll(/<article\b[^>]*\bdata-(?:wiki|update)-entry\b[^>]*>/g)) {
-      assert.doesNotMatch(match[0], /\bhidden\b/, 'Entries must remain visible without JavaScript');
+      assert.doesNotMatch(match[0].replace(/="[^"]*"/g, ''), /\bhidden\b/, 'Entries must remain visible without JavaScript');
     }
   }
   for (const article of data.articles) {
@@ -76,12 +77,17 @@ test('The wiki and updates retain every maintained article, related route and co
     for (const section of article.sections) {
       assert.ok(html.includes(`id="${section.id}"`), article.slug);
       for (const paragraph of section.paragraphs) assert.ok(html.includes(`<p>${escapeHtml(paragraph)}</p>`), `${article.slug}: omitted or unescaped paragraph`);
+      for (const list of section.lists || []) for (const item of list.items) assert.ok(html.includes(`<li>${escapeHtml(item)}</li>`), `${article.slug}: omitted or unescaped list item`);
+      for (const table of section.tables || []) {
+        for (const column of table.columns) assert.ok(html.includes(`<th scope="col">${escapeHtml(column)}</th>`), `${article.slug}: missing table column`);
+        for (const row of table.rows) row.forEach((cell, index) => assert.ok(html.includes(index === 0 ? `<th scope="row">${escapeHtml(cell)}</th>` : `<td>${escapeHtml(cell)}</td>`), `${article.slug}: omitted or unescaped table cell`));
+      }
     }
     for (const related of article.related) assert.ok(html.includes(`href="/uopve/wiki/${related}/"`), `${article.slug}: missing related guide`);
   }
   for (const update of data.updates) {
     assert.ok(updates.includes(`id="${update.id}"`));
-    assert.ok(updates.includes(`<time datetime="${update.date}">`));
+    assert.ok(updates.includes(`<time datetime="${update.changedAt || update.date}">`));
     for (const change of update.changes) assert.ok(updates.includes(`<li>${escapeHtml(change)}</li>`));
   }
   assert.match(wiki, /The Hunter&#39;s Guild/);
@@ -103,6 +109,29 @@ test('Downloads identify the published Windows installer, portable build, digest
   assert.match(html, /Windows 64-bit/);
   assert.match(html, /\.NET Framework 4\.8/);
   assert.match(html, /Close ClassicUO before applying an update/);
+});
+
+test('The complete bestiary has one usable entry per definition, safe loot links and escaped content', async () => {
+  const bestiary = JSON.parse(await readFile(resolve(root, 'data/uopve-bestiary.json'), 'utf8'));
+  const html = await htmlFor('/uopve/wiki/creature-bestiary/');
+  assert.equal([...html.matchAll(/\bdata-bestiary-entry\b/g)].length, bestiary.creatures.length);
+  assert.equal(bestiary.creatures.length, 1136);
+  for (const creature of bestiary.creatures) {
+    const id = creature.id.toLowerCase().replace(/[^a-z0-9-]/g, '-');
+    assert.ok(html.includes(`id="creature-${id}"`), creature.id);
+    assert.ok(html.includes(escapeHtml(creature.name)), creature.id);
+  }
+  assert.doesNotMatch(JSON.stringify(bestiary), /"(?:source|provenance|declaration)":|C:[\\/]|\\\\desktop-/i);
+  const hostile = renderBestiary({ creatures: [{ id: 'example', name: '<script>alert(1)</script>', loot: ['<img src=x onerror=alert(1)>'] }] });
+  assert.ok(hostile.includes('&lt;script&gt;'));
+  assert.doesNotMatch(hostile, /<script|<img src=x/);
+  assert.throws(() => renderBestiary({ creatures: [{id:'a_b'}, {id:'a-b'}] }), /unique/);
+});
+
+test('Gameplay timestamps include the recorded London time and seasonal timezone', async () => {
+  const html = await htmlFor('/uopve/updates/');
+  assert.ok(html.includes('7 October 2026 at 19:15 BST'));
+  assert.ok(html.includes('datetime="2026-10-07T19:15:54+01:00"'));
 });
 
 class Element {
@@ -166,4 +195,41 @@ test('Actual wiki and update indexes filter by all search terms and topic, resto
   ids['update-search'].value = '';
   ids['update-search'].emit('search');
   assert.ok(updates.every(entry => !entry.hidden));
+});
+
+test('Creature and reference table search report matches, combine categories and clear empty results', async () => {
+  const html = await htmlFor('/uopve/wiki/creature-bestiary/');
+  const creatures = [...html.matchAll(/<details\b[^>]*\bdata-bestiary-entry\b[^>]*>/g)].map(match => {
+    const attr = name => decodeHtml(match[0].match(new RegExp(`\\b${name}="([^"]*)"`))?.[1] || '');
+    return new Element({search:attr('data-search'), category:attr('data-category')});
+  });
+  const ids = Object.fromEntries(['bestiary-search','bestiary-category','bestiary-results','bestiary-empty','reference-example-search','reference-example-results','reference-example-empty'].map(id => [id,new Element()]));
+  ids['bestiary-category'].value = 'all';
+  ids['reference-example-search'].id = 'reference-example-search';
+  ids['reference-example-search'].dataset.referenceFilter = 'reference-example';
+  const rows = [new Element({search:'Copper sword 30'}), new Element({search:'Iron dagger 20'})];
+  const document = new Element();
+  document.readyState = 'complete';
+  document.getElementById = id => ids[id] || null;
+  document.querySelectorAll = selector => selector === '[data-bestiary-entry]' ? creatures : selector === '[data-reference-filter]' ? [ids['reference-example-search']] : selector === '[data-reference-entry="reference-example"]' ? rows : [];
+  const window = new Element();
+  vm.runInNewContext(await readFile(resolve(publicRoot,'uopve/uopve.js'),'utf8'),{document,window});
+  assert.equal(ids['bestiary-results'].textContent,'1136 creatures available');
+  ids['bestiary-search'].value='green dragon';
+  ids['bestiary-search'].emit('input');
+  assert.ok(creatures.some(entry => !entry.hidden));
+  assert.ok(creatures.filter(entry => !entry.hidden).every(entry => entry.dataset.search.toLowerCase().includes('dragon')));
+  ids['bestiary-category'].value='Vendors';
+  ids['bestiary-category'].emit('change');
+  assert.equal(ids['bestiary-empty'].hidden,false);
+  ids['bestiary-search'].value=''; ids['bestiary-category'].value='all'; window.emit('pageshow');
+  assert.ok(creatures.every(entry => !entry.hidden));
+  assert.equal(ids['reference-example-results'].textContent,'2 entries available');
+  ids['reference-example-search'].value='copper 30'; ids['reference-example-search'].emit('input');
+  assert.equal(ids['reference-example-results'].textContent,'1 entry found');
+  ids['reference-example-search'].value='unknown'; ids['reference-example-search'].emit('search');
+  assert.equal(ids['reference-example-empty'].hidden,false);
+  ids['reference-example-search'].value=''; ids['reference-example-search'].emit('search');
+  assert.ok(rows.every(entry => !entry.hidden));
+  assert.equal(ids['reference-example-empty'].hidden,true);
 });
