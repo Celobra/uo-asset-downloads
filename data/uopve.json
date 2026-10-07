@@ -1,16 +1,17 @@
 {
   "release": {
-    "version": "1.0.3",
-    "tag": "client-v1.0.3",
+    "version": "1.0.5",
+    "tag": "client-v1.0.5",
     "date": "2026-10-07",
-    "url": "https://github.com/Celobra/UOPvE-Client/releases/tag/client-v1.0.3",
-    "installer": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.3/UOPvE-Setup.exe",
-    "portable": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.3/UOPvE-Launcher.exe",
+    "url": "https://github.com/Celobra/UOPvE-Client/releases/tag/client-v1.0.5",
+    "installer": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.5/UOPvE-Setup.exe",
+    "portable": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.5/UOPvE-Launcher.exe",
     "sizeBytes": 739840,
     "sha256": "4d108ca828e00c659a498a0dcf97a64e82ade1d2f5f450f20183239e6653562b",
     "serverHost": "live.uoassets.com",
     "serverPort": 2593,
-    "clientVersion": "7.0.20.0"
+    "clientVersion": "7.0.20.0",
+    "launcherVersion": "1.0.3"
   },
   "articles": [
     {
@@ -9762,6 +9763,16 @@
     }
   ],
   "updates": [
+    {
+      "id": "client-data-1-0-5",
+      "date": "2026-10-07",
+      "category": "Client development",
+      "title": "Updated animation and static artwork",
+      "summary": "Updated UO:PvE client data is uploaded for development. Public play and launcher downloads remain unavailable.",
+      "changes": ["Updated animation data and its index (anim.mul and anim.idx).", "Updated static artwork and its index (art.mul and artidx.mul).", "Updated tile definitions and creature-type definitions (tiledata.mul and Mobtypes.txt)."],
+      "link": "/uopve/downloads/",
+      "linkLabel": "Check public access status"
+    },
     {
       "id": "public-access-on-hold-2026-10-07",
       "date": "2026-10-07",
