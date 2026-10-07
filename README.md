@@ -36,7 +36,7 @@ Version 0.30.1 fixes legacy UOP terrain loading, handles trailing map padding an
 
 Browse the gallery and use the small Download link on an item to get its files. Open an armour set to inspect or download the complete set or an individual piece.
 
-The library contains 717 listings with 930 ZIP packages. Shared collections stay together when their import tools require the full set.
+The library contains 723 listings with 936 ZIP packages. Shared collections stay together when their import tools require the full set.
 
 Published 3 October 2026: [twenty D&D creatures](https://www.uoassets.com/?category=creatures&collection=DnD-Native-Creatures), [Pegasus](https://www.uoassets.com/?category=creatures&collection=Pegasus-Mount), two original demons, three daemon palette variants, [fifty landscape assemblies](https://www.uoassets.com/?category=terrain&collection=Landscape-Assemblies), the clearly labelled two-view Ashhorn walking study and [Britannia Architect](https://www.uoassets.com/?category=buildings&collection=Britannia-Architect#britannia-architect). Native creatures have interactive eight-facing previews, every available action GIF, registered PNGs, unchanged VDs, import notes and checksums. Mounts include male/female rider composites. The town builder contains a clean public Windows build, editable example and portable source; private shard records are excluded. Target-client/server integration remains necessary.
 
@@ -127,3 +127,13 @@ Six new world packs add terrain tiles/textures, rock surfaces, metal/wood scaffo
 `data/oct3-packs-release.json` records source archive digests and per-frame validation totals. The new bundles append to the existing manifest without changing previous assets. `tools/publish-oct3-packs.py` prepares this specific release from explicit finished archives; do not use it to rebuild unrelated release history.
 
 October 4 adds the 79-sprite stone tower base and 40 runic crafting stones/orbs, with placement/import notes, native previews and checked records. Door, collision and crafting behavior require recipient setup.
+
+## October 4 Ratkin NPC roles
+
+Five original Ratkin bodies: merchant, mage, warrior, citizen and leader. Each retains its unchanged type-2 VD, 35 humanoid slots, seven mounted slots, 1,050 stored frames, 1,680 registered PNG frames and joint anchors. These are new geometry with baked-in role outfits, distinct from the earlier Ratkin palette adaptation. Every source action has a GIF; eight-view players and native facing/action boards accompany the downloads. Offline fitting GIFs use the already public Pack Horse as a comparison, without redistributing its game files. Target-client mounting, equipment fitting, paperdolls and server role behaviour remain recipient work.
+
+The five packages omit source prompts, client references and the unrelated four-race overview. All 5,250 stored frames, 875 native records, 8,400 PNG frames and 10,895 archive checksum entries were checked. `data/ratkin-roles-release.json` records delivery/native identities and validation scope. Bundles 41-43 append to the existing release without changing its earlier files.
+
+## Abyss summoning portal
+
+One item-art design in two registered sizes. Each has 24 opening, 24 active and 20 closing frames; the active loop has no automatic timeout. Includes 136 exact native static-art records, matching RGB555 PNGs and black-key BMPs, blank Art IDs, the state contract and optional animdata planning template. Opening/closing GIFs play once; the lifecycle demonstration uses two example loops and an external close request. Source paintings, builder code and references are omitted. Every native record, PNG/BMP pair, import-manifest digest, boundary pose and package checksum was checked. No monster logic or server script is supplied. IDs, client timing, collision, spawning and in-game testing remain recipient work. `data/abyss-portal-release.json` records the review scope; bundle 44 appends to existing assets.
