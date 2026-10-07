@@ -4,6 +4,7 @@ import { dirname, resolve } from 'node:path';
 import { buildCatalogue } from './catalog.mjs';
 import { validateGallery } from './validate-gallery.mjs';
 import { buildStudioUpdates } from './build-studio-updates.mjs';
+import { buildUopve } from './build-uopve.mjs';
 import { buildStudioRelease } from './build-studio-release.mjs';
 import { validateStaticAssets } from './validate-static-assets.mjs';
 import { prepareReleaseAssets } from './prepare-release-assets.mjs';
@@ -11,6 +12,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 try {
   console.log('Prepared published release assets:', await prepareReleaseAssets(root));
   await buildStudioUpdates();
+  console.log('Built UO:PvE:', await buildUopve());
   await buildStudioRelease();
   console.log('Validated static assets:', await validateStaticAssets(resolve(root, 'public')));
   console.log('Validated gallery:', await validateGallery());
