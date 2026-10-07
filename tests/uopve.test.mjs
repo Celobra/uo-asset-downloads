@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile, stat } from 'node:fs/promises';
+import { readFile, readdir, stat } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
@@ -15,6 +15,13 @@ const localPath = pathname => resolve(publicRoot, '.' + pathname + (pathname.end
 const htmlFor = route => readFile(localPath(route), 'utf8');
 const escapeHtml = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
 const decodeHtml = value => value.replace(/&(amp|lt|gt|quot|#39);/g, (_, entity) => ({ amp: '&', lt: '<', gt: '>', quot: '"', '#39': "'" })[entity]);
+const htmlFilesUnder = async directory => {
+  const files = await Promise.all((await readdir(directory, { withFileTypes: true })).map(entry => {
+    const path = resolve(directory, entry.name);
+    return entry.isDirectory() ? htmlFilesUnder(path) : entry.isFile() && entry.name.endsWith('.html') ? [path] : [];
+  }));
+  return files.flat();
+};
 
 test('Every UO:PvE page has a unique canonical, accessible headings and working local links, assets and fragments', async () => {
   for (const route of routes) {
@@ -51,9 +58,10 @@ test('Every UO:PvE page has a unique canonical, accessible headings and working 
   }
 });
 
-test('The player hub and existing site sections expose the introduction, wiki, downloads and updates', async () => {
+test('The player hub and existing site sections expose the introduction, wiki, availability and updates', async () => {
   const home = await htmlFor('/uopve/');
   for (const section of ['introduction', 'wiki', 'downloads', 'updates']) assert.ok(home.includes(`href="/uopve/${section}/"`), section);
+  assert.match(home, /href="\/uopve\/downloads\/"[^>]*>Availability<\/a>/);
   for (const route of ['/', '/gallery/', '/client/', '/studio/', '/studio/workflows/', '/studio/downloads/', '/studio/updates/']) {
     assert.match(await htmlFor(route), /href="\/uopve\/"/, `${route}: missing UO:PvE navigation`);
   }
@@ -62,6 +70,7 @@ test('The player hub and existing site sections expose the introduction, wiki, d
 test('The wiki and updates retain every maintained article, related route and complete plain-text entry', async () => {
   const wiki = await htmlFor('/uopve/wiki/');
   const updates = await htmlFor('/uopve/updates/');
+  assert.equal(data.articles.length, 79, 'Withdrawing public play must retain the complete player reference');
   assert.equal([...wiki.matchAll(/\bdata-wiki-entry\b/g)].length, data.articles.length);
   assert.equal([...updates.matchAll(/\bdata-update-entry\b/g)].length, data.updates.length);
   for (const html of [wiki, updates]) {
@@ -91,24 +100,58 @@ test('The wiki and updates retain every maintained article, related route and co
     for (const change of update.changes) assert.ok(updates.includes(`<li>${escapeHtml(change)}</li>`));
   }
   assert.match(wiki, /The Hunter&#39;s Guild/);
-  assert.match(wiki, /Launcher, updates &amp; repair/);
+  const launcherGuide = data.articles.find(article => article.slug === 'launcher-and-updates');
+  assert.ok(launcherGuide, 'Keep the existing launcher guide route for its availability notice');
+  assert.ok(wiki.includes(escapeHtml(launcherGuide.title)));
 });
 
-test('Downloads identify the published Windows installer, portable build, digest and connection instructions', async () => {
+test('Release metadata remains recorded privately while the public availability page offers no client downloads or connection details', async () => {
   const html = await htmlFor('/uopve/downloads/');
   const prefix = `https://github.com/Celobra/UOPvE-Client/releases/download/client-v${data.release.version}/`;
   assert.equal(data.release.installer, prefix + 'UOPvE-Setup.exe');
   assert.equal(data.release.portable, prefix + 'UOPvE-Launcher.exe');
+  assert.equal(data.release.url, `https://github.com/Celobra/UOPvE-Client/releases/tag/client-v${data.release.version}`);
   assert.match(data.release.sha256, /^[a-f0-9]{64}$/);
   assert.ok(Number.isSafeInteger(data.release.sizeBytes) && data.release.sizeBytes > 0);
-  assert.ok(html.includes(`class="button" href="${data.release.installer}"`));
-  assert.ok(html.includes(`href="${data.release.portable}"`));
-  assert.ok(html.includes(`<code>${data.release.sha256}</code>`));
-  assert.ok(html.includes(`${data.release.serverHost}:${data.release.serverPort}`));
-  assert.ok(html.includes(data.release.clientVersion));
-  assert.match(html, /Windows 64-bit/);
-  assert.match(html, /\.NET Framework 4\.8/);
-  assert.match(html, /Close ClassicUO before applying an update/);
+  assert.equal(data.availability.publicPlay, false);
+  assert.equal(data.availability.message, 'UO:PvE is still in development. Public play and launcher downloads are not available yet.');
+  assert.ok(html.includes(escapeHtml(data.availability.message)));
+  assert.match(html, /href="\/uopve\/wiki\/"/);
+  for (const value of [data.release.installer, data.release.portable, data.release.url, data.release.sha256, data.release.serverHost]) {
+    assert.ok(!html.includes(value), `Private release metadata appears publicly: ${value}`);
+  }
+});
+
+test('Every generated UO:PvE HTML page keeps launcher downloads and public play unavailable', async () => {
+  const files = await htmlFilesUnder(resolve(publicRoot, 'uopve'));
+  assert.equal(files.length, routes.length, 'Unexpected stale or missing UO:PvE pages');
+  for (const file of files) {
+    const html = await readFile(file, 'utf8');
+    assert.doesNotMatch(html, /UOPvE-Client|live\.uoassets\.com|:2593/i, file);
+    assert.doesNotMatch(html, /\/uopve\/media\/launcher\.png/i, `${file}: launcher screenshot exposed`);
+    assert.ok(!html.includes(data.release.sha256), `${file}: private installer digest exposed`);
+    assert.ok(html.includes(escapeHtml(data.availability.message)), `${file}: missing development notice`);
+    for (const match of html.matchAll(/<(a|button)\b[^>]*>([\s\S]*?)<\/\1>/gi)) {
+      const label = decodeHtml(match[2].replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+      assert.doesNotMatch(label, /\b(?:downloads?|play)\b/i, `${file}: public download/play call to action: ${label}`);
+    }
+    assert.match(html, /href="\/uopve\/downloads\/"[^>]*>Availability<\/a>/, file);
+  }
+  for (const route of ['/uopve/', '/uopve/downloads/', '/uopve/wiki/getting-started/', '/uopve/wiki/launcher-and-updates/']) {
+    assert.ok((await htmlFor(route)).includes(escapeHtml(data.availability.message)), `${route}: missing development notice`);
+  }
+  const introduction = await htmlFor('/uopve/introduction/');
+  assert.doesNotMatch(introduction, /<img\b[^>]*\bsrc="[^"]*launcher/i, 'The introduction must not advertise a launcher screenshot');
+  await assert.rejects(stat(resolve(publicRoot, 'uopve/media/launcher.png')), { code: 'ENOENT' }, 'The launcher screenshot must not remain publicly served');
+  const updates = await htmlFor('/uopve/updates/');
+  for (const version of ['1.0.1', '1.0.2', '1.0.3']) {
+    const record = data.updates.find(update => update.id === `client-${version.replaceAll('.', '-')}`);
+    assert.ok(record, `Missing historical client record ${version}`);
+    assert.match(record.summary, /withdrawn/i, `Historical client version ${version} must be marked withdrawn`);
+    assert.equal(record.link, '/uopve/downloads/', `${version}: historical release must point to availability`);
+    assert.ok(updates.includes(version), `Missing historical client version ${version}`);
+    assert.ok(updates.includes(escapeHtml(record.summary)), `${version}: withdrawn status omitted publicly`);
+  }
 });
 
 test('The complete bestiary has one usable entry per definition, safe loot links and escaped content', async () => {
@@ -172,7 +215,7 @@ test('Actual wiki and update indexes filter by all search terms and topic, resto
   assert.ok(wiki.every(entry => !entry.hidden));
   assert.equal(ids['wiki-results'].textContent, `${data.articles.length} articles available`);
   assert.equal(ids['wiki-results'].attributes['aria-live'], 'polite');
-  ids['wiki-search'].value = 'RAZOR repair';
+  ids['wiki-search'].value = 'OPENING status';
   ids['wiki-search'].emit('input');
   assert.equal(wiki.filter(entry => !entry.hidden).length, 1);
   assert.equal(ids['wiki-results'].textContent, '1 article found');
@@ -184,7 +227,7 @@ test('Actual wiki and update indexes filter by all search terms and topic, resto
   ids['wiki-search'].emit('search');
   assert.equal(wiki.filter(entry => !entry.hidden).length, data.articles.filter(article => article.category === 'Adventuring').length);
   ids['wiki-category'].value = 'all';
-  ids['update-search'].value = 'command window';
+  ids['update-search'].value = 'talent cooldown';
   window.emit('pageshow');
   assert.ok(wiki.every(entry => !entry.hidden));
   assert.equal(ids['wiki-empty'].hidden, true);
