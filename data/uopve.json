@@ -1,0 +1,129 @@
+{
+  "release": {
+    "version": "1.0.1",
+    "tag": "client-v1.0.1",
+    "date": "2026-10-07",
+    "url": "https://github.com/Celobra/UOPvE-Client/releases/tag/client-v1.0.1",
+    "installer": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.1/UOPvE-Setup.exe",
+    "portable": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.1/UOPvE-Launcher.exe",
+    "sizeBytes": 735744,
+    "sha256": "c62502b9e701491a2d2a91f71954b6c2fca4984a2fe73afbdd814248ea05f1b5",
+    "serverHost": "live.uoassets.com",
+    "serverPort": 2593,
+    "clientVersion": "7.0.20.0"
+  },
+  "articles": [
+    {
+      "slug": "getting-started",
+      "title": "Your first steps",
+      "category": "Getting started",
+      "summary": "Install the client, enter the realm and find your first adventure.",
+      "keywords": "installation launcher setup download play account character sheet xp level beginner",
+      "sections": [
+        {"id": "install", "title": "Install and enter the realm", "paragraphs": ["Download UOPvE-Setup.exe from the Downloads page and choose Install UO:PvE. Setup opens the launcher, which downloads ClassicUO and the game files. Allow about 2.2 GB for the initial download, plus room for updates.", "Keep the launcher open until installation finishes. Select PLAY, then enter your shard account details inside ClassicUO. The launcher does not ask for your game password."]},
+        {"id": "character", "title": "Get to know your character", "paragraphs": ["Type .cs in game to open your character sheet. Use .level or .xp to see your progression, and .xpbar to control the experience display.", "Open .class to explore the available classes. Confirm only once you are happy with your choice: class selection is permanent. The Classes & talents guide explains the options."]},
+        {"id": "adventure", "title": "Find a first quest", "paragraphs": ["Visit the Hunter's Guildmaster in Britain's guild district and open Guild Quests. Supply deliveries and monster bounties are a useful place to begin.", "Accept a contract from the Guildmaster, then use the Quests button on your paperdoll to follow your progress. Opening the journal alone does not accept a quest. Return to the Guildmaster when its objectives are complete.", "For a longer journey, seek the Grave Warden at Britain Graveyard to begin The Undying March. Check .achievements for milestones and .titles for unlocked overhead titles."]}
+      ],
+      "related": ["classes-and-talents", "quest-journal", "hunters-guild"]
+    },
+    {
+      "slug": "launcher-and-updates",
+      "title": "Launcher, updates & repair",
+      "category": "Getting started",
+      "summary": "Keep your game files current, repair an installation and use optional Razor.",
+      "keywords": "patcher maps manifest client connection settings install import verify repair razor windows troubleshooting",
+      "sections": [
+        {"id": "updates", "title": "Automatic game updates", "paragraphs": ["The launcher checks for the latest game release when it opens and again before PLAY. It downloads missing or changed release files, including new maps, while keeping unlisted player files.", "Close ClassicUO before an update. If the game is already open, the startup update pauses until it can safely apply the files. Keep the launcher open while a download is running.", "Game files and maps update through the patcher. A new launcher executable is distributed through a new installer release."]},
+        {"id": "repair", "title": "Verify or repair", "paragraphs": ["Choose Verify / repair if release files are missing or appear damaged. The launcher checks their sizes and SHA-256 checksums and replaces files that differ from the published release.", "Open Settings to check the installation folder or choose View log when troubleshooting. If an update fails, check your connection, make sure the game is closed and try Install / update again."]},
+        {"id": "connection", "title": "Connection settings", "paragraphs": ["The default shard address is live.uoassets.com, port 2593. The configured client data version is 7.0.20.0.", "Use the UO:PvE launcher to open the game with its dedicated settings profile. Enter account details in ClassicUO; the launcher does not store your game password."]},
+        {"id": "razor", "title": "Optional Razor", "paragraphs": ["Leave Launch with Razor unchecked to play with ClassicUO alone. Enable it if you want the compatible Razor Community Edition plugin included in the client release.", "Import files is an alternative to downloading: select an existing Ultima Online client folder that contains game data and ClassicUO. Import into a new or empty game folder.", "Uninstall the launcher through Windows Installed apps. Your game folder and player settings are retained."]}
+      ],
+      "related": ["getting-started"]
+    },
+    {
+      "slug": "quest-journal",
+      "title": "Quests & the journal",
+      "category": "Adventuring",
+      "summary": "Track supply runs, bounties, expeditions and The Undying March.",
+      "keywords": "paperdoll quest journal grave warden britain graveyard undying march zombie skeleton lich bounty expedition delivery supply",
+      "sections": [
+        {"id": "journal", "title": "Open your quest journal", "paragraphs": ["Use the Quests button on the paperdoll to open your journal. It shows your tracked objectives and keeps progress between sessions.", "Guild quests must be accepted from the Hunter's Guildmaster. Viewing a quest in the journal does not automatically accept it. Return to the Guildmaster to hand in completed Guild contracts."]},
+        {"id": "contracts", "title": "Choose an adventure", "paragraphs": ["The current quest set includes ten supply deliveries, ten monster bounties and ten expeditions, alongside The Undying March.", "Supply contracts ask for goods, bounties send you after a particular enemy, and expeditions offer broader objectives. Read the contract's requirements and rewards before accepting."]},
+        {"id": "undying-march", "title": "The Undying March", "paragraphs": ["Speak to the Grave Warden at Britain Graveyard. This seven-stage quest begins with zombies, then moves through skeletons, ghouls, wraiths and spectres, liches, lich lords and an ancient lich.", "The stages follow a fixed order. The configured completion reward is 5,000 gold and 1,500 experience. Follow the journal for your current objective before moving to the next enemy."]}
+      ],
+      "related": ["hunters-guild", "achievements-and-titles"]
+    },
+    {
+      "slug": "hunters-guild",
+      "title": "The Hunter's Guild",
+      "category": "Adventuring",
+      "summary": "Accept contracts, join weekly hunts and spend your Guild Marks.",
+      "keywords": "guildmaster britain weekly quarry hunt guild marks rewards field kit sash trophy leaderboard monday gold",
+      "sections": [
+        {"id": "guildmaster", "title": "Meet the Guildmaster", "paragraphs": ["Look for the Hunter's Guildmaster in Britain's guild district. Open Guild Quests to inspect and accept the supply deliveries, bounties and expeditions on offer.", "Complete the objectives, track progress in your paperdoll's Quests journal and return to claim the contract's rewards."]},
+        {"id": "weekly-hunt", "title": "The weekly quarry", "paragraphs": ["The optional weekly hunt rotates among eight quarry types. A new hunting week starts on Monday at 00:00 UTC.", "The Guild provides current and previous weekly top-ten boards. Check the current quarry with the Guildmaster before setting out."]},
+        {"id": "marks", "title": "Rewards and Guild Marks", "paragraphs": ["Guild rewards include gold paid to your bank, experience and Guild Marks. Keep earning Marks to buy a field kit, Guild sash or trophy.", "Guild milestones also contribute to achievements and unlockable titles. Open .achievements to review your progress and claim available rewards."]}
+      ],
+      "related": ["quest-journal", "achievements-and-titles"]
+    },
+    {
+      "slug": "classes-and-talents",
+      "title": "Classes & talents",
+      "category": "Character progression",
+      "summary": "Choose a class and develop your character with levels and talent points.",
+      "keywords": "druid hunter paladin warrior rogue warlock mage priest shaman permanent class talent points level cap 100 character sheet xp",
+      "sections": [
+        {"id": "classes", "title": "Choose your class", "paragraphs": ["Use .class to open class selection. There are nine choices: Druid, Hunter, Paladin, Warrior, Rogue, Warlock, Mage, Priest and Shaman.", "Your confirmed class choice is permanent. Read the in-game descriptions before choosing, and use .cs to review your character sheet."]},
+        {"id": "leveling", "title": "Levels and experience", "paragraphs": ["The current character level cap is 100. Use .level or .xp to review your progress and .xpbar to show or hide the experience display.", "Quests and hunting rewards are among the ways to develop your character. Consult the in-game character sheet for the effects of your current level and choices."]},
+        {"id": "talents", "title": "Spend talent points", "paragraphs": ["Open .talents to review and spend your available points. The current progression grants one talent point every two levels, up to 50 points.", "Read each talent before spending. The in-game panel is the current reference for requirements and effects as the server develops."]}
+      ],
+      "related": ["getting-started", "achievements-and-titles"]
+    },
+    {
+      "slug": "achievements-and-titles",
+      "title": "Achievements & titles",
+      "category": "Character progression",
+      "summary": "Follow your milestones, claim rewards and display an unlocked title.",
+      "keywords": "achievements milestone claim reward title overhead hunter guild quests progression",
+      "sections": [
+        {"id": "achievements", "title": "Track your milestones", "paragraphs": ["Type .achievements to open your achievement panel. Review the requirements, check your progress and claim rewards that are ready.", "Questing and Hunter's Guild activities have achievement milestones, so revisit the panel as you complete contracts and hunts."]},
+        {"id": "titles", "title": "Wear an earned title", "paragraphs": ["Use .titles to select from your unlocked overhead titles. Titles let other players see a milestone you have earned.", "An achievement and its reward may require a claim before the associated title is available. Check the achievement panel first if an expected unlock is missing."]}
+      ],
+      "related": ["hunters-guild", "quest-journal"]
+    },
+    {
+      "slug": "pet-progression",
+      "title": "Pet progression",
+      "category": "Character progression",
+      "summary": "Develop your companion through combat and understand pet level bonuses.",
+      "keywords": "pet tame taming companion level xp combat strength dexterity intelligence health stamina mana transfer",
+      "sections": [
+        {"id": "pet-levels", "title": "A companion that grows", "paragraphs": ["Use .petlevel to open pet progression. Pets can progress from level 1 to level 20 under the current server configuration.", "A pet earns experience through meaningful combat participation. Bring it into the fight and check its progress through the pet panel."]},
+        {"id": "bonuses", "title": "Level bonuses", "paragraphs": ["Each level above the first adds 5 Strength, 5 Dexterity and 5 Intelligence, along with 5 to the pet's health, stamina and mana caps.", "Transferring a pet resets its progression. Take that into account before giving or trading a developed companion."]}
+      ],
+      "related": ["classes-and-talents", "achievements-and-titles"]
+    }
+  ],
+  "updates": [
+    {
+      "id": "client-1-0-1",
+      "date": "2026-10-07",
+      "category": "Client release",
+      "title": "UO:PvE 1.0.1 is available",
+      "summary": "The Windows installer, patcher and launcher are available through the public client release.",
+      "changes": ["Install ClassicUO and the game files through the dedicated UO:PvE launcher.", "Receive updated game files and maps when the launcher opens or before PLAY.", "Verify and repair release files, or import an existing compatible client.", "Launch with ClassicUO alone or enable the included optional Razor Community Edition plugin."],
+      "link": "https://github.com/Celobra/UOPvE-Client/releases/tag/client-v1.0.1",
+      "linkLabel": "Read the release notes"
+    },
+    {
+      "id": "player-hub",
+      "date": "2026-10-07",
+      "category": "Website",
+      "title": "A home for your next adventure",
+      "summary": "The UO:PvE player hub brings the introduction, wiki, downloads and updates together.",
+      "changes": ["Find setup and repair instructions beside the Windows downloads.", "Search seven player guides, covering first steps, questing, the Hunter's Guild and character progression."],
+      "link": "/uopve/wiki/",
+      "linkLabel": "Browse the wiki"
+    }
+  ]
+}
