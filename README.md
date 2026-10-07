@@ -2,9 +2,11 @@
 
 ## UO:PvE player hub
 
-[UO:PvE](https://www.uoassets.com/uopve/) has an introduction, a searchable player wiki with seven guides, Windows installer and portable launcher downloads, and searchable updates. The hub uses the shard launcher's navy and gold identity and supplied realm artwork. Links from the homepage, gallery, Studio and Custom ClassicUO lead to this section.
+[UO:PvE](https://www.uoassets.com/uopve/) has an introduction, a searchable player wiki with 79 guides, Windows installer and portable launcher downloads, and dated bullet updates. The wiki includes spell effects, swing timers, skills, classes, creature difficulty and loot, treasure maps, crafting, quests, achievements, housing and world rules. The hub uses the shard launcher's navy and gold identity and supplied realm artwork. Links from the homepage, gallery, Studio and Custom ClassicUO lead to this section.
 
 Maintain player guides and dated updates in `data/uopve.json`. The normal website build runs `tools/build-uopve.mjs` and generates the static pages under `public/uopve/`. Edit the source data or generator rather than generated HTML. All articles and release history remain readable without JavaScript; local filtering is optional. Keep release version, tag, download URLs, sizes and checksum aligned with a published GitHub release. Add server release dates only when publication is known; local file dates do not establish release history.
+
+Maintain the 1,136 creature and NPC records and their referenced loot selections in `data/uopve-bestiary.json`; `tools/uopve-bestiary.mjs` renders the catalogue. Article sections support paragraphs, lists and rectangular reference tables. Long tables and the bestiary have client-side filters, and article navigation is grouped by topic. Optional update `changedAt` timestamps include an explicit offset and are displayed in Europe/London time, with a date that must match the record. Keep player documentation free of private source paths, credentials and administrative changes. Distinguish loaded definitions from confirmed availability, calculated examples from measured behavior, and staged fixes from changes active after a restart.
 
 The Downloads page links to the published `Celobra/UOPvE-Client` release; it does not bundle game data into this website. The launcher downloads and updates game files separately. Player documentation follows the current shard configuration; in-game panels remain the current reference for requirements and rewards.
 
