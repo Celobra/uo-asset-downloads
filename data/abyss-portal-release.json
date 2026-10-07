@@ -1,0 +1,18 @@
+{
+  "sourceArchive": "UO_Abyss_Portal.zip",
+  "sourceSha256": "8176c5b94b94e5e897be0dd1334af6c319d5d9db6e6c56623d881efbecebf785",
+  "pngBmpNativeTriplesChecked": 136,
+  "checksumEntriesChecked": 426,
+  "states": {
+    "opening": 24,
+    "active": 24,
+    "closing": 20
+  },
+  "sizes": 2,
+  "clientRuntimeTested": false,
+  "activeAutomaticExit": false,
+  "publicFiles": 14,
+  "bundle": "assets-44.zip",
+  "nativeFilesIncluded": true,
+  "sourcePromptsReferencesBuilderOmitted": true
+}
