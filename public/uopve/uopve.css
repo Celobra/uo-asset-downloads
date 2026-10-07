@@ -327,3 +327,30 @@ body.pve {
   html { scroll-behavior: auto; }
   .pve *, .pve *::before, .pve *::after { transition: none !important; animation: none !important; }
 }
+
+/* Wide reference tables scroll inside the article on smaller screens. */
+.reference-table { overflow-x: auto; margin-block: 24px; border: 1px solid var(--pve-line); border-radius: 3px; }
+.reference-table:focus-visible { outline: 3px solid var(--pve-teal); outline-offset: 4px; }
+.reference-table table { width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.6; }
+.reference-table caption { text-align: left; padding: 15px; color: var(--pve-gold); font-weight: 600; background: #111d27; }
+.reference-table th, .reference-table td { text-align: left; vertical-align: top; padding: 11px 14px; border-top: 1px solid var(--pve-line); min-width: 100px; }
+.reference-table thead th { color: var(--pve-ink); background: #172430; }
+.reference-table tbody th { font-weight: 500; color: var(--pve-ink); }
+.reference-table td { color: var(--pve-muted); }
+.reference-table tbody tr:nth-child(even) { background: #101b26; }
+.reference-tools { margin-top: 24px; }
+.reference-tools label { display: flex; flex-direction: column; gap: 8px; color: var(--pve-muted); font-size: 12px; }
+.reference-tools input { width: min(100%, 440px); padding: 10px 14px; background: var(--pve-panel); color: var(--pve-ink); border: 1px solid #42515e; border-radius: 3px; }
+.reference-tools p { margin-top: 10px; font-size: 12px; }
+.guide-topic { margin-bottom: .75rem; }
+.wiki-sidebar .guide-topic summary { padding: .3rem 0; cursor: pointer; color: var(--gold, #d9bc78); }
+.wiki-sidebar .guide-topic a { display: block; margin: .15rem 0 .15rem .6rem; }
+.creature-card, .loot-pool { border: 1px solid #514536; border-radius: .5rem; margin: .75rem 0; background: #17191b; }
+.creature-card > summary, .loot-pool > summary { padding: 1rem; cursor: pointer; font-weight: 600; }
+.creature-card > summary { display: flex; justify-content: space-between; gap: 1rem; }
+.creature-card > summary::before { content: '+'; color: #d9bc78; }
+.creature-card[open] > summary::before { content: '−'; }
+.creature-rating { font-size: .85rem; color: #d9bc78; margin-left: auto; white-space: nowrap; }
+.creature-content, .loot-pool > ul { padding: 0 1rem 1rem; }
+.creature-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1rem; }
+.creature-card[hidden], .loot-pool[hidden], tr[hidden] { display: none; }
