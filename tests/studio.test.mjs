@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../public');
-const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.3/';
+const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.4/';
 const pages = ['/studio/', '/studio/workflows/', '/studio/downloads/', '/studio/updates/'];
 const localPath = pathname => resolve(root, '.' + pathname + (pathname.endsWith('/') ? 'index.html' : ''));
 
@@ -33,13 +33,13 @@ test('The installer is the primary download; application source is separate', as
     const html = await readFile(localPath(page), 'utf8');
     const primary = [...html.matchAll(/<a class="button primary" href="([^"]+)"/g)].map(m => m[1]);
     assert.ok(primary.length > 0);
-    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.33.3.exe');
+    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.33.4.exe');
     assert.ok(primary.every(url => !url.includes('Source-')));
   }
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.33.3.zip'));
-  assert.ok(downloads.includes(release + 'SHA256SUMS-0.33.3.txt'));
-  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.33.3.pdf'));
+  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.33.4.zip'));
+  assert.ok(downloads.includes(release + 'SHA256SUMS-0.33.4.txt'));
+  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.33.4.pdf'));
 });
 
 test('Studio navigation is available from the existing website sections', async () => {
@@ -51,10 +51,10 @@ test('Studio navigation is available from the existing website sections', async 
 
 test('Public guide is complete and uses scripts/styles allowed by CSP', async () => {
   const guide = root + '/studio/guide/';
-  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.3.html', 'utf8');
-  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.3.pdf');
+  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.4.html', 'utf8');
+  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.4.pdf');
   assert.equal(pdf.subarray(0, 5).toString(), '%PDF-');
-  assert.equal(createHash('sha256').update(pdf).digest('hex'), '3f52cc6ede8676dbb61418539c3ccc5ca6653b2a79fcea54a8674828cc23b4da', 'PDF must match the published guide without newline conversion');
+  assert.equal(createHash('sha256').update(pdf).digest('hex'), '26f8a2e1709b056be4aaa7f4474fb2314b1c97644681c55a3c6a6c65da4f59ee', 'PDF must match the published guide without newline conversion');
   assert.ok(pdf.length > 100000);
   assert.doesNotMatch(html, /<style\b|<script(?![^>]*src=)[^>]*>\s*\S/i);
   for (const match of html.matchAll(/(?:href|src)="(guide-[^"]+)"/g)) assert.ok((await stat(guide + match[1])).isFile());
@@ -62,15 +62,15 @@ test('Public guide is complete and uses scripts/styles allowed by CSP', async ()
   for (const match of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.has(match[1]), `missing guide section ${match[1]}`);
 });
 
-test('Studio 0.33.3 retains direct imports, safeguards and full history', async () => {
+test('Studio 0.33.4 retains direct imports, safeguards and full history', async () => {
   const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
-  assert.equal(releases[0].version, '0.33.3');
+  assert.equal(releases[0].version, '0.33.4');
   assert.equal(releases[0].release, true);
   assert.equal(releases[0].date, '2026-10-08');
-  assert.equal(releases[1].version, '0.33.2');
+  assert.equal(releases[1].version, '0.33.3');
   assert.equal(createHash('sha256').update(JSON.stringify(releases.slice(1))).digest('hex'),
-    'e880dfba8ce5f3288e8f21dfd7634a2c4085abe9e48d8481b65d3553ce0f98e5',
-    'All 53 earlier release records must survive this update unchanged');
+    '0c55ca3a9ddcc280de5228ae6b568167e7e78aeec369293d3dcf3b2ba0847019',
+    'All 54 earlier release records must survive this update unchanged');
   const workflow = await readFile(localPath('/studio/workflows/'), 'utf8');
   const updates = await readFile(localPath('/studio/updates/'), 'utf8');
   assert.match(workflow, /NEW IN 0\.32\.1 \/ A COMPLETE BODY EXPORT/);
@@ -140,7 +140,7 @@ test('Practical workspace instructions identify their controls and preserve loca
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
   assert.match(downloads, /91 pages.<br>33 practical chapters/);
   const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
-  assert.equal(releases.length, 54);
+  assert.equal(releases.length, 55);
 });
 
 
@@ -158,7 +158,7 @@ test('Website armor folder instructions identify complete sources and explicit r
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
   assert.ok(downloads.includes('several piece folders'));
   const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
-  assert.ok(releases[0].added.some(text => text.includes('Open ZIP')));
+  assert.ok(releases[1].added.some(text => text.includes('Open ZIP')));
 });
 
 
@@ -167,4 +167,14 @@ test('Direct ZIP workflows explain source selection, metadata and normal reviewe
   for (const text of ['id="zip-package-import"', 'Complete armor set → Open ZIP', 'Open piece ZIP', 'Open sequence ZIP', 'Convert body ZIP to .vd', 'Reimport body ZIP', 'Choose image from ZIP', 'does not combine unrelated groups', 'frames.json', 'body.json', 'without saving client or server files', 'mounted poses']) assert.ok(html.includes(text), text);
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
   assert.ok(downloads.includes('select the archive directly'));
+});
+
+
+test('Armor script layout explains defaults, destinations and independent pieces', async () => {
+  const html = await readFile(localPath('/studio/workflows/'), 'utf8');
+  for (const text of ['id="armor-script-layout"','One file per piece','One file for whole set','shared script folder and filename','Review complete set','Queue changes','existing destination','required generated helpers','resource registration','separate <code>.cs</code> files','does not turn the set into a single wearable item']) assert.ok(html.includes(text),text);
+  const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
+  assert.ok(downloads.includes('Can an armor set use one Sphere script file?'));
+  const { releases } = JSON.parse(await readFile(resolve(root,'../data/studio-updates.json'),'utf8'));
+  assert.ok(releases[0].added.some(text => text.includes('One file for whole set')));
 });

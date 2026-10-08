@@ -1,6 +1,22 @@
 {
   "releases": [
     {
+      "version": "0.33.4",
+      "title": "Choose separate or combined armor-set Sphere scripts",
+      "added": [
+        "Complete armor set offers One file per piece or One file for whole set for Sphere scripts. Separate files remain the default.",
+        "A combined .scp uses one shared folder and a new filename, with all piece definitions and required generated helpers. Review complete set shows the exact destinations and complete source before Save or Queue changes."
+      ],
+      "improved": [
+        "Each piece retains its independently wearable definition, layer, native artwork and effects. RunUO, ServUO and ModernUO keep separate .cs files.",
+        "The complete 91-page guide retains all 33 chapters and explains both script layouts alongside direct ZIP imports and reviewed saves."
+      ],
+      "fixed": [],
+      "note": "One file per piece remains the default. Combined output requires a new filename and shows the complete source before saving or queuing. Pieces retain their individual definitions, artwork and effects; C# targets stay separate.",
+      "release": true,
+      "date": "2026-10-08"
+    },
+    {
       "version": "0.33.3",
       "title": "Open armor, equipment and animation ZIPs directly",
       "added": [
