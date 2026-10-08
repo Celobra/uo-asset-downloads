@@ -1,6 +1,23 @@
 {
   "releases": [
     {
+      "version": "0.33.3",
+      "title": "Open armor, equipment and animation ZIPs directly",
+      "added": [
+        "Open ZIP loads supported downloaded armor sets and collections directly, with detected set and piece counts before Add whole set and Review complete set.",
+        "Open piece ZIP loads one complete wearable piece with its icon, equipment VD and male/female paperdolls; multi-piece packages use Complete armor set.",
+        "Body animation ZIPs offer native VDs, GIFs or frame sequences. Mount ZIPs require native VDs. Choose the intended source when several are present.",
+        "Animation workshop opens exported sequence ZIPs with their origin metadata and converts or reimports supported exported body ZIPs. Mount icons can be chosen from a ZIP."
+      ],
+      "improved": [
+        "The complete 91-page guide retains all 33 chapters, extracted-folder alternatives, native coverage checks, free destinations, previews and reviewed saves."
+      ],
+      "fixed": [],
+      "note": "Select the intended source when several are offered. Keep source files together. A ZIP does not create missing movements or split a whole-suit VD into independently wearable pieces. Native checks, free destinations and reviewed saves remain; final receiving-client movement and combined fit require a check.",
+      "release": true,
+      "date": "2026-10-08"
+    },
+    {
       "version": "0.33.2",
       "title": "Complete armor sets load from website folders",
       "added": [],
