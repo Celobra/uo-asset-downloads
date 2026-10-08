@@ -17,6 +17,7 @@
   function render(){
     const mode=model.mode(state), cat=category(), listing=model.listing(state);
     state.page=listing.page;
+    window.GALLERY_BULK_DOWNLOADS.setPage(mode==='assets'?listing.items:[],{key:JSON.stringify([mode,state.category,state.collection,state.q,state.sort,listing.page]),label:state.collection?nav.title(state.collection):cat?.name||'search-results',page:listing.page});
     const crumb=el('breadcrumbs');crumb.replaceChildren();
     crumb.append(routeLink('All categories',{}));
     if(cat){crumb.append(node('span','/'));crumb.append(routeLink(cat.name,{category:cat.id}));}
@@ -56,8 +57,9 @@
         const im=imageFor(x), copy=node('span',null,'text');
         copy.append(node('strong',x.name),node('small',nav.title(x.project)),node('span',x.pieces?'Complete set · Choose individual pieces':x.kind==='motion'?`${x.actions} actions · 8 views`:x.kind==='effect'?'Animated effect':x.kind==='animated'?'Animated preview':'Still artwork','badge'));
         b.append(im,copy);b.onclick=()=>{returnFocus=x.id;openAsset(x.id);};card.append(b);
-        if(x.download)card.append(nativeLink(x,true));el('grid').append(card);
+        if(x.download)card.append(window.GALLERY_BULK_DOWNLOADS.selectionControl(x),nativeLink(x,true));el('grid').append(card);
       }
+      window.GALLERY_BULK_DOWNLOADS.refresh();
       el('pagination').hidden=listing.pages<=1;
       el('page-number').textContent=`Page ${listing.page} of ${listing.pages}`;el('previous').disabled=listing.page===1;el('next').disabled=listing.page===listing.pages;
       if(cat)el('browse-actions').append(routeLink('← Choose another collection',{category:cat.id},'text-link'));
