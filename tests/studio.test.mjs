@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../public');
-const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.1/';
+const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.2/';
 const pages = ['/studio/', '/studio/workflows/', '/studio/downloads/', '/studio/updates/'];
 const localPath = pathname => resolve(root, '.' + pathname + (pathname.endsWith('/') ? 'index.html' : ''));
 
@@ -33,13 +33,13 @@ test('The installer is the primary download; application source is separate', as
     const html = await readFile(localPath(page), 'utf8');
     const primary = [...html.matchAll(/<a class="button primary" href="([^"]+)"/g)].map(m => m[1]);
     assert.ok(primary.length > 0);
-    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.33.1.exe');
+    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.33.2.exe');
     assert.ok(primary.every(url => !url.includes('Source-')));
   }
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.33.1.zip'));
-  assert.ok(downloads.includes(release + 'SHA256SUMS-0.33.1.txt'));
-  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.33.1.pdf'));
+  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.33.2.zip'));
+  assert.ok(downloads.includes(release + 'SHA256SUMS-0.33.2.txt'));
+  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.33.2.pdf'));
 });
 
 test('Studio navigation is available from the existing website sections', async () => {
@@ -51,10 +51,10 @@ test('Studio navigation is available from the existing website sections', async 
 
 test('Public guide is complete and uses scripts/styles allowed by CSP', async () => {
   const guide = root + '/studio/guide/';
-  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.1.html', 'utf8');
-  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.1.pdf');
+  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.2.html', 'utf8');
+  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.2.pdf');
   assert.equal(pdf.subarray(0, 5).toString(), '%PDF-');
-  assert.equal(createHash('sha256').update(pdf).digest('hex'), 'c747b90722133cd21bef1f4a1aa2d32d9f7e5db9f7b62efbe13ce5a2f926b734', 'PDF must match the published guide without newline conversion');
+  assert.equal(createHash('sha256').update(pdf).digest('hex'), 'de9107ac6e77179e761679c0512ec0117f732b58b3dc97292025e289757c358d', 'PDF must match the published guide without newline conversion');
   assert.ok(pdf.length > 100000);
   assert.doesNotMatch(html, /<style\b|<script(?![^>]*src=)[^>]*>\s*\S/i);
   for (const match of html.matchAll(/(?:href|src)="(guide-[^"]+)"/g)) assert.ok((await stat(guide + match[1])).isFile());
@@ -62,15 +62,15 @@ test('Public guide is complete and uses scripts/styles allowed by CSP', async ()
   for (const match of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.has(match[1]), `missing guide section ${match[1]}`);
 });
 
-test('Studio 0.33.1 retains direct imports, safeguards and full history', async () => {
+test('Studio 0.33.2 retains direct imports, safeguards and full history', async () => {
   const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
-  assert.equal(releases[0].version, '0.33.1');
+  assert.equal(releases[0].version, '0.33.2');
   assert.equal(releases[0].release, true);
-  assert.equal(releases[0].date, '2026-10-04');
-  assert.equal(releases[1].version, '0.33.0');
+  assert.equal(releases[0].date, '2026-10-08');
+  assert.equal(releases[1].version, '0.33.1');
   assert.equal(createHash('sha256').update(JSON.stringify(releases.slice(1))).digest('hex'),
-    '00cc9de0e3affdca90714cdd3f8460fd553944805777395a4b5214463e32104e',
-    'All 51 earlier release records must survive this update unchanged');
+    '367951949c651a1f0e717b8ff0bc44c162344654b8d5e7f7c5f8ae268ee705e3',
+    'All 52 earlier release records must survive this update unchanged');
   const workflow = await readFile(localPath('/studio/workflows/'), 'utf8');
   const updates = await readFile(localPath('/studio/updates/'), 'utf8');
   assert.match(workflow, /NEW IN 0\.32\.1 \/ A COMPLETE BODY EXPORT/);
@@ -140,7 +140,7 @@ test('Practical workspace instructions identify their controls and preserve loca
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
   assert.match(downloads, /89 pages.<br>33 practical chapters/);
   const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
-  assert.equal(releases.length, 52);
+  assert.equal(releases.length, 53);
 });
 
 
@@ -149,4 +149,14 @@ test('Animated artwork routes identify native distribution and review steps', as
   for (const text of ['Animated items','Spell / visual effects','Body / character animations','Mounts / rideable objects','AnimData','Queue changes','Export pending bundle','before saving or clearing','ZIP container','.uoasset']) assert.ok(html.includes(text),text);
   assert.ok(html.includes('does not automatically add spell damage'));
   assert.ok(html.includes('C# scripts are shared separately'));
+});
+
+
+test('Website armor folder instructions identify complete sources and explicit review', async () => {
+  const html = await readFile(localPath('/studio/workflows/'), 'utf8');
+  for (const text of ['id="armor-folder-import"', 'Open set / collection folder', 'outer extracted folder', 'piece subfolders', 'manifest.json', 'Add whole set', 'Review complete set', 'male/female paperdolls', 'fresh destinations', 'does not write game files', 'whole-suit VD cannot be split']) assert.ok(html.includes(text), text);
+  const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
+  assert.ok(downloads.includes('several piece folders'));
+  const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
+  assert.ok(releases[0].fixed.some(text => text.includes('pieces/folder/layer')));
 });
