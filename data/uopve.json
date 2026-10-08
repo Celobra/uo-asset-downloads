@@ -1,17 +1,17 @@
 {
   "release": {
-    "version": "1.0.5",
-    "tag": "client-v1.0.5",
-    "date": "2026-10-07",
-    "url": "https://github.com/Celobra/UOPvE-Client/releases/tag/client-v1.0.5",
-    "installer": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.5/UOPvE-Setup.exe",
-    "portable": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.5/UOPvE-Launcher.exe",
-    "sizeBytes": 739840,
-    "sha256": "4d108ca828e00c659a498a0dcf97a64e82ade1d2f5f450f20183239e6653562b",
+    "version": "1.0.7",
+    "tag": "client-v1.0.7",
+    "date": "2026-10-08",
+    "url": "https://github.com/Celobra/UOPvE-Client/releases/tag/client-v1.0.7",
+    "installer": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.7/UOPvE-Setup.exe",
+    "portable": "https://github.com/Celobra/UOPvE-Client/releases/download/client-v1.0.7/UOPvE-Launcher.exe",
+    "sizeBytes": 783872,
+    "sha256": "5ce6e5d8382975be0de505b35bec8b006391e35c7143025d4d03d4bc46e04714",
     "serverHost": "live.uoassets.com",
     "serverPort": 2593,
     "clientVersion": "7.0.20.0",
-    "launcherVersion": "1.0.3"
+    "launcherVersion": "1.0.4"
   },
   "articles": [
     {
@@ -9763,6 +9763,38 @@
     }
   ],
   "updates": [
+    {
+      "id": "client-development-1-0-7",
+      "date": "2026-10-08",
+      "changedAt": "2026-10-08T13:09:03+01:00",
+      "category": "Launcher development",
+      "title": "Launcher 1.0.4: clearer removal controls",
+      "summary": "Development release 1.0.7 adds a complete-removal option to the launcher. Public play and launcher downloads remain unavailable.",
+      "changes": [
+        "Launcher Settings and Windows Installed apps now use the same UO:PvE uninstaller.",
+        "A confirmation, set to No by default, lists the installation locations and warns that game files, profiles, screenshots and launcher settings will be permanently removed.",
+        "Removal tracks files created by UO:PvE. In shared folders it preserves unrelated contents; original import sources and downloaded setup copies are outside its scope.",
+        "Removal waits for the game to close and active downloads or imports to finish or be cancelled. Interrupted cleanup can be retried.",
+        "All 790 game-file paths, sizes and checksums are unchanged from client 1.0.6. The menu readability fixes and earlier artwork updates are retained."
+      ],
+      "link": "/uopve/downloads/",
+      "linkLabel": "Check public access status"
+    },
+    {
+      "id": "client-development-1-0-6",
+      "date": "2026-10-08",
+      "changedAt": "2026-10-08T12:27:57+01:00",
+      "category": "Client development",
+      "title": "Client 1.0.6: more readable top-menu labels",
+      "summary": "The development client now uses light text on its navy top-menu buttons. Public play and launcher downloads remain unavailable.",
+      "changes": [
+        "Top-menu labels use light text while retaining the gold hover highlight.",
+        "Menu actions, button artwork and layout are unchanged.",
+        "The animation, static artwork, tile and creature-definition updates from client 1.0.5 are retained."
+      ],
+      "link": "/uopve/downloads/",
+      "linkLabel": "Check public access status"
+    },
     {
       "id": "client-data-1-0-5",
       "date": "2026-10-07",
