@@ -75,7 +75,7 @@ test('The wiki and updates retain every maintained article, related route and co
   assert.equal([...updates.matchAll(/\bdata-update-entry\b/g)].length, data.updates.length);
   for (const html of [wiki, updates]) {
     assert.match(html, /<noscript>/);
-    for (const match of html.matchAll(/<article\b[^>]*\bdata-(?:wiki|update)-entry\b[^>]*>/g)) {
+    for (const match of html.matchAll(/<(?:article|li)\b[^>]*\bdata-(?:wiki|update)-entry\b[^>]*>/g)) {
       assert.doesNotMatch(match[0].replace(/="[^"]*"/g, ''), /\bhidden\b/, 'Entries must remain visible without JavaScript');
     }
   }
@@ -178,12 +178,18 @@ test('Gameplay timestamps include the recorded London time and seasonal timezone
 });
 
 class Element {
-  constructor({ search = '', category = '', value = '' } = {}) {
+  constructor({ search = '', category = '', value = '', id = '', tagName = 'DIV', attributes = {} } = {}) {
     this.dataset = { search, category };
     this.value = value;
     this.hidden = false;
     this.textContent = '';
-    this.attributes = {};
+    this.id = id;
+    this.tagName = tagName;
+    this.open = false;
+    this.parentElement = null;
+    this.children = [];
+    this.scrolls = [];
+    this.attributes = attributes;
     this.listeners = new Map();
   }
   addEventListener(name, listener) {
@@ -191,10 +197,23 @@ class Element {
     this.listeners.get(name).push(listener);
   }
   setAttribute(name, value) { this.attributes[name] = value; }
-  emit(name) { for (const listener of this.listeners.get(name) || []) listener(); }
+  getAttribute(name) { return this.attributes[name] ?? null; }
+  append(child) { child.parentElement = this; this.children.push(child); return child; }
+  contains(target) { return this === target || this.children.some(child => child.contains(target)); }
+  querySelector(selector) {
+    if (selector !== '[data-wiki-topic-count]') return null;
+    return this.children.find(child => child.dataset.wikiTopicCount !== undefined)
+      || this.children.map(child => child.querySelector(selector)).find(Boolean) || null;
+  }
+  closest(selector) {
+    if (selector === 'a[href]' && this.tagName === 'A' && this.getAttribute('href') !== null) return this;
+    return this.parentElement?.closest(selector) || null;
+  }
+  scrollIntoView(options) { this.scrolls.push(options); }
+  emit(name, event = {}) { for (const listener of this.listeners.get(name) || []) listener(event); }
 }
 
-const entriesFrom = (html, entry) => [...html.matchAll(new RegExp(`<article\\b[^>]*\\bdata-${entry}-entry\\b[^>]*>`, 'g'))].map(match => {
+const entriesFrom = (html, entry) => [...html.matchAll(new RegExp(`<(?:article|li)\\b[^>]*\\bdata-${entry}-entry\\b[^>]*>`, 'g'))].map(match => {
   const attr = name => decodeHtml(match[0].match(new RegExp(`\\b${name}="([^"]*)"`))?.[1] || '');
   return new Element({ search: attr('data-search'), category: attr('data-category') });
 });
@@ -213,12 +232,12 @@ test('Actual wiki and update indexes filter by all search terms and topic, resto
   assert.equal(ids['wiki-search'].listeners.size, 0, 'Initialization must wait for a loading document');
   document.emit('DOMContentLoaded');
   assert.ok(wiki.every(entry => !entry.hidden));
-  assert.equal(ids['wiki-results'].textContent, `${data.articles.length} articles available`);
+  assert.equal(ids['wiki-results'].textContent, `${data.articles.length} guides available`);
   assert.equal(ids['wiki-results'].attributes['aria-live'], 'polite');
   ids['wiki-search'].value = 'OPENING status';
   ids['wiki-search'].emit('input');
   assert.equal(wiki.filter(entry => !entry.hidden).length, 1);
-  assert.equal(ids['wiki-results'].textContent, '1 article found');
+  assert.equal(ids['wiki-results'].textContent, '1 guide found');
   ids['wiki-category'].value = 'Adventuring';
   ids['wiki-category'].emit('change');
   assert.ok(wiki.every(entry => entry.hidden));
@@ -275,4 +294,278 @@ test('Creature and reference table search report matches, combine categories and
   ids['reference-example-search'].value=''; ids['reference-example-search'].emit('search');
   assert.ok(rows.every(entry => !entry.hidden));
   assert.equal(ids['reference-example-empty'].hidden,true);
+});
+
+const attributeFrom = (opening, name) => decodeHtml(opening.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1] || '');
+const rowsFrom = (html, prefix) => [...html.matchAll(/<tr\b[^>]*\bdata-reference-entry="[^"]+"[^>]*>/g)]
+  .filter(match => attributeFrom(match[0], 'data-reference-entry') === prefix)
+  .map(match => new Element({ tagName: 'TR', search: attributeFrom(match[0], 'data-search') }));
+const sectionsFrom = (html, marker, entries) => [...html.matchAll(new RegExp(`<section\\b[^>]*\\b${marker}\\b[^>]*>([\\s\\S]*?)<\\/section>`, 'g'))].map(match => {
+  const element = new Element({ tagName: 'SECTION', id: attributeFrom(match[0].slice(0, match[0].indexOf('>') + 1), 'id') });
+  const children = entries(match[1]);
+  element.entries = children;
+  for (const child of children) element.append(child);
+  const countMatch = match[1].match(/<span\b[^>]*\bdata-wiki-topic-count\b[^>]*>(.*?)<\/span>/);
+  if (countMatch) {
+    const count = element.append(new Element({ tagName: 'SPAN' }));
+    count.dataset.wikiTopicCount = '';
+    count.textContent = countMatch[1];
+  }
+  return element;
+});
+const referenceLayoutFrom = (html, prefix = 'article-reference') => {
+  const groups = [], rows = [];
+  const sections = [...html.matchAll(/<section\b[^>]*>([\s\S]*?)<\/section>/g)].map(match => {
+    const opening = match[0].slice(0, match[0].indexOf('>') + 1);
+    const section = new Element({ tagName: 'SECTION', id: attributeFrom(opening, 'id') });
+    if (attributeFrom(opening, 'data-reference-section') === prefix) {
+      section.dataset.referenceSection = prefix;
+      groups.push(section);
+    }
+    section.paragraphs = [...match[1].matchAll(/<p\b[^>]*>(.*?)<\/p>/g)].map(paragraph => {
+      const element = section.append(new Element({ tagName: 'P' }));
+      element.textContent = decodeHtml(paragraph[1]);
+      return element;
+    });
+    for (const wrapperMatch of match[1].matchAll(/<div\b[^>]*\bdata-reference-section="[^"]+"[^>]*>([\s\S]*?)<\/div>/g)) {
+      if (attributeFrom(wrapperMatch[0], 'data-reference-section') !== prefix) continue;
+      const wrapper = section.append(new Element());
+      wrapper.dataset.referenceSection = prefix;
+      groups.push(wrapper);
+      for (const row of rowsFrom(wrapperMatch[1], prefix)) { wrapper.append(row); rows.push(row); }
+    }
+    return section;
+  });
+  return { sections, groups, rows };
+};
+const filterIds = names => Object.fromEntries(names.map(id => [id, new Element({ id })]));
+const interactionRuntime = async ({ ids = {}, selectors = {}, desktop = false, hash = '' } = {}) => {
+  const document = new Element();
+  document.readyState = 'complete';
+  document.getElementById = id => ids[id] || null;
+  document.querySelectorAll = selector => selectors[selector] || [];
+  const window = new Element();
+  window.location = { hash };
+  const mediaQueries = [];
+  window.matchMedia = query => { mediaQueries.push(query); return { matches: desktop }; };
+  const frames = [];
+  window.requestAnimationFrame = callback => frames.push(callback);
+  vm.runInNewContext(await readFile(resolve(publicRoot, 'uopve/uopve.js'), 'utf8'), { document, window });
+  return { document, window, mediaQueries, flushFrames: () => { while (frames.length) frames.shift()(); } };
+};
+
+test('The wiki directory groups plain guide rows by topic and articles keep contents accessible without JavaScript', async () => {
+  const wiki = await htmlFor('/uopve/wiki/');
+  const groups = sectionsFrom(wiki, 'data-wiki-topic', body => entriesFrom(body, 'wiki'));
+  assert.equal(groups.length, new Set(data.articles.map(article => article.category)).size);
+  assert.equal(groups.flatMap(group => group.entries).length, data.articles.length);
+  assert.doesNotMatch(wiki, /class="wiki-card"|class="wiki-grid"/);
+  assert.equal([...wiki.matchAll(/<li\b[^>]*\bdata-wiki-entry\b/g)].length, data.articles.length);
+  for (const group of groups) assert.ok(wiki.includes(`data-wiki-topic-link="${group.id}"`), `Missing topic navigation for ${group.id}`);
+  for (const article of data.articles) {
+    const html = await htmlFor(`/uopve/wiki/${article.slug}/`);
+    const contents = html.match(/<details\b[^>]*\bdata-wiki-contents\b[^>]*>/)?.[0];
+    assert.ok(contents, article.slug);
+    assert.doesNotMatch(contents.replace(/="[^"]*"/g, ''), /\bopen\b/, `${article.slug}: mobile contents must start collapsed in HTML`);
+    assert.match(html, /<summary>Contents<\/summary>/);
+  }
+});
+
+test('Wiki search hides empty topic groups and their navigation links, then restores them with cleared or restored controls', async () => {
+  const html = await htmlFor('/uopve/wiki/');
+  const groups = sectionsFrom(html, 'data-wiki-topic', body => entriesFrom(body, 'wiki'));
+  const entries = groups.flatMap(group => group.entries);
+  const links = [...html.matchAll(/<a\b[^>]*\bdata-wiki-topic-link="[^"]+"[^>]*>/g)].map(match => {
+    const link = new Element({ tagName: 'A', attributes: { href: attributeFrom(match[0], 'href') } });
+    link.dataset.wikiTopicLink = attributeFrom(match[0], 'data-wiki-topic-link');
+    return link;
+  });
+  const ids = filterIds(['wiki-search', 'wiki-category', 'wiki-results', 'wiki-empty']);
+  ids['wiki-category'].value = 'all';
+  const runtime = await interactionRuntime({ ids, selectors: { '[data-wiki-entry]': entries, '[data-wiki-topic]': groups, '[data-wiki-topic-link]': links } });
+  assert.equal(groups.length, links.length);
+  assert.ok(groups.every(group => !group.hidden));
+  assert.ok(links.every(link => !link.hidden));
+  for (const group of groups) assert.equal(group.querySelector('[data-wiki-topic-count]')?.textContent, `${group.entries.length} guide${group.entries.length === 1 ? '' : 's'}`);
+  ids['wiki-search'].value = 'OPENING status'; ids['wiki-search'].emit('input');
+  assert.equal(entries.filter(entry => !entry.hidden).length, 1);
+  assert.equal(groups.filter(group => !group.hidden).length, 1);
+  assert.equal(links.filter(link => !link.hidden).length, 1);
+  assert.equal(groups.find(group => !group.hidden).querySelector('[data-wiki-topic-count]').textContent, '1 guide');
+  for (const group of groups) assert.equal(links.find(link => link.dataset.wikiTopicLink === group.id).hidden, group.hidden);
+  ids['wiki-category'].value = 'Adventuring'; ids['wiki-category'].emit('change');
+  assert.ok(groups.every(group => group.hidden));
+  assert.ok(links.every(link => link.hidden));
+  assert.equal(ids['wiki-empty'].hidden, false);
+  ids['wiki-search'].value = ''; ids['wiki-search'].emit('search');
+  assert.equal(groups.filter(group => !group.hidden).length, 1);
+  assert.ok(entries.filter(entry => !entry.hidden).every(entry => entry.dataset.category === 'Adventuring'));
+  ids['wiki-search'].value = 'guild'; ids['wiki-search'].emit('input');
+  const matchingGuides = entries.filter(entry => !entry.hidden).length;
+  assert.ok(matchingGuides > 1, 'Exercise a filtered topic containing multiple matches');
+  assert.equal(groups.find(group => !group.hidden).querySelector('[data-wiki-topic-count]').textContent, `${matchingGuides} guides`);
+  ids['wiki-search'].value = '';
+  ids['wiki-category'].value = 'all'; runtime.window.emit('pageshow');
+  assert.ok(groups.every(group => !group.hidden));
+  assert.ok(links.every(link => !link.hidden));
+  assert.ok(entries.every(entry => !entry.hidden));
+  assert.equal(ids['wiki-empty'].hidden, true);
+  for (const group of groups) assert.equal(group.querySelector('[data-wiki-topic-count]').textContent, `${group.entries.length} guide${group.entries.length === 1 ? '' : 's'}`);
+});
+
+test('Large reference guides provide one search across all tables while smaller guides retain their table filters', async () => {
+  for (const article of data.articles) {
+    const tables = article.sections.flatMap(section => section.tables || []);
+    const rowCount = tables.reduce((sum, table) => sum + table.rows.length, 0);
+    const shared = tables.length > 1 && rowCount > 40;
+    const html = await htmlFor(`/uopve/wiki/${article.slug}/`);
+    assert.equal([...html.matchAll(/\bdata-reference-filter="article-reference"/g)].length, shared ? 1 : 0, article.slug);
+    if (shared) {
+      assert.equal(rowsFrom(html, 'article-reference').length, rowCount, article.slug);
+      const tableOnlySections = article.sections.filter(section => section.tables?.length && !section.paragraphs?.length && !section.lists?.length).length;
+      assert.equal([...html.matchAll(/\bdata-reference-section="article-reference"/g)].length, tables.length + tableOnlySections, article.slug);
+      assert.equal([...html.matchAll(/\bdata-reference-filter=/g)].length, 1, `${article.slug}: redundant per-table filters`);
+    } else {
+      assert.equal([...html.matchAll(/\bdata-reference-filter=/g)].length, tables.filter(table => table.rows.length > 15).length, article.slug);
+    }
+  }
+});
+
+test('Shared reference search filters actual weapon rows and empty sections; a contents hash restores a hidden section before scrolling', async () => {
+  const html = await htmlFor('/uopve/wiki/weapons-reference/');
+  const layout = referenceLayoutFrom(html);
+  const sections = layout.sections.filter(section => section.dataset.referenceSection === 'article-reference');
+  const rows = layout.rows;
+  const ids = filterIds(['article-reference-search', 'article-reference-results', 'article-reference-empty']);
+  ids['article-reference-search'].dataset.referenceFilter = 'article-reference';
+  for (const section of sections) ids[section.id] = section;
+  const intro = layout.sections.find(section => section.id === 'reading'); ids.reading = intro;
+  const runtime = await interactionRuntime({ ids, selectors: { '[data-reference-filter]': [ids['article-reference-search']], '[data-reference-entry="article-reference"]': rows, '[data-reference-section="article-reference"]': layout.groups } });
+  assert.equal(rows.length, 468);
+  assert.ok(sections.every(section => !section.hidden));
+  ids['article-reference-search'].value = 'assassin shortbow'; ids['article-reference-search'].emit('input');
+  assert.equal(rows.filter(row => !row.hidden).length, 1);
+  assert.equal(sections.filter(section => !section.hidden).length, 1);
+  assert.equal(intro.hidden, false, 'Narrative guidance must remain readable');
+  assert.equal(ids['article-reference-results'].textContent, '1 entry found');
+  ids['article-reference-search'].value = 'no-match-123'; ids['article-reference-search'].emit('search');
+  assert.ok(sections.every(section => section.hidden));
+  assert.equal(ids['article-reference-empty'].hidden, false);
+  ids['article-reference-search'].value = ''; runtime.window.emit('pageshow');
+  assert.ok(rows.every(row => !row.hidden));
+  assert.ok(sections.every(section => !section.hidden));
+  assert.equal(ids['article-reference-empty'].hidden, true);
+  ids['article-reference-search'].value = 'assassin shortbow'; ids['article-reference-search'].emit('input');
+  const target = sections.find(section => section.hidden);
+  runtime.window.location.hash = '#' + target.id;
+  runtime.window.emit('hashchange');
+  assert.equal(ids['article-reference-search'].value, '');
+  assert.ok(sections.every(section => !section.hidden));
+  assert.equal(target.scrolls.length, 0, 'Wait for restored rows to enter layout');
+  runtime.flushFrames();
+  assert.equal(target.scrolls.length, 1);
+});
+
+test('Filtering a real mixed reference section keeps its caveats readable and a contents link restores the section’s table', async () => {
+  const html = await htmlFor('/uopve/wiki/shops-and-services/');
+  const { sections, groups, rows } = referenceLayoutFrom(html);
+  const target = sections.find(section => section.id === 'appearance');
+  const source = data.articles.find(article => article.slug === 'shops-and-services').sections.find(section => section.id === 'appearance');
+  assert.equal(target.paragraphs.length, source.paragraphs.length);
+  assert.ok(target.paragraphs.length > 0, 'Use an actual caveat-bearing section');
+  for (const paragraph of source.paragraphs) assert.ok(target.paragraphs.some(element => element.textContent === paragraph));
+  const table = target.children.find(child => child.dataset.referenceSection === 'article-reference');
+  assert.ok(table);
+  const ids = filterIds(['article-reference-search', 'article-reference-results', 'article-reference-empty']);
+  ids['article-reference-search'].dataset.referenceFilter = 'article-reference';
+  for (const section of sections) ids[section.id] = section;
+  const runtime = await interactionRuntime({ ids, selectors: { '[data-reference-filter]': [ids['article-reference-search']], '[data-reference-entry="article-reference"]': rows, '[data-reference-section="article-reference"]': groups } });
+  ids['article-reference-search'].value = 'no-match-123'; ids['article-reference-search'].emit('input');
+  assert.equal(target.hidden, false, 'The appearance guidance must stay readable with zero matching rows');
+  assert.ok(target.paragraphs.every(paragraph => !paragraph.hidden));
+  assert.equal(table.hidden, true);
+  runtime.window.location.hash = '#appearance'; runtime.window.emit('hashchange');
+  assert.equal(ids['article-reference-search'].value, '');
+  assert.equal(target.hidden, false);
+  assert.equal(table.hidden, false, 'A section link must restore its hidden descendant table');
+  assert.ok(table.children.every(row => !row.hidden));
+  runtime.flushFrames(); assert.equal(target.scrolls.length, 1);
+});
+
+test('Creature and loot deep links expand details and ancestors; hidden targets clear only relevant filters and same-hash clicks work', async () => {
+  const html = await htmlFor('/uopve/wiki/creature-bestiary/');
+  const creatures = [...html.matchAll(/<details\b[^>]*\bdata-bestiary-entry\b[^>]*>/g)].map(match => new Element({
+    id: attributeFrom(match[0], 'id'), tagName: 'DETAILS', search: attributeFrom(match[0], 'data-search'), category: attributeFrom(match[0], 'data-category'),
+  }));
+  const lootOpening = html.match(/<details\b[^>]*class="loot-pool"[^>]*>/)?.[0];
+  assert.ok(lootOpening, 'The bestiary retains usable loot disclosures');
+  const loot = new Element({ id: attributeFrom(lootOpening, 'id'), tagName: 'DETAILS' });
+  const target = creatures[0];
+  const ancestor = new Element({ tagName: 'DETAILS' }); ancestor.append(target); ancestor.append(loot);
+  const ids = filterIds(['bestiary-search', 'bestiary-category', 'bestiary-results', 'bestiary-empty']);
+  for (const creature of creatures) ids[creature.id] = creature;
+  ids[loot.id] = loot;
+  ids['bestiary-search'].value = 'no-match-123'; ids['bestiary-category'].value = 'Vendors';
+  const runtime = await interactionRuntime({ ids, selectors: { '[data-bestiary-entry]': creatures }, hash: '#' + encodeURIComponent(target.id) });
+  assert.equal(ids['bestiary-search'].value, '');
+  assert.equal(ids['bestiary-category'].value, 'all');
+  assert.ok(creatures.every(creature => !creature.hidden));
+  assert.equal(target.open, true);
+  assert.equal(ancestor.open, true);
+  runtime.flushFrames(); assert.equal(target.scrolls.length, 1);
+  ids['bestiary-search'].value = 'no-match-123'; ids['bestiary-search'].emit('input');
+  target.open = false; ancestor.open = false;
+  const anchor = new Element({ tagName: 'A', attributes: { href: '#' + target.id } });
+  const icon = anchor.append(new Element({ tagName: 'SPAN' }));
+  for (const event of [{ ctrlKey: true }, { metaKey: true }, { shiftKey: true }, { altKey: true }, { button: 1 }, { defaultPrevented: true }]) {
+    runtime.document.emit('click', { target: icon, button: 0, ...event });
+    assert.equal(ids['bestiary-search'].value, 'no-match-123', 'Modified or canceled navigation must not change filters');
+    assert.equal(target.open, false);
+  }
+  const external = new Element({ tagName: 'A', attributes: { href: '/uopve/wiki/another/#' + target.id } });
+  runtime.document.emit('click', { target: external, button: 0 });
+  assert.equal(ids['bestiary-search'].value, 'no-match-123');
+  runtime.document.emit('click', { target: icon, button: 0 });
+  assert.equal(ids['bestiary-search'].value, '', 'A repeated hash click must reveal its target without a hashchange event');
+  assert.equal(target.open, true);
+  assert.equal(ancestor.open, true);
+  runtime.flushFrames(); assert.equal(target.scrolls.length, 2);
+  ids['bestiary-search'].value = 'no-match-123'; ids['bestiary-search'].emit('input');
+  ancestor.open = false;
+  runtime.window.location.hash = '#' + loot.id; runtime.window.emit('hashchange');
+  assert.equal(loot.open, true);
+  assert.equal(ancestor.open, true);
+  assert.equal(ids['bestiary-search'].value, 'no-match-123', 'A loot link must preserve an unrelated creature search');
+  runtime.flushFrames(); assert.equal(loot.scrolls.length, 1);
+  runtime.window.location.hash = '#' + target.id;
+  target.open = false;
+  runtime.window.emit('pageshow', { persisted: true });
+  runtime.flushFrames();
+  assert.equal(ids['bestiary-search'].value, 'no-match-123', 'Back navigation must preserve an intentional filter even with an earlier hash');
+  assert.equal(target.hidden, true);
+  assert.equal(target.open, false);
+  assert.equal(target.scrolls.length, 2, 'Back navigation must retain the browser-restored reading position');
+  runtime.window.emit('pageshow', { persisted: false });
+  runtime.flushFrames();
+  assert.equal(target.hidden, false, 'A fresh page must reveal its hash after input restoration');
+  assert.equal(target.open, true);
+  assert.equal(target.scrolls.length, 2, 'Input restoration must not add a second hash scroll');
+  runtime.window.location.hash = '#%E0%A4%A';
+  assert.doesNotThrow(() => runtime.window.emit('hashchange'), 'Malformed percent escapes must not break the page');
+  runtime.window.location.hash = '#missing-id';
+  assert.doesNotThrow(() => runtime.window.emit('hashchange'));
+});
+
+test('Contents start open only on desktop and remain under the reader’s control after toggling, resize and browser restoration', async () => {
+  const html = await htmlFor('/uopve/wiki/weapons-reference/');
+  assert.match(html, /<details class="wiki-contents" data-wiki-contents>/);
+  for (const desktop of [false, true]) {
+    const contents = new Element({ tagName: 'DETAILS' });
+    const runtime = await interactionRuntime({ desktop, selectors: { '[data-wiki-contents]': [contents] } });
+    assert.deepEqual(runtime.mediaQueries, ['(min-width: 900px)']);
+    assert.equal(contents.open, desktop);
+    contents.open = !desktop;
+    runtime.window.emit('resize'); runtime.window.emit('pageshow', { persisted: true });
+    assert.equal(contents.open, !desktop, 'The reader’s explicit toggle must survive viewport changes and back navigation');
+  }
 });
