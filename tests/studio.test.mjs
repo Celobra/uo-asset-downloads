@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../public');
-const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.4/';
+const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.5/';
 const pages = ['/studio/', '/studio/workflows/', '/studio/downloads/', '/studio/updates/'];
 const localPath = pathname => resolve(root, '.' + pathname + (pathname.endsWith('/') ? 'index.html' : ''));
 
@@ -33,13 +33,13 @@ test('The installer is the primary download; application source is separate', as
     const html = await readFile(localPath(page), 'utf8');
     const primary = [...html.matchAll(/<a class="button primary" href="([^"]+)"/g)].map(m => m[1]);
     assert.ok(primary.length > 0);
-    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.33.4.exe');
+    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.33.5.exe');
     assert.ok(primary.every(url => !url.includes('Source-')));
   }
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.33.4.zip'));
-  assert.ok(downloads.includes(release + 'SHA256SUMS-0.33.4.txt'));
-  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.33.4.pdf'));
+  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.33.5.zip'));
+  assert.ok(downloads.includes(release + 'SHA256SUMS-0.33.5.txt'));
+  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.33.5.pdf'));
 });
 
 test('Studio navigation is available from the existing website sections', async () => {
@@ -51,10 +51,10 @@ test('Studio navigation is available from the existing website sections', async 
 
 test('Public guide is complete and uses scripts/styles allowed by CSP', async () => {
   const guide = root + '/studio/guide/';
-  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.4.html', 'utf8');
-  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.4.pdf');
+  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.5.html', 'utf8');
+  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.5.pdf');
   assert.equal(pdf.subarray(0, 5).toString(), '%PDF-');
-  assert.equal(createHash('sha256').update(pdf).digest('hex'), '26f8a2e1709b056be4aaa7f4474fb2314b1c97644681c55a3c6a6c65da4f59ee', 'PDF must match the published guide without newline conversion');
+  assert.equal(createHash('sha256').update(pdf).digest('hex'), '1c257d3f97bb2bb5cefd9f4c7727c70db27521438cffdd2e8b6f504354eb061f', 'PDF must match the published guide without newline conversion');
   assert.ok(pdf.length > 100000);
   assert.doesNotMatch(html, /<style\b|<script(?![^>]*src=)[^>]*>\s*\S/i);
   for (const match of html.matchAll(/(?:href|src)="(guide-[^"]+)"/g)) assert.ok((await stat(guide + match[1])).isFile());
@@ -62,15 +62,15 @@ test('Public guide is complete and uses scripts/styles allowed by CSP', async ()
   for (const match of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.has(match[1]), `missing guide section ${match[1]}`);
 });
 
-test('Studio 0.33.4 retains direct imports, safeguards and full history', async () => {
+test('Studio 0.33.5 retains direct imports, safeguards and full history', async () => {
   const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
-  assert.equal(releases[0].version, '0.33.4');
+  assert.equal(releases[0].version, '0.33.5');
   assert.equal(releases[0].release, true);
   assert.equal(releases[0].date, '2026-10-08');
-  assert.equal(releases[1].version, '0.33.3');
+  assert.equal(releases[1].version, '0.33.4');
   assert.equal(createHash('sha256').update(JSON.stringify(releases.slice(1))).digest('hex'),
-    '0c55ca3a9ddcc280de5228ae6b568167e7e78aeec369293d3dcf3b2ba0847019',
-    'All 54 earlier release records must survive this update unchanged');
+    'cb2fb6b3e14eda524919a28cf728e8154070ed538cde1f3e21881405397ce3d2',
+    'All 55 earlier release records must survive this update unchanged');
   const workflow = await readFile(localPath('/studio/workflows/'), 'utf8');
   const updates = await readFile(localPath('/studio/updates/'), 'utf8');
   assert.match(workflow, /NEW IN 0\.32\.1 \/ A COMPLETE BODY EXPORT/);
@@ -138,9 +138,9 @@ test('Practical workspace instructions identify their controls and preserve loca
   assert.match(html, /does not guarantee that every contained image/);
   assert.match(html, /same asset ID/);
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.match(downloads, /91 pages.<br>33 practical chapters/);
+  assert.match(downloads, /92 pages.<br>33 practical chapters/);
   const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
-  assert.equal(releases.length, 55);
+  assert.equal(releases.length, 56);
 });
 
 
@@ -158,7 +158,7 @@ test('Website armor folder instructions identify complete sources and explicit r
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
   assert.ok(downloads.includes('several piece folders'));
   const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
-  assert.ok(releases[1].added.some(text => text.includes('Open ZIP')));
+  assert.ok(releases[2].added.some(text => text.includes('Open ZIP')));
 });
 
 
@@ -176,5 +176,16 @@ test('Armor script layout explains defaults, destinations and independent pieces
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
   assert.ok(downloads.includes('Can an armor set use one Sphere script file?'));
   const { releases } = JSON.parse(await readFile(resolve(root,'../data/studio-updates.json'),'utf8'));
-  assert.ok(releases[0].added.some(text => text.includes('One file for whole set')));
+  assert.ok(releases[1].added.some(text => text.includes('One file for whole set')));
+});
+
+
+test('Script destinations explain existing Sphere files, staged folders and distribution limits', async () => {
+  const workflow = await readFile(localPath('/studio/workflows/'), 'utf8');
+  for (const text of ['id="script-destinations"','New script','Add to existing script','Existing script','New script filename','New folder','original definitions and comments','complete resulting','one final EOF','Multiple queued appends','session restoration','exact original-file recovery','new separate <code>.cs</code> files','Content packs reject existing-script appends','One file for whole set']) assert.ok(workflow.includes(text),text);
+  const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
+  assert.ok(downloads.includes('Can I add new definitions to an existing Sphere script?'));
+  const { releases } = JSON.parse(await readFile(resolve(root,'../data/studio-updates.json'),'utf8'));
+  assert.ok(releases[0].added.some(text => text.includes('Add to existing script')));
+  assert.ok(releases[0].added.some(text => text.includes('New folder')));
 });

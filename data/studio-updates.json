@@ -1,6 +1,22 @@
 {
   "releases": [
     {
+      "version": "0.33.5",
+      "title": "Choose new or existing script files and stage folders",
+      "added": [
+        "Asset imports and Generate server script offer New script or Add to existing script for Sphere. Review the complete resulting file, including retained definitions and comments.",
+        "New folder stages a subfolder beneath the chosen destination and creates it only in the reviewed save. C# targets retain new separate .cs files."
+      ],
+      "improved": [
+        "Whole armor sets can choose One file for whole set with a new or existing Sphere .scp. Duplicate names, multiple queued appends, restored sessions and exact recovery are checked.",
+        "Content packs reject existing-script appends to exclude unrelated old definitions; choose New script for portable bundles. The complete 92-page guide retains all 33 chapters."
+      ],
+      "fixed": [],
+      "note": "New script remains the default. Existing Sphere additions retain the old definitions/comments, encoding and final EOF; review the complete file. C# stays in new separate files. Existing-file appends are excluded from portable content packs.",
+      "release": true,
+      "date": "2026-10-08"
+    },
+    {
       "version": "0.33.4",
       "title": "Choose separate or combined armor-set Sphere scripts",
       "added": [
