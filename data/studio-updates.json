@@ -1,6 +1,23 @@
 {
   "releases": [
     {
+      "version": "0.33.2",
+      "title": "Complete armor sets load from website folders",
+      "added": [],
+      "improved": [
+        "Open the outer downloaded folder once, check the detected set and piece count, then choose Add whole set and Review complete set.",
+        "Parent collections and extraction wrappers can reveal their contained armor sets; each selected set keeps its own complete piece list.",
+        "The complete 89-page guide explains website armor folders while retaining all 33 Studio chapters and the existing allocation, movement checks and reviewed saves."
+      ],
+      "fixed": [
+        "Complete armor set recognises the website's extracted per-set downloads with pieces/folder/layer and items/files/layer manifests, alongside existing sets collections.",
+        "Missing or ambiguous source assets are identified before adding a set, and a failed folder load clears stale set choices."
+      ],
+      "note": "Extract the download before importing. Each wearable piece needs its own icon, equipment VD and male/female paperdolls. Source IDs remain references; allocation, movement checks and reviewed saves are retained. A whole-suit VD cannot be split automatically. Final combined fit and movement require a receiving-client check.",
+      "release": true,
+      "date": "2026-10-08"
+    },
+    {
       "version": "0.33.1",
       "title": "Animated items and spell effects have clear import choices",
       "added": [
