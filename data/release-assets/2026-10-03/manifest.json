@@ -220,6 +220,21 @@
       "file": "assets-44.zip",
       "bytes": 19926341,
       "sha256": "ee3716a453bf4b603ce885a9eba4fe65c649618fd3d8f019f96bfa84a2d3bb72"
+    },
+    {
+      "file": "assets-45.zip",
+      "bytes": 15419528,
+      "sha256": "504f5876604a0e02faf5d73d991ae78fe8e44cdc419fcd55346cb3dc6dcfb4ad"
+    },
+    {
+      "file": "assets-46.zip",
+      "bytes": 14857731,
+      "sha256": "d2a6ebd4ddb4bc506d524e89fba6f203f18844487a422e9a6981a5cfb7c226cd"
+    },
+    {
+      "file": "assets-47.zip",
+      "bytes": 3185356,
+      "sha256": "32aeb133729d0b70b9959f2cd2e368c5035ddabc59fb7e5cc2277bccb5a399fe"
     }
   ],
   "files": [
@@ -12276,6 +12291,1446 @@
       "bytes": 17402,
       "sha256": "9fdc9ec2aaa741bace8e3ec9096bfc31e1f7afc4a85e86d60965098ab4a94961",
       "bundle": "assets-44.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/orc-role-citizen.zip",
+      "bytes": 5471983,
+      "sha256": "93fd04fa87ced67093f046a4b576d82d4885f3679bb759a77e69b3fc36142f99",
+      "bundle": "assets-45.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/orc-role-leader.zip",
+      "bytes": 6238237,
+      "sha256": "85d4b9d5a3c4122cdd7f9d3a579fce12661031d0876ea4ec324fe655dd1ff9b5",
+      "bundle": "assets-45.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/orc-role-mage.zip",
+      "bytes": 6256821,
+      "sha256": "cc8cacb7edec1b4b32cee9e34362ba02ff61b80cae43db293ba24eb63591b92b",
+      "bundle": "assets-45.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/orc-role-merchant.zip",
+      "bytes": 5716846,
+      "sha256": "8ed6093ca65b0e448541818de9683935d1749d88ae98e7c50931d6d7b922a1c0",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/downloads/creatures/orc-role-warrior.zip",
+      "bytes": 6281845,
+      "sha256": "d6b9110906f85468838faed19279541dcce51031d830a5dbfa024c62cb45d874",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-00.gif",
+      "bytes": 11097,
+      "sha256": "925d4194c3406ab3564c6f10a3b2de4789a8e09afcbfb976c9b6b847b4203ffd",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-01.gif",
+      "bytes": 10980,
+      "sha256": "49e9b53b1ef0a010df95fe7e120068124b271a2b04664a73485aafd3d6deaad9",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-02.gif",
+      "bytes": 10710,
+      "sha256": "c22072c9891ed70aace0f2a71e0732d1000ae00fb27c712bba7c80cd7fa4d84d",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-03.gif",
+      "bytes": 10708,
+      "sha256": "94103f5bd15d423b78332ed33bb60d443e8cfdb7128a63626d767e981355f3a9",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-04.gif",
+      "bytes": 1670,
+      "sha256": "4aeb37534b3c1596fba240b7b4f2884a36ff2022d80b77bf615066f379c6df94",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-05.gif",
+      "bytes": 5912,
+      "sha256": "e5fbd0bf84aab63343e8b161fd0cc02dd8d593063abc883a117aac1bdb7bbeb6",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-06.gif",
+      "bytes": 5378,
+      "sha256": "1c66d47b46aed4c42a9dba965045b6633ca57fe9448aabc3985a4f3c50ee263d",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-07.gif",
+      "bytes": 1637,
+      "sha256": "8938f8eeb0d6c000871748e9639cd7624c941e8e168fdb36c2f46b8c660a1338",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-08.gif",
+      "bytes": 1595,
+      "sha256": "4634f70475958cef7c1a76afe219bc11fed944ddbe2ef243228e0eda6e2e5721",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-09.gif",
+      "bytes": 7290,
+      "sha256": "776d322f872524f71675e1221cee087b744c77438f86fbc472ab982c4eea4691",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-10.gif",
+      "bytes": 6117,
+      "sha256": "a51f45ec57615519822cf9e1bed76a150e3600137f71f1dd3d22489a7d95aab5",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-11.gif",
+      "bytes": 6329,
+      "sha256": "6d9ba3056e6993b32e8aa2741d8fa13fec60209c1edab1fe50dbd00e4d2b787a",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-12.gif",
+      "bytes": 6841,
+      "sha256": "c02312e727d2eb7c815d207259a24faf14d7af9964a45a1601c12f7be89c85e6",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-13.gif",
+      "bytes": 7169,
+      "sha256": "f8a05bfd41d93f4b8d335f7f22072e941bbd9e650c23ca210da4499309f241fc",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-14.gif",
+      "bytes": 6613,
+      "sha256": "61bc9044297ab33e330af71b33278cef86a48422ff8cc13baced6ead9ee1896f",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-15.gif",
+      "bytes": 10791,
+      "sha256": "9cbae56a2748859c9aa8507193ea831f0b523c557e23d0504cb9c4de1160b0bb",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-16.gif",
+      "bytes": 8153,
+      "sha256": "43140c7d39c4bb8e4521aa7517dbacdac683b984ec18a9bf278d642181b5b01e",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-17.gif",
+      "bytes": 7813,
+      "sha256": "0f4c45e770dec64583b51290a7c3c00f128aae994e52b7b875ef4daebfabd00d",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-18.gif",
+      "bytes": 6730,
+      "sha256": "e299d53947c44bb8fd480d494836394f6694a0209700bb79e1e2fdc714b9cd08",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-19.gif",
+      "bytes": 7368,
+      "sha256": "8793be95e14f1e87ccb54accd6c232a51e92d47d0a293c1942c02d11fdb2509a",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-20.gif",
+      "bytes": 6057,
+      "sha256": "de7cb857aff018124ca0c01116818d86dc7e11e5365737b9c30c61d06cca6c14",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-21.gif",
+      "bytes": 7548,
+      "sha256": "0ccab79a2717ade71bdf40b9e13811810cd7523d6a21ae21b8360bd0ae2de6a6",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-22.gif",
+      "bytes": 8940,
+      "sha256": "43299458c0296587844a8ffcc10eaf122ce5d5f2520c03f016846c871a9ed2ea",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-23.gif",
+      "bytes": 7036,
+      "sha256": "9f8d3e119b338ebbd1b2074fd3bbfac1ab012bff71f0b93f0d02afc822143442",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-24.gif",
+      "bytes": 6948,
+      "sha256": "d0d8dee32110243c17f25680643a08fed8c005c8dc1347e2b7e29360518d298e",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-25.gif",
+      "bytes": 1670,
+      "sha256": "6a2991f3cf8d371ddd2bdf5a2f9f5ea21b899ebe93ba152c36148afcade19305",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-26.gif",
+      "bytes": 6081,
+      "sha256": "13a58a66faf915ddacdba7b3a89e3f633af9a22cc931b2f03ca5eadf3a6c7ce2",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-27.gif",
+      "bytes": 5375,
+      "sha256": "15e5aa260de69c4b8a507e1d54c9b5ca60039e8e3cee4366eea841ae2716c35f",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-28.gif",
+      "bytes": 7713,
+      "sha256": "68c6d624594f65937382814e0c7dad15385e3e8d28ce1a6d1bd4a64002ccac7d",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-29.gif",
+      "bytes": 5685,
+      "sha256": "440f910003f3878262e17718caaaa4004413c6eef40e485c8f7824647043fe6e",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-30.gif",
+      "bytes": 5295,
+      "sha256": "1670a2cc3892d1e17a2ffd28d3d9ed9f6560118c0eb8a4e4848044067bcc5740",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-31.gif",
+      "bytes": 5937,
+      "sha256": "652c08280d098deb40ed45c5c272c502d3d600c7e0e04b5628f3a339496acc40",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-32.gif",
+      "bytes": 4968,
+      "sha256": "7bbdcb5169b69244356fc938b8cbd934f80784e2fe11a72faaa100a19067c0f3",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-33.gif",
+      "bytes": 4919,
+      "sha256": "34dd3a4aeac4488e16e27f058b4c2ac865fc59521512076ac2a22047b96d24d3",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-action-34.gif",
+      "bytes": 5778,
+      "sha256": "525e9c34eed205627bf88bbec6783ef72bc5473df65529cce7e85f881e9f8c56",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-all-actions.png",
+      "bytes": 373559,
+      "sha256": "cece176938132d483aeaf53ebebd9257758a131084f856312d8ea07ee32aae69",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-eight-directions.png",
+      "bytes": 14913,
+      "sha256": "e50371e8ec612a74ffa8ea2bafa07e109fd04572b37f38c39576ae9c70c261af",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-motion.js",
+      "bytes": 19950,
+      "sha256": "1f79518041eb773243c1ca393539f3bb99073e133c20d4c1df0aa1c57914bb7c",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-mounted-fit-23.gif",
+      "bytes": 19806,
+      "sha256": "66ee9f5e03a88e3cea2e3da45836c44f26c76825cad04e55d3090920a28bbf7e",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-mounted-fit-24.gif",
+      "bytes": 19988,
+      "sha256": "c13ccc0d090c8b1fa2fda9a9937c8846f558057eca90029c167a4b04484f32f8",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-mounted-fit-25.gif",
+      "bytes": 4304,
+      "sha256": "7093278ef4ac77b2dbb0a3e70cc3d27d045d9c9a573e8aae9caacd51510f79ec",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-mounted-fit-26.gif",
+      "bytes": 16599,
+      "sha256": "b8ecf7f8250d11041706a00ada4436b08b2d60e259fdf6bd318e8f3bd9b7d488",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-mounted-fit-27.gif",
+      "bytes": 16237,
+      "sha256": "1c202ecbd5fed6e95851ca58f607f9f6a7a74267a27a93ef675420de1ef84184",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-mounted-fit-28.gif",
+      "bytes": 22880,
+      "sha256": "8b6b61d30ff38edfabb0ad4774a5beff228dc10e9ac1408f66f48691d760c809",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-mounted-fit-29.gif",
+      "bytes": 16890,
+      "sha256": "80330e3dc454846452e32e8486946da9a82f61c359ea03bd84266c0307a94653",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-citizen-thumbnail.png",
+      "bytes": 2203,
+      "sha256": "8f287b1bdac5fe0130c8de1795d534a9346d479faf97da8f833bb6dda31be1c8",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-00.gif",
+      "bytes": 13402,
+      "sha256": "c192b9fcc70c6e00fea2598f4c2a876095ede7b92cfba87d677c63be6c7d4bee",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-01.gif",
+      "bytes": 13383,
+      "sha256": "546e371918213a2de63f5d5678e9211b068c7a19970f2908bbf234a378a1c578",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-02.gif",
+      "bytes": 13382,
+      "sha256": "0a7ed915bba3bac783df76059fd73eacfc61575eeb942213f62aca36e122d1f1",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-03.gif",
+      "bytes": 13280,
+      "sha256": "330c248fdf6c4f96c8729bef1e900c5b7206a49d7adcb584c697d1eda4349e31",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-04.gif",
+      "bytes": 1799,
+      "sha256": "2105a96937cd427b4b4251901acf8d081d6ac0004f05a7b39f4b427c434d7e03",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-05.gif",
+      "bytes": 6710,
+      "sha256": "f4bbbaa2ed0d6649b4af2bb31abf6d01ab68e96a7487c6cfd99fac0aa85a0529",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-06.gif",
+      "bytes": 6430,
+      "sha256": "7f5600a457995eb6bab16d695e298d2ed172ea682ccd0e3aa7cbfa423c7fa8a2",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-07.gif",
+      "bytes": 1791,
+      "sha256": "3bc7a4365d6dabb22bd442b4ab8b19440d23b1f4bcc006f1671111d957b49fee",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-08.gif",
+      "bytes": 1776,
+      "sha256": "abc019c9ee96c99642c48d0c684aae21adae4569fa43d49ae2f93d62aceca6f6",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-09.gif",
+      "bytes": 8533,
+      "sha256": "5f5a7446d876cf20031635a5e9f2ed050ba712e0df802f6fb01ae60f9b4f0d60",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-10.gif",
+      "bytes": 7479,
+      "sha256": "00fe14ec6044b07cc3182a495281c25162a73baf11630d1b20da1af8d33cfe3e",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-11.gif",
+      "bytes": 7774,
+      "sha256": "4c3bfe373c66177b4d20510e634498dc2cc941882b21935633f9980eaf76d51e",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-12.gif",
+      "bytes": 8382,
+      "sha256": "a25186bfd940ca28deb20ca525b8de33ceb4d7ac0f50354625ec95ee5b56692d",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-13.gif",
+      "bytes": 8504,
+      "sha256": "6a2076376a75b2f311413dea2137f113871020c47e837d097521eaf3304a6b0d",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-14.gif",
+      "bytes": 8103,
+      "sha256": "7b245cf4dad4fcf8f93c0c257410e6d3e9c80173bc3bdedafb6a19d949b9c5b2",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-15.gif",
+      "bytes": 13255,
+      "sha256": "ec3372360a6851aea6df47e2c6545d83d43d40489e3b2b156befc3e7f21e88dc",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-16.gif",
+      "bytes": 9487,
+      "sha256": "cf97ff83b51e17787aebce45a473aafe00f5c99887b09d080f85fcff88dbaf9b",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-17.gif",
+      "bytes": 9582,
+      "sha256": "c31fcf36714ecddf26ae297e155c4cb5c53f86c9193e87ece6c9ad82e1671e4c",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-18.gif",
+      "bytes": 8124,
+      "sha256": "56dee7936629c7e4ff7501080be9a77b6e8262b4d858935f6322f868e4903546",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-19.gif",
+      "bytes": 9145,
+      "sha256": "b6a3f1e691ef15befe37ab3def0c81b3d6768cebe75bf41dfac39b48b961f3d7",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-20.gif",
+      "bytes": 7091,
+      "sha256": "b4207e784be0dc7b209523aacf7f796c967925a2818c76062122802f176aeedc",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-21.gif",
+      "bytes": 8501,
+      "sha256": "a5a760525eb3ed37f646ccad680bc2b98af9d6facf3e0a51834f93e7193c5571",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-22.gif",
+      "bytes": 10066,
+      "sha256": "5dcf4d438645a52272b0f0a26f0a87c9de2ac41ae98cd253865dd5b643a8ab68",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-23.gif",
+      "bytes": 7936,
+      "sha256": "41acaf476b4ea4ec7c9dd9847371b2daba1fd5aea91d15cc46a82383d6052510",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-24.gif",
+      "bytes": 7779,
+      "sha256": "52ac7a63926081a9cdef2f4bbb4f35d323f8c686ca88ce5eceebcbc9b525fd1c",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-25.gif",
+      "bytes": 1855,
+      "sha256": "dc77dcae2a7ff82576871d895e31dd2f2fa3f3923575cbab1da40afb8989f0d3",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-26.gif",
+      "bytes": 7067,
+      "sha256": "736d07ae949801756bd7e3231ee53d27b8413d1c7aeb06ef21e69b0e000d6543",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-27.gif",
+      "bytes": 6404,
+      "sha256": "84439f2511a45143062e9ca0dc02dedd4f86bcb23d0e6f396dcd1ef47026c474",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-28.gif",
+      "bytes": 9389,
+      "sha256": "720c70063bc33178dc9fb150d082b9830d86250b7ae01599f3449229c4330086",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-29.gif",
+      "bytes": 6723,
+      "sha256": "a5d82f66f34e81285451d0dad2b5860e56cfdcfdbbd971cf650c1edc0340b24f",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-30.gif",
+      "bytes": 6131,
+      "sha256": "fa4da32b78d74b1d1aa90fec9748f749e1f80eaab01397b57101d3fdeecfc711",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-31.gif",
+      "bytes": 7686,
+      "sha256": "b6538623407ca4beb602c88b6c00e26bd10f3c5585e7391dd22103e6cb74e112",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-32.gif",
+      "bytes": 6037,
+      "sha256": "557080ba8a03edd6fc6f22f006b581af2b86b3e76ccc317030eaddf135af35b4",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-33.gif",
+      "bytes": 5705,
+      "sha256": "f42c299556ac2f1fd6c3f54f73572adf60e1a824569b3d1526ca55a7bf9aaff8",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-action-34.gif",
+      "bytes": 6520,
+      "sha256": "e895339a6867cfeecfdf9cfd080d578a35ef5756d36d5ad934315b5a0500e67c",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-all-actions.png",
+      "bytes": 419191,
+      "sha256": "5d8a9c91a0f26abcc397c4c14965f942e0d7ede060a0eb85924316382af403c5",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-eight-directions.png",
+      "bytes": 16341,
+      "sha256": "79ac51cd3620f8c3a4e7f06f909fae6134d3cd00fb6cb6c1b0f7b21e0f891956",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-motion.js",
+      "bytes": 19948,
+      "sha256": "a0d12b6e3d870a35c21fd31d3601f147b2c9844c41d6c7f80fee6f68f8b3185c",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-mounted-fit-23.gif",
+      "bytes": 20362,
+      "sha256": "4ac34f34626f95ebe91d8f5ba17dbd1a215406dec2c246ad47da03ca60cde61d",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-mounted-fit-24.gif",
+      "bytes": 20520,
+      "sha256": "1cd051b7542a7809b6e45db4b4a962feecaf48db717f6324711c7a3c31a0d9e2",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-mounted-fit-25.gif",
+      "bytes": 4410,
+      "sha256": "73d0a47f390f908a3e38625d4c909ada528f62c79b199bca0b8a50f406a30915",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-mounted-fit-26.gif",
+      "bytes": 20034,
+      "sha256": "e7f3b2f48b99221be1ab464984aea6d8acf00d11f77005a29b0d7496f6811775",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-mounted-fit-27.gif",
+      "bytes": 19689,
+      "sha256": "9a7fdf0d7807706985d359c7b415cac8ab0f1fea98b612d5dc1c60090bb90274",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-mounted-fit-28.gif",
+      "bytes": 27614,
+      "sha256": "4616a4e6c39c59a559db8d83ef001ddf6634032efe887356d2b1386d8ebf8408",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-mounted-fit-29.gif",
+      "bytes": 19801,
+      "sha256": "3728eea56fce18b07659b071a2017f88779fe631af828dfd295d5a2512881819",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-leader-thumbnail.png",
+      "bytes": 2485,
+      "sha256": "46d5cf3ea46d4b364152a4fc6ec81b56eaa25cf815fec401e5f21cd53a355b9c",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-00.gif",
+      "bytes": 12661,
+      "sha256": "a412e2433ced0fc7142092575c4399d74f478442e7a030c55807ad3a790d015f",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-01.gif",
+      "bytes": 12531,
+      "sha256": "f25d8f062cc290b79534ab1014f6a56aed9fa07ed411509d8e79059047a0ed58",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-02.gif",
+      "bytes": 12837,
+      "sha256": "187f5dced954a181b19ddabc27d447ca44c62c61777d0073ccb7fab2bab473cf",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-03.gif",
+      "bytes": 12867,
+      "sha256": "a55b888f70de58ca5bf62c0ef542a7342a2e3d51257c1db21fa71c5639580288",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-04.gif",
+      "bytes": 1669,
+      "sha256": "c6fa665d4e5b38c9dc25b246d71a6a2a6d8d2b832da42c57669cd412ab02032b",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-05.gif",
+      "bytes": 6357,
+      "sha256": "fbcde5817c6410169058daaf20303dbfed9146c084b4e9835316312f26d0a46c",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-06.gif",
+      "bytes": 5884,
+      "sha256": "c8822c85ab81ca38331c48463c6624d6731d00ce4ed0da01ba24008965681f7e",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-07.gif",
+      "bytes": 1769,
+      "sha256": "852b47e47f022891b41722c8cf40b751e71522b1f6ef022551367e9cbd4fba2b",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-08.gif",
+      "bytes": 1756,
+      "sha256": "708cb3c7fc7a1b2377f41d8b9d0f133555903846ad5c94fbbfe1609f6e995344",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-09.gif",
+      "bytes": 8304,
+      "sha256": "6a9a822b2bd8165527bd2b98119a5ede810ceb399fc4ae6c316018a343814947",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-10.gif",
+      "bytes": 7206,
+      "sha256": "43d0f5ea143b6d68866677467725ca0a069fa396cffee7be387fe99ce5480bb4",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-11.gif",
+      "bytes": 7515,
+      "sha256": "557d1e75ef57daafda39ad25102bed0b9974959559a9213e29a3d1365b0db347",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-12.gif",
+      "bytes": 8254,
+      "sha256": "85f785f3296e6be265624db490d701a53cc10df039b84cbcea03090bdd832f22",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-13.gif",
+      "bytes": 8389,
+      "sha256": "df35d12f942492cd98a448e02cda7dfe74e4dee56373da82b36f45b572e33786",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-14.gif",
+      "bytes": 7906,
+      "sha256": "5cd5960088b4f283ab77b12d1feb8732d943222af3183425627875a4ab32d3cd",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-15.gif",
+      "bytes": 12768,
+      "sha256": "5479ad6f8fc54bea7f1b8906a230d72e14c6ac46077dcde37748c3d903f29a5b",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-16.gif",
+      "bytes": 8972,
+      "sha256": "73482f88d8367182e5757a9094b0d6505685d63fd6bacea575a02d9054e370cb",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-17.gif",
+      "bytes": 9077,
+      "sha256": "d52263793df746e4eb92097ba41394049b56dcf0605a8664d45ef80b60d1a392",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-18.gif",
+      "bytes": 8022,
+      "sha256": "5b48079cd330f4859fd94626484cfc517ce13fa487ec7cdf805eab1d0f877cc3",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-19.gif",
+      "bytes": 9121,
+      "sha256": "3d36eab38def1e18255572da71f89150a8945997aa6d0551dda06214736330bb",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-20.gif",
+      "bytes": 6834,
+      "sha256": "e0bda8ef36434d352e14b6b095f629a59fccfbab5545a09818af63d45ad21df0",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-21.gif",
+      "bytes": 8079,
+      "sha256": "8f39e67752b703efd3e05378085456b7895560d3ae3496a5d26b172d9e95215c",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-22.gif",
+      "bytes": 9720,
+      "sha256": "e534d7812fcafd5ba19fbd0274275ad8cd50d610913cc678607a7103d63c676b",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-23.gif",
+      "bytes": 7814,
+      "sha256": "1b01aa6fa8d26a857c90ce0dbe3977fcb5776eace6a15f8940af861829a61fa3",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-24.gif",
+      "bytes": 7748,
+      "sha256": "62a371523bbfa7b4cc107d40b20e967861a21dc9f2925d81180cd1f22b0a206d",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-25.gif",
+      "bytes": 1813,
+      "sha256": "afa24a6f8dd59acb9f73b45c6ff14a1258f6468efbaade3b9b2bfac1221fa090",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-26.gif",
+      "bytes": 6781,
+      "sha256": "bd184e6fb8a2c3405e89d02730878c0f0ada4b4fa806be5ce8a2e6ad65283c9d",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-27.gif",
+      "bytes": 6401,
+      "sha256": "e355e586681b93d039fe4c320a41dd259a6a609a940bdb3ad948953ed59aae96",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-28.gif",
+      "bytes": 9191,
+      "sha256": "1d3cb2e75e57221fa5ce3799f94c5c988a8bca4a11fbb48c92bb81330c4ce093",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-29.gif",
+      "bytes": 6510,
+      "sha256": "a89ce84cc5884e8a4971a9e263d09904fe444031736775b394e9e713d299264b",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-30.gif",
+      "bytes": 6181,
+      "sha256": "10f9bb11d2f3451c8f0e79bbee31b1c7f7644a3a73732cb69a898305ce9cfc07",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-31.gif",
+      "bytes": 7558,
+      "sha256": "a4dd2fb106c942ec664696821ced504884e6cf582ac19d5941b469e01dc3cfc2",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-32.gif",
+      "bytes": 5682,
+      "sha256": "37e7e6c8fa8644fc439d81524aadc175f06950111fa3c2ad65594f0352eeac1c",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-33.gif",
+      "bytes": 5276,
+      "sha256": "ec8794d2cce0697f0124d22e38dc45d301d2ad12c86ae4ba256ac78a8cbc2445",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-action-34.gif",
+      "bytes": 6113,
+      "sha256": "bcdeb598032a93ce569ba5fd91f66469a2c8ea23eab44da5e899871828c9c736",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-all-actions.png",
+      "bytes": 415931,
+      "sha256": "a98db1edd676e2969039797fc1318245681163c498a122b6d044014d05b4a994",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-eight-directions.png",
+      "bytes": 15740,
+      "sha256": "222e47ca07ed9f872072029425c07aa654eee4f4e5274d8fd8ef96d55b8f429f",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-motion.js",
+      "bytes": 19944,
+      "sha256": "2aabaf14a1abe6546f890e18d7b004661c612f984422100528af2d91a64e8462",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-mounted-fit-23.gif",
+      "bytes": 19424,
+      "sha256": "14de5a2d6ec41bbf1e6f21099c4b1dd08414aa5e156ff099e9b057a94e527f80",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-mounted-fit-24.gif",
+      "bytes": 19634,
+      "sha256": "4f16c3d84648cc1ae39c7dd699f040ee7f506253dbcae674039dc928c7e64429",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-mounted-fit-25.gif",
+      "bytes": 4217,
+      "sha256": "561cbfcee0d165665895cc65b661a3059a06166053cdc3d8167421af971882e0",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-mounted-fit-26.gif",
+      "bytes": 18733,
+      "sha256": "41587f0f963f0e2fc0fcea3d55087c0542ee8bdb95a678acd6895722743246f3",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-mounted-fit-27.gif",
+      "bytes": 18407,
+      "sha256": "a28d57c95235c489b91f3c62f53c2ce628317adca2e5d370a61d2066539b6261",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-mounted-fit-28.gif",
+      "bytes": 22297,
+      "sha256": "71c4f3775d3b4d30b96523f966e8714be66ceba885500ba211917914eb076b1a",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-mounted-fit-29.gif",
+      "bytes": 17649,
+      "sha256": "75095b27140c192d84f557675c3135de04ca684dbaf8b1fcdd8057127ef206ae",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-mage-thumbnail.png",
+      "bytes": 2397,
+      "sha256": "b6d88cb4f1983da72ed47558aa411861e321d9edc77bd482e75478bef8550bc7",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-00.gif",
+      "bytes": 11484,
+      "sha256": "abae9ad319affe8c98f8e40dc1aa6afaf98b958a72a3095296276049a815c052",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-01.gif",
+      "bytes": 11413,
+      "sha256": "5fabd9204c6bbb9464b4ab41bb881473c740d837409b4f31cdd6665685f51d0a",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-02.gif",
+      "bytes": 11108,
+      "sha256": "4b6e506a9e5674be0c99e72888ab6e440c320d238a0dcca13b0914dcbc6cd09d",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-03.gif",
+      "bytes": 11047,
+      "sha256": "f8ffd6fb15aa053ab9d5b6df74b646e792658c89082d4f8973f6b2064242bfdd",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-04.gif",
+      "bytes": 1729,
+      "sha256": "23acbe0ce3ed5a7a5175b14217a07501d9f454b2d614c774531ffc686e1bb14c",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-05.gif",
+      "bytes": 6203,
+      "sha256": "d41d1fc39bcdd0d8b04d9d77381f828a018045a654d31cc9b2f8d3959c2d9b1e",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-06.gif",
+      "bytes": 5646,
+      "sha256": "6787b2aca7dfbe160537eb6695658f6a1703e9ddb55a5f4244d4ddba3c9dbb05",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-07.gif",
+      "bytes": 1688,
+      "sha256": "58e79599e349c52968360786e69e959e8708188b6f2406d86667472bef566d9f",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-08.gif",
+      "bytes": 1641,
+      "sha256": "fdee720ec1d2bd2760926883b1dbef4bd786fd317b1843008206f0689014508d",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-09.gif",
+      "bytes": 7883,
+      "sha256": "8b89758bef8c296a28399fc4b3884f1cceb85de706b84d40ba33937a3703340e",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-10.gif",
+      "bytes": 6298,
+      "sha256": "5ae152197d9b5b43482d02163b1ac2d917e21ce1140d021a17fe6ec22e6b7051",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-11.gif",
+      "bytes": 6450,
+      "sha256": "85881dbdff0ce210fc1836bc5cc04d50713ab31e2282ad127c04c388891792e3",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-12.gif",
+      "bytes": 7125,
+      "sha256": "f46dd4f8949888f16b2cf1b9ac54f4ea3912c49ecc748e058b1b5d8ae3148b1e",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-13.gif",
+      "bytes": 7798,
+      "sha256": "c64cf98d7fae75ac277f444c2660aa932abd01c56a594769fb1c388dc46ce4f1",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-14.gif",
+      "bytes": 6961,
+      "sha256": "7d1c5e4b7f52dff40c5263920e08328c34cc6d9f940b2afe4f802dc3c643e189",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-15.gif",
+      "bytes": 11146,
+      "sha256": "b32fc133758d5f2353aff3639a490ec7de0bd8ff9a11cbfc08a696fb860ed84c",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-16.gif",
+      "bytes": 8571,
+      "sha256": "5ac917e684a2fbf065f79e69113bc6b2b71fef8d3bc92492aa8caaa79dae55e7",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-17.gif",
+      "bytes": 8206,
+      "sha256": "4f94eb39c19cb45d4851fecec82c31147c8d3ea9033223852ab57bef4a11a5fc",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-18.gif",
+      "bytes": 6984,
+      "sha256": "652879598e6226f9f1dabba2369cd4b06137160700a8a586883c374a9ce8a016",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-19.gif",
+      "bytes": 8276,
+      "sha256": "5c312137649b1e585183b5505464fc946f5d645e0b68960dbf6a7ce65faf5a36",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-20.gif",
+      "bytes": 6634,
+      "sha256": "8b9ff6fbfe70342ecc578ac35a863b2fc295f8285b62cb1e725d3a37cd57b61f",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-21.gif",
+      "bytes": 7984,
+      "sha256": "fd81e880348d44c2710c690f2b5de802dbf2a6145bcc2347ee3fb9e1ea6c4872",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-22.gif",
+      "bytes": 9412,
+      "sha256": "0c9591c83e3a69f90028c78ce5a9d24f9d1310e2a93ac14df7ee901cf9c0b469",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-23.gif",
+      "bytes": 7381,
+      "sha256": "1d378eb16e1969cd9901c1819a26548005971a31d84502de1e1e1f71f9bf9230",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-24.gif",
+      "bytes": 7216,
+      "sha256": "62b082386abb7900221a50bfea7c268fa3c5b28c4eb5ba60d7f974b8495801c8",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-25.gif",
+      "bytes": 1714,
+      "sha256": "fb5e5c50ac1598e55175eee5c3f3d7db9adbffbd5adc4c94258b3d5beb755020",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-26.gif",
+      "bytes": 6626,
+      "sha256": "f2bb97e75e6fce97e5b575542281eace869c8d5d0f8c7822ae9b7e04a81ffa77",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-27.gif",
+      "bytes": 5652,
+      "sha256": "2199bbc86efe9315a8be5de3717f40f267c4a5ca94834422cd55ee4060271146",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-28.gif",
+      "bytes": 8581,
+      "sha256": "09dedf3c9109eec68cebd3ea9f091bf462800e70e0114aa8c6f18d906c2c7465",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-29.gif",
+      "bytes": 6235,
+      "sha256": "854bc271e95241cad8024db72b956727e43f1c159677e5ca09ad1c792e28ba7a",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-30.gif",
+      "bytes": 5438,
+      "sha256": "175819cd93a1d81c5b5e7a7218bdea0b212f6482b0f22a82fe0e0b41df3aaff3",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-31.gif",
+      "bytes": 6337,
+      "sha256": "22ff61c12d3dc608784558a00bc91b835cb46552c3d0dda676cc4aea8e7e470d",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-32.gif",
+      "bytes": 5763,
+      "sha256": "4a55900d2c36c7f418145c118dec97f62fff6823f1b5b74a5f1c943e248d6451",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-33.gif",
+      "bytes": 5101,
+      "sha256": "87ef7cb90156dce71841a262f42627e0d4c3bf60d98ca9908458b32962ae6570",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-action-34.gif",
+      "bytes": 6041,
+      "sha256": "f239919ec1ad26ea175f4ba1fe3f60a29233e3f59d1150e8f180633d8325439b",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-all-actions.png",
+      "bytes": 401713,
+      "sha256": "54791ba97612a721ce2e9de621b0e4f532596cf43f165716a6961fbd36dff8aa",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-eight-directions.png",
+      "bytes": 15648,
+      "sha256": "b20c97e37730800a007f638c295e3746ea108c1f9b75d2a534e04ac9e992899e",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-motion.js",
+      "bytes": 19952,
+      "sha256": "1f4adfca74ab3f629e21618854b82e46beee630fadc3e2e4d79e7472048e0a3d",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-mounted-fit-23.gif",
+      "bytes": 20123,
+      "sha256": "bc1d8daa7773a991c397c6574968d964389d2c1e28d54c6a47cfead9f83a2757",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-mounted-fit-24.gif",
+      "bytes": 20279,
+      "sha256": "dbc6da81c7c42e78bcd7bcc75da081fe19eecea2e702c67f869e627d00212bfe",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-mounted-fit-25.gif",
+      "bytes": 4343,
+      "sha256": "133174ef714418eefc73b589e5d627c6c8ae1fd39014d405a3b56cb4b7e5e420",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-mounted-fit-26.gif",
+      "bytes": 17986,
+      "sha256": "865ac086069cbb04aea0be88a9fd88501eff390c6169571fbe4b053840f81634",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-mounted-fit-27.gif",
+      "bytes": 18520,
+      "sha256": "4c7029f104a1cd9967a95825f60eb491e4367d46a02b239e8bf16411560bcc33",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-mounted-fit-28.gif",
+      "bytes": 22758,
+      "sha256": "6cc8262655a168c59fa2756d56c6aa604142822b8b50ac73d33cda7e3b4e21f2",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-mounted-fit-29.gif",
+      "bytes": 18203,
+      "sha256": "da9c5dd6613f2d26072de6d45e95fbcaec633aeb5f1ccc0d9362714d21ee07da",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-merchant-thumbnail.png",
+      "bytes": 2385,
+      "sha256": "97053b6808f7783bbf9e6d6d304dd976ef19209771017bd60f82d113ce7b90b1",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-00.gif",
+      "bytes": 12443,
+      "sha256": "48bb2269ed6d66fa92ca4c29da6062834f053e630d612c07d879de05ae38f292",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-01.gif",
+      "bytes": 12281,
+      "sha256": "f29e6dd26a50cf294be47038977120ab4b55757887daa4644df4270c15273af1",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-02.gif",
+      "bytes": 12162,
+      "sha256": "ae83ef0e6c822b7d83a66918b65434eaeece4f1299e7ed1cffbcf0b94ddc8394",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-03.gif",
+      "bytes": 12036,
+      "sha256": "31828ec772f5adc4b031ed34734e358158b26be32ebf16563f2eedf15f6dae9c",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-04.gif",
+      "bytes": 1875,
+      "sha256": "478d480da53cacbddc2f1cf0ec390beced2a78233553ff415a3ab200835367fc",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-05.gif",
+      "bytes": 6435,
+      "sha256": "a6358933084085022cfdde0ca6eba8e7cfb845a9bf1b572790ad745e4bd0ac89",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-06.gif",
+      "bytes": 5855,
+      "sha256": "2a7aa24138d1bbb39439e5b3d1939fb583cb4562abaf5af4d3ec0f8d33d84457",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-07.gif",
+      "bytes": 1787,
+      "sha256": "4975da92ffba39ab12f6e930c9d42894174daa48da87a3bda2d99b7cef1190bc",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-08.gif",
+      "bytes": 1726,
+      "sha256": "57bde7974e09b42c16087c2641126d116a4f5004114b242894437362b8c40a53",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-09.gif",
+      "bytes": 7745,
+      "sha256": "12b0ab550206abd44df639d24f9176f79474aee00c616d750183f6c06af429ba",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-10.gif",
+      "bytes": 6235,
+      "sha256": "6f81acebbe7850e93d9c3442dff31bcd0ffff4adceed2c41e618713b4f8a7bec",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-11.gif",
+      "bytes": 6658,
+      "sha256": "f78354045553ac4f9128886006aa1d57a5572cf289fe384347fdae018d453b2f",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-12.gif",
+      "bytes": 7308,
+      "sha256": "a5ef10483ed35bc7483a1390449faa2272c206f8d7d433ded937a675368bdcca",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-13.gif",
+      "bytes": 7682,
+      "sha256": "27a4eac09aa2487b8085fff6d1ed6472c583cbe99ff978df8ce7bcdc576de985",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-14.gif",
+      "bytes": 6864,
+      "sha256": "3866e3dde69c6559b97aa75b19bdbd949fc2abaeb7dca4c3d5888c07d16842aa",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-15.gif",
+      "bytes": 11998,
+      "sha256": "1d070bf9666f11f4a70c536dff1644051ff6183286560800a83a19fee07d4f51",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-16.gif",
+      "bytes": 8883,
+      "sha256": "902154948dc545462d4823c8e33dd01d19d5a36e81d389d45cd922c329aa56ae",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-17.gif",
+      "bytes": 8549,
+      "sha256": "7cbb4634c789d82d0eda4a33d1fbfb63a8c7a0ad16bdf27382fac7a2de3d0fac",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-18.gif",
+      "bytes": 7286,
+      "sha256": "971f43637a5692f2d9e8a796aac0b1768db418c4203e058d3ee40b63edc013f9",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-19.gif",
+      "bytes": 7895,
+      "sha256": "ca31514e5d3b812b553df95fd264540bd861d02c240ca08213e663b75e128415",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-20.gif",
+      "bytes": 6494,
+      "sha256": "6621c241e5baa9c76dfc6c620f8a4543451e1022cd05feaf7743277aed79393f",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-21.gif",
+      "bytes": 8662,
+      "sha256": "6a8be6c78f704ee1e1b1fc009e1a4750126aa4d19081af738f10dbaa8267adc3",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-22.gif",
+      "bytes": 10226,
+      "sha256": "4b4281d9ce4f71f2f3bc65f5bbae542eec5f95a8dfa2a728ff65a9219cd02058",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-23.gif",
+      "bytes": 7793,
+      "sha256": "79e3d75feef1fd2a6970742edf99b9b9399050eb4391c170c9a5ed99add4d68a",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-24.gif",
+      "bytes": 7767,
+      "sha256": "0dcf9cd94578ddf5869798e72df6da54da33665bf5a142e097db67d6305c9f31",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-25.gif",
+      "bytes": 1822,
+      "sha256": "da0c4271b6fdc4dc9d111a9338fb362981ae929a9daef2f9a8a90df69e646a62",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-26.gif",
+      "bytes": 6552,
+      "sha256": "2b97797534e2dff2365febcf0b612fb8482cf50717ce23a0edd892cf890330e7",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-27.gif",
+      "bytes": 5795,
+      "sha256": "c2839a88aade711e3b33a0a1b696916d94371d12b6222896aa2f4c25f1f6f623",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-28.gif",
+      "bytes": 8485,
+      "sha256": "d97d1e23ab8ce921f2c112fbee5e29e4371b9dd55c4ccc3f1f4ca67d92b4a60e",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-29.gif",
+      "bytes": 6149,
+      "sha256": "4761b710da2c91a9cc63b78dc658e14c953f027af3ee2dc1d739e78753b943b2",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-30.gif",
+      "bytes": 5601,
+      "sha256": "6ced4e85080bea5e1ea5d5aafa29d9f3e68b423d2785b36ccf681399307a79a0",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-31.gif",
+      "bytes": 6277,
+      "sha256": "825d98ea42c23f7a051e764c015a2d5115fb695409cdfbf960196b571f7bdbde",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-32.gif",
+      "bytes": 5998,
+      "sha256": "fd11ef5af1f99578defa79ef753e62db3c6ede0d62e10548aa30330bfb6a400f",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-33.gif",
+      "bytes": 5316,
+      "sha256": "eed4549b9d8af37272c1325cf501499bbcf14eaf5785543b649d8c74c164f68f",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-action-34.gif",
+      "bytes": 6319,
+      "sha256": "03d3d088c32860d18d400602acfa5eadc00dfff4c8cf48e0dc352c2810bb3f2c",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-all-actions.png",
+      "bytes": 459147,
+      "sha256": "5f7746741fbada8f5e96e64434bdd3c028ddbde7d05c569ad98b0738d1eb6375",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-eight-directions.png",
+      "bytes": 19062,
+      "sha256": "66ae152cbd30f5eb6ce0ec5157961029947d4579f287c8d738d07ff9293148a7",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-motion.js",
+      "bytes": 19950,
+      "sha256": "0416a9f39606dc5b8038d28e99c9c23ebb0ac567ef22c3826fb71c67365af073",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-mounted-fit-23.gif",
+      "bytes": 20498,
+      "sha256": "41c6f5670e8cf4c1b1281a768e455b932f4c0fda53bfca3c412554b0422edcf5",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-mounted-fit-24.gif",
+      "bytes": 20755,
+      "sha256": "b870581ec0eb4d00fce94f2e0cf96dc0f97273b1301ba4f79b811a614574d9e2",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-mounted-fit-25.gif",
+      "bytes": 4432,
+      "sha256": "80802bb1901c07209a0a6c14fc67e9823680cdd58e18e8c70ad46f65bfa72562",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-mounted-fit-26.gif",
+      "bytes": 20292,
+      "sha256": "495ee799b0d5481f59e9300ed882b6a6e65ec21956ddcca886b9fe09c4af3818",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-mounted-fit-27.gif",
+      "bytes": 19753,
+      "sha256": "42c4f2f5567df31ba453eaebd9682f85ae18a973b0ff913f971e5f8f2c62bd8f",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-mounted-fit-28.gif",
+      "bytes": 26512,
+      "sha256": "8331b79f7ed8e615c3645e954d0046cb23453fb0ce8d5b74d05ac19832e4d8db",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-mounted-fit-29.gif",
+      "bytes": 20002,
+      "sha256": "2c2a11f720f699f988442eae165720acf127db249f3bebd0324b18b098060575",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/media/new-assets/orc-role-warrior-thumbnail.png",
+      "bytes": 2764,
+      "sha256": "82ddcbc177d4222f6c6f0cfe2118308883fa6cb3344dfd62e60aeacb4ebce582",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/sheets/orc-role-citizen.png",
+      "bytes": 936436,
+      "sha256": "4f1fe8c13e848257c619fd27eddec8ababc53b7e6263ae82d79d5393b8bf6fa0",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/sheets/orc-role-leader.png",
+      "bytes": 1174243,
+      "sha256": "530c21745ed020ad0e735f35da83e32419f85a17195c62d81bd266d46a90db95",
+      "bundle": "assets-46.zip"
+    },
+    {
+      "path": "gallery/sheets/orc-role-mage.png",
+      "bytes": 1169263,
+      "sha256": "fc8f9a04e0ddb5c3f4fdef4deef8e16c9df1942be378a2568d1a137f68b36374",
+      "bundle": "assets-47.zip"
+    },
+    {
+      "path": "gallery/sheets/orc-role-merchant.png",
+      "bytes": 1002434,
+      "sha256": "f46c094c862b777de5e973dcf2def75fa941563c9aa221a6b019892dfaa3ed2d",
+      "bundle": "assets-47.zip"
+    },
+    {
+      "path": "gallery/sheets/orc-role-warrior.png",
+      "bytes": 1111431,
+      "sha256": "8cc393fdfa8899284679789eb53a45611bbe559627b3e206a8cec296fe0cb8b1",
+      "bundle": "assets-47.zip"
     }
   ]
 }

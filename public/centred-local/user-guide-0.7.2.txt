@@ -1,0 +1,130 @@
+CentrED# Local 0.7.2 — Windows x64 development build
+
+Start CentrEDSharp-Local.exe. The .NET runtime, editing engine, interface
+resources and native libraries are included. Native libraries extract into
+a runtime-managed cache at startup. You still supply your own UO client data.
+No separate server, login, account or listening port is needed for local work.
+The welcome screen explains the workflow. Help > Quick start and help opens
+the guide again. Project > Options > General lets you change the font and
+size. Existing display preferences remain.
+
+CREATE A PROJECT
+Choose Add map above the editor, or Project > Maps and working copies.
+Browse to your UO client-data folder, use Look for maps, select a map, name
+its working copy, then choose Create copy and open tab. Known map dimensions
+are detected. Expand Custom map dimensions when needed; dimensions must
+match the index and be multiples of eight.
+The source map/statics/index are copied and checksummed before editing.
+Artwork remains in the selected UO folder and is read by the editor.
+
+MAP TABS
+Open additional projects or create working copies of other discovered map
+files to add their tabs. Tab names follow the source map, including map0x
+and other variants when they have matching statics/index files. Click a tab
+to switch; the editor saves the current working copy before opening the next.
+Each map keeps separate project files, checkpoints and display presets.
+Undo history starts again when a map is reopened; Undo never crosses maps.
+Finish or cancel a large operation or image export before switching tabs.
+Closing a tab saves it and retains its project in the library for reopening.
+
+The working map, settings, profiles, logs, blueprints and checkpoints live
+in your Windows local application-data folder under CentrEDSharp-Local.
+You can choose another location with --data-dir followed by a folder.
+Keep adequate space for a working map and its recoverable checkpoints.
+Checkpoints contain a complete map/statics/index copy. A large operation
+keeps copies before and after it for Undo/Redo. Automatic backups retain
+twenty copies; manual checkpoints and operation history copies are retained
+on disk until you remove them. Check storage use before large map operations.
+
+NAVIGATION AND EVERYDAY CONTROLS
+The action bar provides Save map, Undo, Redo, Checkpoint, Go to, Inspector,
+Layers and Help. Go to opens coordinates, bookmarks and the minimap. Type X/Y
+then press Go or Enter. Ctrl+L focuses coordinates; Ctrl+Home centres the map.
+Back and Forward revisit explicit destinations. Resize the navigation window
+to fit the minimap. Save bookmark records the view centre; names can be searched,
+renamed or deleted. Each local map keeps separate bookmarks.
+Search artwork by part of its name or an exact decimal/0x hexadecimal ID.
+Clear search restores results. Choose Terrain or Objects, and List or Grid.
+Select a tile to inspect it; Use graphic and Use hue open their pickers.
+Right-click the map for tool switching and graphic/height/hue sampling.
+Layers controls the visible height range and separate graphic/hue filters.
+Show all layers resets height only. Help > Reset layout shows Tiles first.
+
+SAVE AND RECOVER
+Use Save map (normally Ctrl+S). The status shows unsaved edits and the
+last save time. Closing saves and waits for the engine to finish. A failed
+save keeps the application open and reports details in Activity.
+Use Keep a checkpoint before experimenting. Under Checkpoints and recovery,
+Restore selected checkpoint keeps
+a checkpoint of the current map first and clears the previous undo history.
+The recovery record restores the last committed files after interrupted
+editing/saving. Edits after that committed save may be lost in a crash.
+The first edit after a save makes a recovery copy; large maps can pause
+while this completes. Autosave/checkpoint retention is configured per project.
+
+EDITING TOOLS
+Paint, move, height and replacement operations validate coordinates and
+heights. A replacement is deleted only when its preview supplies a new tile.
+History has names, bounded undo/redo groups and separate project sessions.
+Use Tools > Large scale operations for a region or facet, preview the count,
+then apply. Progress and cancellation are available. A cancelled local
+operation restores its checkpoint. Cancellation of a remote operation can
+leave accepted remote edits; its status explains this.
+Use Tools > Find, replace and cleanup to inspect duplicates, invalid IDs/hues,
+missing artwork
+and incomplete tree assemblies, or search/replace filtered statics. Review
+the preview before applying. Cleanup suggestions depend on the artwork and
+tree definitions supplied by your project.
+
+BLUEPRINTS AND TERRAIN
+The blueprint library includes art previews, searchable tags, anchors,
+rotation, mirroring, and floor/roof/height filters. Transformed placement is
+validated before applying. Exported blueprint metadata retains source IDs,
+coordinates, heights and hues. Source metadata hashes identify matching
+artwork. CSV building exports include a checksum-verified interchange
+manifest. Explicit decimal graphic/hue mappings can be reviewed and enabled
+when importing into different artwork; the source building is preserved.
+Read BLUEPRINT-INTERCHANGE.md for the mapping format and recovery details.
+The editor does not allocate or install artwork IDs automatically.
+Land brushes use deterministic side/corner matching and report missing or
+ambiguous transition definitions. Complete definitions produce better edges.
+
+DISPLAY AND IMAGES
+Project > Options > General provides display presets and artwork reload.
+The Keymap tab provides shortcut remapping and conflict hints; Lights
+controls lighting. Text size can be adjusted from 10 to 40 in General.
+Presets include filters, lights, flat view, camera orientation, grid and
+overlay settings. An artwork-change notification offers controlled reload.
+Reload runs between operations and preserves accepted map edits/history.
+Reloading changed tiledata can require repairing now-invalid placed items.
+Image export renders bounded tiles, shows progress/cancel and writes its
+final image only after completion. PNG supports larger images than JPEG.
+Finish/cancel image export before closing or switching projects.
+
+EXPORT MAP FILES
+In Maps and working copies, choose Export a map copy and a parent folder.
+A new export
+folder contains map/statics/index plus checksums and an artwork identity
+manifest. Original graphic IDs are retained. Use matching artwork/tiledata.
+Exports are not installed automatically. Back up receiving files and test
+your exported copy in your own client/server before using it as a live map.
+UOP map support is bounded by the format checks; unsupported compression is
+reported rather than silently edited. Use compatible uncompressed working
+files when required.
+
+OPTIONAL COLLABORATION
+Collaboration is separate from local projects. Joining uses TLS by default
+and requires a trusted certificate matching the hostname. Hosting requires
+its own XML configuration and certificate and defaults to loopback.
+Explicit legacy mode is available for old CentrED/CentrED+ peers; it uses
+unprotected TCP. Old server account hashes migrate after successful login.
+Saved Windows passwords use your Windows account's protected storage.
+
+BUILD AND VALIDATION
+This is a modified development version based on upstream release 0.6.11.31,
+commit 50d23f7a8d7f247f7f53bee419c01942fcfd59fa. Automated regression checks
+and Windows package/GUI tests are documented separately from this package.
+Linux/macOS builds and collaboration with external legacy servers need
+receiving-system testing. No UO game data, accounts or world saves are shipped.
+The binary is unsigned. Source build instructions and license notices are
+included in the development source. No upstream release was published.

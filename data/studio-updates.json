@@ -1,6 +1,24 @@
 {
   "releases": [
     {
+      "version": "0.33.7",
+      "title": "Move around Map Regions with direct navigation",
+      "added": [
+        "Map Regions adds Pan map, pointer-centred wheel zoom, + / − centre zoom and Home / Fit map. Left-drag pans in Pan map mode; middle- or right-drag pans in every mode.",
+        "Use Find selected or double-click / Enter in the region list to locate a region on its own facet. Fit boundary frames its boundary."
+      ],
+      "improved": [
+        "Arrow keys pan the focused canvas; Shift makes larger moves. Escape cancels an unfinished pan or boundary drag. These view controls do not change map files or region rules.",
+        "All 1,253 application checks passed with zero skips, including 30 real-Tk navigation checks. The complete 91-page guide retains all 33 chapters and documents the new controls."
+      ],
+      "fixed": [
+        "Navigation rejects stale callbacks and superseded facet requests, preserves accepted boundaries when a gesture is cancelled, and retains review, queue, save, backup and recovery behavior."
+      ],
+      "note": "Recent activity, generated-world refinement and the full 35-tool catalogue remain available. Native artwork and server integration still require receiving-client and shard tests.",
+      "release": true,
+      "date": "2026-10-09"
+    },
+    {
       "version": "0.33.6",
       "title": "Refine generated worlds and find your recent activity",
       "added": [
