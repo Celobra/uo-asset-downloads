@@ -1,0 +1,32 @@
+{
+  "version": "0.7.2",
+  "status": "local development build",
+  "testRecord": "255 passed, zero failures or skips",
+  "receivingSystemTested": false,
+  "multiplayerTested": false,
+  "inGameTested": false,
+  "upstream": "https://github.com/kaczy93/centredsharp",
+  "upstreamCommit": "50d23f7a8d7f247f7f53bee419c01942fcfd59fa",
+  "artifacts": {
+    "CentrEDSharp-Local-0.7.2-win-x64.zip": {
+      "bytes": 37621109,
+      "sha256": "e51cd13fab296149faefb1e36905eafa3007cf49a55bd5375d8a383f5e4d5336",
+      "members": 12,
+      "crc": "passed",
+      "privacy": "passed"
+    },
+    "CentrEDSharp-Local-0.7.2-source.zip": {
+      "bytes": 28429525,
+      "sha256": "c3cf07d343813cf66d9735c126dae4c40774fe9dd75cd533b6beaec3311abd53",
+      "members": 1354,
+      "crc": "passed",
+      "privacy": "passed"
+    },
+    "executable": {
+      "bytes": 91612319,
+      "sha256": "c9f47b78f7543d5c67aae2c15e16e09f8e8382b22dddc16596928b9e578d4afc",
+      "checksumMembers": "passed",
+      "noticesRetained": true
+    }
+  }
+}

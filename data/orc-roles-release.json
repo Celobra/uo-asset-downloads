@@ -1,0 +1,47 @@
+{
+  "sourceArchive": "UO_Orcs_5_Roles.zip",
+  "sourceSha256": "86791b813c9b40978ba70c7bfe4c8fd96205f061a09f07b7cde914b08b049d8d",
+  "nativeVDs": [
+    {
+      "id": "orc-role-merchant",
+      "sha256": "6cf6605bf7833ead1194055acf6a3a2576104b83246710a4b075ab931c9eb209"
+    },
+    {
+      "id": "orc-role-mage",
+      "sha256": "f5d174ea361d60067e61f227748ee8eda7a91692969794cc0e50b99ee308fdc2"
+    },
+    {
+      "id": "orc-role-warrior",
+      "sha256": "1ea1f8121b84f9bf930ccf14d7764f8128adce510972248e7a5856b79c7c823b"
+    },
+    {
+      "id": "orc-role-citizen",
+      "sha256": "8d53dd9c09508e5958d7257eb9d324ea570f57e1fec04e4a9bf68fd244171bc5"
+    },
+    {
+      "id": "orc-role-leader",
+      "sha256": "e0168026a837e487b9d0d94f4c7606ed8c48511c0b30fba7a20103edc6428788"
+    }
+  ],
+  "nativeFramesVerified": 5250,
+  "nativeRecordsVerified": 875,
+  "pngFramesVerified": 8400,
+  "checksumMembersVerified": 10895,
+  "clientRuntimeTested": false,
+  "riderPreviewReference": {
+    "listing": "pack-horse",
+    "vdSha256": "8b06455f2f10789ae16c28ccfb810bcf91c60743e767303fbf9c5910c3b90162",
+    "includedAsDownload": false
+  },
+  "date": "2026-10-09",
+  "items": [
+    "orc-role-merchant",
+    "orc-role-mage",
+    "orc-role-warrior",
+    "orc-role-citizen",
+    "orc-role-leader"
+  ],
+  "publicFiles": 240,
+  "bundleStart": 45,
+  "bundles": 3
+}

@@ -36,19 +36,19 @@ Version 0.32.0 introduced Simple and Advanced modes, focused navigation, hover h
 
 [Explore UO Asset Studio](https://www.uoassets.com/studio/) — a connected Windows workshop for UO artwork, animations, paperdolls, Sphere scripts, sound, houses and generated worlds.
 
-**[Download the Windows installer](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.6/UOAssetStudio-Setup-0.33.6.exe)** · [Complete PDF guide](https://www.uoassets.com/studio/guide/UOAssetStudio-User-Guide-0.33.6.pdf) · [Separate application source](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.6/UOAssetStudio-Source-0.33.6.zip)
+**[Download the Windows installer](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.7/UOAssetStudio-Setup-0.33.7.exe)** · [Complete PDF guide](https://www.uoassets.com/studio/guide/UOAssetStudio-User-Guide-0.33.7.pdf) · [Separate application source](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.7/UOAssetStudio-Source-0.33.7.zip)
 
 The dedicated section contains an overview, a detailed workflow tour with actual app screenshots and animated walkthroughs, a downloads/guide page and a searchable [Updates page](https://www.uoassets.com/studio/updates/). The release bundles a ready-to-run installer; source and offline documentation are separate downloads. This repository contains the website, while the named Studio source ZIP contains the application code.
 
 Maintain release history in `data/studio-updates.json`, newest first. Add verified user-facing changes under `added`, `fixed` or `improved`; use `date` only for a known publication date and `release: true` only when its GitHub release exists. Maintain `data/studio-release.json` with the final published installer URL, SHA256 and byte count. The build validates its version against the newest published history entry and the current download links, then generates `/studio/update.json`; pending digests stop the build. The endpoint uses explicit no-cache/no-store headers. The normal website build generates the static Updates page and keeps its navigation link on the Studio pages. Older entries were reconstructed from application release notes and verified development records; repeated 0.20.2 builds are grouped under that version. Filtering is optional: the complete history is readable without JavaScript.
 
-Version 0.30.1 fixes legacy UOP terrain loading, handles trailing map padding and detects standard map dimensions automatically. Version 0.30.0 added a redesigned Home, navigation sidebar and searchable tool library, with remembered side panels and text-size choices. Map Regions edits Sphere boundaries and guarded, magic and travel rules through reviewed saves. The complete 0.33.6 guide has 91 pages and retains all 33 chapters. It adds the practical editing, building and inspection workflows while retaining direct artwork imports, task categories, tile-pack selection, update checks, whole-body VD exports, UOP bundle distribution and save/refresh progress.
+Version 0.30.1 fixes legacy UOP terrain loading, handles trailing map padding and detects standard map dimensions automatically. Version 0.30.0 added a redesigned Home, navigation sidebar and searchable tool library, with remembered side panels and text-size choices. Map Regions edits Sphere boundaries and guarded, magic and travel rules through reviewed saves. The complete 0.33.7 guide has 91 pages and retains all 33 chapters. It adds the practical editing, building and inspection workflows while retaining direct artwork imports, task categories, tile-pack selection, update checks, whole-body VD exports, UOP bundle distribution and save/refresh progress.
 
 ## Asset library
 
 Browse the gallery and use the small Download link on an item to get its files. Open an armour set to inspect or download the complete set or an individual piece.
 
-The library contains 723 listings with 936 ZIP packages. Shared collections stay together when their import tools require the full set.
+The library contains 728 listings with 941 ZIP packages. Shared collections stay together when their import tools require the full set.
 
 Published 3 October 2026: [twenty D&D creatures](https://www.uoassets.com/?category=creatures&collection=DnD-Native-Creatures), [Pegasus](https://www.uoassets.com/?category=creatures&collection=Pegasus-Mount), two original demons, three daemon palette variants, [fifty landscape assemblies](https://www.uoassets.com/?category=terrain&collection=Landscape-Assemblies), the clearly labelled two-view Ashhorn walking study and [Britannia Architect](https://www.uoassets.com/?category=buildings&collection=Britannia-Architect#britannia-architect). Native creatures have interactive eight-facing previews, every available action GIF, registered PNGs, unchanged VDs, import notes and checksums. Mounts include male/female rider composites. The town builder contains a clean public Windows build, editable example and portable source; private shard records are excluded. Target-client/server integration remains necessary.
 
@@ -149,3 +149,12 @@ The five packages omit source prompts, client references and the unrelated four-
 ## Abyss summoning portal
 
 One item-art design in two registered sizes. Each has 24 opening, 24 active and 20 closing frames; the active loop has no automatic timeout. Includes 136 exact native static-art records, matching RGB555 PNGs and black-key BMPs, blank Art IDs, the state contract and optional animdata planning template. Opening/closing GIFs play once; the lifecycle demonstration uses two example loops and an external close request. Source paintings, builder code and references are omitted. Every native record, PNG/BMP pair, import-manifest digest, boundary pose and package checksum was checked. No monster logic or server script is supplied. IDs, client timing, collision, spawning and in-game testing remain recipient work. `data/abyss-portal-release.json` records the review scope; bundle 44 appends to existing assets.
+
+
+## October 9 workshop releases
+
+Studio 0.33.7 adds direct Map Regions panning, zoom, selected-region location, boundary fitting and gesture cancellation. All 1,253 application checks passed with zero skips; the complete guide retains 91 pages and 33 chapters.
+
+Five original Orc NPC roles retain their exact native VDs, all 35 humanoid actions, 1,050 native frames and 1,680 registered PNG frames per role. All-action GIFs, eight-view playback, facing/action boards and seven offline mounted-fit comparisons accompany each download. Equipment fitting, paperdolls, server behavior and target-client integration remain separate.
+
+[CentrED# Local 0.7.2](https://www.uoassets.com/centred-local/) is a Windows development download for local map editing, with its separate MIT source and dependency notices. Local editing uses one executable without a separate server. Map tabs, working copies, recovery, blueprint interchange and direct navigation are documented; receiving-computer, multiplayer and in-game acceptance remain unverified.
