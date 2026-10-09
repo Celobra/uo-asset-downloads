@@ -9,7 +9,7 @@
 
   // The complete indexes remain readable when JavaScript is unavailable.
   const filters = [];
-  const enableFilter = ({ inputId, entrySelector, resultsId, emptyId, categoryId, noun, groupSelector, groupLinkSelector, groupsOnlyWhenActive = false }) => {
+  const enableFilter = ({ inputId, entrySelector, resultsId, emptyId, categoryId, noun, groupSelector, groupLinkSelector, groupsOnlyWhenActive = false, wordPrefix = false }) => {
     const input = document.getElementById(inputId);
     const entries = Array.from(document.querySelectorAll(entrySelector));
     if (!input || entries.length === 0) return;
@@ -20,6 +20,7 @@
     const index = entries.map((element) => ({
       element,
       search: normalize(element.dataset.search || element.textContent),
+      words: wordPrefix ? normalize(element.dataset.search || element.textContent).split(/[^\p{L}\p{N}]+/u).filter(Boolean) : [],
       category: normalize(element.dataset.category),
     }));
     const groups = groupSelector ? Array.from(document.querySelectorAll(groupSelector)).map(element => ({
@@ -36,14 +37,15 @@
     }
 
     const update = () => {
-      const terms = normalize(input.value).split(/\s+/).filter(Boolean);
+      const terms = normalize(input.value).split(wordPrefix ? /[^\p{L}\p{N}]+/u : /\s+/).filter(Boolean);
       const selectedCategory = category ? normalize(category.value) : "";
       const active = terms.length > 0 || Boolean(selectedCategory && selectedCategory !== "all");
       let visible = 0;
 
       for (const item of index) {
         const matchesCategory = !selectedCategory || selectedCategory === "all" || item.category === selectedCategory;
-        const matchesSearch = terms.every((term) => item.search.includes(term));
+        // Creature names such as Roper should not match unrelated words such as property.
+        const matchesSearch = terms.every((term) => wordPrefix ? item.words.some(word => word.startsWith(term)) : item.search.includes(term));
         const matches = matchesCategory && matchesSearch;
         item.element.hidden = !matches;
         if (matches) visible += 1;
@@ -98,7 +100,7 @@
   };
 
   const initialize = () => {
-    enableFilter({ inputId: 'bestiary-search', entrySelector: '[data-bestiary-entry]', resultsId: 'bestiary-results', emptyId: 'bestiary-empty', categoryId: 'bestiary-category', noun: 'creature' });
+    enableFilter({ inputId: 'bestiary-search', entrySelector: '[data-bestiary-entry]', resultsId: 'bestiary-results', emptyId: 'bestiary-empty', categoryId: 'bestiary-category', noun: 'creature', wordPrefix: true });
     for (const input of document.querySelectorAll('[data-reference-filter]')) {
       const prefix = input.dataset.referenceFilter;
       enableFilter({ inputId: input.id, entrySelector: `[data-reference-entry="${prefix}"]`, resultsId: `${prefix}-results`, emptyId: `${prefix}-empty`, noun: 'entry', groupSelector: `[data-reference-section="${prefix}"]`, groupsOnlyWhenActive: true });

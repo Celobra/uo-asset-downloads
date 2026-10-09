@@ -70,7 +70,7 @@ test('The player hub and existing site sections expose the introduction, wiki, a
 test('The wiki and updates retain every maintained article, related route and complete plain-text entry', async () => {
   const wiki = await htmlFor('/uopve/wiki/');
   const updates = await htmlFor('/uopve/updates/');
-  assert.equal(data.articles.length, 79, 'Withdrawing public play must retain the complete player reference');
+  assert.equal(data.articles.length, 86, 'The development refresh must retain the existing guides and add the seven new references');
   assert.equal([...wiki.matchAll(/\bdata-wiki-entry\b/g)].length, data.articles.length);
   assert.equal([...updates.matchAll(/\bdata-update-entry\b/g)].length, data.updates.length);
   for (const html of [wiki, updates]) {
@@ -158,7 +158,7 @@ test('The complete bestiary has one usable entry per definition, safe loot links
   const bestiary = JSON.parse(await readFile(resolve(root, 'data/uopve-bestiary.json'), 'utf8'));
   const html = await htmlFor('/uopve/wiki/creature-bestiary/');
   assert.equal([...html.matchAll(/\bdata-bestiary-entry\b/g)].length, bestiary.creatures.length);
-  assert.equal(bestiary.creatures.length, 1136);
+  assert.equal(bestiary.creatures.length, 1147);
   for (const creature of bestiary.creatures) {
     const id = creature.id.toLowerCase().replace(/[^a-z0-9-]/g, '-');
     assert.ok(html.includes(`id="creature-${id}"`), creature.id);
@@ -276,7 +276,11 @@ test('Creature and reference table search report matches, combine categories and
   document.querySelectorAll = selector => selector === '[data-bestiary-entry]' ? creatures : selector === '[data-reference-filter]' ? [ids['reference-example-search']] : selector === '[data-reference-entry="reference-example"]' ? rows : [];
   const window = new Element();
   vm.runInNewContext(await readFile(resolve(publicRoot,'uopve/uopve.js'),'utf8'),{document,window});
-  assert.equal(ids['bestiary-results'].textContent,'1136 creatures available');
+  assert.equal(ids['bestiary-results'].textContent,'1147 creatures available');
+  ids['bestiary-search'].value='roper';
+  ids['bestiary-search'].emit('input');
+  assert.equal(creatures.filter(entry => !entry.hidden).length,1,'Creature name search must not match property text on unrelated creatures');
+  assert.ok(creatures.find(entry => !entry.hidden).dataset.search.includes('c_roper'));
   ids['bestiary-search'].value='green dragon';
   ids['bestiary-search'].emit('input');
   assert.ok(creatures.some(entry => !entry.hidden));
