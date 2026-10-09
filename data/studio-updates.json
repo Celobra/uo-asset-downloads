@@ -1,6 +1,25 @@
 {
   "releases": [
     {
+      "version": "0.33.8",
+      "title": "Static ZIP packs load with clear skipped-file reports",
+      "added": [
+        "Static folder and ZIP imports load compatible tiles together and list unusable images by filename and reason in the View skipped files... report. Oversized overview sheets no longer prevent the remaining compatible tiles from loading.",
+        "View skipped files... opens a scrolling copyable report. A pack with no compatible tiles keeps the previous selection; archive/resource failures and cancellation stop the complete load. The normal reviewed ID, TileData, MUL/UOP save, queue, backup and recovery steps remain."
+      ],
+      "improved": [
+        "Static folder/ZIP batches accept up to 4096 compatible still tiles within the existing 16-million-pixel, 128 MB input and 16 MB per-file limits. Direct Choose images retains its separate 256-file cap.",
+        "PNG preference recognises exact mirrored PNG/BMP format folders. Advanced offers Include both PNG and BMP versions and Include preview images; preview inclusion still requires native-compatible artwork. Invalid preferred PNGs are reported without silently falling back to BMP.",
+        "All 1,297 checks passed with zero skips from a fresh source ZIP. The complete 91-page guide retains all 33 chapters, including Map Regions arrow/mouse panning and region-list double-click/Enter locating from 0.33.7. Frozen source/runtime and actual Scaffolding/Wilderness native save/recovery cases were verified."
+      ],
+      "fixed": [
+        "Animated item and spell-effect sources reject incompatible selected frames instead of shortening the sequence. Preview/contact-sheet filenames remain part of strict selected sequences; the existing preview-folder and PNG/BMP choices still apply. Reopen a filtered static list with animation enabled before using it as a sequence. Native animated statics remain limited to 64 frames."
+      ],
+      "note": "Artwork is kept at its original dimensions; overview sheets are not automatically split or resized. TileData collision, ladders and final receiving-client/shard behaviour still require review. Map Regions navigation from 0.33.7 and all existing tools remain available.",
+      "release": true,
+      "date": "2026-10-09"
+    },
+    {
       "version": "0.33.7",
       "title": "Move around Map Regions with direct navigation",
       "added": [
