@@ -1,0 +1,28 @@
+CentrED# Local - Celobra Edition
+Release: 0.7.1-celobra.1
+Local base version: 0.7.1
+Celobra edition revision: 1
+
+Edition maintainer and publisher: Celobra
+Official edition downloads: https://www.uoassets.com/centred-local/
+
+Celobra identifies the maintainer and publisher of this modified Local edition.
+It is not a claim of sole authorship or ownership of the original CentrED# code,
+third-party libraries, or Ultima Online client data and artwork.
+
+Original CentrED#: Copyright (c) 2023 kaczy93. MIT License.
+Upstream: https://github.com/kaczy93/centredsharp
+Original baseline: release 0.6.11.31, commit
+50d23f7a8d7f247f7f53bee419c01942fcfd59fa
+
+The original MIT licence is included unchanged as LICENSE. Original and
+third-party notices are retained as THIRD-PARTY-NOTICES and embedded in the
+application. Open Help > About and credits to read them.
+
+This revision adds edition branding and credits to the retained Local 0.7.1
+feature baseline. Earlier unbranded archives are preserved. Download only the
+matching source, documentation and checksums for the chosen release identity.
+
+Branding and published checksums help identify this edition. They do not prevent
+copying, modification or removal of branding. This build does not claim an
+Authenticode signature or a registered Celobra trademark.
