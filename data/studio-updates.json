@@ -1,6 +1,26 @@
 {
   "releases": [
     {
+      "version": "0.33.9",
+      "title": "Region review preserves untouched legacy definitions",
+      "added": [
+        "Region validation errors now identify the affected region and source file. Selecting another region keeps the intended sidebar row after applying valid pending name or rule changes.",
+        "Creator credit names Celobra in the application, complete guide and website."
+      ],
+      "improved": [
+        "Unsupported definitions keep their original script text. Studio does not repair their boundaries or treat them as valid regions; edited and new regions still receive the normal checks.",
+        "Map Regions arrow/mouse panning, zoom and double-click/Enter locating from 0.33.7 remain available, alongside compatible static ZIP imports and all existing tools.",
+        "All 1,328 application checks passed across 111 modules with zero skips in both a single fresh maintained-source run and a fresh public source ZIP. Reviewed region save/recovery, frozen source/runtime and the complete 91-page, 33-chapter guide were verified."
+      ],
+      "fixed": [
+        "Map Regions review preserves exactly unchanged loaded definitions. An unrelated unsupported boundary or legacy definition no longer prevents another region's valid edit from being reviewed.",
+        "Leaving an unchanged region form keeps its original unsupported values. Pending coordinate edits still need valid numbers and boundaries before changing selection or reviewing."
+      ],
+      "note": "Untouched unsupported definitions are preserved rather than repaired. Edited/new regions and pending coordinate changes retain their normal checks; reviewed save, queue, backup and recovery remain. No production game/server data or installed apps were changed during verification.",
+      "release": true,
+      "date": "2026-10-11"
+    },
+    {
       "version": "0.33.8",
       "title": "Static ZIP packs load with clear skipped-file reports",
       "added": [
