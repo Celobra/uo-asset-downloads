@@ -1,7 +1,7 @@
 {
-  "version": "0.7.3-celobra.1",
+  "version": "0.7.4-celobra.1",
   "status": "Celobra Edition development release",
-  "testRecord": "399 passed, zero failures or skips; native/resources and About GUI smoke passed",
+  "testRecord": "495 passed, zero failures or skips; native/resources, final executable workspace/workflow/interface and isolated eight-map backend checks passed",
   "receivingSystemTested": false,
   "multiplayerTested": false,
   "inGameTested": false,
@@ -12,15 +12,17 @@
   "upstream": "https://github.com/kaczy93/centredsharp",
   "upstreamVersion": "0.6.11.31",
   "upstreamCommit": "50d23f7a8d7f247f7f53bee419c01942fcfd59fa",
-  "releaseUrl": "https://github.com/Celobra/uo-asset-downloads/releases/tag/centred-local-v0.7.3-celobra.1",
+  "releaseUrl": "https://github.com/Celobra/uo-asset-downloads/releases/tag/centred-local-v0.7.4-celobra.1",
   "downloads": {
-    "windows": "https://github.com/Celobra/uo-asset-downloads/releases/download/centred-local-v0.7.3-celobra.1/CentrEDSharp-Local-0.7.3-celobra.1-win-x64.zip",
-    "source": "https://github.com/Celobra/uo-asset-downloads/releases/download/centred-local-v0.7.3-celobra.1/CentrEDSharp-Local-0.7.3-celobra.1-source.zip",
-    "checksums": "https://github.com/Celobra/uo-asset-downloads/releases/download/centred-local-v0.7.3-celobra.1/SHA256SUMS-0.7.3-celobra.1.txt",
-    "guide": "https://www.uoassets.com/centred-local/user-guide-0.7.3-celobra.1.txt",
-    "attribution": "https://www.uoassets.com/centred-local/edition-attribution-0.7.3-celobra.1.txt",
-    "notices": "https://www.uoassets.com/centred-local/third-party-notices-0.7.3-celobra.1.txt",
-    "comparison": "https://www.uoassets.com/centred-local/CentrEDSharp-Local-0.7.3-Celobra-Comparison.pdf"
+    "windows": "https://github.com/Celobra/uo-asset-downloads/releases/download/centred-local-v0.7.4-celobra.1/CentrEDSharp-Local-0.7.4-celobra.1-win-x64.zip",
+    "source": "https://github.com/Celobra/uo-asset-downloads/releases/download/centred-local-v0.7.4-celobra.1/CentrEDSharp-Local-0.7.4-celobra.1-source.zip",
+    "checksums": "https://github.com/Celobra/uo-asset-downloads/releases/download/centred-local-v0.7.4-celobra.1/SHA256SUMS-0.7.4-celobra.1.txt",
+    "guide": "https://www.uoassets.com/centred/user-guide-0.7.4-celobra.1.txt",
+    "comparison": "https://www.uoassets.com/centred/CentrEDSharp-Local-0.7.4-Celobra-Guide-and-Comparison.pdf",
+    "attribution": "https://www.uoassets.com/centred/edition-attribution-0.7.4-celobra.1.txt",
+    "notices": "https://www.uoassets.com/centred/third-party-notices-0.7.4-celobra.1.txt",
+    "audit": "https://www.uoassets.com/centred/audit-recommendations-0.7.4-celobra.1.md",
+    "releaseNotes": "https://www.uoassets.com/centred/release-notes-0.7.4-celobra.1.md"
   },
   "playerPreview": {
     "type": "approximate editor inspection",
@@ -35,27 +37,27 @@
     "requiresConfiguredClientAndServer": true
   },
   "artifacts": {
-    "CentrEDSharp-Local-0.7.3-celobra.1-win-x64.zip": {
-      "bytes": 37662525,
-      "sha256": "a99194a394de47b155d8a31308be558cfa783514c272c97e071e0dc7ab18d37a"
+    "CentrEDSharp-Local-0.7.4-celobra.1-win-x64.zip": {
+      "bytes": 37766103,
+      "sha256": "b69a3c815b48f5322e3a7a62cbb0134757b6a1532b08e69965d6f2aed4e40e01"
     },
-    "CentrEDSharp-Local-0.7.3-celobra.1-source.zip": {
-      "bytes": 28480767,
-      "sha256": "e8d6fc5a2b8c63f6d2883c9458f364105f06029cbbfdb62dd91b4900e78a7c8e"
+    "CentrEDSharp-Local-0.7.4-celobra.1-source.zip": {
+      "bytes": 28531709,
+      "sha256": "ec7b35bb5349a0c2cc7b93069cc9ca2d6748bfe469af6fa1a726910202194ade"
     },
-    "executable": {
-      "bytes": 91706547,
-      "sha256": "ef499ebb4234da959259c78163f2920cef779077f06ef8f367f46bc65ed2ffea"
-    },
-    "CentrEDSharp-Local-0.7.3-Celobra-Comparison.pdf": {
-      "bytes": 56216,
-      "sha256": "f2318a14ee755d33dca5883133e1518f1633b611cc785e882c069bfe19bc8063",
-      "pages": 5,
+    "CentrEDSharp-Local-0.7.4-Celobra-Guide-and-Comparison.pdf": {
+      "bytes": 68334,
+      "sha256": "fc9ae66b2d3c122c7fdf7f85de91c4f5fd5209a4c0f2ef14b84e1acc5e059323",
+      "pages": 9,
       "visualReview": "all pages passed",
       "privacy": "passed"
+    },
+    "executable": {
+      "bytes": 91797171,
+      "sha256": "6266232b84150f550f64b157d46765dd07caed0e9112fd800cf0d4a2dcb38c59"
     }
   },
-  "baseLocalVersion": "0.7.3",
+  "baseLocalVersion": "0.7.4",
   "editionRevision": 1,
   "product": "CentrED# Local - Celobra Edition",
   "publisher": "Celobra",
@@ -63,7 +65,6 @@
   "originalLicensePreserved": true,
   "thirdPartyNoticesPreserved": true,
   "brandingPreventsCopying": false,
-  "reissueOf": "0.7.3",
   "previousReleases": {
     "0.7.2": {
       "version": "0.7.2",
@@ -286,6 +287,88 @@
       "thirdPartyNoticesPreserved": true,
       "brandingPreventsCopying": false,
       "reissueOf": "0.7.2"
+    },
+    "0.7.3-celobra.1": {
+      "version": "0.7.3-celobra.1",
+      "status": "Celobra Edition development release",
+      "testRecord": "399 passed, zero failures or skips; native/resources and About GUI smoke passed",
+      "receivingSystemTested": false,
+      "multiplayerTested": false,
+      "inGameTested": false,
+      "actualGameLaunchTested": false,
+      "knownIssues": [
+        "Multiplayer radar broadcast defect remains open."
+      ],
+      "upstream": "https://github.com/kaczy93/centredsharp",
+      "upstreamVersion": "0.6.11.31",
+      "upstreamCommit": "50d23f7a8d7f247f7f53bee419c01942fcfd59fa",
+      "releaseUrl": "https://github.com/Celobra/uo-asset-downloads/releases/tag/centred-local-v0.7.3-celobra.1",
+      "downloads": {
+        "windows": "https://github.com/Celobra/uo-asset-downloads/releases/download/centred-local-v0.7.3-celobra.1/CentrEDSharp-Local-0.7.3-celobra.1-win-x64.zip",
+        "source": "https://github.com/Celobra/uo-asset-downloads/releases/download/centred-local-v0.7.3-celobra.1/CentrEDSharp-Local-0.7.3-celobra.1-source.zip",
+        "checksums": "https://github.com/Celobra/uo-asset-downloads/releases/download/centred-local-v0.7.3-celobra.1/SHA256SUMS-0.7.3-celobra.1.txt",
+        "guide": "https://www.uoassets.com/centred-local/user-guide-0.7.3-celobra.1.txt",
+        "attribution": "https://www.uoassets.com/centred-local/edition-attribution-0.7.3-celobra.1.txt",
+        "notices": "https://www.uoassets.com/centred-local/third-party-notices-0.7.3-celobra.1.txt",
+        "comparison": "https://www.uoassets.com/centred-local/CentrEDSharp-Local-0.7.3-Celobra-Comparison.pdf"
+      },
+      "playerPreview": {
+        "type": "approximate editor inspection",
+        "editsMapTiles": false,
+        "requiresUserArtwork": true
+      },
+      "realClientTesting": {
+        "launch": "explicit, external client in its own window",
+        "automaticMapInstallation": false,
+        "liveMapSync": false,
+        "embeddedGameSession": false,
+        "requiresConfiguredClientAndServer": true
+      },
+      "artifacts": {
+        "CentrEDSharp-Local-0.7.3-celobra.1-win-x64.zip": {
+          "bytes": 37662525,
+          "sha256": "a99194a394de47b155d8a31308be558cfa783514c272c97e071e0dc7ab18d37a"
+        },
+        "CentrEDSharp-Local-0.7.3-celobra.1-source.zip": {
+          "bytes": 28480767,
+          "sha256": "e8d6fc5a2b8c63f6d2883c9458f364105f06029cbbfdb62dd91b4900e78a7c8e"
+        },
+        "executable": {
+          "bytes": 91706547,
+          "sha256": "ef499ebb4234da959259c78163f2920cef779077f06ef8f367f46bc65ed2ffea"
+        },
+        "CentrEDSharp-Local-0.7.3-Celobra-Comparison.pdf": {
+          "bytes": 56216,
+          "sha256": "f2318a14ee755d33dca5883133e1518f1633b611cc785e882c069bfe19bc8063",
+          "pages": 5,
+          "visualReview": "all pages passed",
+          "privacy": "passed"
+        }
+      },
+      "baseLocalVersion": "0.7.3",
+      "editionRevision": 1,
+      "product": "CentrED# Local - Celobra Edition",
+      "publisher": "Celobra",
+      "signing": "unsigned",
+      "originalLicensePreserved": true,
+      "thirdPartyNoticesPreserved": true,
+      "brandingPreventsCopying": false,
+      "reissueOf": "0.7.3"
     }
+  },
+  "extends": "0.7.3-celobra.1",
+  "pageUrl": "https://www.uoassets.com/centred/",
+  "handsOnInterfaceReviewComplete": false,
+  "tabUndoAcrossRestart": false,
+  "mapWorkspace": {
+    "blankMapFormats": [
+      "MUL",
+      "UOP"
+    ],
+    "automaticPreparation": true,
+    "maximumOpenOrPreparingTabs": 32,
+    "keepsPreparedBackends": true,
+    "sessionUndoPerMap": true,
+    "savedViewsPersist": true
   }
 }

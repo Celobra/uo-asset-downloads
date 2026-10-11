@@ -1,0 +1,11 @@
+d5a4e50c72a9fcc8c76bdeec7694b1c4ccd2e9b1629462d89733fa712b2ccffa  audit-recommendations-0.7.4-celobra.1.md
+fc9ae66b2d3c122c7fdf7f85de91c4f5fd5209a4c0f2ef14b84e1acc5e059323  CentrEDSharp-Local-0.7.4-Celobra-Guide-and-Comparison.pdf
+ec7b35bb5349a0c2cc7b93069cc9ca2d6748bfe469af6fa1a726910202194ade  CentrEDSharp-Local-0.7.4-celobra.1-source.zip
+b69a3c815b48f5322e3a7a62cbb0134757b6a1532b08e69965d6f2aed4e40e01  CentrEDSharp-Local-0.7.4-celobra.1-win-x64.zip
+24ddc6a8bd31d2add28f8956c8ba07fe49795f9c074133b96d5d30ea152a6319  edition-attribution-0.7.4-celobra.1.txt
+4834b1bfc6ccf1277c1719ce2d0851d98a3dfc9af1f5f0d38007076a88edc107  LICENSE-0.7.4-celobra.1.txt
+663cd27d4245aa2298eca4eb5e2f211ef65f3233859cd3d0b13875287689943e  map-workspace-0.7.4-celobra.1.md
+20f6b66d96ad16cf5615390c715b69b3b476e6486163536a0198fa1a0c588951  release-notes-0.7.4-celobra.1.md
+6161a31eda253d5bcff09963c91a74a6973678ef0e6d77069b8f341c8e6fbd50  release-verification-0.7.4-celobra.1.txt
+e9c545b445515f68b6b51e17f98b6c21fe2037ee22cbded0e85f69cc56cad0d4  third-party-notices-0.7.4-celobra.1.txt
+64145e5215a820702e3502a7922586d2d8e4287609678edb1c76a91cbfb9cc9b  user-guide-0.7.4-celobra.1.txt

@@ -8,3 +8,5 @@
 *.png binary
 *.gif binary
 *.pdf binary
+public/centred/*.txt -text
+public/centred/*.md -text

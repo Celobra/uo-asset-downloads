@@ -1,0 +1,56 @@
+CentrED# Local - Celobra Edition 0.7.4-celobra.1
+Verification completed 11 October 2026
+
+Build and regression checks
+- Locked dependency restore passed with .NET SDK 10.0.401.
+- Windows x64 self-contained single-executable release uses runtime 10.0.12.
+- Final full suite: 495 passed, zero failed, zero skipped.
+  Shared: 16; local backend: 46; editor: 433.
+- Final executable package probe: all nine native libraries and eight embedded
+  resources passed; product, publisher and version identity matched.
+
+Final executable checks using disposable working projects
+- Prepared all six facets and an x variant in background tabs; failed and
+  cancelled imports left ready maps usable. Completion also worked with the
+  map panel hidden.
+- Reused resident backends and shared artwork. Each map retained its position,
+  zoom, layers, view bounds, navigation and named Undo/Redo within the session.
+- Created and reopened both blank MUL and UOP maps; verified dimensions,
+  terrain fill, elevation and empty statics. Closing tabs released file handles.
+- Editing, cancellation recovery, cleanup, checkpoint Undo/Redo, terrain image
+  import, blueprint transformation, snapshot restoration and export passed.
+- Inspector, navigation bounds, bookmarks, hue sampling, area selection,
+  display presets, workspace recovery and player-preview rendering passed.
+- These final executable runs used a 3440 by 1369 viewport. A separate build
+  from the final application source passed the 1280 by 720 workspace check.
+
+Eight-map backend and preservation check
+- All eight valid real map sets (six facets plus map0x/map1x variants) were
+  discovered and prepared from isolated input copies.
+- Sixteen visits kept project-scoped edits and named Undo/Redo; only the
+  selected backend was active. Disconnect after the explicit save did not
+  perform another save.
+- All 24 working terrain/index/statics files were released on disposal and
+  restored to their imported checksums. All 101 isolated input files retained
+  their checksums. This was a backend/file-I/O check, not a GUI timing benchmark.
+- The original 24 terrain/index/statics files and all sixteen earlier original
+  and Celobra release ZIPs retained their recorded checksums.
+
+Distribution checks
+- Original MIT LICENSE and third-party notices retained byte for byte.
+- Source manifest records the verified preceding release and every source hash.
+- Binary and source ZIPs checked for CRC integrity and member checksums.
+- Public files scanned for personal paths, obvious credential patterns,
+  private logs and workspace notes. UO game data is not included.
+
+Limits
+Initial preparation must finish before a new tab is ready; larger maps require
+more time, disk space and memory. Tab Undo/Redo is retained during the open
+session; saved view settings persist across restarts. The editor uses supplied
+UO artwork and creates separate working map copies.
+
+The build is unsigned. Automated executable checks do not replace acceptance
+on another computer or in-game testing of exported maps. The hands-on interface
+review was stopped at the user's request; no final accessibility, large-font or
+exhaustive interactive layout acceptance is claimed. Remaining proposals are
+listed in AUDIT-RECOMMENDATIONS.md and are not advertised as implemented.
