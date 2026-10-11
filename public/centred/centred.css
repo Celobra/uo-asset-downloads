@@ -1,0 +1,49 @@
+/* Application page additions; shared Workshop colours and typography live in studio.css. */
+.map-hero{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:44px 72px;padding-block:72px 68px;align-items:center}
+.map-hero h1{font-size:clamp(48px,5.6vw,82px);max-width:860px}
+.map-hero .lead{max-width:780px}
+.hero-summary{border-left:1px solid var(--line);padding-left:36px}
+.hero-summary .eyebrow{line-height:1.7;margin-bottom:16px}
+.hero-summary dl{margin:0 0 16px}
+.hero-summary dl>div{padding:16px 0;border-bottom:1px solid var(--line)}
+.hero-summary dt{font-size:15px;font-weight:650;color:var(--ink)}
+.hero-summary dd{margin:5px 0 0;color:var(--muted);font-size:14px}
+.hero-workspace{grid-column:1/-1}
+.screen-top a{font-size:11px;margin-left:auto;white-space:nowrap}
+.section-heading{max-width:960px}
+.map-note{font-size:14px;max-width:1060px;margin-top:28px;margin-bottom:0;border-left:2px solid #79673d;padding-left:20px}
+.map-note strong{color:var(--ink)}
+.setup-section{padding-block:70px}
+.setup-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;margin-top:36px}
+.setup-path{min-width:0}
+.path-number{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.13em;border-top:1px solid var(--line);padding-top:22px}
+.setup-path h3{font-size:24px;margin-top:0}
+.setup-path ol{padding-left:22px;margin:22px 0;color:var(--muted)}
+.setup-path li{padding-left:8px;margin-bottom:17px}
+.setup-path strong{color:var(--ink);font-weight:600}
+.setup-path>p:last-child{font-size:14px}
+.release-downloads{gap:54px;padding-top:12px;padding-bottom:0}
+.download-main h3,.guide-download h3{font:33px/1.2 Georgia,"Times New Roman",serif;margin:0 0 22px}
+.download-main .eyebrow{margin-bottom:18px}
+.download-links{display:flex;flex-wrap:wrap;gap:10px 20px;margin:26px 0 16px;font-size:13px}
+.guide-download{padding:34px 0 0}
+.document-list{list-style:none;padding:0;margin:26px 0 0}
+.document-list li{padding:14px 0;border-top:1px solid var(--line)}
+.document-list a{font-size:15px}
+.document-list span{display:block;font-size:13px;color:var(--muted);margin-top:4px}
+.comparison-intro{max-width:1000px}
+.comparison-scroll{max-width:100%;overflow-x:auto;margin-top:32px;border:1px solid var(--line);border-radius:4px}
+.comparison-scroll:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+.comparison-table{width:100%;min-width:720px;border-collapse:collapse;text-align:left;font-size:14px;line-height:1.65}
+.comparison-table caption{text-align:left;color:var(--muted);background:#111b25;padding:18px 22px;font-size:13px;border-bottom:1px solid var(--line)}
+.comparison-table th,.comparison-table td{padding:18px 22px;vertical-align:top;border-bottom:1px solid var(--line)}
+.comparison-table thead th{background:#17232e;color:var(--ink);font-size:14px;font-weight:600}
+.comparison-table tbody th{width:21%;font-weight:600;color:var(--ink)}
+.comparison-table td{width:39.5%;color:var(--muted)}
+.comparison-table td:last-child{background:#16242b}
+.comparison-table tbody tr:last-child>*{border-bottom:0}
+.validation-section .columns h3:not(:first-child){margin-top:30px}
+.validation-section strong{color:var(--ink);font-weight:600}
+@media(max-width:1100px){.map-hero{gap:36px 40px}.hero-summary{padding-left:25px}.setup-grid{gap:35px}.release-downloads{gap:35px}.site-head nav{gap:20px}}
+@media(max-width:760px){.map-hero{grid-template-columns:1fr;padding-block:45px;gap:30px}.map-hero h1{font-size:clamp(43px,10vw,61px)}.hero-summary{border-left:0;border-top:1px solid var(--line);padding:24px 0 0}.hero-summary dl{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}.hero-summary dl>div:last-child{grid-column:1/-1}.hero-summary dl>div{padding:12px 0}.hero-summary .eyebrow{margin-bottom:6px}.setup-section{padding-block:45px}.setup-grid{grid-template-columns:1fr;gap:22px;margin-top:28px}.setup-path h3{font-size:23px}.release-downloads{gap:22px}.guide-download{padding-top:8px}.download-main h3,.guide-download h3{font-size:29px}.comparison-table th,.comparison-table td{padding:15px 18px}.comparison-table caption{padding:15px 18px}.map-note{padding-left:15px}.site-head nav{gap:10px;justify-content:flex-start;column-gap:22px}.screen-top a{font-size:10px}}
+@media(max-width:420px){.hero-summary dl{grid-template-columns:1fr}.hero-summary dl>div:last-child{grid-column:auto}.map-hero .actions .button{width:100%}.map-hero .screen-top>span:first-child{display:none}.screen-top{padding-inline:10px;gap:8px}.screen-top a{font-size:9px}.site-head nav{column-gap:17px}}
