@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "app_id": "uo-asset-studio",
-  "version": "0.33.10",
+  "version": "0.33.11",
   "release_notes_url": "https://www.uoassets.com/studio/updates/",
   "installer": {
-    "url": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.10/UOAssetStudio-Setup-0.33.10.exe",
-    "sha256": "550f79122875ce469d94008acd2942a6ff153e6e5358c6e193600bc3c153dd91",
-    "size": 17528497
+    "url": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.11/UOAssetStudio-Setup-0.33.11.exe",
+    "sha256": "93f203d14a5fdaced7295e71de2bdb003e3bfaf63fdf405823d2eb3dc6afffbc",
+    "size": 17592451
   }
 }
