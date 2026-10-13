@@ -2,6 +2,27 @@
   "releases": [
     {
       "added": [
+        "All animations lists available physical MUL/UOP body entries directly from the current project client, with optional shard definition names.",
+        "Body animations filters source banks and searches names or decimal/hexadecimal IDs; available actions, facings and shared slots are visible.",
+        "Animated items & effects browses native AnimData artwork separately and opens its exact frame sequence in Test Scene Effect."
+      ],
+      "date": "2026-10-13",
+      "fixed": [
+        "Search Enter uses the current filter; unrelated malformed body metadata and previous hidden body/player settings no longer block native effect previews."
+      ],
+      "improved": [
+        "Explicit routed-body VD commands distinguish compatible body exports from raw UOP previews and static item/effect artwork.",
+        "Lazy cancellable scans, project/revision checks, bounded thumbnails and accessible small-window controls keep browsing responsive.",
+        "Protected graphic spaces, exact replacement review, ZIP imports, armor, scripts, Map Regions and all prior tools remain available.",
+        "All 1,444 final application checks passed across 118 test modules with zero skips in a single fresh maintained-source run. The entire suite separately passed from a fresh source ZIP. The frozen runtime and complete 95-page, 33-chapter guide were verified."
+      ],
+      "note": "The library shows supported native directory/index entries; payload previews validate on demand. Unknown UOP entries and unsupported legacy artwork overrides are reported. Preview FPS is not universal native timing. Verify final movement, riding, hues and effects on the receiving shard.",
+      "release": true,
+      "title": "Browse the client animation library",
+      "version": "0.33.11"
+    },
+    {
+      "added": [
         "Existing graphics require an unchecked, exact replacement confirmation in Review. View graphics review details shows affected IDs, source and bank; changed content, files, references or queued reservations require a fresh review.",
         "Asset spaces shows Free candidate, Used, Referenced, Queued and Unavailable with native thumbnails, filters and hover details. Automatic placement and the visual inventory share protection and queued reservations."
       ],
