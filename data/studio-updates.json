@@ -1,6 +1,27 @@
 {
   "releases": [
     {
+      "added": [
+        "Existing graphics require an unchecked, exact replacement confirmation in Review. View graphics review details shows affected IDs, source and bank; changed content, files, references or queued reservations require a fresh review.",
+        "Asset spaces shows Free candidate, Used, Referenced, Queued and Unavailable with native thumbnails, filters and hover details. Automatic placement and the visual inventory share protection and queued reservations."
+      ],
+      "date": "2026-10-13",
+      "fixed": [
+        "Statics and tiles use the same protected graphics inventory as their free-space browser. Native artwork, TileData, animation metadata, script references and client mappings protect their IDs.",
+        "Animation bodies and mounts reserve their whole physical MUL footprint. Overlapping bank aliases, saved body references and queued imports are protected, including linked mount memory and imported shrink icons."
+      ],
+      "improved": [
+        "Keep a backup starts enabled for graphic replacements. Restored sessions and portable imports cannot silently carry replacement approval; unavailable or queued destinations must be changed.",
+        "Larger static batches retain their native image and memory bounds. MUL/UOP source occupancy, fallback mappings, relevant verdata overrides and logical Sphere body routes receive conservative ownership checks.",
+        "Map Regions navigation and preserved legacy-region review, ZIP imports, gumps, equipment, armor, artwork editing, scripts and all previous tools remain available.",
+        "All 1,391 final application checks passed across 115 test modules with zero skips in a single fresh maintained-source run. The entire suite separately passed from a fresh source ZIP. The frozen runtime and complete 92-page, 33-chapter guide were verified."
+      ],
+      "note": "Free candidates use recognized native and indexed ownership checks, then final reviewed-save guards. Queued/unavailable slots cannot be approved as ordinary replacements. Earlier overwritten graphics are not restored by this release. Verify client and server behaviour on the receiving shard.",
+      "release": true,
+      "title": "Protected graphics and visible free space",
+      "version": "0.33.10"
+    },
+    {
       "version": "0.33.9",
       "title": "Region review preserves untouched legacy definitions",
       "added": [
