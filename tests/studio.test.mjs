@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../public');
-const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.9/';
+const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.10/';
 const pages = ['/studio/', '/studio/workflows/', '/studio/downloads/', '/studio/updates/'];
 const localPath = pathname => resolve(root, '.' + pathname + (pathname.endsWith('/') ? 'index.html' : ''));
 
@@ -34,13 +34,13 @@ test('The installer is the primary download; application source is separate', as
     const html = await readFile(localPath(page), 'utf8');
     const primary = [...html.matchAll(/<a class="button primary" href="([^"]+)"/g)].map(m => m[1]);
     assert.ok(primary.length > 0);
-    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.33.9.exe');
+    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.33.10.exe');
     assert.ok(primary.every(url => !url.includes('Source-')));
   }
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.33.9.zip'));
-  assert.ok(downloads.includes(release + 'SHA256SUMS-0.33.9.txt'));
-  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.33.9.pdf'));
+  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.33.10.zip'));
+  assert.ok(downloads.includes(release + 'SHA256SUMS-0.33.10.txt'));
+  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.33.10.pdf'));
 });
 
 test('Studio navigation is available from the existing website sections', async () => {
@@ -53,10 +53,10 @@ test('Studio navigation is available from the existing website sections', async 
 
 test('Public guide is complete and uses scripts/styles allowed by CSP', async () => {
   const guide = root + '/studio/guide/';
-  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.9.html', 'utf8');
-  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.9.pdf');
+  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.10.html', 'utf8');
+  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.10.pdf');
   assert.equal(pdf.subarray(0, 5).toString(), '%PDF-');
-  assert.equal(createHash('sha256').update(pdf).digest('hex'), '59cc1af9e64b0ee9b7a634e228ef7f8ce743da9e7a59a6fd5aaf2dd64b709663', 'PDF must match the published guide without newline conversion');
+  assert.equal(createHash('sha256').update(pdf).digest('hex'), '863ccf97d4da32ee406f7945a21871a3e9a1a985a740ede30644205e3cd117e4', 'PDF must match the published guide without newline conversion');
   assert.ok(pdf.length > 100000);
   assert.doesNotMatch(html, /<style\b|<script(?![^>]*src=)[^>]*>\s*\S/i);
   for (const match of html.matchAll(/(?:href|src)="(guide-[^"]+)"/g)) assert.ok((await stat(guide + match[1])).isFile());
@@ -64,17 +64,22 @@ test('Public guide is complete and uses scripts/styles allowed by CSP', async ()
   for (const match of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.has(match[1]), `missing guide section ${match[1]}`);
 });
 
-test('Studio 0.33.9 retains direct imports, safeguards and full history', async () => {
+test('Studio 0.33.10 protects graphics and retains direct imports, safeguards and full history', async () => {
   const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
-  assert.equal(releases[0].version, '0.33.9');
+  assert.equal(releases[0].version, '0.33.10');
   assert.equal(releases[0].release, true);
-  assert.equal(releases[0].date, '2026-10-11');
-  assert.equal(releases[1].version, '0.33.8');
+  assert.equal(releases[0].date, '2026-10-13');
+  assert.equal(releases[1].version, '0.33.9');
   assert.equal(createHash('sha256').update(JSON.stringify(releases.slice(1))).digest('hex'),
-    '8e9b397a786f047fa974146cd4124d49177f2bb4d0cb5d542a3462ac92de530b',
-    'All 59 earlier release records must survive this update unchanged');
+    'cfc50376b7293a98484cc0754aaaac753caa6c732279208853440782abc59ae2',
+    'All 60 earlier release records must survive this update unchanged');
   const workflow = await readFile(localPath('/studio/workflows/'), 'utf8');
   const updates = await readFile(localPath('/studio/updates/'), 'utf8');
+  const graphics = workflow.match(/<section class="wrap workflow" id="graphic-slot-safety">[\s\S]*?<\/section>/)[0];
+  for (const text of ['Asset spaces','Free candidate','Used','Referenced','Queued','Unavailable','native','hover','source and bank','same effective inventory','I confirm replacing the existing graphics listed in this review','starts unchecked','Keep a backup','fresh review','Restored sessions','whole physical MUL footprint','overlap','riding-memory','shrink icon','logical Sphere body','stricter full-body','receiving client and shard']) assert.ok(graphics.includes(text),text);
+  assert.ok(releases[0].fixed.some(text=>text.includes('Statics and tiles')));
+  assert.ok(releases[0].fixed.some(text=>text.includes('whole physical MUL footprint')));
+  assert.ok(releases[0].added.some(text=>text.includes('exact replacement confirmation')));
   assert.match(workflow, /NEW IN 0\.32\.1 \/ A COMPLETE BODY EXPORT/);
   assert.match(workflow, /last valid recognized/);
   assert.match(workflow, /0x2000/);
@@ -140,9 +145,9 @@ test('Practical workspace instructions identify their controls and preserve loca
   assert.match(html, /does not guarantee that every contained image/);
   assert.match(html, /same asset ID/);
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.match(downloads, /91 pages.<br>33 practical chapters/);
+  assert.match(downloads, /92 pages.<br>33 practical chapters/);
   const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
-  assert.equal(releases.length, 60);
+  assert.equal(releases.length, 61);
 });
 
 
@@ -204,7 +209,7 @@ test('Rules 4 world workflow identifies exact controls, dependencies and receivi
   const html = await readFile(localPath('/studio/workflows/'), 'utf8');
   for (const text of ['id="world-generator-0336"','Temperate Mainland','Island Adventures','Frozen Highlands','Dry Frontier','Volcanic Wilderness','Keep this world','Another world','Restore kept','Compare worlds','World setups ▾','Open setup…','Save setup…','Save favourite…','Favourites / recent…','Reroll chosen part','Apply regions','Buildings from your stamps','Add stamp…','Generation stages…','Keep generation pictures','Check details','Terrain review','TileData','bounded one-level approximation','maintained legacy rules','do not create NPCs','receiving client and shard']) assert.ok(html.includes(text), text);
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.ok(downloads.includes('1,328 final application checks passed across 111 test modules with zero skips'));
+  assert.ok(downloads.includes('1,391 final application checks passed across 115 test modules with zero skips'));
   const overview = await readFile(localPath('/studio/'), 'utf8');
   assert.ok(overview.includes('35 tools'));
   assert.ok(overview.includes('id="worlds-and-activity"'));
@@ -228,11 +233,11 @@ test('Region navigation remains available with canvas focus and explicit current
   for (const text of ['NEW IN 0.33.7','Pan map','left button','Middle- or right-drag','every mode','focused canvas','Shift','Wheel zoom','Home and Fit map','Choose the facet in Map first','double-click / Enter','Fit boundary','Escape','reviewed save, queue, backup and recovery']) assert.ok(html.includes(text),text);
   const { releases } = JSON.parse(await readFile(resolve(root,'../data/studio-updates.json'),'utf8'));
   assert.equal(releases.find(r=>r.version==='0.33.7').version,'0.33.7');
-  assert.ok(releases[0].improved.some(text=>text.includes('Map Regions')&&text.includes('0.33.7')));
+  assert.ok(releases.find(r=>r.version==='0.33.9').improved.some(text=>text.includes('Map Regions')&&text.includes('0.33.7')));
   const review = page.match(/<section class="wrap workflow" id="region-review-0339">[\s\S]*?<\/section>/)[0];
   for (const text of ['UPDATED IN 0.33.9','Apply to draft','intended sidebar selection','unchanged form','Invalid pending coordinates','read-only','Review changes','Exactly unchanged loaded definitions','original script text','1–256 boundary rectangles','affected region and source file','does not repair unsupported geometry','reviewed save, queue, backup and recovery','source script collection','receiving shard']) assert.ok(review.includes(text),text);
-  assert.ok(releases[0].fixed.some(text=>text.includes('unrelated unsupported boundary')));
-  assert.ok(releases[0].added.some(text=>text.includes('source file')));
+  assert.ok(releases.find(r=>r.version==='0.33.9').fixed.some(text=>text.includes('unrelated unsupported boundary')));
+  assert.ok(releases.find(r=>r.version==='0.33.9').added.some(text=>text.includes('source file')));
   const overview = await readFile(localPath('/studio/'),'utf8');
   assert.ok(overview.includes('id="region-review-0339"'));
   assert.ok(overview.includes('NEW IN 0.33.9 / REGION REVIEW'));
