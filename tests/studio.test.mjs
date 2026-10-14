@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../public');
-const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.11/';
+const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.12/';
 const pages = ['/studio/', '/studio/workflows/', '/studio/downloads/', '/studio/updates/'];
 const localPath = pathname => resolve(root, '.' + pathname + (pathname.endsWith('/') ? 'index.html' : ''));
 
@@ -34,13 +34,13 @@ test('The installer is the primary download; application source is separate', as
     const html = await readFile(localPath(page), 'utf8');
     const primary = [...html.matchAll(/<a class="button primary" href="([^"]+)"/g)].map(m => m[1]);
     assert.ok(primary.length > 0);
-    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.33.11.exe');
+    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.33.12.exe');
     assert.ok(primary.every(url => !url.includes('Source-')));
   }
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.33.11.zip'));
-  assert.ok(downloads.includes(release + 'SHA256SUMS-0.33.11.txt'));
-  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.33.11.pdf'));
+  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.33.12.zip'));
+  assert.ok(downloads.includes(release + 'SHA256SUMS-0.33.12.txt'));
+  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.33.12.pdf'));
 });
 
 test('Studio navigation is available from the existing website sections', async () => {
@@ -53,10 +53,10 @@ test('Studio navigation is available from the existing website sections', async 
 
 test('Public guide is complete and uses scripts/styles allowed by CSP', async () => {
   const guide = root + '/studio/guide/';
-  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.11.html', 'utf8');
-  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.11.pdf');
+  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.12.html', 'utf8');
+  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.12.pdf');
   assert.equal(pdf.subarray(0, 5).toString(), '%PDF-');
-  assert.equal(createHash('sha256').update(pdf).digest('hex'), '1644284c9274ed2a52ebe5607c55028cda1b1ab8d1270173d60fd27f7daab92b', 'PDF must match the published guide without newline conversion');
+  assert.equal(createHash('sha256').update(pdf).digest('hex'), '4381417395fbec21fb617654f2910e2fb8d85c79548dbdc73fb6dbee2a09bbd4', 'PDF must match the published guide without newline conversion');
   assert.ok(pdf.length > 100000);
   assert.doesNotMatch(html, /<style\b|<script(?![^>]*src=)[^>]*>\s*\S/i);
   for (const match of html.matchAll(/(?:href|src)="(guide-[^"]+)"/g)) assert.ok((await stat(guide + match[1])).isFile());
@@ -64,22 +64,25 @@ test('Public guide is complete and uses scripts/styles allowed by CSP', async ()
   for (const match of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.has(match[1]), `missing guide section ${match[1]}`);
 });
 
-test('Studio 0.33.11 browses client animations and retains earlier imports, safeguards and full history', async () => {
+test('Studio 0.33.12 plays and exports animations and retains earlier imports, safeguards and full history', async () => {
   const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
-  assert.equal(releases[0].version, '0.33.11');
+  assert.equal(releases[0].version, '0.33.12');
   assert.equal(releases[0].release, true);
   assert.equal(releases[0].date, '2026-10-13');
-  assert.equal(releases[1].version, '0.33.10');
+  assert.equal(releases[1].version, '0.33.11');
   assert.equal(createHash('sha256').update(JSON.stringify(releases.slice(1))).digest('hex'),
-    '4187b6d7fe54d81c0ce67cb4a80cb5935d0fd0bc32502174ab657e59ac8709f3',
-    'All 61 earlier release records must survive this update unchanged');
+    'cd7df279daca78da1dc5006308f1972d24daf07b6e6223c5d8476c0a324ee85c',
+    'All 62 earlier release records must survive this update unchanged');
   const workflow = await readFile(localPath('/studio/workflows/'), 'utf8');
   const updates = await readFile(localPath('/studio/updates/'), 'utf8');
+  const playback = workflow.match(/<section class="wrap workflow" id="animation-playback-03312">[\s\S]*?<\/section>/)[0];
+  for (const text of ['Play/Pause','Previous/Next','seek','Preview FPS','speed','zoom','loop','Save GIF','Export frame','Preview in Test Scene','AnimData','frame order','disabled for artwork','body decoder','receiving shard']) assert.ok(playback.includes(text),text);
+  assert.ok(releases[0].added.some(text=>text.includes('Save GIF')));
   const library = workflow.match(/<section class="wrap workflow" id="animation-library-03311">[\s\S]*?<\/section>/)[0];
   for (const text of ['All animations','Body animations','Animated items &amp; effects','AnimData','Test Scene Effect','Reload library','0x','MUL','UOP','Shared native slots','Convert routed body to .vd','Routed body export options','Unknown UOP','art.def/verdata','preview FPS','Double-click','press Enter','receiving shard']) assert.ok(library.includes(text),text);
-  assert.ok(releases[0].added.some(text=>text.includes('All animations')));
-  assert.ok(releases[0].added.some(text=>text.includes('Animated items & effects')));
-  assert.ok(releases[0].fixed.some(text=>text.includes('Search Enter')));
+  assert.ok(releases.find(r=>r.version==='0.33.11').added.some(text=>text.includes('All animations')));
+  assert.ok(releases.find(r=>r.version==='0.33.11').added.some(text=>text.includes('Animated items & effects')));
+  assert.ok(releases.find(r=>r.version==='0.33.11').fixed.some(text=>text.includes('Search Enter')));
   const graphics = workflow.match(/<section class="wrap workflow" id="graphic-slot-safety">[\s\S]*?<\/section>/)[0];
   for (const text of ['Asset spaces','Free candidate','Used','Referenced','Queued','Unavailable','native','hover','source and bank','same effective inventory','I confirm replacing the existing graphics listed in this review','starts unchecked','Keep a backup','fresh review','Restored sessions','whole physical MUL footprint','overlap','riding-memory','shrink icon','logical Sphere body','stricter full-body','receiving client and shard']) assert.ok(graphics.includes(text),text);
   assert.ok(releases.find(r=>r.version==='0.33.10').fixed.some(text=>text.includes('Statics and tiles')));
@@ -150,9 +153,9 @@ test('Practical workspace instructions identify their controls and preserve loca
   assert.match(html, /does not guarantee that every contained image/);
   assert.match(html, /same asset ID/);
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.match(downloads, /95 pages.<br>33 practical chapters/);
+  assert.match(downloads, /96 pages.<br>33 practical chapters/);
   const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
-  assert.equal(releases.length, 62);
+  assert.equal(releases.length, 63);
 });
 
 
@@ -214,7 +217,7 @@ test('Rules 4 world workflow identifies exact controls, dependencies and receivi
   const html = await readFile(localPath('/studio/workflows/'), 'utf8');
   for (const text of ['id="world-generator-0336"','Temperate Mainland','Island Adventures','Frozen Highlands','Dry Frontier','Volcanic Wilderness','Keep this world','Another world','Restore kept','Compare worlds','World setups ▾','Open setup…','Save setup…','Save favourite…','Favourites / recent…','Reroll chosen part','Apply regions','Buildings from your stamps','Add stamp…','Generation stages…','Keep generation pictures','Check details','Terrain review','TileData','bounded one-level approximation','maintained legacy rules','do not create NPCs','receiving client and shard']) assert.ok(html.includes(text), text);
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.ok(downloads.includes('1,444 final application checks passed across 118 test modules with zero skips'));
+  assert.ok(downloads.includes('1,458 final application checks passed across 119 test modules with zero skips'));
   const overview = await readFile(localPath('/studio/'), 'utf8');
   assert.ok(overview.includes('35 tools'));
   assert.ok(overview.includes('id="worlds-and-activity"'));
