@@ -2,6 +2,27 @@
   "releases": [
     {
       "added": [
+        "Animations keeps native body and Animated items & effects playback in one workspace with visible controls.",
+        "Save GIF exports the selected body or Art/AnimData sequence; Export frame exports the shown frame."
+      ],
+      "date": "2026-10-13",
+      "fixed": [
+        "Resizing preserves the Play/Pause label and a MUL source clears stale UOP notices."
+      ],
+      "improved": [
+        "Play/Pause, stepping, seek, Preview FPS, speed, zoom and loop remain reachable in tested layouts.",
+        "Native item/effect frame order is retained; Preview in Test Scene is optional and body VD commands remain separate.",
+        "Export dialogs retain selected frames/settings; native timing metadata is not relabelled as in-game speed.",
+        "All earlier library, protected graphics, reviewed saves, backups and import/script workflows remain available.",
+        "All 1,458 final application checks passed across 119 test modules with zero skips in a single fresh maintained-source run. The entire suite separately passed from a fresh source ZIP. The frozen runtime and complete 96-page, 33-chapter guide were verified."
+      ],
+      "note": "Preview/GIF timing follows selected settings; native timing metadata and routed-body VD exports remain distinct. Verify final gameplay on the receiving shard.",
+      "release": true,
+      "title": "Play and export animations in one workspace",
+      "version": "0.33.12"
+    },
+    {
+      "added": [
         "All animations lists available physical MUL/UOP body entries directly from the current project client, with optional shard definition names.",
         "Body animations filters source banks and searches names or decimal/hexadecimal IDs; available actions, facings and shared slots are visible.",
         "Animated items & effects browses native AnimData artwork separately and opens its exact frame sequence in Test Scene Effect."
