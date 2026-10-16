@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "version": "0.3.0",
+  "sourceSha256": "68e63dbaaca860e24474a77634b2c9429c56eb1856477b5202a7e12a6af3908e",
+  "installerSha256": "fa80729f97505b7c9d512bcf3fdc5d9c5c827712189a71977b2fd8efab365e00",
+  "textNormalization": "UTF-8 without BOM; CRLF to LF; no other text changes",
+  "files": [
+    {
+      "path": "assistant.d.ts",
+      "bytes": 11854,
+      "sha256": "a252eb5636a729ab93e87f6bc88abc15bac845caca6c6339fc2095aea51222a6"
+    },
+    {
+      "path": "examples/01-status.js",
+      "bytes": 246,
+      "sha256": "e3aa6ae09f5e7d2f8fad38bd2d754677243a5d86117ef902ae6953bd20b52fc6"
+    },
+    {
+      "path": "examples/02-bounded-monitor.js",
+      "bytes": 301,
+      "sha256": "2d95cf72dae5ad0cfdd2ce84fa085987167c148b96ed94625d439dc5a267b5bc"
+    },
+    {
+      "path": "examples/03-alias-and-friends.js",
+      "bytes": 154,
+      "sha256": "ffce54dc23f48e2e24b08cf09de16abe1e3219bb3ff9448372294e6528e2ea57"
+    },
+    {
+      "path": "examples/04-open-backpack.js",
+      "bytes": 208,
+      "sha256": "c55a907c6e47c5e7a20c800c85892e23177b916a5cf370e0d6ed45aa7ca68a6a"
+    },
+    {
+      "path": "examples/05-action-catalog.js",
+      "bytes": 209,
+      "sha256": "b91febd61e3a3599468f576b65746acab35fbd1586f27a82ee12b70fc6430c92"
+    },
+    {
+      "path": "examples/06-heal-self.js",
+      "bytes": 552,
+      "sha256": "5d470bd5dff411d54a098b72aad43087274ce1aedb1a82e4d403abc754eddb73"
+    },
+    {
+      "path": "examples/07-count-bandages.js",
+      "bytes": 194,
+      "sha256": "3e7d15fffe8c300413abf001f1e2876aa1d7b5a27dc8bab709a975d66c4a11aa"
+    },
+    {
+      "path": "examples/08-move-one-item.js",
+      "bytes": 505,
+      "sha256": "aef964371ffc779b3c0bb469753e96dfb2dcdda14d3dc053ac09f0188bb24d47"
+    },
+    {
+      "path": "examples/09-journal-boundary.js",
+      "bytes": 283,
+      "sha256": "080bb1b681a4dc5fa84b89195a4c386c26a11e2b7329cb8e4e6942fc7e0f6c48"
+    },
+    {
+      "path": "examples/10-inspect-gump.js",
+      "bytes": 274,
+      "sha256": "8161b4497018217aaf6eb69e5e5caf2850fb75eef1c9b687fdfb3500fe5d4b12"
+    },
+    {
+      "path": "examples/11-buffs-and-properties.js",
+      "bytes": 388,
+      "sha256": "142f2af670e7e6656fbc0a7342cc33899114c606ff4877d16dda8828e2b41f65"
+    },
+    {
+      "path": "examples/12-map-current-location.js",
+      "bytes": 161,
+      "sha256": "8ea734f44f7127c1d1f6de72a7b29e11910406e991114ebc261909457ca3c1a4"
+    },
+    {
+      "path": "examples/examples.json",
+      "bytes": 1682,
+      "sha256": "776d1faf963a6221c74e5dd6cefbec8879a070a77997770e46be26e6d6949773"
+    },
+    {
+      "path": "examples/README.txt",
+      "bytes": 492,
+      "sha256": "b011bc2eb9c8750386b234ac4f10a9bb2359cbdba48a862b9bb4f0065b46543a"
+    }
+  ]
+}

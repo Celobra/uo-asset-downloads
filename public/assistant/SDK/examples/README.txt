@@ -1,4 +1,4 @@
-UO Assistant 0.2.0 scripting examples
+UO Assistant 0.3.0 scripting examples
 
 Each .js file is a separate script. Read its guide description before running.
 08-move-one-item.js requires an alias named supplyBag and requests a real transfer.

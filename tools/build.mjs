@@ -9,12 +9,14 @@ import { buildStudioRelease } from './build-studio-release.mjs';
 import { validateStaticAssets } from './validate-static-assets.mjs';
 import { prepareReleaseAssets } from './prepare-release-assets.mjs';
 import { validatePublishedAssistantFeed } from './assistant-updates.mjs';
+import { buildAssistant } from './build-assistant.mjs';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 try {
   console.log('Prepared published release assets:', await prepareReleaseAssets(root));
   await buildStudioUpdates();
   console.log('Built UO:PvE:', await buildUopve());
   await buildStudioRelease();
+  console.log('Built Assistant page:', await buildAssistant(root));
   console.log('Verified Assistant updater metadata:', await validatePublishedAssistantFeed(root));
   console.log('Validated static assets:', await validateStaticAssets(resolve(root, 'public')));
   console.log('Validated gallery:', await validateGallery());

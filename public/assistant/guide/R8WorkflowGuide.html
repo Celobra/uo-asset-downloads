@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UO Assistant 0.3.0 — workflow and scripting additions</title><link rel="stylesheet" href="R8WorkflowGuide.css"></head><body><main><nav aria-label="Documentation"><a href="Guide.html">Getting started</a> · <a href="Features.html">Features</a> · <a href="Release-Notes.html">Release notes</a> · <a href="Scripting-Guide.html">Scripting guide</a> · <a href="Scripting-Guide.pdf">63-page PDF</a> · <a href="R8WorkflowGuide.html">Workflow guide</a> · <a href="Map-Travel-Team.html">Maps, travel and teams</a> · <a href="Native-Playability.html">Game controls</a> · <a href="Recording.html">Recording</a> · <a href="Auto-Updates.html">Updates</a> · <a href="Recording-Dependencies.html">Recording source</a></nav><h1 id="uo-assistant-0-3-0-workflow-and-scripting-additions">UO Assistant 0.3.0 workflow and scripting additions</h1>
+<p>The assistant opens in its own window. The game keeps its GPU renderer and normal controls. Saved rules belong to the selected shard profile. Recording, script playback, observers, healing and team sharing do not start merely because their definitions were saved.</p>
+<p>This guide covers the input, inventory, scripting and patient additions. The application guide covers installation, GPU recording, map layers, expedition routes, team sharing and runebook travel. The installed JavaScript API declaration is the exact reference for script calls.</p>
+<h2 id="input-and-the-native-action-bar">Input and the native action bar</h2>
+<p>Open <strong>Input &amp; action bars</strong> to configure the game without placing the assistant over its play area.</p>
+<ol>
+<li>Enter a gesture such as <code>Ctrl+Mouse4</code>, <code>Alt+WheelUp</code> or a keyboard key with modifiers.</li>
+<li>Select its action and numeric spell/skill/preset ID. For a saved task, enter its exact saved name.</li>
+<li>Choose <strong>Game</strong>, <strong>Targeting</strong> or <strong>Chat</strong> context. Use a modified key for shortcuts intended while typing.</li>
+<li>Choose <strong>Tap</strong>, <strong>Release</strong>, or <strong>Hold</strong>. Hold means one action after 350 milliseconds, not a repeating action.</li>
+<li>Enable pass-through only when the same input should also reach ordinary game controls.</li>
+<li>Save. The connected game receives the profile&#x27;s finite configuration. A rich binding takes precedence over a duplicate legacy assistant binding while still respecting ordinary input pass-through.</li>
+</ol>
+<p>Mouse left/right and essential game keys remain reserved where required by the native input handler. A refused binding is not an authorization to override ordinary game input. The game reports configuration feedback and retains the previous valid configuration on refusal.</p>
+<p>Target presets support nearest, next, previous and lowest-known-health selection. Configure the candidate category, range, friend/controlled-pet exclusions and optional poisoned-only/known-health conditions. A target response still requires the current real target cursor. A remembered friendly or enemy selection is not authority to answer a replacement cursor.</p>
+<p>Action buttons can run spells, skills, inventory uses, macros, scripts, equipment or travel presets, recording/replay controls, and targeting presets. Set the button label, action ID/object ID or saved task name. A hotkey label on a button is explanatory: create the actual input binding separately.</p>
+<p>To display a custom timer, enter its exact saved <strong>Cooldown name</strong> on the button. The assistant sends small status updates at most twice per second when values change. These updates do not reinstall bindings or run actions. The display uses the real task-runner state and the passive cooldown model. Unknown, stale, estimated, journal-ready, failed and interrupted outcomes remain distinguishable. A countdown estimate does not prove a shard accepted the item or spell.</p>
+<h2 id="object-inspector-and-portable-definitions">Object inspector and portable definitions</h2>
+<p>Open <strong>Object inspector</strong>, enter an object ID or use its target button, then inspect the loaded facts. Alternatively choose an item on Inventory and use <strong>Use selected inventory item</strong>. Missing properties remain unknown; the inspector does not request hidden data.</p>
+<p>From the inspected item you can create:</p>
+<ul>
+<li>An exact saved alias.</li>
+<li>A graphic/hue counter.</li>
+<li>Protection for that exact object.</li>
+<li>A named loot rule for that type/hue.</li>
+<li>A JavaScript use-by-type script, avoiding a temporary object ID.</li>
+</ul>
+<p>Inspect and save do not use, move or target the item in gameplay. Target selection itself is explicit.</p>
+<h2 id="named-rules-and-destination-bags">Named rules and destination bags</h2>
+<p>Create a loot or scavenge set on the existing agent page, then use <strong>Named loot rules</strong> to edit its individual named rules.</p>
+<p>Each rule has an optional graphic/hue, name selector, property groups, priority, maximum stack amount and destination bag. <strong>Destination 0</strong> uses the set&#x27;s default bag. A nonzero destination must still be a currently accessible owned container when evaluated and dispatched. A missing matching destination stops the plan instead of dropping the item into a different bag.</p>
+<p>Within each property group, choose <strong>All</strong> for AND or <strong>Any</strong> for OR. The between-groups choice applies the same distinction to the groups. A property condition can have a literal prefix, optional numeric minimum/maximum and an optional literal substring. For example:</p>
+<div class="table"><table><thead><tr><th>Group</th><th>Join</th><th>Conditions</th></tr></thead><tbody>
+<tr><td>1</td><td>All</td><td>Luck at least 100; Lower Reagent Cost at least 15</td></tr>
+<tr><td>2</td><td>All</td><td>Damage Increase at least 25</td></tr>
+</tbody></table></div>
+<p>Choosing <strong>Any</strong> between those groups accepts either complete group. Higher-priority matching rules are evaluated first; one item is routed by one rule. Unloaded or incomplete required properties do not match. The explanation button tells you why a selected loaded item matches or fails.</p>
+<h2 id="search-compare-and-move-inventory">Search, compare and move inventory</h2>
+<p><strong>Search &amp; compare inventory</strong> searches currently loaded owned containers by graphic, hue, name/property substring or container ancestry. Run Search explicitly; background updates do not destroy your selection.</p>
+<p>Select one or two items to compare their loaded properties. Use Ctrl/Shift selection for a batch. <strong>Preview selected move</strong> creates a finite plan; <strong>Move selected items</strong> manually starts the same checked queue used by organizers. It accepts up to 128 selected movable non-container stacks in accessible owned inventory. A protected, held, missing or invalid selected item refuses the plan. Every move is checked again and its inventory change is observed before proceeding.</p>
+<p>Native loot presentation can preserve the current setting, use traditional bags, use a grid, or show both. Ordinary bags remain available.</p>
+<h2 id="type-property-equipment-selectors">Type/property equipment selectors</h2>
+<p>Capture an ordinary equipment set, then open <strong>Equipment selectors</strong>. Each wearable layer can keep an exact object ID or use a selector consisting of type/hue, optional name and property conditions. An optional ranking property chooses the highest loaded numeric value; ties use object ID for a deterministic result.</p>
+<p>The preview lists chosen objects or the first missing layer. Unknown properties, missing wearable-layer facts, protected objects and inaccessible items are excluded. One object cannot satisfy two layers. Existing weapon-conflict and occupied-layer checks still apply.</p>
+<p>Set <strong>Undress bag</strong> to an accessible owned bag, or use 0 for the backpack. Replacement must still be explicitly permitted by the equipment set. The assistant does not infer a bank or external container as an undress destination.</p>
+<h2 id="recording-ordinary-gameplay">Recording ordinary gameplay</h2>
+<p><strong>Gameplay recorder</strong> records ordinary manual double-clicks, cast/skill uses, item moves/equips, target responses, supported gump/menu/prompt replies and attacks observed by the client bridge. It excludes automated playback, configuration traffic and authentication.</p>
+<p>Start recording after entering the game. Perform a short sequence, then stop and save. Review the macro before running it. The recorder adds waits for fresh target/dialog state and removes captured session, target and dialog authority tokens. It preserves the requested choice/button and other reviewed action details rather than granting an old dialog permission to act again.</p>
+<p>Select a recorded object use and replace it with a type/hue match, or replace an object use/entity target with a saved alias. This is useful after a stack, tool or patient receives a different object ID. <strong>Play from selected step</strong> validates the remaining block structure; it refuses a slice containing orphaned branch/repeat boundaries. Use the existing macro editor to insert or rearrange steps and complete structured blocks.</p>
+<p>Recording a successful request does not prove shard success. Changed dialogs, ambiguous targets, incomplete inventory, missing aliases or a refusal stop playback; there is no blanket automatic retry.</p>
+<h2 id="migrating-uosteam-and-razor-macros">Migrating UOSteam and Razor macros</h2>
+<p><strong>Macro migration</strong> reads text; it never loads a legacy executable, Python interpreter, plugin or DLL. Paste a UOSteam script or open a text file. Serialized Razor actions use the existing enumerated parser first.</p>
+<p>Select <strong>Translate only</strong>. The page shows generated JavaScript, converted-line counts and exact blockers/warnings. Any unsupported/error line prevents a runnable conversion from being saved. Review every warning before <strong>Save reviewed conversion as script</strong>. Saving does not execute it.</p>
+<p>The converter supports useful finite combinations of:</p>
+<ul>
+<li>If/else-if/else conditions and bounded numeric/list loops.</li>
+<li>Local aliases, list creation/push/pop/indexing, ignore lists and timers.</li>
+<li>Loaded object/type/count/layer/range checks, loaded skills and gump text checks.</li>
+<li>Item use, checked item moves/type moves, equipping and explicit target waits/responses.</li>
+<li>Spell/skill catalogue lookup, gump waits/replies, journal waits and optional system-only scope.</li>
+<li>Assistant output messages, cancellation, war mode and explicit attacks.</li>
+</ul>
+<p>Important differences are reported rather than hidden:</p>
+<ul>
+<li>While loops and list iteration are capped at 100 iterations; the overall run/operation limits also apply.</li>
+<li>Lists and timers exist only during that script run. A list holds at most 512 entries and the helper limits list count.</li>
+<li><code>promptalias</code> requires the alias to be selected and saved before running. Interactive legacy prompting is not replayed.</li>
+<li>Head/system messages appear in assistant output; overhead placement and colour are not reproduced.</li>
+<li>Precise container slot placement, arbitrary pixel clicking, unsupported mobile searches, unbounded replay and unknown commands require manual translation.</li>
+<li>Skill predicates use only actual server-observed loaded skill values. Unknown values stop the script instead of being treated as zero.</li>
+<li>Type searches operate on current loaded facts and explicit container/ground scope. A move waits for an observed inventory change and stops if it is not seen.</li>
+</ul>
+<p>A read-only audit of the supplied 200 UOSteam scripts produced 32 complete conversions, compared with 2 accepted by the earlier importer. It converted 14,451 command/control lines across the corpus, including partial conversions that remain blocked. None of those supplied scripts was executed. The audit used synthetic action-name entries to measure syntax coverage, so it does not establish live spell IDs, shard compatibility or gameplay success. There is no claim of complete UOSteam, Razor Enhanced Python or Injection compatibility.</p>
+<h2 id="source-debugger">Source debugger</h2>
+<p>Use <strong>Source debugger &amp; bench</strong> for actual JavaScript source breaks. Select a saved script or copy the editor source. Enter comma-separated source line numbers, starting at 1, and optionally break on the first statement. Then explicitly start <strong>Debug this source in game</strong>.</p>
+<p>When paused, inspect the current original-source line, column, primitive local variables and function call stack. Object/array previews are deliberately shallow; inspection does not call user getters, <code>toString</code> or arbitrary watch expressions. The UI provides Continue, Step statement and Stop. This source debugger is separate from the existing macro/API-boundary trace.</p>
+<p>A pause revokes the current native action grant and invalidates target/dialog leases. Resume validates the current session, issues a new grant and requires fresh leases again. Script runtime includes paused time. A long pause can therefore reach the configured deadline. Stop and window closure cancel a paused worker before later actions can run.</p>
+<h2 id="offline-script-bench">Offline script bench</h2>
+<p><strong>Simulate against current loaded facts</strong> evaluates JavaScript in a constrained isolated engine using a copied snapshot, or an illustrative fixture when no game is connected. It records proposed API operations and script output. It does not connect to a client, send packets, access game accounts, read script-selected files, install modules or contact a network provider.</p>
+<p>Offline target/journal checks use only the supplied snapshot. Gump/prompt waits return false. Action results are labelled simulations. Server replies, timing, changing inventory, movement and rendering still need an in-game test. A successful bench run proves neither shard acceptance nor combat safety.</p>
+<h2 id="visual-workflows-and-reusable-functions">Visual workflows and reusable functions</h2>
+<p><strong>Visual workflows</strong> is a block editor with a connected diagram. Add actions, pauses, conditions, else/end blocks, finite repeats and calls to named reusable functions. Choose Root or a function to edit its block list. Move/remove blocks, validate, save and manually run.</p>
+<p>The compiler expands functions into the same macro executor. It does not create another privileged scripting runtime. Recursive functions are refused. Function nesting is limited to eight calls, macro block nesting to four, and the resulting macro to 256 steps/2,048 expanded steps. Each repeat is 1–100 iterations. Ordinary current-state checks, shard policy, target leases, item proofs and Stop remain active.</p>
+<h2 id="priority-observers">Priority observers</h2>
+<p>Create several <strong>Priority observers</strong> over health, mana, stamina, weight, item counts, target state or literal journal conditions. Link each to a saved script, macro or visual workflow. Set a priority and quiet time; optionally require a rising edge.</p>
+<p>Saving never arms observers. <strong>Arm observers for this character session</strong> is an explicit action. One highest-priority eligible task can enter the existing single-run action arbiter; other pending edges are retained. Held items, active targets, movement and recent manual actions take precedence. Manual game actions stop a task started by the observer scheduler. Reconnection/character changes, Stop/disarm and closing the assistant disarm observers. They do not automatically rearm on the next login.</p>
+<p>Choose short bounded tasks for observers. A task that waits indefinitely for unrelated input prevents other automated actions from using that one action slot until it stops.</p>
+<h2 id="patients-pets-and-cooldown-outcomes">Patients, pets and cooldown outcomes</h2>
+<p><strong>Patients &amp; pets</strong> shares the saved Healing settings. Choose self, a specific server-identified controlled pet, or an explicit patient list. Add saved friends, currently loaded party members, a picked patient or an entered object ID. Patient-list selection chooses the lowest known health fraction in configured range. Missing health/poison facts stay unknown. Bandages remain limited to two tiles; a configured spell can use a longer range up to 12 tiles.</p>
+<p>The selection is checked again before answering a healing target. If the patient changes or leaves range, the run stops instead of silently answering a new target with a different patient. The existing Healing page supplies thresholds and manually started watches; Timing &amp; healing provides fixed/dexterity bandage formulas.</p>
+<p>An explicit pet-command button speaks the configured shard command once while a nearby server-identified controlled pet is loaded. It does not infer commands from pet artwork, start automatically or assume a pet obeyed.</p>
+<p>For a saved cooldown, configure specific failure and interruption journal messages. Only newly observed matching events can end a running estimate. <strong>Failed (journal)</strong> and <strong>Interrupted (journal)</strong> do not mean ready and do not emit a ready alert. Journal-ready completion remains distinct from an elapsed estimate. System-only observation excludes ordinary player speech; choose All only when appropriate for that shard.</p>
+<h2 id="sound-journal-and-readability">Sound, journal and readability</h2>
+<p><strong>Sound presets</strong> lists up to 32 recent sound events. Select an ID and use Listen once before deciding whether to mute it. Listening bypasses that individual ID mute but retains master-volume/background sound behaviour. The saved mute list is explicit and visible; unmute one ID or clear it. Music, footsteps, ordinary sound volume and other display choices remain on the existing controls.</p>
+<p><strong>Focused journal</strong> adds literal search/highlights, source selection and repeat folding. It changes only this reading view. The original Journal page and captured messages remain intact. Saved highlights use readable background/foreground colours. Existing Workspace settings provide font/scale, high contrast and accessible palettes across the separate assistant; role layouts can pair them with game presentation settings. These additions do not claim a new controller driver or automatic gamepad profile.</p>
+<h2 id="template-versions-and-optional-assisted-editing">Template versions and optional assisted editing</h2>
+<p><strong>Script library &amp; edit preview</strong> records local publisher/version/description and a SHA-256 content hash for a saved script. Check whether its source still matches the saved version before sharing it. Definitions and profile backups remain explicit reviewed files; a template manifest does not execute or fetch remote code.</p>
+<p>The included 0.3 template selector provides known-skill reporting, checked weapon-alias equipment and per-rule loot-bag examples. Adding one explicitly saves a new script and its 0.3.0 content manifest; it does not run. Review the example&#x27;s required aliases and shard assumptions first.</p>
+<p>The optional assisted-editing workflow builds a local context preview from only the pasted selected source, your requested change and installed documented API signatures. It does not automatically launch a provider, require an API key, transmit an account/profile or execute a generated proposal. Copy only after reviewing the preview, use a provider of your choice, and validate any pasted replacement. Save/run is a separate explicit action. This is an editing aid, not an autonomous gameplay agent.</p>
+<h2 id="javascript-api-additions">JavaScript API additions</h2>
+<pre><code>// Use the installed API spelling and argument order.
+await assistant.equipItem(&#x27;spareWeapon&#x27;, 1);
+
+const before = (await assistant.snapshot()).Journal
+  .reduce((n, line) =&gt; Math.max(n, line.Sequence), 0);
+const confirmed = await assistant.waitForJournal(
+  &#x27;You finish applying the bandages&#x27;, 15000, before, &#x27;System&#x27;
+);
+await assistant.log(confirmed ? &#x27;Observed finish message&#x27; : &#x27;No finish observed&#x27;);</code></pre>
+<p><code>equipItem(serialOrAlias, layer)</code> validates one loaded item, refuses an occupied/conflicting/protected layer and observes the equipment change. Use a saved equipment set for explicitly configured replacements and an undress bag.</p>
+<p><code>waitForJournal(text, timeoutMilliseconds, afterSequence?, source?)</code> retains its existing arguments and adds optional <code>&quot;All&quot;</code>/<code>&quot;System&quot;</code> source selection. The default remains All for existing scripts. A wait can be 0–30,000 milliseconds. The sequence fence prevents a retained older line from satisfying a new confirmation wait.</p>
+<h2 id="testing-limits">Testing limits</h2>
+<p>Automated tests exercise the actual bounded JavaScript engine, source debugger pause/locals/call stack/Stop, fresh gump leases, item/rule proofs, finite graph execution, scheduler priority/manual exclusion, patient unknown-state handling, cooldown outcomes and the actual WPF save/preview handlers. Native tests separately exercise input contexts, holds, targeting, urgent deltas, layout and sound/status controls. Synthetic UI screenshots are labelled fixtures. These tests do not substitute for a new manual gameplay session on each shard, nor prove all third-party macros or custom gumps compatible.</p><footer><p>UO Assistant 0.3.0 · Windows x64 · Unsigned development preview. <a href="Third-Party-Notices.html">Third-party notices</a> · <a href="https://www.uoassets.com/assistant/">UO Assistant website</a></p></footer></main></body></html>

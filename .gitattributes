@@ -10,3 +10,6 @@
 *.pdf binary
 public/centred/*.txt -text
 public/centred/*.md -text
+# Preserve original recording notices byte-for-byte; the aggregate contains upstream separators.
+public/assistant/guide/Licenses/FFmpeg-* -text
+public/assistant/guide/Licenses/FFmpeg-Media-Third-Party-Notices.txt -diff
