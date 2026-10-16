@@ -12,7 +12,7 @@ interface AssistantTarget { Active: boolean; Revision: number; Id: number; Type:
 interface AssistantItem {
   Serial: number; Graphic: number; Hue: number; Amount: number; Container: number;
   Layer: number; Name: string; X: number; Y: number; Z: number; OwnedInventory: boolean;
-  Accessible: boolean; Movable: boolean; IsContainer: boolean;
+  Accessible: boolean; TileName: string; Movable: boolean; IsContainer: boolean;
 }
 interface AssistantPlayer {
   Serial: number; Name: string; Backpack: number; X: number; Y: number; Z: number; Map: number;
@@ -126,7 +126,55 @@ interface AssistantSnapshot {
     Playability: AssistantPlayability;
   };
 }
+interface AssistantSearchFilter {
+  /** Case-insensitive name/text match. Empty matches any known or unknown name. */
+  Name?: string; ExactName?: boolean; Graphic?: number; Hue?: number;
+}
+interface AssistantTileQuery extends AssistantSearchFilter {
+  Kind?: "Any" | "Tree" | "Cave" | "Land" | "Static";
+  Map?: number; X?: number; Y?: number; Radius?: number; Offset?: number;
+}
+interface AssistantTile {
+  X: number; Y: number; Z: number; Graphic: number; DisplayGraphic: number; Hue: number;
+  Name: string; Kind: "Land" | "Static"; Tree: boolean; Cave: boolean; Distance: number;
+}
+interface AssistantTilePage {
+  Map: number; X: number; Y: number; Radius: number; CapturedUtc: string;
+  Tiles: AssistantTile[]; NextOffset: number | null; UnloadedTiles: number; Truncated: boolean; Complete: boolean;
+}
+interface AssistantItemQuery extends AssistantSearchFilter {
+  Scope?: "Any" | "Ground" | "Owned" | "Equipped" | "Backpack";
+  Container?: number; Recursive?: boolean; Range?: number;
+  Movable?: boolean; IsContainer?: boolean; Limit?: number;
+}
+interface AssistantGumpQuery extends AssistantSearchFilter {
+  Type?: string; LocalSerial?: number; ServerSerial?: number; Offset?: number;
+}
+interface AssistantScannedControl {
+  Type: string; Serial: number; X: number; Y: number; Width: number; Height: number;
+  Page: number; Enabled: boolean; Text: string; Graphic: number | null; Hue: number | null;
+  Button: number | null; Action: string; ToPage: number | null;
+}
+interface AssistantScannedGump {
+  Token: number; Type: string; LocalSerial: number; ServerSerial: number;
+  X: number; Y: number; Width: number; Height: number; ActivePage: number; FromServer: boolean;
+  Controls: AssistantScannedControl[]; Truncated: boolean;
+}
 interface AssistantApi {
+  /** Loaded terrain only, radius 0–18, at most 32 cells/256 matches per page.
+   * Keep Map/X/Y/Radius fixed and use NextOffset until null. Aggregate missing/truncated flags.
+   * Graphic is original map art; DisplayGraphic may differ with the season.
+   * Tree uses the client's tree filter; Cave uses its cave filter or a land name containing cave.
+   * Classification is a candidate, never proof that the shard allows harvesting. */
+  scanTiles(query?: AssistantTileQuery): Promise<AssistantTilePage>;
+  /** Loaded items only; never opens containers or requests names/properties.
+   * Best known property/item/tile name, case insensitive. Range filters Ground scope.
+   * Complete refers to captured facts, never the entire shard or unseen inventories. */
+  findItems(query?: AssistantItemQuery): Promise<{Items: AssistantItem[]; Complete: boolean; UnknownNames: number; Message: string}>;
+  /** Open visible game windows, nested visible controls on the active page.
+   * Excludes editable fields. Bounded pages, follow NextOffset; a truncated gump remains partial.
+   * Name matches type or control text. Does not lease, click, reply, or open a window. */
+  findGumps(query?: AssistantGumpQuery): Promise<{Gumps: AssistantScannedGump[]; NextOffset: number | null; Truncated: boolean; Complete: boolean}>;
   snapshot(): Promise<AssistantSnapshot>;
   alias(name: string): Promise<number>;
   isFriend(serial: SerialOrAlias): Promise<boolean>;

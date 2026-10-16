@@ -1,17 +1,17 @@
 {
   "product": "UO Assistant",
-  "version": "0.3.0",
-  "clientVersion": "0.3.0",
+  "version": "0.4.0",
+  "clientVersion": "0.4.0",
   "date": "2026-10-16",
   "platform": "Windows x64",
   "status": "unsigned Windows x64 development preview",
-  "releaseUrl": "https://github.com/Celobra/uo-asset-downloads/releases/tag/uo-assistant-v0.3.0",
+  "releaseUrl": "https://github.com/Celobra/uo-asset-downloads/releases/tag/uo-assistant-v0.4.0",
   "downloads": {
-    "installer": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-Setup.exe",
-    "source": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-Source.zip",
-    "guide": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-Guide.zip",
-    "rebuildKit": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-MP3Sharp-Source-Rebuild.zip",
-    "checksums": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/SHA256SUMS-0.3.0.txt",
+    "installer": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.4.0/UOAssistant-0.4.0-Setup.exe",
+    "source": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.4.0/UOAssistant-0.4.0-Source.zip",
+    "guide": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.4.0/UOAssistant-0.4.0-Guide.zip",
+    "rebuildKit": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.4.0/UOAssistant-0.4.0-MP3Sharp-Source-Rebuild.zip",
+    "checksums": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.4.0/SHA256SUMS-0.4.0.txt",
     "recordingTools": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-Recording-Tools.zip",
     "ffmpegSource": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-FFmpeg-Source-Rebuild.zip",
     "ffmpegDependencies": [
@@ -22,88 +22,67 @@
   },
   "artifacts": {
     "README.txt": {
-      "bytes": 2230,
-      "sha256": "eef2d8df4014115b1647087ab6a425f25582ac2e1fa97743f155a498de2b27e1"
+      "bytes": 437,
+      "sha256": "2e69ec8aa0a57f2a03ad0a0c509dc7313a4fe141d1b7e7f430644609328caa69"
     },
-    "UOAssistant-0.3.0-FFmpeg-Dependency-Sources-01.zip": {
-      "bytes": 1640788340,
-      "sha256": "70498f0d1430fef2de5fe0750b054ff39ed2a5108e18693881ff235c7b9e77ad"
+    "UOAssistant-0.4.0-Guide.zip": {
+      "bytes": 1047624,
+      "sha256": "23ef92da9ed170f4dd9697827cbced6b7b6cedff5d23cf55775bae4e15af0b26"
     },
-    "UOAssistant-0.3.0-FFmpeg-Dependency-Sources-02.zip": {
-      "bytes": 569112604,
-      "sha256": "deee254acdade1f1953573b2d709525bb81c20cd90a5df4f289940e8e2e50dcb"
+    "UOAssistant-0.4.0-MP3Sharp-Source-Rebuild.zip": {
+      "bytes": 170950,
+      "sha256": "688744e1927606bd0ab1fe5e1e3bbcf8a6badd92d76a607e95d994b8b7264579"
     },
-    "UOAssistant-0.3.0-FFmpeg-Source-Rebuild.zip": {
-      "bytes": 25018882,
-      "sha256": "61e373b300234a59ad1d62bf11344691cc44e9e3ccfaefa2de3cfba0bc897dae"
+    "UOAssistant-0.4.0-Release-Notes.html": {
+      "bytes": 2740,
+      "sha256": "4d411bd713ad35c408f7ac9fb12c6eb8b2f2a98381376c781c5d73ba8a3c4604"
     },
-    "UOAssistant-0.3.0-Guide.zip": {
-      "bytes": 1034197,
-      "sha256": "f072c0db1b6845eff515a2a6fd7803741823864594b35a720f46e983adeb6cc0"
+    "UOAssistant-0.4.0-Setup.exe": {
+      "bytes": 191365169,
+      "sha256": "d6884f927b645f8d04749c8268aa8bc652099787de559785ef26fd3f1ab4b5f7"
     },
-    "UOAssistant-0.3.0-MP3Sharp-Source-Rebuild.zip": {
-      "bytes": 170401,
-      "sha256": "725d63eaddff4ea6daf9a88399755e34cd5bdc6de60ec1079f0fd2dd9fbcefb6"
-    },
-    "UOAssistant-0.3.0-Recording-Tools.zip": {
-      "bytes": 79512020,
-      "sha256": "69e1eebd24e4151ef97686b51fbaf7bcf1113f887d577f20dc8673c26b835d06"
-    },
-    "UOAssistant-0.3.0-Release-Notes.html": {
-      "bytes": 10550,
-      "sha256": "7cfe6c1019961a1e1c3bebfecd81a16c7bb68cf7f02be1a59ac5941fcef523a8"
-    },
-    "UOAssistant-0.3.0-Setup.exe": {
-      "bytes": 191353660,
-      "sha256": "fa80729f97505b7c9d512bcf3fdc5d9c5c827712189a71977b2fd8efab365e00"
-    },
-    "UOAssistant-0.3.0-Source.zip": {
-      "bytes": 22372124,
-      "sha256": "68e63dbaaca860e24474a77634b2c9429c56eb1856477b5202a7e12a6af3908e"
+    "UOAssistant-0.4.0-Source.zip": {
+      "bytes": 22396531,
+      "sha256": "4b93947930a16ee1aba8232aab92298240c9bbff161ec53f1f34a4893dd08532"
     },
     "update.json": {
-      "bytes": 3415,
-      "sha256": "2ae63616aafea772001d196d923a8c2e2e63d8db0103a9d86b2365ae05f8a6e5"
+      "bytes": 4185,
+      "sha256": "16370fee5f350f7638b627255be091d61879c2b6e0a438b10e4f31d7eaf00c06"
     },
-    "release.json": {
-      "bytes": 5848,
-      "sha256": "e7df3020a966c0ae0da7760eccdbf8ea0c9b9e9a226500a5635c0c34981abf6e"
-    },
-    "SHA256SUMS-0.3.0.txt": {
-      "bytes": 1180,
-      "sha256": "2fa8955ca87b6a195175989174435c4e90eab423f44712130fd81a7a60b10c5e"
+    "SHA256SUMS-0.4.0.txt": {
+      "bytes": 660,
+      "sha256": "7a768b931c4121430e4749b7770a2be9f88a326edfce52aa8d8f2e44477e45bb"
     }
   },
   "producerChecks": {
-    "integrated": 1149,
+    "integrated": 1100,
     "launcherCoreNetwork": 111,
     "launcherInterface": 14,
-    "installation": 1334,
-    "payloadFiles": 1284,
-    "networkFencedStartup": true,
-    "distributedGpuRecording": 44
+    "installation": 0,
+    "payloadFiles": 1288,
+    "installerSourceGuards": 13,
+    "harvestingSimulations": 26
   },
   "applicationCheckGroups": {
-    "native": 392,
-    "startup": 58,
+    "native": 399,
     "protocol": 30,
-    "automation": 224,
+    "automation": 227,
+    "scanning": 22,
+    "harvestingJint": 2,
     "storage": 30,
     "nativeTools": 45,
     "mapsTravelTeam": 72,
     "workflows": 78,
-    "companionInterface": 195,
-    "recordingBounds": 25
+    "companionInterface": 195
   },
-  "sourceInventorySha256": "349FE9E2929E2B3F7B459D799FC1CA4872E8D3C2C020D84AE0529E43B626DDDF",
-  "clientManifestSha256": "CA928396286234F78E45B879B9E1C544B8639DB06F14738177B6C1F1DC9DC412",
-  "payloadManifestSha256": "BBD85539A28E6D5210BD9EA09F361257119813C089FEF3580530F644DD09121C",
-  "installerSourceInventorySha256": "07BF6CA4FC99F93F94C03F2FCF517A41283C5AFD9E833871F368F663AFCB39C0",
+  "sourceInventorySha256": "7c101921cbc557874e4d983ee38e4ff2e94390631b655266796b8e8b6cc320d9",
+  "clientManifestSha256": "17efbeaad44f364f301b02615553bc28b731e64eeb33789b4fbc5689670a025b",
+  "payloadManifestSha256": "cc9800868fb26f5933b3e70a47e7a23479fc7ac519311f0a570d8f20097ddf49",
   "guide": {
-    "pages": 63,
-    "sections": 58,
-    "apiMethods": 45,
-    "standaloneExamples": 12
+    "pages": 64,
+    "sections": 63,
+    "apiMethods": 48,
+    "standaloneExamples": 15
   },
   "recording": {
     "defaultPreference": [
@@ -126,16 +105,17 @@
       "hevc": 2849510,
       "h264": 3645670
     },
-    "encodedFrameDrops": 0
+    "encodedFrameDrops": 0,
+    "verificationVersion": "0.3.0"
   },
   "limits": [
     "Unsigned development preview.",
-    "Synthetic performance fixtures do not establish live shard FPS.",
-    "Hardware recording was tested on NVIDIA; AMD/Intel encoding needs receiving-system checks.",
-    "Final gameplay, targeting, dialogs, travel and rules require receiving-system checks.",
-    "Legacy conversion supports an explicit subset and blocks incomplete scripts.",
-    "AI editing prepares local reviewable context; no external provider is enabled.",
-    "The exact FFmpeg source and dependency archives are included; a Linux/Docker media recompile was not run."
+    "Read-only scans cover loaded client facts and report incomplete results.",
+    "Live shard harvesting, custom cave art and populated-world performance need receiving-system checks.",
+    "Fresh install/uninstall not repeated because an existing product registration was preserved.",
+    "Recording components and their NVIDIA tests are unchanged from 0.3.0; AMD/Intel need receiving-system checks.",
+    "Exact corresponding FFmpeg source/rebuild and dependency archives remain in release 0.3.0.",
+    "External Qodo review unavailable: CLI signed out."
   ],
   "gameDataIncluded": false,
   "privateProfilesIncluded": false,
@@ -147,6 +127,183 @@
     "license": "Original BSD 2-Clause and dependency notices retained"
   },
   "previousReleases": [
+    {
+      "product": "UO Assistant",
+      "version": "0.3.0",
+      "clientVersion": "0.3.0",
+      "date": "2026-10-16",
+      "platform": "Windows x64",
+      "status": "unsigned Windows x64 development preview",
+      "releaseUrl": "https://github.com/Celobra/uo-asset-downloads/releases/tag/uo-assistant-v0.3.0",
+      "downloads": {
+        "installer": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-Setup.exe",
+        "source": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-Source.zip",
+        "guide": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-Guide.zip",
+        "rebuildKit": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-MP3Sharp-Source-Rebuild.zip",
+        "checksums": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/SHA256SUMS-0.3.0.txt",
+        "recordingTools": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-Recording-Tools.zip",
+        "ffmpegSource": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-FFmpeg-Source-Rebuild.zip",
+        "ffmpegDependencies": [
+          "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-FFmpeg-Dependency-Sources-01.zip",
+          "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-FFmpeg-Dependency-Sources-02.zip"
+        ],
+        "recordingNotices": "https://www.uoassets.com/assistant/guide/Recording-Dependencies.html"
+      },
+      "artifacts": {
+        "README.txt": {
+          "bytes": 2230,
+          "sha256": "eef2d8df4014115b1647087ab6a425f25582ac2e1fa97743f155a498de2b27e1"
+        },
+        "UOAssistant-0.3.0-FFmpeg-Dependency-Sources-01.zip": {
+          "bytes": 1640788340,
+          "sha256": "70498f0d1430fef2de5fe0750b054ff39ed2a5108e18693881ff235c7b9e77ad"
+        },
+        "UOAssistant-0.3.0-FFmpeg-Dependency-Sources-02.zip": {
+          "bytes": 569112604,
+          "sha256": "deee254acdade1f1953573b2d709525bb81c20cd90a5df4f289940e8e2e50dcb"
+        },
+        "UOAssistant-0.3.0-FFmpeg-Source-Rebuild.zip": {
+          "bytes": 25018882,
+          "sha256": "61e373b300234a59ad1d62bf11344691cc44e9e3ccfaefa2de3cfba0bc897dae"
+        },
+        "UOAssistant-0.3.0-Guide.zip": {
+          "bytes": 1034197,
+          "sha256": "f072c0db1b6845eff515a2a6fd7803741823864594b35a720f46e983adeb6cc0"
+        },
+        "UOAssistant-0.3.0-MP3Sharp-Source-Rebuild.zip": {
+          "bytes": 170401,
+          "sha256": "725d63eaddff4ea6daf9a88399755e34cd5bdc6de60ec1079f0fd2dd9fbcefb6"
+        },
+        "UOAssistant-0.3.0-Recording-Tools.zip": {
+          "bytes": 79512020,
+          "sha256": "69e1eebd24e4151ef97686b51fbaf7bcf1113f887d577f20dc8673c26b835d06"
+        },
+        "UOAssistant-0.3.0-Release-Notes.html": {
+          "bytes": 10550,
+          "sha256": "7cfe6c1019961a1e1c3bebfecd81a16c7bb68cf7f02be1a59ac5941fcef523a8"
+        },
+        "UOAssistant-0.3.0-Setup.exe": {
+          "bytes": 191353660,
+          "sha256": "fa80729f97505b7c9d512bcf3fdc5d9c5c827712189a71977b2fd8efab365e00"
+        },
+        "UOAssistant-0.3.0-Source.zip": {
+          "bytes": 22372124,
+          "sha256": "68e63dbaaca860e24474a77634b2c9429c56eb1856477b5202a7e12a6af3908e"
+        },
+        "update.json": {
+          "bytes": 3415,
+          "sha256": "2ae63616aafea772001d196d923a8c2e2e63d8db0103a9d86b2365ae05f8a6e5"
+        },
+        "release.json": {
+          "bytes": 5848,
+          "sha256": "e7df3020a966c0ae0da7760eccdbf8ea0c9b9e9a226500a5635c0c34981abf6e"
+        },
+        "SHA256SUMS-0.3.0.txt": {
+          "bytes": 1180,
+          "sha256": "2fa8955ca87b6a195175989174435c4e90eab423f44712130fd81a7a60b10c5e"
+        }
+      },
+      "producerChecks": {
+        "integrated": 1149,
+        "launcherCoreNetwork": 111,
+        "launcherInterface": 14,
+        "installation": 1334,
+        "payloadFiles": 1284,
+        "networkFencedStartup": true,
+        "distributedGpuRecording": 44
+      },
+      "applicationCheckGroups": {
+        "native": 392,
+        "startup": 58,
+        "protocol": 30,
+        "automation": 224,
+        "storage": 30,
+        "nativeTools": 45,
+        "mapsTravelTeam": 72,
+        "workflows": 78,
+        "companionInterface": 195,
+        "recordingBounds": 25
+      },
+      "sourceInventorySha256": "349FE9E2929E2B3F7B459D799FC1CA4872E8D3C2C020D84AE0529E43B626DDDF",
+      "clientManifestSha256": "CA928396286234F78E45B879B9E1C544B8639DB06F14738177B6C1F1DC9DC412",
+      "payloadManifestSha256": "BBD85539A28E6D5210BD9EA09F361257119813C089FEF3580530F644DD09121C",
+      "installerSourceInventorySha256": "07BF6CA4FC99F93F94C03F2FCF517A41283C5AFD9E833871F368F663AFCB39C0",
+      "guide": {
+        "pages": 63,
+        "sections": 58,
+        "apiMethods": 45,
+        "standaloneExamples": 12
+      },
+      "recording": {
+        "defaultPreference": [
+          "HEVC",
+          "AV1",
+          "H.264"
+        ],
+        "capture": "paired game window",
+        "audio": "optional game-only process loopback",
+        "microphone": false,
+        "localOnly": true,
+        "hardwareTested": "NVIDIA RTX 5090",
+        "syntheticTextQualitySsim": {
+          "av1": 0.978,
+          "hevc": 0.978,
+          "h264": 0.978
+        },
+        "syntheticClipBytes": {
+          "av1": 3625347,
+          "hevc": 2849510,
+          "h264": 3645670
+        },
+        "encodedFrameDrops": 0
+      },
+      "limits": [
+        "Unsigned development preview.",
+        "Synthetic performance fixtures do not establish live shard FPS.",
+        "Hardware recording was tested on NVIDIA; AMD/Intel encoding needs receiving-system checks.",
+        "Final gameplay, targeting, dialogs, travel and rules require receiving-system checks.",
+        "Legacy conversion supports an explicit subset and blocks incomplete scripts.",
+        "AI editing prepares local reviewable context; no external provider is enabled.",
+        "The exact FFmpeg source and dependency archives are included; a Linux/Docker media recompile was not run."
+      ],
+      "gameDataIncluded": false,
+      "privateProfilesIncluded": false,
+      "automaticLogin": false,
+      "installation": "current Windows user",
+      "upstream": {
+        "project": "ClassicUO",
+        "commit": "ee79d7ebc1cc0e53ff84fe6cae17d389e2737f93",
+        "license": "Original BSD 2-Clause and dependency notices retained"
+      },
+      "automaticUpdates": {
+        "feed": "https://www.uoassets.com/assistant/update.json",
+        "defaultCheckOnLaunch": true,
+        "intervalMinutesWhileIdle": 30,
+        "automaticInstallation": false,
+        "signedCatalog": true,
+        "existingPreferencesRetained": true
+      },
+      "update": {
+        "feedUrl": "https://www.uoassets.com/assistant/update.json",
+        "defaultEnabled": true,
+        "idleIntervalMinutes": 30,
+        "automaticInstall": false,
+        "savedOptOutsPreserved": true,
+        "signedCatalog": true
+      },
+      "publicationChecks": {
+        "payloadFilesRehashed": 1284,
+        "originalSourceInputsVerified": 1516,
+        "publicSourceInputsIncluded": 1479,
+        "installerSourceFilesVerified": 151,
+        "sourceArchiveCrc": true,
+        "guideArchiveCrc": true,
+        "externalQodo": "unavailable: not logged in",
+        "reconstructedSourceChecks": 1149,
+        "freshLauncherChecks": 111,
+        "offlineGuideLinksChecked": true
+      }
+    },
     {
       "product": "UO Assistant",
       "version": "0.2.1",
@@ -303,15 +460,43 @@
     "signedCatalog": true
   },
   "publicationChecks": {
-    "payloadFilesRehashed": 1284,
-    "originalSourceInputsVerified": 1516,
-    "publicSourceInputsIncluded": 1479,
-    "installerSourceFilesVerified": 151,
+    "payloadFilesRehashed": 1288,
+    "publicSourceInputsIncluded": 1647,
     "sourceArchiveCrc": true,
     "guideArchiveCrc": true,
     "externalQodo": "unavailable: not logged in",
-    "reconstructedSourceChecks": 1149,
-    "freshLauncherChecks": 111,
-    "offlineGuideLinksChecked": true
+    "offlineGuideLinksChecked": 122,
+    "runtimeFilesVerified": 840,
+    "privacyPathMatches": 0
+  },
+  "dependencyArtifacts": {
+    "UOAssistant-0.3.0-FFmpeg-Dependency-Sources-01.zip": {
+      "bytes": 1640788340,
+      "sha256": "70498f0d1430fef2de5fe0750b054ff39ed2a5108e18693881ff235c7b9e77ad"
+    },
+    "UOAssistant-0.3.0-FFmpeg-Dependency-Sources-02.zip": {
+      "bytes": 569112604,
+      "sha256": "deee254acdade1f1953573b2d709525bb81c20cd90a5df4f289940e8e2e50dcb"
+    },
+    "UOAssistant-0.3.0-FFmpeg-Source-Rebuild.zip": {
+      "bytes": 25018882,
+      "sha256": "61e373b300234a59ad1d62bf11344691cc44e9e3ccfaefa2de3cfba0bc897dae"
+    },
+    "UOAssistant-0.3.0-Recording-Tools.zip": {
+      "bytes": 79512020,
+      "sha256": "69e1eebd24e4151ef97686b51fbaf7bcf1113f887d577f20dc8673c26b835d06"
+    }
+  },
+  "scanning": {
+    "methods": [
+      "scanTiles",
+      "findItems",
+      "findGumps"
+    ],
+    "loadedFactsOnly": true,
+    "readOnly": true,
+    "maximumTileRadius": 18,
+    "maximumScriptSeconds": 1800,
+    "editableTextExcluded": true
   }
 }
