@@ -491,3 +491,5 @@ body.pve.wiki-page {
   .wiki-page .creature-content { padding-left: 0; }
   .wiki-page .loot-pool > ul { margin-left: 5px; }
 }
+
+.opening-preview{margin:24px 0;max-width:960px}.opening-preview video{display:block;width:100%;height:auto;background:#141614;border:1px solid var(--line,#4b453b);border-radius:8px}.opening-preview figcaption{margin-top:12px;max-width:75ch;font-size:.92rem;color:var(--muted,#bcb7a9);line-height:1.7}

@@ -24,6 +24,11 @@ const htmlFilesUnder = async directory => {
 };
 
 test('Every UO:PvE page has a unique canonical, accessible headings and working local links, assets and fragments', async () => {
+  const checkedHtml = new Map();
+  const targetHtmlFor = target => {
+    if (!checkedHtml.has(target)) checkedHtml.set(target, readFile(target, 'utf8'));
+    return checkedHtml.get(target);
+  };
   for (const route of routes) {
     const html = await htmlFor(route);
     assert.match(html, /<html lang="en">/);
@@ -45,7 +50,7 @@ test('Every UO:PvE page has a unique canonical, accessible headings and working 
       const target = localPath(decodeURIComponent(url.pathname));
       assert.ok((await stat(target)).isFile(), `${route}: missing ${url.pathname}`);
       if (url.hash) {
-        const targetHtml = await readFile(target, 'utf8');
+        const targetHtml = await targetHtmlFor(target);
         assert.ok(targetHtml.includes(`id="${decodeURIComponent(url.hash.slice(1))}"`), `${route}: missing anchor ${url.href}`);
       }
     }
@@ -70,7 +75,7 @@ test('The player hub and existing site sections expose the introduction, wiki, a
 test('The wiki and updates retain every maintained article, related route and complete plain-text entry', async () => {
   const wiki = await htmlFor('/uopve/wiki/');
   const updates = await htmlFor('/uopve/updates/');
-  assert.equal(data.articles.length, 86, 'The development refresh must retain the existing guides and add the seven new references');
+  assert.equal(data.articles.length, 91, 'The progression refresh retains the existing guides and adds five new player guides');
   assert.equal([...wiki.matchAll(/\bdata-wiki-entry\b/g)].length, data.articles.length);
   assert.equal([...updates.matchAll(/\bdata-update-entry\b/g)].length, data.updates.length);
   for (const html of [wiki, updates]) {
@@ -85,7 +90,7 @@ test('The wiki and updates retain every maintained article, related route and co
     assert.ok(html.includes(`<h1 id="article-title">${escapeHtml(article.title)}</h1>`));
     for (const section of article.sections) {
       assert.ok(html.includes(`id="${section.id}"`), article.slug);
-      for (const paragraph of section.paragraphs) assert.ok(html.includes(`<p>${escapeHtml(paragraph)}</p>`), `${article.slug}: omitted or unescaped paragraph`);
+      for (const paragraph of section.paragraphs || []) assert.ok(html.includes(`<p>${escapeHtml(paragraph)}</p>`), `${article.slug}: omitted or unescaped paragraph`);
       for (const list of section.lists || []) for (const item of list.items) assert.ok(html.includes(`<li>${escapeHtml(item)}</li>`), `${article.slug}: omitted or unescaped list item`);
       for (const table of section.tables || []) {
         for (const column of table.columns) assert.ok(html.includes(`<th scope="col">${escapeHtml(column)}</th>`), `${article.slug}: missing table column`);
@@ -158,7 +163,7 @@ test('The complete bestiary has one usable entry per definition, safe loot links
   const bestiary = JSON.parse(await readFile(resolve(root, 'data/uopve-bestiary.json'), 'utf8'));
   const html = await htmlFor('/uopve/wiki/creature-bestiary/');
   assert.equal([...html.matchAll(/\bdata-bestiary-entry\b/g)].length, bestiary.creatures.length);
-  assert.equal(bestiary.creatures.length, 1147);
+  assert.equal(bestiary.creatures.length, 1149);
   for (const creature of bestiary.creatures) {
     const id = creature.id.toLowerCase().replace(/[^a-z0-9-]/g, '-');
     assert.ok(html.includes(`id="creature-${id}"`), creature.id);
@@ -276,7 +281,7 @@ test('Creature and reference table search report matches, combine categories and
   document.querySelectorAll = selector => selector === '[data-bestiary-entry]' ? creatures : selector === '[data-reference-filter]' ? [ids['reference-example-search']] : selector === '[data-reference-entry="reference-example"]' ? rows : [];
   const window = new Element();
   vm.runInNewContext(await readFile(resolve(publicRoot,'uopve/uopve.js'),'utf8'),{document,window});
-  assert.equal(ids['bestiary-results'].textContent,'1147 creatures available');
+  assert.equal(ids['bestiary-results'].textContent,'1149 creatures available');
   ids['bestiary-search'].value='roper';
   ids['bestiary-search'].emit('input');
   assert.equal(creatures.filter(entry => !entry.hidden).length,1,'Creature name search must not match property text on unrelated creatures');
@@ -445,7 +450,7 @@ test('Shared reference search filters actual weapon rows and empty sections; a c
   for (const section of sections) ids[section.id] = section;
   const intro = layout.sections.find(section => section.id === 'reading'); ids.reading = intro;
   const runtime = await interactionRuntime({ ids, selectors: { '[data-reference-filter]': [ids['article-reference-search']], '[data-reference-entry="article-reference"]': rows, '[data-reference-section="article-reference"]': layout.groups } });
-  assert.equal(rows.length, 468);
+  assert.equal(rows.length, 470);
   assert.ok(sections.every(section => !section.hidden));
   ids['article-reference-search'].value = 'assassin shortbow'; ids['article-reference-search'].emit('input');
   assert.equal(rows.filter(row => !row.hidden).length, 1);

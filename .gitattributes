@@ -7,6 +7,8 @@
 *.zip binary
 *.png binary
 *.gif binary
+*.jpg binary
+*.mp4 binary
 *.pdf binary
 public/centred/*.txt -text
 public/centred/*.md -text

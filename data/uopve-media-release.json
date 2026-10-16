@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-16",
+  "title": "UO:PvE opening film",
+  "durationSeconds": 36,
+  "preview": {
+    "file": "/uopve/media/opening-720p-silent.mp4",
+    "width": 1280,
+    "height": 720,
+    "audio": false,
+    "sizeBytes": 12885274,
+    "sha256": "2bd983dcdfc8a96e87a2316381baa9344a1fbe90559c46a039264e87ed19aa83"
+  },
+  "original": {
+    "url": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-pve-opening-2026-10-16/UO_PvE_Opening_1080p.mp4",
+    "width": 1920,
+    "height": 1080,
+    "audio": true,
+    "sizeBytes": 29272760,
+    "sha256": "e0e98ddc9fe866c6bec529ab01bf3f7ac8b2741bbb3160d80bb04645ebdd5c6d"
+  },
+  "poster": {
+    "file": "/uopve/media/opening-poster.jpg",
+    "sha256": "6f8e49e81d9c4833acef1074cc1cf70346f29fba03afdacdf549a51a354633c2"
+  }
+}

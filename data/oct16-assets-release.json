@@ -1,0 +1,1102 @@
+{
+  "date": "2026-10-16",
+  "sources": [
+    {
+      "archive": "UO_Cave_Dungeon_Walls.zip",
+      "bytes": 5315073,
+      "sha256": "2d9dc36ad061435da502e08db4ea9d18460b51b412e151a4bfea04d051669708"
+    },
+    {
+      "archive": "UO_Curved_Wall.zip",
+      "bytes": 3449732,
+      "sha256": "58d7c2c576211acc8e2a4a1320a5abf979e83a8a23c6ff3248cf768a84c971a3"
+    },
+    {
+      "archive": "UO_Wall_Pack_V2_Export_Matched.zip",
+      "bytes": 6293840,
+      "sha256": "efce2283ac3613bc9b9d6a255de4c12e86fcacade5fbc72691d8c6e22fbf2f4b"
+    },
+    {
+      "archive": "UO_Wilderness_New_Art.zip",
+      "bytes": 9403652,
+      "sha256": "cafe0e0de470cda4d6fc568b34b24641de7fec4685d1cf469e3f23c073e335fd"
+    },
+    {
+      "archive": "UO_Library_Books.zip",
+      "bytes": 15512005,
+      "sha256": "599ed5302fb793ec187aed8317e9015582222b0d213f450eb64fe0e01dfb4450"
+    },
+    {
+      "archive": "UO_Book_Stacks.zip",
+      "bytes": 6857174,
+      "sha256": "a43d2837c25c8dc786809386b974ab6a168e690dbc43da2f41ce2d7d145d594d"
+    },
+    {
+      "archive": "UO_Moving_Terrain.zip",
+      "bytes": 29359319,
+      "sha256": "2bf871ca9ecc77ba4881d0da45fb24da509fc1ea75f3848a1cfc5db30f714785"
+    },
+    {
+      "archive": "UO_Terrain_Roads_and_Corners.zip",
+      "bytes": 117082731,
+      "sha256": "a6e8d293a93a556c7301499d49f27c2615de14f075445038294d83dd1be5744c"
+    },
+    {
+      "archive": "UO_Dwarves_5_Roles_V2.zip",
+      "bytes": 28791408,
+      "sha256": "06fe19964f060582525e72611074c6cd0a59c3b1d3b7de68b67bbfc8a1a79180"
+    },
+    {
+      "archive": "UO_Gnomes_5_Roles_V2.zip",
+      "bytes": 21921169,
+      "sha256": "11e6feda00794e8b8901b33db304ef55b07e9607439cd774d7104947f565ed15"
+    },
+    {
+      "archive": "UO_Orcs_5_Roles_V2.zip",
+      "bytes": 35041625,
+      "sha256": "40bc44ee15d245d8346391f52db3a08a3a50853f4bcc8e323742cc19c4b8a50b"
+    },
+    {
+      "archive": "UO_Ratkin_5_Roles_V2.zip",
+      "bytes": 29038382,
+      "sha256": "7079f7507f81a69917550079180fdee40f8da73339a970d8cd1d07bdd6a51747"
+    },
+    {
+      "archive": "UO_Greek_Mythology_Mobs.zip",
+      "bytes": 33325860,
+      "sha256": "506c5e30cd8e38642b7ed38fd5bfa9eb1008ef6c7652ab3a9c4a3b67271178a3"
+    },
+    {
+      "archive": "UO_Flying_Books_6.zip",
+      "bytes": 11708683,
+      "sha256": "d1832f952f13522df1e61f7c9957560239a9d7a383bbb60c11015b62fc8cb1a8"
+    },
+    {
+      "archive": "UO_Roaming_Library_Books.zip",
+      "bytes": 16150661,
+      "sha256": "9f7f79a4e2e7942c17ef78d05527f7ec2a967e5213df2b3502aefe09ff92305a"
+    }
+  ],
+  "items": [
+    "uo-cave-dungeon-walls",
+    "uo-curved-stone-walls",
+    "uo-wall-styles-v2",
+    "uo-wilderness-new-art",
+    "uo-library-books",
+    "uo-book-stacks",
+    "moving-terrain-meadow-grass",
+    "moving-terrain-forest-grass",
+    "moving-terrain-dry-grass",
+    "moving-terrain-shallow-water",
+    "moving-terrain-deep-water",
+    "moving-terrain-marsh-water",
+    "moving-terrain-molten-lava",
+    "moving-terrain-golden-lava",
+    "moving-terrain-crusted-lava",
+    "terrain-joins-meadow-grass",
+    "terrain-joins-dark-forest-grass",
+    "terrain-joins-dry-grass",
+    "terrain-joins-moss",
+    "terrain-joins-leafy-forest-floor",
+    "terrain-joins-wildflower-grass",
+    "terrain-joins-trampled-grass",
+    "terrain-joins-heathland",
+    "terrain-joins-tundra",
+    "terrain-joins-packed-dirt",
+    "terrain-joins-dark-loam",
+    "terrain-joins-red-clay",
+    "terrain-joins-wet-mud",
+    "terrain-joins-cracked-earth",
+    "terrain-joins-fine-gravel",
+    "terrain-joins-cobblestone",
+    "terrain-joins-old-flagstone",
+    "terrain-joins-weathered-brick",
+    "terrain-joins-pale-sand",
+    "terrain-joins-golden-sand",
+    "terrain-joins-red-sand",
+    "terrain-joins-sandy-gravel",
+    "terrain-joins-coastal-pebbles",
+    "terrain-joins-sandstone-bedrock",
+    "terrain-joins-limestone-rock",
+    "terrain-joins-slate-rock",
+    "terrain-joins-granite-rubble",
+    "terrain-joins-snow",
+    "terrain-joins-dirty-snow",
+    "terrain-joins-packed-ice",
+    "terrain-joins-frosted-earth",
+    "terrain-joins-swamp-moss",
+    "terrain-joins-bog-mud",
+    "terrain-joins-shallow-water",
+    "terrain-joins-lava-crust",
+    "terrain-joins-volcanic-ash",
+    "dwarf-role-merchant-v2",
+    "dwarf-role-mage-v2",
+    "dwarf-role-warrior-v2",
+    "dwarf-role-citizen-v2",
+    "dwarf-role-leader-v2",
+    "gnome-role-merchant-v2",
+    "gnome-role-mage-v2",
+    "gnome-role-warrior-v2",
+    "gnome-role-citizen-v2",
+    "gnome-role-leader-v2",
+    "orc-role-merchant-v2",
+    "orc-role-mage-v2",
+    "orc-role-warrior-v2",
+    "orc-role-citizen-v2",
+    "orc-role-leader-v2",
+    "ratkin-role-merchant-v2",
+    "ratkin-role-mage-v2",
+    "ratkin-role-warrior-v2",
+    "ratkin-role-citizen-v2",
+    "ratkin-role-leader-v2",
+    "greek-mythology-centaur",
+    "greek-mythology-satyr",
+    "greek-mythology-minotaur",
+    "greek-mythology-harpy",
+    "greek-mythology-medusa",
+    "greek-mythology-styx",
+    "flying-book-apprentice-journal",
+    "flying-book-astral-atlas",
+    "flying-book-chained-tome",
+    "flying-book-bone-grimoire",
+    "flying-book-living-herbal",
+    "flying-book-ember-codex",
+    "uo-roaming-library-books"
+  ],
+  "existingItemsPreserved": 1140,
+  "counts": {
+    "nativeStaticRecords": 1701,
+    "nativeLandRecords": 4824,
+    "nativeAnimationFrames": 23220,
+    "pngAnimationFrames": 37312
+  },
+  "publicFiles": 1202,
+  "bundles": 23,
+  "packages": [
+    {
+      "id": "uo-cave-dungeon-walls",
+      "files": 317,
+      "download": {
+        "file": "downloads/world/uo-cave-dungeon-walls.zip",
+        "sizeBytes": 1544648,
+        "sha256": "78ee31c58e321060d7f6934d9d2a2b224e0c70f596c6f5ed4e075356f9ab8ba1",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "uo-curved-stone-walls",
+      "files": 164,
+      "download": {
+        "file": "downloads/world/uo-curved-stone-walls.zip",
+        "sizeBytes": 833838,
+        "sha256": "aceba79e1eeecaea501668c661f7d51b7d80fa22e92c6ab813480a35dff63aca",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "uo-wall-styles-v2",
+      "files": 179,
+      "download": {
+        "file": "downloads/world/uo-wall-styles-v2.zip",
+        "sizeBytes": 1150984,
+        "sha256": "b6b0f3672b66e12bd8a1cb20b727d59dbb4999d6d4161022eb0836807ff88891",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "uo-wilderness-new-art",
+      "files": 120,
+      "download": {
+        "file": "downloads/world/uo-wilderness-new-art.zip",
+        "sizeBytes": 1867101,
+        "sha256": "2af9b47123c9d4b6ae3f26dfdcd3008b88aeee9ae2fd19b424620b3e2379710b",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "uo-library-books",
+      "files": 654,
+      "download": {
+        "file": "downloads/world/uo-library-books.zip",
+        "sizeBytes": 3890695,
+        "sha256": "ad2478c3d28457d98416758173b7c2c87402f0171177f9e1c74f4eb90e0eb9e0",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "uo-book-stacks",
+      "files": 223,
+      "download": {
+        "file": "downloads/world/uo-book-stacks.zip",
+        "sizeBytes": 671386,
+        "sha256": "6198dea8ca13d0e9132207e87fcb5f30a88dc3aef221195dd971f0c3e06ce99a",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "moving-terrain-meadow-grass",
+      "files": 395,
+      "download": {
+        "file": "downloads/world/moving-terrain-meadow-grass.zip",
+        "sizeBytes": 1976756,
+        "sha256": "2ee28ae03673b1eca09569c52fe3d370c6ee3221d3b3d509a8c1faebd3f9c951",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "moving-terrain-forest-grass",
+      "files": 395,
+      "download": {
+        "file": "downloads/world/moving-terrain-forest-grass.zip",
+        "sizeBytes": 1998361,
+        "sha256": "a2815012f2d7ecb2251bee1d8bd03e77ef5bc5c156e3a9d2bfc13014e6f4b180",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "moving-terrain-dry-grass",
+      "files": 395,
+      "download": {
+        "file": "downloads/world/moving-terrain-dry-grass.zip",
+        "sizeBytes": 1887372,
+        "sha256": "6b21044bedd0dece13396a49da3a65420b085945e8088766097a332fbdf52581",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "moving-terrain-shallow-water",
+      "files": 395,
+      "download": {
+        "file": "downloads/world/moving-terrain-shallow-water.zip",
+        "sizeBytes": 2120798,
+        "sha256": "8d00bf9856e7b90382003a259b6e72544ccc0c50330cb170f4bc069b5ca972d8",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "moving-terrain-deep-water",
+      "files": 395,
+      "download": {
+        "file": "downloads/world/moving-terrain-deep-water.zip",
+        "sizeBytes": 1583146,
+        "sha256": "4bc6ad9116eba3de45231b5a3a3ffae4a07ff0bdcfb02ecd378d27d044d2c709",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "moving-terrain-marsh-water",
+      "files": 395,
+      "download": {
+        "file": "downloads/world/moving-terrain-marsh-water.zip",
+        "sizeBytes": 1862162,
+        "sha256": "e7b859e10866e7bf4ec7361f1846437e69c4af56e900b926a4c88dc2d6b9d31e",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "moving-terrain-molten-lava",
+      "files": 395,
+      "download": {
+        "file": "downloads/world/moving-terrain-molten-lava.zip",
+        "sizeBytes": 2315743,
+        "sha256": "837c358554febb0200cbc66fa641b5d43787f710b7c645c3fdc313deccaf5b53",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "moving-terrain-golden-lava",
+      "files": 395,
+      "download": {
+        "file": "downloads/world/moving-terrain-golden-lava.zip",
+        "sizeBytes": 2261730,
+        "sha256": "54b6fbe8dd52fa24e02a076049060956fafaf8e022e9c09408509decc61db1b8",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "moving-terrain-crusted-lava",
+      "files": 395,
+      "download": {
+        "file": "downloads/world/moving-terrain-crusted-lava.zip",
+        "sizeBytes": 1920448,
+        "sha256": "5655f0b55ae18d3c6062f97756af9ae5808981f0771c8bdf749cfba82ae670cf",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-meadow-grass",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-meadow-grass.zip",
+        "sizeBytes": 3304348,
+        "sha256": "54270bf9c8da036c42b2591a90fb398dc424c281352fb956b42d3751cbc8d861",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-dark-forest-grass",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-dark-forest-grass.zip",
+        "sizeBytes": 3160837,
+        "sha256": "80e1b24691ea89ecde40652bc86114def731bfc2209db4d79cab4f8b0c7fdde6",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-dry-grass",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-dry-grass.zip",
+        "sizeBytes": 3362888,
+        "sha256": "699eb77c9e6868295666ccc3d5ddd9d9247715f4784b6ee95444c8b62489cc66",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-moss",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-moss.zip",
+        "sizeBytes": 3156056,
+        "sha256": "f727a9fc4722354abb79037a586c7f79c3fd16ee696f9156adf0281ed3cda298",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-leafy-forest-floor",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-leafy-forest-floor.zip",
+        "sizeBytes": 3288483,
+        "sha256": "ec6a1834260c3617697637465aa73f3abd0372f48b5910c6c73f48f0844ee158",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-wildflower-grass",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-wildflower-grass.zip",
+        "sizeBytes": 3360806,
+        "sha256": "9b607073398591489e4e5fc998bb38173a87cd24f620564433fb315881e5e47c",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-trampled-grass",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-trampled-grass.zip",
+        "sizeBytes": 3218883,
+        "sha256": "912c85f3ac969445ebd4a4ab527670ef336ddb79fe72e86821a034e354edd248",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-heathland",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-heathland.zip",
+        "sizeBytes": 3248195,
+        "sha256": "82bc690b2e6452e2ed1516b0680c01f42e96ad0ee846809f19f92c5fc0ae50be",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-tundra",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-tundra.zip",
+        "sizeBytes": 3330870,
+        "sha256": "eb6d618c3b43a2b710f71ed7254aa33b04a775fd1322ea7be12cc9d4beee70d4",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-packed-dirt",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-packed-dirt.zip",
+        "sizeBytes": 3127306,
+        "sha256": "73387998702034725ba8b6821b450cef1a11246b8ff4e969dc5d1d085c26bd2f",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-dark-loam",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-dark-loam.zip",
+        "sizeBytes": 2833175,
+        "sha256": "cc28054b00c9c71b3f1c3d2cb15434c9aa6b8a1fbf9946e15d6cde3f97671680",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-red-clay",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-red-clay.zip",
+        "sizeBytes": 3012857,
+        "sha256": "e065c340325f41ecb7d509a4597801c739869cddf32576963eb00070b218abee",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-wet-mud",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-wet-mud.zip",
+        "sizeBytes": 2940863,
+        "sha256": "1b30eee1c32cd1746a37ed7d2f76fa079d1d58681c3aa9082deb8bbd8ac9a0a3",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-cracked-earth",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-cracked-earth.zip",
+        "sizeBytes": 3162014,
+        "sha256": "db0146ccae82a850b18773c53b9a5d151d7e112849f89afd633fb3bfb02ae97d",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-fine-gravel",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-fine-gravel.zip",
+        "sizeBytes": 3330377,
+        "sha256": "22611de0bb248ddd234dcca04beaef1a9f324bece24c05d1458338f5b3be3629",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-cobblestone",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-cobblestone.zip",
+        "sizeBytes": 3135541,
+        "sha256": "3131e924662ef3a293d97fdac2bb182575193f90ced65b7750f68c322ac13fe6",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-old-flagstone",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-old-flagstone.zip",
+        "sizeBytes": 3123003,
+        "sha256": "193811efd13aa2eab01184e52e01de88316f8e2bdeefaf78ebb12b58e3c179ce",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-weathered-brick",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-weathered-brick.zip",
+        "sizeBytes": 3115161,
+        "sha256": "2cf4dd04e92232fbe714dade115dca6e6f2561b16bbf2a1c4dcfabef215e11fb",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-pale-sand",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-pale-sand.zip",
+        "sizeBytes": 3282638,
+        "sha256": "1e00ce13c38843566bdee65a88e03436eb22cae3e6088cf2f1d4dc935eef3f3a",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-golden-sand",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-golden-sand.zip",
+        "sizeBytes": 3376769,
+        "sha256": "971560b4a2545265ebfd8c27afed105e55e3cabed424298a45d298c4af5822a5",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-red-sand",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-red-sand.zip",
+        "sizeBytes": 3171597,
+        "sha256": "1ad452fb54427c652eadff9f4d984bf5013e67828af9a68148e474ec6550060b",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-sandy-gravel",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-sandy-gravel.zip",
+        "sizeBytes": 3444586,
+        "sha256": "47c98cf44fe2222ada01d4c3acacd90ec4eb88e2f4c365e27ac1f8cf328e0fc2",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-coastal-pebbles",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-coastal-pebbles.zip",
+        "sizeBytes": 3404179,
+        "sha256": "62e6af9e3d63bcb7ac030be3b3cfb24f0f0333e5780328baf386461b9098b9c9",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-sandstone-bedrock",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-sandstone-bedrock.zip",
+        "sizeBytes": 3212281,
+        "sha256": "42f375b70a6f47b93f3e2b1ace30713a66bb2fcfea515ab9810de8e414b40144",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-limestone-rock",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-limestone-rock.zip",
+        "sizeBytes": 3235385,
+        "sha256": "4d649a9dae20f7bd29d753bf7c3263765969697febda7fa769911fa38812c58d",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-slate-rock",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-slate-rock.zip",
+        "sizeBytes": 2978048,
+        "sha256": "f82aafdf6db86ae0931daa856183efaa4caed1545941dcc96803f8d7d956a82b",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-granite-rubble",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-granite-rubble.zip",
+        "sizeBytes": 3291837,
+        "sha256": "835f710cd4df92a6979befb597490d9495a6c2dd8651ac316321ba4a531abd9a",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-snow",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-snow.zip",
+        "sizeBytes": 2942237,
+        "sha256": "6ab9ad6cc7599d4fadd1113e321f8cb20e37a534e794b69039bc87eb3ebdd401",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-dirty-snow",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-dirty-snow.zip",
+        "sizeBytes": 3299959,
+        "sha256": "c64e4c12eb317ff7673df0ebe607e3084f18476053eb2abb5891407fdbfcd064",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-packed-ice",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-packed-ice.zip",
+        "sizeBytes": 3029913,
+        "sha256": "db075a3f12772e4512886f73e50caef20f0bf9be6d78b72463d2548a3cdef036",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-frosted-earth",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-frosted-earth.zip",
+        "sizeBytes": 3392649,
+        "sha256": "79c61a5cb15b1c2832fa9f351b9142029ebbf8b5bcef841bb2f3b93f56da85b6",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-swamp-moss",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-swamp-moss.zip",
+        "sizeBytes": 3060097,
+        "sha256": "0e44845ae180d38b052912f46e8c4833a945fc2d6d2b5f345f57251697a6a074",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-bog-mud",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-bog-mud.zip",
+        "sizeBytes": 2976273,
+        "sha256": "599141986a6bea6a9452c72b38dbae023f1347262b53f6c85eaf5b47aadae6be",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-shallow-water",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-shallow-water.zip",
+        "sizeBytes": 3052750,
+        "sha256": "dce3029c870f89e733ebd0e9df9d581da2b687a119bba4ec45df7357af4b96eb",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-lava-crust",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-lava-crust.zip",
+        "sizeBytes": 3108311,
+        "sha256": "34477864e4e3387a5ac844603ac963d7993ce81ff7c22c85517f036c9f9ce156",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "terrain-joins-volcanic-ash",
+      "files": 681,
+      "download": {
+        "file": "downloads/world/terrain-joins-volcanic-ash.zip",
+        "sizeBytes": 2996989,
+        "sha256": "a8635901dc5484ef47b871f2272fb0ef3d2943ea9eb8673c25737b71ff100f4f",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "dwarf-role-merchant-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/dwarf-role-merchant-v2.zip",
+        "sizeBytes": 4748896,
+        "sha256": "cac2bbdcbc72ca58796eb5de077dffa882b8ac4211abe24514025ede43c6b20e",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "dwarf-role-mage-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/dwarf-role-mage-v2.zip",
+        "sizeBytes": 5581178,
+        "sha256": "83e5031a5df181f1a445d664564a064e773c9694f8027d17d0a2c20f1911a200",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "dwarf-role-warrior-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/dwarf-role-warrior-v2.zip",
+        "sizeBytes": 4859590,
+        "sha256": "54cb92a7dc128ddb46ba621662e04aeb88acbe96c7bc363a390299a13825d24b",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "dwarf-role-citizen-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/dwarf-role-citizen-v2.zip",
+        "sizeBytes": 4588466,
+        "sha256": "3aff933aaf533175f8d02d6deee8c0e13c2ac70568e00896173bf69ffdc363bb",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "dwarf-role-leader-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/dwarf-role-leader-v2.zip",
+        "sizeBytes": 5226584,
+        "sha256": "0797e2cbc44fa5ab4b843375ad5f8c8b06130ef04af5e570413b5c8b5dfc8aee",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "gnome-role-merchant-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/gnome-role-merchant-v2.zip",
+        "sizeBytes": 3512321,
+        "sha256": "486fe1de1c0b67d4c71c561419d2a3fb479f1ecf22927a7d641f8b7c56a392ff",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "gnome-role-mage-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/gnome-role-mage-v2.zip",
+        "sizeBytes": 3934762,
+        "sha256": "af60305b831bde15ea0fb9045a987045b1768de18d2bb0e513d2dd8408df1fd0",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "gnome-role-warrior-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/gnome-role-warrior-v2.zip",
+        "sizeBytes": 3550062,
+        "sha256": "eafd59c54a417513049d5b9a75985052e9232d0a5222243d230fd2103d5f9f3c",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "gnome-role-citizen-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/gnome-role-citizen-v2.zip",
+        "sizeBytes": 3374579,
+        "sha256": "2c76532e76672a0e6284027158c079a097fe820d4456a15eb2762bcc9c80b1dd",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "gnome-role-leader-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/gnome-role-leader-v2.zip",
+        "sizeBytes": 3783784,
+        "sha256": "fe4a6e1c0aa636ec6178ffb494563a0289dad7c33dd71b9772dfa5bbdbcb2171",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "orc-role-merchant-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/orc-role-merchant-v2.zip",
+        "sizeBytes": 5883860,
+        "sha256": "9bf632b83b49164918fbd41ac886e5f4f42cc5dbb5f97fccc11b52f89eefb76d",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "orc-role-mage-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/orc-role-mage-v2.zip",
+        "sizeBytes": 7088310,
+        "sha256": "eb18aca07b0982fabb3f4e46c4dd5db560441a271d03a67f7abb372f61a505f6",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "orc-role-warrior-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/orc-role-warrior-v2.zip",
+        "sizeBytes": 6098572,
+        "sha256": "393e8cebbfeadef1bb6086a069aacfa25fc3a35f236438e2b4673039a9128703",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "orc-role-citizen-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/orc-role-citizen-v2.zip",
+        "sizeBytes": 5720461,
+        "sha256": "1817514e1e0fe88eb86935ceb4e65d01f835725789b8426d337b267e37b274ec",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "orc-role-leader-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/orc-role-leader-v2.zip",
+        "sizeBytes": 6571666,
+        "sha256": "7c4239603f4ca826344f7041d8e2741895d0410fc5ece9dfde26701fd03a0984",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "ratkin-role-merchant-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/ratkin-role-merchant-v2.zip",
+        "sizeBytes": 4895824,
+        "sha256": "65adefc8391d8f5c743b849a97a27d6bbfe9bcb260a02d362c7500662ea9bf31",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "ratkin-role-mage-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/ratkin-role-mage-v2.zip",
+        "sizeBytes": 5505564,
+        "sha256": "45b19525b1730541e6706cab82797df33b8691e33ab9c9445e5c40a8a5acb96f",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "ratkin-role-warrior-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/ratkin-role-warrior-v2.zip",
+        "sizeBytes": 4961492,
+        "sha256": "06153198c8f9cbf8787d2f7fedc9ac1c5a682e46bc725ca4c6c83aa79f49f393",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "ratkin-role-citizen-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/ratkin-role-citizen-v2.zip",
+        "sizeBytes": 4736237,
+        "sha256": "9530c54649a463864df0745b99d93a19cab43c0e0906c3ae6922d4ebebea356f",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "ratkin-role-leader-v2",
+      "files": 2143,
+      "download": {
+        "file": "downloads/creatures/ratkin-role-leader-v2.zip",
+        "sizeBytes": 5205943,
+        "sha256": "636b76e4c89fc9d701e83c3f8327bc46ec2603242c7432cabc854b502649edd0",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "greek-mythology-centaur",
+      "files": 636,
+      "download": {
+        "file": "downloads/creatures/greek-mythology-centaur.zip",
+        "sizeBytes": 3413249,
+        "sha256": "7c1be2cdaaf665c052a24025904026817cf046e6c40b20e0628153110b1f98f2",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "greek-mythology-satyr",
+      "files": 636,
+      "download": {
+        "file": "downloads/creatures/greek-mythology-satyr.zip",
+        "sizeBytes": 2234071,
+        "sha256": "2df9280e3ad10b368fb1b8f981c204b6267f318e42c564350f7ce2b3b248adc8",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "greek-mythology-minotaur",
+      "files": 636,
+      "download": {
+        "file": "downloads/creatures/greek-mythology-minotaur.zip",
+        "sizeBytes": 5022520,
+        "sha256": "990e4678c03cad3efc8ea0b1a7e50b66a4105c474381786219a6fd067f78d4fa",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "greek-mythology-harpy",
+      "files": 838,
+      "download": {
+        "file": "downloads/creatures/greek-mythology-harpy.zip",
+        "sizeBytes": 5980481,
+        "sha256": "df535b0927335fd97872c49bfda0822c4d06d060ee2ae96023f603547a627950",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "greek-mythology-medusa",
+      "files": 1470,
+      "download": {
+        "file": "downloads/creatures/greek-mythology-medusa.zip",
+        "sizeBytes": 8347654,
+        "sha256": "330217264be1e1fae80ed8b793e4d9faac9ce9b98edf4b2756bf141d3728fca9",
+        "label": "Registered PNG frames + original action metadata",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "greek-mythology-styx",
+      "files": 636,
+      "download": {
+        "file": "downloads/creatures/greek-mythology-styx.zip",
+        "sizeBytes": 3126173,
+        "sha256": "9a6b264521f38c1b75b32e2181a532b7c4a14de7e5297cd5d391a7cc5da1eddc",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "flying-book-apprentice-journal",
+      "files": 265,
+      "download": {
+        "file": "downloads/creatures/flying-book-apprentice-journal.zip",
+        "sizeBytes": 958385,
+        "sha256": "731cb483e6137227dba4678a70beee76f2e371700b4e863f63e6ee15e2fa00fd",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "flying-book-astral-atlas",
+      "files": 265,
+      "download": {
+        "file": "downloads/creatures/flying-book-astral-atlas.zip",
+        "sizeBytes": 1235627,
+        "sha256": "af79c05f9ad7bd9bd9f5ebfcfd40501cce30e30c40ade5ba746113f6e671e311",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "flying-book-chained-tome",
+      "files": 265,
+      "download": {
+        "file": "downloads/creatures/flying-book-chained-tome.zip",
+        "sizeBytes": 1306283,
+        "sha256": "0a7e80af3d20b3d138a39b2e3980f87b8c36e208fae626354fb752610e5e8728",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "flying-book-bone-grimoire",
+      "files": 265,
+      "download": {
+        "file": "downloads/creatures/flying-book-bone-grimoire.zip",
+        "sizeBytes": 1146303,
+        "sha256": "0ec9c267d8dbc9933ac6c4f51727edfa116fcdaa87368879194c0dd3727af8de",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "flying-book-living-herbal",
+      "files": 265,
+      "download": {
+        "file": "downloads/creatures/flying-book-living-herbal.zip",
+        "sizeBytes": 1144428,
+        "sha256": "f4985a0d0fac91b3d96afad0cd29a25fa0347b3bda1478788c75459c255d08f1",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "flying-book-ember-codex",
+      "files": 265,
+      "download": {
+        "file": "downloads/creatures/flying-book-ember-codex.zip",
+        "sizeBytes": 1025206,
+        "sha256": "6be08dae2ce1d83c5acbd3b94635cfb6994069fea11e02196b6b52f8e0e35f65",
+        "label": "VD + registered PNGs + native records",
+        "status": "Import and target-client checks required"
+      }
+    },
+    {
+      "id": "uo-roaming-library-books",
+      "files": 1177,
+      "download": {
+        "file": "downloads/world/uo-roaming-library-books.zip",
+        "sizeBytes": 13795756,
+        "sha256": "eae5f626687b8bca5020d07389192f98ef83cf6dd0752972182d7fd294b1982b",
+        "label": "Native art + manifests + import notes",
+        "status": "Import and target-client checks required"
+      }
+    }
+  ],
+  "limitations": "Native format/pixel checks and offline previews. No live client or shard installation, ID assignment, appearance acceptance or gameplay verification."
+}

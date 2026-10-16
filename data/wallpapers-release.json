@@ -1,0 +1,72 @@
+{
+  "title": "Alchemy of Britannia",
+  "date": "2026-10-16",
+  "page": "/wallpapers/",
+  "galleryId": "alchemy-of-britannia-wallpaper",
+  "releaseTag": "uo-wallpapers-2026-10-16",
+  "offline": {
+    "file": "downloads/tools/alchemy-of-britannia-offline.zip",
+    "sizeBytes": 5697598,
+    "sha256": "6db57fa4c459c0fdd99ddafcaa49c5ee852f18c1a66f29972bbc588b01301c03",
+    "label": "Offline live wallpaper + two illustrations + guide",
+    "status": "Browser ready; desktop wallpaper requires a separate application"
+  },
+  "runtimeFiles": [
+    {
+      "file": "index.html",
+      "bytes": 1140,
+      "sha256": "2fbf64dfc9f212e30e7c63f361214a0b2ae077fb7ca1043e91bff5b3679e0e29"
+    },
+    {
+      "file": "wallpaper.js",
+      "bytes": 7358,
+      "sha256": "63180f076a7096a5c905a92ffa19b2ed96fe95e4a4e44fbdc2f01fa1056eb061"
+    },
+    {
+      "file": "assets/fullmetal-alchemist.png",
+      "bytes": 2796208,
+      "sha256": "166f3ca4205674d0fe759d0594b4231463bafe68f078d623a4e670892261da00"
+    },
+    {
+      "file": "assets/ultima-online.png",
+      "bytes": 2920428,
+      "sha256": "0de7e029af2bbe98e15d6d5a7f80708977d28bf48457e443c089c24a0a88faf3"
+    }
+  ],
+  "previews": [
+    {
+      "label": "The portal between two worlds \u2014 frame from the offline animation",
+      "file": "media/new-assets/alchemy-of-britannia-transition.jpg"
+    },
+    {
+      "label": "Fullmetal Alchemist scene \u2014 frame from the offline animation",
+      "file": "media/new-assets/alchemy-of-britannia-fullmetal.jpg"
+    },
+    {
+      "label": "Ultima Online scene \u2014 frame from the offline animation",
+      "file": "media/new-assets/alchemy-of-britannia-ultima.jpg"
+    }
+  ],
+  "video": {
+    "file": "Alchemy-of-Britannia-1080p.mp4",
+    "url": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-wallpapers-2026-10-16/Alchemy-of-Britannia-1080p.mp4",
+    "sizeBytes": 55615853,
+    "sha256": "3297835e11ce1c1c1dff4ca6c0af21e41dc3263a58f5c891c72b4f3a9a9fc906",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationSeconds": 32,
+    "decodedFrames": 960,
+    "audioTracks": 0
+  },
+  "description": "Generated Fullmetal Alchemist / Ultima Online fan illustration. A 32-second silent live wallpaper with camera drift, mist, embers, lighting and a portal transition; characters are illustrated stills, not frame-by-frame animated characters. Offline HTML, JavaScript and two original image assets included. Opening the page installs nothing. Desktop wallpaper use requires a separate compatible application. Original 1080p video and setup details: www.uoassets.com/wallpapers/.",
+  "desktopInstallationTested": false,
+  "originalRuntimeBytesPreserved": true,
+  "sourcePromptsAndToolsExcluded": true,
+  "publicFiles": [
+    "gallery/downloads/tools/alchemy-of-britannia-offline.zip",
+    "gallery/media/new-assets/alchemy-of-britannia-transition.jpg",
+    "gallery/media/new-assets/alchemy-of-britannia-fullmetal.jpg",
+    "gallery/media/new-assets/alchemy-of-britannia-ultima.jpg"
+  ]
+}

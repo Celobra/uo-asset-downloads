@@ -1,0 +1,90 @@
+{
+  "product": "SphereX Server",
+  "version": "2026.10.16-preview",
+  "date": "2026-10-16",
+  "codeSnapshotDate": "2026-10-08",
+  "status": "unsigned custom Nightly development preview",
+  "platform": "Windows x64",
+  "pageUrl": "https://www.uoassets.com/spherex/",
+  "releaseUrl": "https://github.com/Celobra/uo-asset-downloads/releases/tag/spherex-preview-20261016",
+  "downloads": {
+    "windows": "https://github.com/Celobra/uo-asset-downloads/releases/download/spherex-preview-20261016/SphereX-Fresh-Server-2026.10.16-preview-win-x64.zip",
+    "source": "https://github.com/Celobra/uo-asset-downloads/releases/download/spherex-preview-20261016/SphereX-Source-2026.10.16-preview.zip",
+    "checksums": "https://github.com/Celobra/uo-asset-downloads/releases/download/spherex-preview-20261016/SHA256SUMS-SphereX-2026.10.16-preview.txt",
+    "guide": "https://www.uoassets.com/spherex/guide.md"
+  },
+  "artifacts": {
+    "SphereX-Fresh-Server-2026.10.16-preview-win-x64.zip": {
+      "bytes": 6755430,
+      "sha256": "a226e39273030d65cbd409fcd0b1637af96e4d763f66d6ce3c1036cfc33a33e2"
+    },
+    "SphereX-Source-2026.10.16-preview.zip": {
+      "bytes": 6047094,
+      "sha256": "55616e296b1c470c3aba48689ac063b1e5ba49299639b7f90491449c8fb5c4f5"
+    }
+  },
+  "executable": {
+    "bytes": 4528128,
+    "sha256": "3c72968554a37b8fcf47986bd28f436712cdcb9e710a680796b0a69e94b1c40d"
+  },
+  "source": {
+    "verifiedNativeFiles": 587,
+    "exportedFiles": 765,
+    "nativeInventorySha256": "16087db430118f6740d1fd88b6d71d08b2e5669ed24cd3fd697084edcf2060b6",
+    "sourceInventorySha256": "7e37cac1df13f9839c728d86292bd9b607db398fcab339a5879a55848e48a032",
+    "gameplaySourceChangedForPublication": false,
+    "sourceCommit": null,
+    "historicalNativeBinarySha256": "bff390ad32890878bb664555460c9fa52b5d777b4aab2347eaeb7f7b5acbac12",
+    "compilerPrefixMapped": true
+  },
+  "scripts": {
+    "repository": "https://github.com/Sphereserver/Scripts-X",
+    "commit": "27e78bc896da239d3738fe02a6d6bf8e9045c16d",
+    "unmodifiedFiles": 831
+  },
+  "checks": {
+    "consoleToolsPassed": true,
+    "freshRuntime": [
+      {
+        "name": "blank-world",
+        "zeroAccountsItemsCharacters": true,
+        "startup": true,
+        "saveAndExit": true,
+        "diagnostics": 0
+      },
+      {
+        "name": "owner-setup",
+        "startup": true,
+        "authenticatedOwnerConsole": true,
+        "accounts": 1,
+        "characters": 0,
+        "items": 0,
+        "saveAndExit": true,
+        "diagnostics": 0
+      },
+      {
+        "name": "saved-world-restart",
+        "startup": true,
+        "authenticatedOwnerConsole": true,
+        "accounts": 1,
+        "characters": 0,
+        "items": 0,
+        "saveAndExit": true,
+        "diagnostics": 0
+      }
+    ],
+    "repeatSetupPreservesExistingAccountsAndConfig": true,
+    "archiveIntegrity": true,
+    "privacy": true,
+    "distributedAccounts": 0,
+    "distributedWorldObjects": 0,
+    "clientDataIncluded": false
+  },
+  "limits": [
+    "Unsigned Nightly development preview",
+    "No new production-load, multiplayer-gameplay or receiving-system validation",
+    "Known compact-layout, Pause, search, activity-recording and native pathfinding issues remain",
+    "Source examples are not installed in the fresh stock world"
+  ],
+  "upstream": "https://github.com/Sphereserver/Source-X"
+}
