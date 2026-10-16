@@ -1,0 +1,53 @@
+{
+  "Version": "0.2.0",
+  "Examples": [
+    {
+      "File": "01-status.js",
+      "Description": "Read the player and performance snapshot without acting."
+    },
+    {
+      "File": "02-bounded-monitor.js",
+      "Description": "Take three read-only samples with a pause between them."
+    },
+    {
+      "File": "03-alias-and-friends.js",
+      "Description": "Resolve the current character and inspect the friend list result."
+    },
+    {
+      "File": "04-open-backpack.js",
+      "Description": "Request opening the backpack and report the actual request result."
+    },
+    {
+      "File": "05-action-catalog.js",
+      "Description": "List available actions without casting or using a skill."
+    },
+    {
+      "File": "06-heal-self.js",
+      "Description": "Find the ordinary Heal spell, request it, and target self only after a fresh cursor."
+    },
+    {
+      "File": "07-count-bandages.js",
+      "Description": "Count the conventional bandage graphic and report completeness."
+    },
+    {
+      "File": "08-move-one-item.js",
+      "Description": "Move one loaded item into a selected destination alias named supplyBag."
+    },
+    {
+      "File": "09-journal-boundary.js",
+      "Description": "Wait briefly for a new matching message; no game action is sent."
+    },
+    {
+      "File": "10-inspect-gump.js",
+      "Description": "Inspect an open gump without replying to it."
+    },
+    {
+      "File": "11-buffs-and-properties.js",
+      "Description": "Read buffs and one loaded item property record."
+    },
+    {
+      "File": "12-map-current-location.js",
+      "Description": "Open the map and set a temporary waypoint at the current position."
+    }
+  ]
+}

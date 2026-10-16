@@ -8,12 +8,14 @@ import { buildUopve } from './build-uopve.mjs';
 import { buildStudioRelease } from './build-studio-release.mjs';
 import { validateStaticAssets } from './validate-static-assets.mjs';
 import { prepareReleaseAssets } from './prepare-release-assets.mjs';
+import { validatePublishedAssistantFeed } from './assistant-updates.mjs';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 try {
   console.log('Prepared published release assets:', await prepareReleaseAssets(root));
   await buildStudioUpdates();
   console.log('Built UO:PvE:', await buildUopve());
   await buildStudioRelease();
+  console.log('Verified Assistant updater metadata:', await validatePublishedAssistantFeed(root));
   console.log('Validated static assets:', await validateStaticAssets(resolve(root, 'public')));
   console.log('Validated gallery:', await validateGallery());
   const input = JSON.parse(await readFile(resolve(root, 'data/catalog.json'), 'utf8'));
@@ -37,6 +39,10 @@ try {
   Cache-Control: public, max-age=0, must-revalidate
 
 /studio/update.json
+  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: application/json; charset=utf-8
+
+/assistant/update.json
   Cache-Control: no-cache, no-store, must-revalidate
   Content-Type: application/json; charset=utf-8
 

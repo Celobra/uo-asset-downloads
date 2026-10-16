@@ -170,3 +170,18 @@ Studio 0.33.7 adds direct Map Regions panning, zoom, selected-region location, b
 Five original Orc NPC roles retain their exact native VDs, all 35 humanoid actions, 1,050 native frames and 1,680 registered PNG frames per role. All-action GIFs, eight-view playback, facing/action boards and seven offline mounted-fit comparisons accompany each download. Equipment fitting, paperdolls, server behavior and target-client integration remain separate.
 
 [CentrED# Local - Celobra Edition 0.7.3](https://www.uoassets.com/centred-local/) is a Windows development download maintained and published by Celobra. Version `0.7.3-celobra.1` adds visible edition branding, Windows publisher properties and Help > About and credits, retaining original Copyright (c) 2023 kaczy93, the MIT licence and dependency notices. It keeps Local 0.7.3’s two-corner area picking, inclusive X/Y view bounds, saved workspace layouts and approximate character preview. The optional real-client launcher opens the user's existing client in its own window; it does not install exported maps automatically or sync changes live. The rebuild passed 399 automated checks. A [comparison PDF](https://www.uoassets.com/centred-local/CentrEDSharp-Local-0.7.3-Celobra-Comparison.pdf) explains changes from original CentrED# 0.6.11.31, which already included embedded LocalServer and MUL/UOP support, plus edition attribution and history. Celobra Edition 1 reissues of 0.7.0–0.7.2, their separate source/checksums/guides, and unchanged unbranded 0.7.3/0.7.2 downloads remain linked. Branding and checksums identify the downloads but do not prevent copying; these builds are unsigned. Receiving-computer, multiplayer and in-game acceptance remain unverified; the multiplayer radar broadcast defect remains open.
+
+## UO Assistant 0.2.1
+
+[UO Assistant](https://www.uoassets.com/assistant/) provides a GPU Ultima Online
+client, separate assistant, comprehensive scripting manual and profile launcher.
+The launcher checks the application-signed website feed in the background and
+lets the user choose when to download and install. This unsigned Windows x64
+development preview retains the 0.2.0 client and assistant program files.
+
+[Windows installer](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.2.1/UOAssistant-0.2.1-Setup.exe) · [Full matching source](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.2.1/UOAssistant-0.2.1-Source.zip) · [Scripting manual](https://www.uoassets.com/assistant/guide/Scripting-Guide.html) · [Automatic updates](https://www.uoassets.com/assistant/guide/Auto-Updates.html).
+
+Bring your own authorized shard data; no game assets, accounts or private profiles
+are distributed. Installation remains an explicit user choice. The updater's
+release signature is separate from Windows publisher signing. Earlier Assistant
+0.1.6 downloads and source remain available from the application page.
