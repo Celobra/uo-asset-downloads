@@ -1,14 +1,14 @@
 {
   "schema": 1,
-  "version": "0.3.0",
-  "sourceSha256": "68e63dbaaca860e24474a77634b2c9429c56eb1856477b5202a7e12a6af3908e",
-  "installerSha256": "fa80729f97505b7c9d512bcf3fdc5d9c5c827712189a71977b2fd8efab365e00",
+  "version": "0.4.0",
+  "sourceSha256": "4b93947930a16ee1aba8232aab92298240c9bbff161ec53f1f34a4893dd08532",
+  "installerSha256": "d6884f927b645f8d04749c8268aa8bc652099787de559785ef26fd3f1ab4b5f7",
   "textNormalization": "UTF-8 without BOM; CRLF to LF; no other text changes",
   "files": [
     {
       "path": "assistant.d.ts",
-      "bytes": 11854,
-      "sha256": "a252eb5636a729ab93e87f6bc88abc15bac845caca6c6339fc2095aea51222a6"
+      "bytes": 14923,
+      "sha256": "610c60b4c32c827ed5d33719a242b8c8207428ab68f7a828cc5ba404f4abcda8"
     },
     {
       "path": "examples/01-status.js",
@@ -71,14 +71,29 @@
       "sha256": "8ea734f44f7127c1d1f6de72a7b29e11910406e991114ebc261909457ca3c1a4"
     },
     {
+      "path": "examples/13-scan-trees-and-caves.js",
+      "bytes": 549,
+      "sha256": "167599c05dea3d932ca3b57706fa349ecbc089de42fcafacab1278849c817275"
+    },
+    {
+      "path": "examples/14-find-items-by-name.js",
+      "bytes": 377,
+      "sha256": "8d2caf8c930fb4b78934cb15baa035e1f21c4af89e63b046e26316c0a1a17f31"
+    },
+    {
+      "path": "examples/15-inspect-open-gumps.js",
+      "bytes": 760,
+      "sha256": "1feeb588526679ff37da3343eb2a5cf352b613a8ac07d40923b21326ab050d37"
+    },
+    {
       "path": "examples/examples.json",
-      "bytes": 1682,
-      "sha256": "776d1faf963a6221c74e5dd6cefbec8879a070a77997770e46be26e6d6949773"
+      "bytes": 2109,
+      "sha256": "9ce3b6534863e5f69cff74ce1164deba91a4a60c71215f2e8e57ed605c0464ff"
     },
     {
       "path": "examples/README.txt",
-      "bytes": 492,
-      "sha256": "b011bc2eb9c8750386b234ac4f10a9bb2359cbdba48a862b9bb4f0065b46543a"
+      "bytes": 289,
+      "sha256": "84eae152dfdd88c6f57ae5b2410bd1f2161422e9a4d46612d1f65feeacf98595"
     }
   ]
 }

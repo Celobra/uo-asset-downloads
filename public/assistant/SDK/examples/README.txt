@@ -1,8 +1,3 @@
-UO Assistant 0.3.0 scripting examples
+UO Assistant 0.4.0 examples
 
-Each .js file is a separate script. Read its guide description before running.
-08-move-one-item.js requires an alias named supplyBag and requests a real transfer.
-06-heal-self.js requests an actual spell if Heal is available.
-Other examples are read-only or explicitly open a backpack/map or set a local waypoint.
-No example uses a password, network API or external module.
-See Documentation/Scripting-Guide.html or the PDF for instructions and limits.
+Each .js file is a complete script. Import or paste it into the JavaScript editor. Read its comments before Run. Files 13-15 demonstrate read-only terrain, item and general gump searches. No example runs automatically. See the matching SDK and scanning guide.

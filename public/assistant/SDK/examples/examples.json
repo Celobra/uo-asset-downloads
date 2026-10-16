@@ -1,5 +1,5 @@
 {
-  "Version": "0.3.0",
+  "Version": "0.4.0",
   "Examples": [
     {
       "File": "01-status.js",
@@ -48,6 +48,18 @@
     {
       "File": "12-map-current-location.js",
       "Description": "Open the map and set a temporary waypoint at the current position."
+    },
+    {
+      "File": "13-scan-trees-and-caves.js",
+      "Description": "Read nearby loaded tree or cave tiles with paginated completeness checks."
+    },
+    {
+      "File": "14-find-items-by-name.js",
+      "Description": "Search loaded owned items using their cached names."
+    },
+    {
+      "File": "15-inspect-open-gumps.js",
+      "Description": "Inspect visible local and server game windows without replying."
     }
   ]
 }
