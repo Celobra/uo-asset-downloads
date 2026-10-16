@@ -1,0 +1,26 @@
+[
+  {
+    "File": "GPL-3.0.txt",
+    "Source": "https://raw.githubusercontent.com/gcc-mirror/gcc/master/COPYING3",
+    "Length": 35147,
+    "Sha256": "8CEB4B9EE5ADEDDE47B31E975C1D90C73AD27B6B165A1DCD80C7C545EB65B903"
+  },
+  {
+    "File": "FNA3D.txt",
+    "Source": "https://raw.githubusercontent.com/FNA-XNA/FNA3D/master/LICENSE",
+    "Length": 1010,
+    "Sha256": "D195F90751650BD0D789DF9B0DCF7A389FE8B8FD90C751BD3852C6A2265EE84A"
+  },
+  {
+    "File": "SDL3-Native.txt",
+    "Source": "https://raw.githubusercontent.com/libsdl-org/SDL/main/LICENSE.txt",
+    "Length": 884,
+    "Sha256": "1C040B8271B37E5076359F8FD54240E371114112924D2DF81EF87C7D6A1DFDFD"
+  },
+  {
+    "File": "zlib-1.2.11-Header.txt",
+    "Source": "https://raw.githubusercontent.com/madler/zlib/v1.2.11/zlib.h",
+    "Length": 96239,
+    "Sha256": "4DDC82B4AF931AB55F44D977BDE81BFBC4151B5DCDCCC03142831A301B5EC3C8"
+  }
+]
