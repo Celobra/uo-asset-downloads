@@ -8,7 +8,7 @@
  */
 type SerialOrAlias = number | string;
 interface AssistantResult { RequestId: string; Accepted: boolean; Message: string; Serial: number }
-interface AssistantTarget { Active: boolean; Revision: number; Id: number; Type: string; LastSerial: number }
+interface AssistantTarget { Active: boolean; Revision: number; Id: number; Type: string; LastSerial: number; Disposition: string }
 interface AssistantItem {
   Serial: number; Graphic: number; Hue: number; Amount: number; Container: number;
   Layer: number; Name: string; X: number; Y: number; Z: number; OwnedInventory: boolean;
@@ -17,11 +17,12 @@ interface AssistantItem {
 interface AssistantPlayer {
   Serial: number; Name: string; Backpack: number; X: number; Y: number; Z: number; Map: number;
   Hits: number; HitsMax: number; Mana: number; ManaMax: number; Stamina: number; StaminaMax: number;
-  Weight: number; WeightMax: number; Dead: boolean; Mounted: boolean;
+  Weight: number; WeightMax: number; Dead: boolean; Mounted: boolean; Dexterity: number;
 }
 interface AssistantMobile {
   Serial: number; Name: string; Body: number; Hue: number; X: number; Y: number; Z: number;
-  Distance: number; Notoriety: number;
+  Distance: number; Notoriety: number; Hits?: number | null; HitsMax?: number | null;
+  Renamable?: boolean | null; Poisoned?: boolean | null;
 }
 interface AssistantJournal { Sequence: number; Time: string; Text: string; Type: string; Name: string }
 interface AssistantItemDetail {
@@ -43,21 +44,36 @@ interface AssistantRenderOptions {
 }
 interface AssistantItemMatch { Graphic: number; Hue?: number | null }
 interface AssistantPropertyRule { Name?: string; Minimum?: number | null; Maximum?: number | null; Contains?: string }
+/** Numeric enum values: 0=All, 1=Any. */
+type AssistantPredicateJoin = 0 | 1;
+interface AssistantPredicateGroup { Join?: AssistantPredicateJoin; Properties: AssistantPropertyRule[] }
 interface AssistantLootRules {
   Name?: string; Source?: number; Destination: number; MaximumRange?: number; DelayMilliseconds?: number;
   MaximumRunSeconds?: number; OpenCorpses?: boolean;
-  Rules: {Match?: AssistantItemMatch; NameContains?: string; Properties?: AssistantPropertyRule[]; MaximumAmount?: number}[];
+  Rules: {Match?: AssistantItemMatch; NameContains?: string; Properties?: AssistantPropertyRule[]; MaximumAmount?: number;
+    Priority?: number; GroupJoin?: AssistantPredicateJoin; Groups?: AssistantPredicateGroup[]}[];
 }
 interface AssistantVendorRules {
   Name?: string; Vendor?: number; MaximumTotal?: number;
   Rules: {Match: AssistantItemMatch; DesiredAmount: number; MaximumUnitPrice?: number;
-    KeepAmount?: number; Properties?: AssistantPropertyRule[]}[];
+    KeepAmount?: number; Properties?: AssistantPropertyRule[]; Priority?: number;
+    GroupJoin?: AssistantPredicateJoin; Groups?: AssistantPredicateGroup[]}[];
 }
 interface AssistantPreview { Commands: unknown[]; Message: string; Total: number }
 interface AssistantVendor {
   Token: number; Revision: number; Serial: number; Buy: boolean; Truncated: boolean;
   ManualSelection: boolean;
   Offers: {Serial: number; Graphic: number; Hue: number; Amount: number; UnitPrice: number; Name: string}[];
+}
+interface AssistantFrameSample {
+  Sequence: number; IntervalMs: number; NetworkMs: number; WorldUpdateMs: number;
+  UiUpdateMs: number; AssistantMs: number; WorldDrawMs: number; UiDrawMs: number; PresentMs: number;
+}
+interface AssistantNativeTools {
+  ProcessId: number; Frames: AssistantFrameSample[]; LatencyMilliseconds?: number | null;
+  HotkeysEnabled: boolean; PassThrough: boolean; Feedback: string; FeedbackSequence: number;
+  RoutePreview: {X: number; Y: number; Z?: number | null; Loaded: boolean; Impassable: boolean}[];
+  RouteStatus: string;
 }
 interface AssistantSnapshot {
   Schema: number; SessionId: string; WorldEpoch: number; Sequence: number; CapturedUtc: string;
@@ -66,7 +82,8 @@ interface AssistantSnapshot {
   Target: AssistantTarget; HeldItem: number; Items: AssistantItem[]; Mobiles: AssistantMobile[];
   Journal: AssistantJournal[]; InventoryTruncated: boolean; MobilesTruncated: boolean;
   ActionsAvailable: {Kind: string; Id: number; Name: string; Group: string}[];
-  Actions: {Sequence: number; Time: string; Origin: string; Command: unknown; Result: string}[];
+  Actions: {Sequence: number; Time: string; Origin: string; Command: unknown; Result: string;
+    ItemGraphic?: number | null; ItemHue?: number | null; OwnedInventory?: boolean}[];
   Capabilities: string[];
   Features: {
     ItemDetails: AssistantItemDetail[]; ItemDetailsTruncated: boolean;
@@ -78,7 +95,7 @@ interface AssistantSnapshot {
       PrimaryAbility: number; SecondaryAbility: number};
     Rendering: Required<AssistantRenderOptions>; Truncated: boolean; PartyMembers: number[];
     LockedFeatures: number; CharacterFeatures: number;
-    AssistantPolicy: {Known: boolean; DisabledMask: number};
+    AssistantPolicy: {Known: boolean; DisabledMask: number}; NativeTools: AssistantNativeTools;
   };
 }
 interface AssistantApi {

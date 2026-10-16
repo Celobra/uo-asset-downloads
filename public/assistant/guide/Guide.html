@@ -2,8 +2,8 @@
 <html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>UO Assistant — getting started</title>
 <link rel="stylesheet" href="Guide.css">
-<main><h1>UO Assistant</h1><p>A GPU game client with a separate assistant window. Version 0.1.6 is a development preview.</p>
-<nav><a href="Features.html">Assistant tools</a> · <a href="Release-Notes.html">Release notes</a> · <a href="Third-Party-Notices.html">Third-party notices</a></nav>
+<main><h1>UO Assistant</h1><p>A GPU game client with a separate assistant window. Version 0.2.1 is a development preview.</p>
+<nav><a href="Auto-Updates.html">Automatic updates</a> · <a href="Features.html">Assistant tools</a> · <a href="Release-Notes.html">Release notes</a> · <a href="Third-Party-Notices.html">Third-party notices</a></nav>
 <section class="card"><h2>Install</h2><p>Run the setup EXE and follow the installation steps. Installation is for your Windows account. The client, assistant and their .NET runtimes are included; PowerShell and a development SDK are not required.</p><p>Your shard's game data is separate. Use a complete client installation supplied for your shard, including its custom maps and artwork.</p></section>
 <h2>Connect to a shard</h2><ol>
 <li>Open <strong>UO Assistant</strong> from the Start menu or desktop shortcut.</li>
@@ -17,4 +17,15 @@
 <h2>Graphics</h2><p>Start with Automatic. If your graphics driver needs a different renderer, choose a supported graphics option in the profile and start the game again. A steady Draw FPS counter measures application presentation, rather than the physical screen refresh rate.</p>
 <h2>Updates and uninstalling</h2><p>Install an update into the same application folder. Close this application's launcher, game and assistant first. The installer does not stop unrelated clients.</p><p>Uninstall from Windows Installed apps or the Start menu entry. Your profiles, assistant definitions and logs are kept separately from installed program files and are retained after uninstalling. Your shard's client folder is never removed.</p>
 <h2>About this preview</h2><p>The GPU client is based on ClassicUO. Assistant features draw on the useful behavior of Razor, Razor Enhanced, ClassicAssist, Orion and Injection. Common legacy macro imports cover an explicit subset; they do not execute arbitrary historical Python, C#, BASIC programs or assistant DLLs. New agents and shard-specific dialogs still need manual gameplay checks.</p><p>This development installer is not digitally signed. No accounts, passwords, world saves, shard game files or private development logs are included.</p>
-</main></html>
+<h2>New in 0.2.0</h2><ul>
+<li>Performance graphs with bounded native stage samples, latency, process memory and optional OS GPU/VRAM counters; opt-in sanitized diagnostic export.</li>
+<li>Navigation search, favourites, compact dashboard, text/panel sizing, contrast, placement recovery and docking beside the game.</li>
+<li>Searchable spell/skill/task hotkeys, key capture, normalized conflicts, master enable and pass-through, plus target/refusal feedback.</li>
+<li>Cooldown groups, ready alerts, explicit observed timing suggestions, editable bandage dexterity formulas and selected pet healing.</li>
+<li>Named play-style profiles and rotating automatic backups with restore previews.</li>
+<li>Visual bounded macro programs with conditions/repeats and a dedicated JavaScript editor with parsing, highlighting, completion and trace navigation.</li>
+<li>Searchable categorized UO marker library with UOAM, Ultima Mapper XML and CSV import/export; native marker display and local loaded-terrain straight-line preview.</li>
+<li>Prioritized property rules with AND/OR groups and match explanations, passive alerts and bounded crafting plans with fresh exact-gump replies and observed outcomes.</li>
+<li>Launcher setup templates, preflight, explicit connection test, optional verified release feeds and local recovery-package verification.</li>
+</ul><p>Read the <a href="Scripting-Guide.html">complete scripting guide</a> or <a href="Scripting-Guide.pdf">printable PDF</a>. Twelve separate examples are in SDK/examples. The 44-method public JavaScript API is documented, including limits, observation and target/dialog ownership.</p>
+<p>The marker library integrates UO formats into the native map; it does not embed the separate Ultima Mapper executable or its external sharing service. Terrain preview does not start walking or compute an unloaded-world route. GPU measurements show unavailable where the operating system cannot supply them. New launcher preferences automatically check the UO Assistant feed at www.uoassets.com. Existing saved opt-outs and custom feeds remain intact. A local signed recovery catalog is included.</p></main></html>
