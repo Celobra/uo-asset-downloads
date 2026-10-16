@@ -22,8 +22,14 @@ test('Every visible listing has exactly one populated category and collection',(
       assert.ok(items.length);ids.push(...items.map(x=>x.id));
     }
   }
-  assert.equal(ids.length,728);assert.equal(new Set(ids).size,728);
+  assert.equal(ids.length,835);assert.equal(new Set(ids).size,835);
   assert.ok(model.items.every(x=>!x.parentSet));
+});
+test('New animated ground, road and wilderness collections appear under terrain',()=>{
+  for(const collection of ['Moving-Terrain','Terrain-Roads-and-Corners','Wilderness-New-Art']){
+    const state=model.read('?category=terrain&collection='+collection);
+    assert.equal(state.collection,collection);assert.ok(model.results(state).length);
+  }
 });
 test('Search accepts armour/armor, multiple words and individual piece names without duplicate armour pieces',()=>{
   for(const q of ['armour','armor','fire nova'])assert.ok(model.results(model.normalize({q})).length,q);

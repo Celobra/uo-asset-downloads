@@ -1,0 +1,203 @@
+{
+  "date": "2026-10-16",
+  "sources": [
+    {
+      "archive": "UO_New_Monsters_15_Prototypes.zip",
+      "bytes": 71642990,
+      "sha256": "8ef7b082bf73c1b1a662d0e77040552b3de2a0da1f0c44f1251daff97f6dd18c"
+    }
+  ],
+  "items": [
+    "original-prototype-beholder",
+    "original-prototype-mind-flayer",
+    "original-prototype-owlbear",
+    "original-prototype-displacer-beast",
+    "original-prototype-gelatinous-cube",
+    "original-prototype-mimic",
+    "original-prototype-rust-monster",
+    "original-prototype-umber-hulk",
+    "original-prototype-hook-horror",
+    "original-prototype-roper",
+    "original-prototype-carrion-crawler",
+    "original-prototype-chuul",
+    "original-prototype-bulette",
+    "original-prototype-intellect-devourer",
+    "original-prototype-shambling-mound"
+  ],
+  "counts": {
+    "nativeStaticRecords": 0,
+    "nativeLandRecords": 0,
+    "nativeAnimationFrames": 875,
+    "pngAnimationFrames": 1400
+  },
+  "publicFiles": 150,
+  "bundles": 3,
+  "packages": [
+    {
+      "id": "original-prototype-beholder",
+      "files": 148,
+      "download": {
+        "file": "downloads/creatures/original-prototype-beholder.zip",
+        "sizeBytes": 2324818,
+        "sha256": "a3ccea2cb416a734a49a75a8271a1ccd9988b311bdc08c03b1d2128e9d02aaec",
+        "label": "VD + registered PNGs + native records",
+        "status": "Prototype \u2014 artist cleanup and client testing required"
+      }
+    },
+    {
+      "id": "original-prototype-mind-flayer",
+      "files": 140,
+      "download": {
+        "file": "downloads/creatures/original-prototype-mind-flayer.zip",
+        "sizeBytes": 1228208,
+        "sha256": "d9f0bb719cec0af294559517e5714f246fcb4c744c68c8ae70b8c554d0302140",
+        "label": "VD + registered PNGs + native records",
+        "status": "Prototype \u2014 artist cleanup and client testing required"
+      }
+    },
+    {
+      "id": "original-prototype-owlbear",
+      "files": 148,
+      "download": {
+        "file": "downloads/creatures/original-prototype-owlbear.zip",
+        "sizeBytes": 3706125,
+        "sha256": "7cdd3cb5908358b42c03bd6026db669312101635fe30e7926d6cfeb2a51903cc",
+        "label": "VD + registered PNGs + native records",
+        "status": "Prototype \u2014 artist cleanup and client testing required"
+      }
+    },
+    {
+      "id": "original-prototype-displacer-beast",
+      "files": 148,
+      "download": {
+        "file": "downloads/creatures/original-prototype-displacer-beast.zip",
+        "sizeBytes": 2056284,
+        "sha256": "9c4a0ab85d5720d75f34df42b94120e4c2406edb3bc63733b988e066b8b5cd1b",
+        "label": "VD + registered PNGs + native records",
+        "status": "Prototype \u2014 artist cleanup and client testing required"
+      }
+    },
+    {
+      "id": "original-prototype-gelatinous-cube",
+      "files": 148,
+      "download": {
+        "file": "downloads/creatures/original-prototype-gelatinous-cube.zip",
+        "sizeBytes": 3713001,
+        "sha256": "55544a9a3f32170d9f24105be1d847aee23cb7fc88145f5763bfccce226ef39a",
+        "label": "VD + registered PNGs + native records",
+        "status": "Prototype \u2014 artist cleanup and client testing required"
+      }
+    },
+    {
+      "id": "original-prototype-mimic",
+      "files": 148,
+      "download": {
+        "file": "downloads/creatures/original-prototype-mimic.zip",
+        "sizeBytes": 2459028,
+        "sha256": "6a107bfad8035c42095f9954cd8eaa859cca5a24aa0eccb79aa98ef4f93697dd",
+        "label": "VD + registered PNGs + native records",
+        "status": "Prototype \u2014 artist cleanup and client testing required"
+      }
+    },
+    {
+      "id": "original-prototype-rust-monster",
+      "files": 140,
+      "download": {
+        "file": "downloads/creatures/original-prototype-rust-monster.zip",
+        "sizeBytes": 979397,
+        "sha256": "7afc22d1ccf86c92500f7160be36061631eb9666752950e49b6e5431382ccf45",
+        "label": "VD + registered PNGs + native records",
+        "status": "Prototype \u2014 artist cleanup and client testing required"
+      }
+    },
+    {
+      "id": "original-prototype-umber-hulk",
+      "files": 140,
+      "download": {
+        "file": "downloads/creatures/original-prototype-umber-hulk.zip",
+        "sizeBytes": 3106997,
+        "sha256": "c728a96e1f81a0539f7be6302974e94593a489b94543e7f1f32be1d2a7a8870a",
+        "label": "VD + registered PNGs + native records",
+        "status": "Prototype \u2014 artist cleanup and client testing required"
+      }
+    },
+    {
+      "id": "original-prototype-hook-horror",
+      "files": 140,
+      "download": {
+        "file": "downloads/creatures/original-prototype-hook-horror.zip",
+        "sizeBytes": 2263134,
+        "sha256": "476c5f88d9b2ddb7c2055e2ff53a008eca297dc46212d233583b2f2a6b724b8b",
+        "label": "VD + registered PNGs + native records",
+        "status": "Prototype \u2014 artist cleanup and client testing required"
+      }
+    },
+    {
+      "id": "original-prototype-roper",
+      "files": 148,
+      "download": {
+        "file": "downloads/creatures/original-prototype-roper.zip",
+        "sizeBytes": 4245949,
+        "sha256": "4bdfade02872358538404b68503ffd800a58cb583a201bf1766e313bb7e1d8b5",
+        "label": "VD + registered PNGs + native records",
+        "status": "Prototype \u2014 artist cleanup and client testing required"
+      }
+    },
+    {
+      "id": "original-prototype-carrion-crawler",
+      "files": 148,
+      "download": {
+        "file": "downloads/creatures/original-prototype-carrion-crawler.zip",
+        "sizeBytes": 1814662,
+        "sha256": "3355828234dfecd1a77b3c574418ff9c7d2c8530ab8dcbfec96f0105a566139e",
+        "label": "VD + registered PNGs + native records",
+        "status": "Prototype \u2014 artist cleanup and client testing required"
+      }
+    },
+    {
+      "id": "original-prototype-chuul",
+      "files": 148,
+      "download": {
+        "file": "downloads/creatures/original-prototype-chuul.zip",
+        "sizeBytes": 3377477,
+        "sha256": "e2841ea9cb7899af19f6e0d92486c0a6c503f16c61a86a3a7384522edfb70cfe",
+        "label": "VD + registered PNGs + native records",
+        "status": "Prototype \u2014 artist cleanup and client testing required"
+      }
+    },
+    {
+      "id": "original-prototype-bulette",
+      "files": 148,
+      "download": {
+        "file": "downloads/creatures/original-prototype-bulette.zip",
+        "sizeBytes": 2928494,
+        "sha256": "365e46bc41ebfc434f4edeefa1f959f9e647b99d332a08a8a24019b34c72f519",
+        "label": "VD + registered PNGs + native records",
+        "status": "Prototype \u2014 artist cleanup and client testing required"
+      }
+    },
+    {
+      "id": "original-prototype-intellect-devourer",
+      "files": 140,
+      "download": {
+        "file": "downloads/creatures/original-prototype-intellect-devourer.zip",
+        "sizeBytes": 917434,
+        "sha256": "ec8fab3e8ee6bf9ccb981c9e7acebae583f6d7cc3db9dd19a17e17ce89879b22",
+        "label": "VD + registered PNGs + native records",
+        "status": "Prototype \u2014 artist cleanup and client testing required"
+      }
+    },
+    {
+      "id": "original-prototype-shambling-mound",
+      "files": 148,
+      "download": {
+        "file": "downloads/creatures/original-prototype-shambling-mound.zip",
+        "sizeBytes": 3539870,
+        "sha256": "5a4b87546460e01e2a0028ff4787b13b9995b2f890abb40fff3f5ec332fbe715",
+        "label": "VD + registered PNGs + native records",
+        "status": "Prototype \u2014 artist cleanup and client testing required"
+      }
+    }
+  ],
+  "status": "Animation prototypes; artist cleanup and client testing required"
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SphereX Server Preview · UO Workshop</title>
+  <meta name="description" content="A fresh Windows SphereX development server with a coloured console, administration map and character tracking. Download the blank-world package, matching source and setup guide.">
+  <link rel="canonical" href="https://www.uoassets.com/spherex/">
+  <link rel="stylesheet" href="/studio/studio.css">
+  <link rel="stylesheet" href="spherex.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <a class="brand" href="/spherex/"><span class="sigil" aria-hidden="true">UO</span><span>SphereX Server<small>Custom development preview</small></span></a>
+  <nav aria-label="On this page"><a href="#download">Download</a><a href="#setup">Set up</a><a href="#features">Features</a><a href="#checks">Checks &amp; limits</a></nav>
+  <a class="back" href="/">UO Workshop ↗</a>
+</header>
+<main id="main">
+  <section class="wrap server-hero" aria-labelledby="hero-title">
+    <div>
+      <p class="eyebrow">WINDOWS X64 / DEVELOPMENT PREVIEW</p>
+      <h1 id="hero-title">Your shard.<br>A clearer view.</h1>
+      <p class="lead">Start a fresh SphereX world with a coloured console, an administration map and character tracking. Inspect NPC routes and manage your own server from one window.</p>
+      <div class="actions"><a class="button primary" href="#download">Get the server ↓</a><a class="button secondary" href="#setup">Read the setup steps →</a></div>
+      <p class="small">16 October 2026 public rebuild · 8 October code snapshot · Unsigned Nightly preview</p>
+    </div>
+    <figure class="screen map-preview">
+      <img src="map-preview.png" width="532" height="245" alt="Existing SphereX map capture showing tracked NPC markers, health bars and an Order patrol captain on a town street">
+      <figcaption>Existing application capture with demonstration NPCs. The fresh download starts with an empty world; these patrols are not preinstalled.</figcaption>
+    </figure>
+  </section>
+  <div class="ribbon"><div class="wrap"><span>EMPTY WORLD</span><span>YOUR OWN CLIENT DATA</span><span>MATCHING SOURCE</span><span>LOCAL SETUP FIRST</span></div></div>
+  <section class="wrap server-section" id="download" aria-labelledby="download-title">
+    <p class="eyebrow">2026.10.16-PREVIEW</p><h2 id="download-title">Download the fresh server.</h2>
+    <p>The Windows ZIP includes the custom executable, runtime libraries, first-run setup, official Scripts-X scripts and empty account and world files. Bring your own compatible Ultima Online client data.</p>
+    <div class="actions"><a class="button primary" href="https://github.com/Celobra/uo-asset-downloads/releases/download/spherex-preview-20261016/SphereX-Fresh-Server-2026.10.16-preview-win-x64.zip">Download Windows ZIP ↓</a><a class="button secondary" href="https://github.com/Celobra/uo-asset-downloads/releases/download/spherex-preview-20261016/SphereX-Source-2026.10.16-preview.zip">Download matching source ↓</a></div>
+    <p class="small"><a href="https://github.com/Celobra/uo-asset-downloads/releases/download/spherex-preview-20261016/SHA256SUMS-SphereX-2026.10.16-preview.txt">Checksums</a> · <a href="guide.md">Complete setup and command guide</a> · <a href="release-notes.md">Release notes</a> · <a href="source-provenance.md">Build and source details</a> · <a href="third-party-notices.txt">Licences and notices</a></p>
+    <p class="server-note">Use a new folder for this preview. It supplies a fresh stock script library and blank world, rather than an upgrade for an existing shard. Game data, player accounts and UO:PvE content are not included.</p>
+  </section>
+  <section class="wrap server-section" id="setup" aria-labelledby="setup-title">
+    <p class="eyebrow">FIRST RUN</p><h2 id="setup-title">Build your own starting point.</h2>
+    <ol class="setup-steps">
+      <li><strong>Extract the whole ZIP into a new folder.</strong> Keep the executable, libraries, scripts and setup files together.</li>
+      <li><strong>Open Setup-Server.cmd.</strong> Choose your client-data folder, server name, port and a new Owner account. Read and accept the Nightly notice.</li>
+      <li><strong>Open Start-Sphere.cmd.</strong> Connect your compatible client to <code>127.0.0.1</code> and the port you chose; the setup default is <code>2593</code>.</li>
+      <li><strong>Configure your world.</strong> The stock library includes map0–map5 definitions. Supply their matching modern client data, then set up decorations, vendors and spawns.</li>
+    </ol>
+    <p>First-run setup creates your account locally. There is no shared default password. Repeating setup retains an existing account and configuration. Review client encryption compatibility in the <a href="guide.md">complete guide</a>.</p>
+  </section>
+  <section class="wrap server-section" id="features" aria-labelledby="features-title">
+    <p class="eyebrow">WHAT THE CUSTOM BUILD ADDS</p><h2 id="features-title">See what your server is doing.</h2>
+    <div class="feature-grid">
+      <article><h3>Console and script diagnostics</h3><p>Coloured output, text and severity filters, command history, script diagnostics and reload reports.</p></article>
+      <article><h3>Map and character tracking</h3><p>Facet selection, search, area reports, NPC and player markers, sleeping-sector shading and available native or managed route overlays. Offline positions show the last saved location.</p></article>
+      <article><h3>Owner tools</h3><p>Permission-checked character information, teleport and jail controls, managed walking journeys, activity recording and account searches.</p></article>
+      <article><h3>Current native fixes</h3><p>The 8 October source includes the UTF-8 empty-line reader correction and the guard for disabled facets. This public rebuild removes local compiler paths without changing gameplay source.</p></article>
+    </div>
+  </section>
+  <section class="wrap server-section" id="checks" aria-labelledby="checks-title">
+    <p class="eyebrow">TESTED SCOPE</p><h2 id="checks-title">A development starting point.</h2>
+    <p>The clean public build passed the existing console-tools suite, isolated blank-world startup, first Owner setup and login, saving and a saved-world restart. The package was checked for matching source, empty accounts and saves, archive integrity and private paths.</p>
+    <p>This preview is unsigned and based on a Nightly server. The earlier audit still identifies small-window layout and Pause problems, expensive searches and remaining activity-recording and native pathfinding work. No GUI or performance repairs are claimed for this release.</p>
+    <p>There is no new production-load, multiplayer-gameplay or receiving-system validation for this public rebuild. Benchmark results for older executables do not establish the capacity of this package. The supplied stock scripts do not install the optional faction-patrol demonstrations found in the source examples.</p>
+    <p><a href="guide.md">Read the complete guide →</a> · <a href="https://github.com/Sphereserver/Source-X">Original SphereServer X project ↗</a></p>
+  </section>
+</main>
+<footer class="wrap"><p>Custom SphereServer X development preview · Celobra · Original SphereServer and dependency licences retained.</p><nav aria-label="Other workshop tools"><a href="/">Assets</a><a href="/studio/">Asset Studio</a><a href="/assistant/">UO Assistant</a><a href="/centred/">CentrED# Local</a><a href="/spherex/">SphereX Server</a></nav></footer>
+</body>
+</html>

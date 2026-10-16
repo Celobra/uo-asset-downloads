@@ -1,5 +1,5 @@
 // Materialize verified release bundles before building the static website.
-import { readFile, writeFile, mkdir, stat } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, stat, readdir } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
@@ -49,24 +49,38 @@ export function unpackReleaseBundle(blob, expected) {
 }
 
 export async function prepareReleaseAssets(root = site) {
-  const folder = resolve(root,'data/release-assets/2026-10-03');
-  const manifest = JSON.parse(await readFile(resolve(folder,'manifest.json'),'utf8'));
-  validateReleaseManifest(manifest);
-  let written = 0;
-  for (const bundle of manifest.bundles) {
-    const blob = await readFile(resolve(folder,bundle.file));
-    if (blob.length !== bundle.bytes || digest(blob) !== bundle.sha256) throw Error('Release bundle checksum mismatch: '+bundle.file);
-    const members = unpackReleaseBundle(blob, manifest.files.filter(f => f.bundle === bundle.file));
-    for (const [path,data] of members) {
-      const target = resolve(root,'public',path);
-      let matches = false;
-      try { matches = (await stat(target)).size === data.length && digest(await readFile(target)) === digest(data); }
-      catch (e) { if (e.code !== 'ENOENT') throw e; }
-      if (!matches) {
-        await mkdir(dirname(target),{recursive:true});
-        await writeFile(target,data); written++;
+  const releases = resolve(root,'data/release-assets');
+  const dates = (await readdir(releases,{withFileTypes:true})).filter(entry => entry.isDirectory() && /^\d{4}-\d{2}-\d{2}$/.test(entry.name)).map(entry => entry.name).sort();
+  const publishedPaths = new Set();
+  const prepared = [];
+  for (const date of dates) {
+    const folder = resolve(releases,date);
+    const manifest = JSON.parse(await readFile(resolve(folder,'manifest.json'),'utf8'));
+    validateReleaseManifest(manifest);
+    for (const file of manifest.files) {
+      if (publishedPaths.has(file.path)) throw Error('Release dates must not overwrite an existing asset: '+file.path);
+      publishedPaths.add(file.path);
+    }
+    prepared.push({folder,manifest});
+  }
+  let written = 0, bundles = 0;
+  for (const {folder,manifest} of prepared) {
+    bundles += manifest.bundles.length;
+    for (const bundle of manifest.bundles) {
+      const blob = await readFile(resolve(folder,bundle.file));
+      if (blob.length !== bundle.bytes || digest(blob) !== bundle.sha256) throw Error('Release bundle checksum mismatch: '+bundle.file);
+      const members = unpackReleaseBundle(blob, manifest.files.filter(f => f.bundle === bundle.file));
+      for (const [path,data] of members) {
+        const target = resolve(root,'public',path);
+        let matches = false;
+        try { matches = (await stat(target)).size === data.length && digest(await readFile(target)) === digest(data); }
+        catch (e) { if (e.code !== 'ENOENT') throw e; }
+        if (!matches) {
+          await mkdir(dirname(target),{recursive:true});
+          await writeFile(target,data); written++;
+        }
       }
     }
   }
-  return {files:manifest.files.length,written,bundles:manifest.bundles.length};
+  return {files:publishedPaths.size,written,bundles};
 }

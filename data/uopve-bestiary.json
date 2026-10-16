@@ -1,17 +1,18 @@
 {
-  "asOf": "2026-10-09",
+  "asOf": "2026-10-16",
   "metadata": {
     "basis": "Current development script configuration. World placement and runtime activation are separate.",
-    "activeFiles": 667,
-    "creatureDefinitions": 1147,
-    "creatureSourceFiles": 38,
+    "activeFiles": 678,
+    "creatureDefinitions": 1149,
+    "creatureSourceFiles": 40,
     "difficultyScale": "Configured 1–100 base ratings; no invented difficulty tiers.",
     "unknownValues": "null means not explicitly specified; expressions and ranges are retained as strings.",
     "inheritance": "Only copied base properties are inherited through ID. The parent creation/loot trigger is not run by assumption.",
     "loot": "Death loot, carried equipment and carving resources are separate. Pool selections and Rn chances remain conditional.",
     "followerSlots": "Species slots are listed for completeness. The current OptionFlags do not enable the native pet-slot cap.",
     "lootGrammar": "ITEM=selection,quantity,RN; default quantity1. Rn is a one-in-n creation roll. Four-or-more brace tokens are resource/weight pairs; value0 means no item. Two numeric brace tokens are an inclusive range. Conditional branches and nested template rules are not independent guaranteed drops.",
-    "resistances": "Stored source properties only. Percentage-based elemental resistance reduction is disabled in the current combat configuration. Native fire-immunity flags are a separate mechanism."
+    "resistances": "Stored source properties only. Percentage-based elemental resistance reduction is disabled in the current combat configuration. Native fire-immunity flags are a separate mechanism.",
+    "appearance": "Current development compatibility may use installed fallback artwork without replacing creature identity, statistics, rewards or progression."
   },
   "creatures": [
     {
@@ -16512,7 +16513,9 @@
         "Poisoning skill is explicitly configured; poison delivery and chance depend on its active combat behavior.",
         "Magery is configured; the exact native spell selection is situational."
       ],
-      "notes": [],
+      "notes": [
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
+      ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
       "difficulty": {
@@ -26623,7 +26626,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -26695,7 +26699,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -26767,7 +26772,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -27793,7 +27799,9 @@
         "1 Ribs (Raw),10 Hides (Pile)"
       ],
       "abilities": [],
-      "notes": [],
+      "notes": [
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
+      ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
       "difficulty": {
@@ -38120,7 +38128,8 @@
         "Magery is configured; the exact native spell selection is situational."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -39175,7 +39184,9 @@
       "abilities": [
         "Stored energy melee share property: 50%."
       ],
-      "notes": [],
+      "notes": [
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
+      ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
       "difficulty": {
@@ -40164,7 +40175,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -40228,7 +40240,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -51201,7 +51214,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -51277,7 +51291,8 @@
         "Poisoning skill is explicitly configured; poison delivery and chance depend on its active combat behavior."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -51346,7 +51361,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -51416,7 +51432,8 @@
         "Stored poison melee share property: 50%."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -51488,7 +51505,8 @@
         "Poisoning skill is explicitly configured; poison delivery and chance depend on its active combat behavior."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -51558,7 +51576,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -51628,7 +51647,8 @@
         "Poisoning skill is explicitly configured; poison delivery and chance depend on its active combat behavior."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -51703,7 +51723,8 @@
         "Magery is configured; the exact native spell selection is situational."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -51772,7 +51793,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -51839,7 +51861,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -51911,7 +51934,8 @@
         "Stored energy melee share property: 25%."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -51978,7 +52002,8 @@
       "carvingResources": [],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -52050,7 +52075,8 @@
         "Stored poison melee share property: 50%."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -52125,7 +52151,8 @@
         "Magery is configured; the exact native spell selection is situational."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -52196,7 +52223,8 @@
         "Stored poison melee share property: 60%."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -52265,7 +52293,8 @@
         "Stored energy melee share property: 50%."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -52334,7 +52363,8 @@
       "carvingResources": [],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -52403,7 +52433,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -52472,7 +52503,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -52541,7 +52573,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -52610,7 +52643,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -52680,7 +52714,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -52750,7 +52785,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -52820,7 +52856,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -52890,7 +52927,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -52960,7 +52998,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -53034,7 +53073,8 @@
         "Magery is configured; the exact native spell selection is situational."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -53108,7 +53148,8 @@
         "Magery is configured; the exact native spell selection is situational."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -53179,7 +53220,8 @@
         "Stored cold melee share property: 100%."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -53251,7 +53293,8 @@
         "Stored energy melee share property: 25%."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -53321,7 +53364,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -53396,7 +53440,8 @@
         "Magery is configured; the exact native spell selection is situational."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -53469,7 +53514,8 @@
         "Magery is configured; the exact native spell selection is situational."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -53544,7 +53590,8 @@
         "Magery is configured; the exact native spell selection is situational."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -53619,7 +53666,8 @@
         "Magery is configured; the exact native spell selection is situational."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -53694,7 +53742,8 @@
         "Magery is configured; the exact native spell selection is situational."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -53754,7 +53803,8 @@
       "carvingResources": [],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -53823,7 +53873,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -53895,7 +53946,8 @@
         "Stored poison melee share property: 25%."
       ],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -53957,7 +54009,8 @@
       "carvingResources": [],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -54019,7 +54072,8 @@
       "carvingResources": [],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -54083,7 +54137,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -54149,7 +54204,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -54213,7 +54269,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -54277,7 +54334,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -54343,7 +54401,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -54409,7 +54468,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -54473,7 +54533,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -54539,7 +54600,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -54605,7 +54667,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -54671,7 +54734,8 @@
       ],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -95946,7 +96010,8 @@
       "carvingResources": [],
       "abilities": [],
       "notes": [
-        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited."
+        "Unspecified statistics use native defaults or spawn-time settings; parent creation triggers are not assumed to be inherited.",
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
       ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
@@ -96095,7 +96160,9 @@
         "Three phases: transitions at 70% and 35% remaining health. Later phases reduce incoming damage and increase outgoing damage by 10% then 20%.",
         "Energy burst: 3-second warning, 8-tile player area, base damage 30 / 40 / 55 by phase."
       ],
-      "notes": [],
+      "notes": [
+        "Development compatibility rules may use verified installed artwork while preserving this creature’s original identity, statistics, quest credit and progression."
+      ],
       "status": "active",
       "availability": "Loaded definition; presence at a specific place or time is not established by the load list.",
       "difficulty": {
@@ -101040,6 +101107,125 @@
       "notes": [],
       "status": "active",
       "availability": "Loaded definition; a spawn location or acquisition route is not established by this entry.",
+      "difficulty": {
+        "value": null,
+        "label": "No fixed base rating",
+        "basis": "No explicit configured base rating."
+      },
+      "scalingGoldEligible": false,
+      "civilian": false,
+      "spawnGroups": [],
+      "events": [],
+      "lootDetails": [],
+      "protectedDeathLoot": []
+    },
+    {
+      "id": "c_uopve_display_mannequin",
+      "name": "armor display mannequin",
+      "family": "Armor Displays",
+      "category": "Town NPCs",
+      "role": "Protected house display",
+      "aliases": [
+        "c_uopve_display_mannequin"
+      ],
+      "base": "c_man",
+      "stats": {
+        "str": "100",
+        "dex": "100",
+        "int": "10"
+      },
+      "armor": null,
+      "damage": null,
+      "resistances": {},
+      "taming": null,
+      "tamingNotes": "A house display; not a tameable creature.",
+      "animalLore": null,
+      "skills": {},
+      "followerSlots": null,
+      "food": null,
+      "maxFood": null,
+      "brain": "brain_human",
+      "karma": "0",
+      "fame": "0",
+      "loot": [],
+      "lootPools": [],
+      "equipment": [],
+      "carvingResources": [],
+      "abilities": [
+        "Stationary protected house display; does not fight or act as a pet.",
+        "Shows original equipment; editing requires current house owner or co-owner access."
+      ],
+      "notes": [
+        "Not a combat, XP or gold reward target."
+      ],
+      "status": "active",
+      "availability": "Placed through an Armor Display Mannequin Deed; no crafting, shop or reward distribution is added by this definition.",
+      "difficulty": {
+        "value": null,
+        "label": "No fixed base rating",
+        "basis": "No explicit configured base rating."
+      },
+      "scalingGoldEligible": false,
+      "civilian": true,
+      "spawnGroups": [],
+      "events": [
+        "e_uopve_display_mannequin"
+      ],
+      "lootDetails": [],
+      "protectedDeathLoot": []
+    },
+    {
+      "id": "c_worg",
+      "name": "Worg",
+      "family": "Custom mounts",
+      "category": "Mounts",
+      "role": "Rideable mount",
+      "aliases": [
+        "0e5",
+        "c_worg"
+      ],
+      "base": null,
+      "stats": {
+        "str": "100",
+        "dex": "50",
+        "int": "25"
+      },
+      "armor": "10",
+      "damage": "5–10",
+      "resistances": {
+        "physical": "0",
+        "fire": "0",
+        "cold": "0",
+        "poison": "0",
+        "energy": "0"
+      },
+      "taming": "50.0",
+      "tamingNotes": "Configured Taming 50.0; native taming checks still apply.",
+      "animalLore": "0",
+      "skills": {
+        "Wrestling": "50.0",
+        "Tactics": "50.0",
+        "Magic Resistance": "0.0",
+        "Magery": "0.0",
+        "Evaluating Intelligence": "0.0",
+        "Meditation": "0.0"
+      },
+      "followerSlots": "1",
+      "food": "fruit, grain, grass",
+      "maxFood": "20",
+      "brain": "brain_animal",
+      "karma": "0",
+      "fame": "1000",
+      "loot": [],
+      "lootPools": [],
+      "equipment": [],
+      "carvingResources": [],
+      "abilities": [
+        "Native rideable mount and shrink figurine."
+      ],
+      "notes": [],
+      "status": "active",
+      "availability": "Loaded definition; a spawn location or player acquisition route is not established by this entry.",
       "difficulty": {
         "value": null,
         "label": "No fixed base rating",

@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-16",
+  "images": 3533,
+  "reusableImages": 139,
+  "replacementImages": 3394,
+  "omittedUnchangedCharacterImages": 2143,
+  "items": [
+    "uopve-reusable-interface-kit",
+    "uopve-gump-replacements-01",
+    "uopve-gump-replacements-02",
+    "uopve-gump-replacements-03",
+    "uopve-gump-replacements-04",
+    "uopve-gump-replacements-05",
+    "uopve-gump-replacements-06"
+  ],
+  "packages": [
+    {
+      "id": "uopve-reusable-interface-kit",
+      "images": 139,
+      "bytes": 3388802,
+      "sha256": "ba65456af2970f9b959a3ea48138caaf94d53c649a713572408d25350214cf47"
+    },
+    {
+      "id": "uopve-gump-replacements-01",
+      "images": 433,
+      "bytes": 18623274,
+      "sha256": "e1dbfde8e060e2990ecaabe6fa3434701e4595bd9d97cc047ce19309ad0207e6"
+    },
+    {
+      "id": "uopve-gump-replacements-02",
+      "images": 311,
+      "bytes": 18873532,
+      "sha256": "7aae652e2ed5790966d9b32bb547e2941e33300496af444d047c81b6043bd199"
+    },
+    {
+      "id": "uopve-gump-replacements-03",
+      "images": 852,
+      "bytes": 19050974,
+      "sha256": "1ed525138bd9a9c7a6b9f1bd908ae84bb67f77d695a698b1d0ba60c8f64d6719"
+    },
+    {
+      "id": "uopve-gump-replacements-04",
+      "images": 1309,
+      "bytes": 19114838,
+      "sha256": "a41c578060ce3c224ba376f86f6c3e20624abb69e140a7d4862b8e5f8989d452"
+    },
+    {
+      "id": "uopve-gump-replacements-05",
+      "images": 424,
+      "bytes": 18627008,
+      "sha256": "3cdb81732291e5670ba88f9082296389e82e5599e5c0a7c23d7c31a6578ee4bb"
+    },
+    {
+      "id": "uopve-gump-replacements-06",
+      "images": 65,
+      "bytes": 5484643,
+      "sha256": "69b25673f75cfc8c00ac4ab0fbede89cad4a6f52ae965a920b917c5e687bf301"
+    }
+  ]
+}
