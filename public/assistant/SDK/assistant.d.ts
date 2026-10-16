@@ -35,7 +35,9 @@ interface AssistantEntry { Id: number; Text: string; MaximumLength?: number }
 interface AssistantDialog {
   Token: number; Revision: number; LocalSerial: number; ServerSerial: number; Kind: string;
   Text: string[]; Choices: {Id: number; Text: string; Graphic: number; Hue: number}[];
-  Switches: number[]; Entries: AssistantEntry[]; Truncated: boolean;
+  Switches: number[]; Entries: AssistantEntry[]; ActivePage: number;
+  /** Local page switches are distinct from server reply buttons. */
+  PageChoices: {Id: number; Text: string; Graphic: number; Hue: number}[]; Truncated: boolean;
 }
 interface AssistantRenderOptions {
   CustomLight?: boolean; LightLevel?: number; Weather?: boolean; Sound?: boolean; SoundVolume?: number;
@@ -51,7 +53,8 @@ interface AssistantLootRules {
   Name?: string; Source?: number; Destination: number; MaximumRange?: number; DelayMilliseconds?: number;
   MaximumRunSeconds?: number; OpenCorpses?: boolean;
   Rules: {Match?: AssistantItemMatch; NameContains?: string; Properties?: AssistantPropertyRule[]; MaximumAmount?: number;
-    Priority?: number; GroupJoin?: AssistantPredicateJoin; Groups?: AssistantPredicateGroup[]}[];
+    Priority?: number; GroupJoin?: AssistantPredicateJoin; Groups?: AssistantPredicateGroup[];
+    Name?: string; Destination?: number}[];
 }
 interface AssistantVendorRules {
   Name?: string; Vendor?: number; MaximumTotal?: number;
@@ -74,11 +77,35 @@ interface AssistantNativeTools {
   HotkeysEnabled: boolean; PassThrough: boolean; Feedback: string; FeedbackSequence: number;
   RoutePreview: {X: number; Y: number; Z?: number | null; Loaded: boolean; Impassable: boolean}[];
   RouteStatus: string;
+  Layout: {Width: number; Height: number;
+    Gumps: {Type: string; LocalSerial: number; ServerSerial: number; X: number; Y: number}[]};
+}
+interface AssistantInputBinding {
+  Gesture: string; Kind: string; Id: number; Serial: number; Name: string; PassThrough: boolean;
+  Context: "Game" | "Targeting" | "Chat"; Trigger: "Tap" | "Release" | "Hold";
+}
+interface AssistantTargetPreset {
+  Id: number; Name: string; Category: "Hostile" | "Friendly" | "Any"; Range: number;
+  Selection: "Nearest" | "Next" | "Previous" | "LowestHealth"; ExcludeFriends: boolean;
+  ExcludeRenamable: boolean; PoisonedOnly: boolean; Body: number; RequireKnownHealth: boolean;
+}
+interface AssistantActionSlot {
+  Id: number; Label: string; Kind: string; ActionId: number; Serial: number; Name: string; Hotkey: string;
+  RemainingMilliseconds: number; Estimated: boolean; Running: boolean; CooldownName: string; StateLabel: string;
+}
+interface AssistantPlayability {
+  /** Entries exist only after actual server skill observations. Cap can remain unknown. */
+  Skills: {Id: number; Name: string; Value: number; Base: number; Cap: number | null}[];
+  Bindings: AssistantInputBinding[]; TargetPresets: AssistantTargetPreset[]; ActionSlots: AssistantActionSlot[];
+  ShowActionBar: boolean; TraceLogging: boolean; MutedSoundIds: number[];
+  RecentSounds: {Id: number; HeardUtc: string; Muted: boolean}[]; GridLootMode: number;
+  LastFriendly: number; LastEnemy: number; FrameP99Milliseconds: number; LongFrames: number;
+  DiagnosticsFile: string; DroppedLogMessages: number; Feedback: string;
 }
 interface AssistantSnapshot {
   Schema: number; SessionId: string; WorldEpoch: number; Sequence: number; CapturedUtc: string;
   InGame: boolean; Connected: boolean; Status: string; Player: AssistantPlayer;
-  Performance: {DrawFps: number; FrameP95Ms: number; ClientCpuPercent: number};
+  Performance: {DrawFps: number; FrameP95Ms: number; ClientCpuPercent: number; FrameP99Ms: number; LongFrames: number};
   Target: AssistantTarget; HeldItem: number; Items: AssistantItem[]; Mobiles: AssistantMobile[];
   Journal: AssistantJournal[]; InventoryTruncated: boolean; MobilesTruncated: boolean;
   ActionsAvailable: {Kind: string; Id: number; Name: string; Group: string}[];
@@ -96,6 +123,7 @@ interface AssistantSnapshot {
     Rendering: Required<AssistantRenderOptions>; Truncated: boolean; PartyMembers: number[];
     LockedFeatures: number; CharacterFeatures: number;
     AssistantPolicy: {Known: boolean; DisabledMask: number}; NativeTools: AssistantNativeTools;
+    Playability: AssistantPlayability;
   };
 }
 interface AssistantApi {
@@ -107,7 +135,7 @@ interface AssistantApi {
   sleep(milliseconds: number): Promise<boolean>;
   /** Leases a fresh target; intervening manual or replacement cursors invalidate it. */
   waitForTarget(timeoutMilliseconds: number): Promise<boolean>;
-  waitForJournal(text: string, timeoutMilliseconds: number, afterSequence?: number | null): Promise<boolean>;
+  waitForJournal(text: string, timeoutMilliseconds: number, afterSequence?: number | null, source?: "All" | "System"): Promise<boolean>;
   openBackpack(): Promise<AssistantResult>;
   openMap(): Promise<AssistantResult>;
   dismount(): Promise<AssistantResult>;
@@ -121,6 +149,8 @@ interface AssistantApi {
   cancelTarget(): Promise<AssistantResult>;
   targetGround(x: number, y: number, z: number, graphic?: number): Promise<AssistantResult>;
   moveItem(serial: SerialOrAlias, destination: SerialOrAlias, amount: number): Promise<AssistantResult>;
+  /** Equip one loaded item on an unoccupied wearable layer; validates inventory and awaits the observed change. */
+  equipItem(serial: SerialOrAlias, layer: number): Promise<boolean>;
   properties(serial: SerialOrAlias): Promise<AssistantItemDetail | false>;
   buffs(): Promise<AssistantBuff[]>;
   /** Finds a matching currently open/newly arrived dialog; leases its exact identity for one reply. */

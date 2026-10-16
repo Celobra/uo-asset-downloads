@@ -3,7 +3,7 @@ import { resolve, extname, basename } from 'node:path';
 
 // Offline documents remain authoritative. The website extracts their CSS into
 // ordinary files because the existing hosting policy refuses inline styles.
-export async function syncAssistantGuides(root, documentation, sdk) {
+export async function syncAssistantGuides(root, documentation) {
   const out = resolve(root, 'public/assistant/guide'); await mkdir(out, {recursive: true});
   let count = 0;
   for (const entry of await readdir(documentation, {withFileTypes: true})) {
@@ -41,7 +41,6 @@ export async function syncAssistantGuides(root, documentation, sdk) {
       }
     }
   }
-  await copyTree(sdk, resolve(root, 'public/assistant/SDK'));
   await writeFile(resolve(out, 'README.txt'), 'UO Assistant documentation\n\nThese pages accompany the current application release. Begin with Guide.html, Scripting-Guide.html, Native-Playability.html or Recording.html. Recording-Dependencies.html retains the recording component source and license information.\n');
   return {documents: count};
 }

@@ -196,3 +196,9 @@ The website page is generated from `data/assistant-page.html` and the verified
 metadata belongs in that record: the build refuses missing installer identities,
 private-profile flags and download/version mismatches. Preserve original notices,
 LGPL recording sources/rebuild kits and the older releases when updating it.
+
+Copy the public SDK from the checked final application's `SDK` tree with
+`tools/sync-assistant-sdk.mjs`, separately from the offline documentation sync.
+Its release manifest pins every SDK file to the matching installer and source
+identities. The website tests check the complete tree, 45 current API methods
+and the expanded playability, layout and dialog contracts.

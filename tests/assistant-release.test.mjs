@@ -4,6 +4,8 @@ import { readFile, stat, readdir } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { validatePublishedAssistantFeed } from '../tools/assistant-updates.mjs';
+import { normalizeSdkFile } from '../tools/sync-assistant-sdk.mjs';
+import { createHash } from 'node:crypto';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const metadata=JSON.parse(await readFile(resolve(root,'data/assistant-release.json'),'utf8'));
 const page=await readFile(resolve(root,'public/assistant/index.html'),'utf8');
@@ -48,4 +50,42 @@ test('Both gallery entry points expose the application while retaining current S
   const html=await readFile(resolve(root,name),'utf8');
   for(const text of ['/assistant/','UO Assistant 0.3.0','Studio 0.33.12','Orc-NPC-Roles','CentrED#'])assert.ok(html.includes(text),name+': '+text);
  }
+});
+
+test('Published SDK matches the final payload contract and documents all 45 current API methods',async()=>{
+ const manifest=JSON.parse(await readFile(resolve(root,'data/assistant-sdk-release.json'),'utf8'));
+ assert.equal(manifest.schema,1);assert.equal(manifest.version,metadata.version);
+ assert.equal(manifest.installerSha256,metadata.artifacts[`UOAssistant-${metadata.version}-Setup.exe`].sha256.toLowerCase());
+ assert.equal(manifest.sourceSha256,metadata.artifacts[`UOAssistant-${metadata.version}-Source.zip`].sha256.toLowerCase());
+ const sdk=resolve(root,'public/assistant/SDK');
+ const actual=[];
+ async function inventory(directory,prefix=''){
+  for(const entry of await readdir(directory,{withFileTypes:true})){
+   assert.ok(!entry.isSymbolicLink(),'SDK files must not be redirected');
+   if(entry.isDirectory())await inventory(resolve(directory,entry.name),prefix+entry.name+'/');
+   else if(entry.isFile())actual.push(prefix+entry.name);
+  }
+ }
+ await inventory(sdk);
+ assert.deepEqual(actual.sort(),manifest.files.map(file=>file.path).sort(),'SDK must have the entire final payload tree and no stale extra files');
+ for(const file of manifest.files){
+  assert.ok(!file.path.split('/').includes('..')&&!file.path.startsWith('/'));
+  const bytes=normalizeSdkFile(file.path,await readFile(resolve(sdk,file.path)));
+  assert.equal(bytes.length,file.bytes,file.path);
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),file.sha256,file.path);
+ }
+ const definitions=await readFile(resolve(sdk,'assistant.d.ts'),'utf8');
+ const api=definitions.match(/interface AssistantApi \{([\s\S]*?)\n\}/)?.[1];assert.ok(api);
+ const methods=[...api.matchAll(/^\s{2}(\w+)\(/gm)].map(match=>match[1]);
+ assert.equal(methods.length,45);assert.equal(new Set(methods).size,45);
+ assert.equal(metadata.guide.apiMethods,methods.length);
+ assert.ok(methods.includes('equipItem'));
+ for(const field of ['Playability: AssistantPlayability','interface AssistantPlayability','Layout: {Width: number','ActivePage: number','PageChoices: {Id: number'])assert.ok(definitions.includes(field),field);
+ const loot=definitions.match(/interface AssistantLootRules \{([\s\S]*?)\n\}/)?.[1];
+ assert.match(loot,/Name\?: string; Destination\?: number/);
+ assert.match(api,/waitForJournal\([^\n]+source\?: "All" \| "System"/);
+ const examples=JSON.parse(await readFile(resolve(sdk,'examples/examples.json'),'utf8'));
+ assert.equal(examples.Version,metadata.version);assert.equal(examples.Examples.length,12);
+ assert.equal(metadata.guide.standaloneExamples,examples.Examples.length);
+ assert.equal(manifest.files.length,examples.Examples.length+3);
 });
