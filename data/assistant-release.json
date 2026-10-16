@@ -1,0 +1,76 @@
+{
+  "product": "UO Assistant",
+  "version": "0.1.6",
+  "status": "unsigned Windows x64 development preview",
+  "releaseUrl": "https://github.com/Celobra/uo-asset-downloads/releases/tag/uo-assistant-v0.1.6",
+  "downloads": {
+    "installer": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.1.6/UOAssistant-0.1.6-Setup.exe",
+    "source": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.1.6/UOAssistant-0.1.6-Source.zip",
+    "guide": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.1.6/UOAssistant-0.1.6-Guide.zip",
+    "rebuildKit": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.1.6/UOAssistant-0.1.6-MP3Sharp-Source-Rebuild.zip",
+    "checksums": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.1.6/SHA256SUMS-0.1.6.txt"
+  },
+  "artifacts": {
+    "README.txt": {
+      "bytes": 1317,
+      "sha256": "951d44b9e6aef55249dc5d77119a2ba2bf875df2e00ddf6d4ea70b04887d54e6"
+    },
+    "release.json": {
+      "bytes": 1279,
+      "sha256": "9d77d6608864f750761e767756cfc63ad070ea86ed947524cd4a51c1cd4f0e1d"
+    },
+    "UOAssistant-0.1.6-Guide.zip": {
+      "bytes": 57694,
+      "sha256": "8137644c237fbd8b38fa72d970ad02fbd240e4ae5d8244dd83e7d707e5ee7d75"
+    },
+    "UOAssistant-0.1.6-MP3Sharp-Source-Rebuild.zip": {
+      "bytes": 144618,
+      "sha256": "7a5d7348edaaedca7fd1ec035ae49161a03837817319016458977d19df0e11ba"
+    },
+    "UOAssistant-0.1.6-Release-Notes.html": {
+      "bytes": 2524,
+      "sha256": "bd7212dbc6416781a2b945f06ca32e5cd917f6c90458164c9a7220b9a50e6b6e"
+    },
+    "UOAssistant-0.1.6-Setup.exe": {
+      "bytes": 118433447,
+      "sha256": "971126dc0e3a96251b278a56d4f0fb7b2872ff676f456f4aa1b6e86e21bb34eb"
+    },
+    "UOAssistant-0.1.6-Source.zip": {
+      "bytes": 21412135,
+      "sha256": "2888de10d3a45c59b03a77deb5e01842a5d393c284b59d30f485badaf8540c69"
+    }
+  },
+  "producerChecks": {
+    "integrated": 729,
+    "installation": 1100,
+    "payloadFiles": 1048,
+    "networkFencedStartup": true
+  },
+  "publicationChecks": {
+    "payloadFilesRehashed": 1048,
+    "originalSourceInputsVerified": 1446,
+    "publicSourceInputsIncluded": 1410,
+    "installerSourceFilesVerified": 102,
+    "sourceArchiveCrc": true,
+    "guideArchiveCrc": true,
+    "externalQodo": "unavailable: not logged in",
+    "freshPublicSourceChecks": 729,
+    "offlineGuideLinksChecked": true
+  },
+  "limits": [
+    "Unsigned development preview.",
+    "Receiving-system gameplay and shard-specific timing rules require manual checks.",
+    "Cooldowns are local estimates; item-use requests are not server acknowledgements.",
+    "Synthetic screenshots and startup checks are not live performance benchmarks.",
+    "Source README describes managed builds and separate complete installer rebuild requirements."
+  ],
+  "gameDataIncluded": false,
+  "privateProfilesIncluded": false,
+  "automaticLogin": false,
+  "installation": "current Windows user",
+  "upstream": {
+    "project": "ClassicUO",
+    "commit": "ee79d7ebc1cc0e53ff84fe6cae17d389e2737f93",
+    "license": "Original BSD 2-Clause and dependency notices retained"
+  }
+}
