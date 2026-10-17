@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "version": "0.4.0",
-  "sourceSha256": "4b93947930a16ee1aba8232aab92298240c9bbff161ec53f1f34a4893dd08532",
-  "installerSha256": "d6884f927b645f8d04749c8268aa8bc652099787de559785ef26fd3f1ab4b5f7",
+  "version": "0.5.0",
+  "sourceSha256": "151fedda4e78e6382ab78721fab5cc9513885c72b23f5655eaf9b7bbe3407970",
+  "installerSha256": "06d38e15fcc3cde008f2c61b8002a88613dfc12469b3aef0bc135b6d988eb1a5",
   "textNormalization": "UTF-8 without BOM; CRLF to LF; no other text changes",
   "files": [
     {
@@ -88,12 +88,97 @@
     {
       "path": "examples/examples.json",
       "bytes": 2109,
-      "sha256": "9ce3b6534863e5f69cff74ce1164deba91a4a60c71215f2e8e57ed605c0464ff"
+      "sha256": "af8069821f19886356cec30008f67685cb80778619812a4748d3c00b05157f8a"
     },
     {
       "path": "examples/README.txt",
-      "bytes": 289,
-      "sha256": "84eae152dfdd88c6f57ae5b2410bd1f2161422e9a4d46612d1f65feeacf98595"
+      "bytes": 372,
+      "sha256": "ab00b913f701d765e0c5c3b0f0c4e9cc1600658a1fa90f1cd3b6da1eee9e149c"
+    },
+    {
+      "path": "simple-examples/01-Start-here-—-open-your-backpack.uosimple",
+      "bytes": 140,
+      "sha256": "ad41a1842a2359b9ae9876a7abc74adf2dbdebcd639e54a660488f07a7db96d0"
+    },
+    {
+      "path": "simple-examples/02-Heal-yourself.uosimple",
+      "bytes": 105,
+      "sha256": "9f673c261be5f08a76e67be6829660333dc214e68d9dc7b3333c9b7b28201e13"
+    },
+    {
+      "path": "simple-examples/03-Flame-Strike-your-last-target.uosimple",
+      "bytes": 70,
+      "sha256": "506a273087ef64ef73a63ae80c30b94eaba5c77c28d43c5a64e3bcc94120a93e"
+    },
+    {
+      "path": "simple-examples/04-Use-an-item-on-yourself.uosimple",
+      "bytes": 122,
+      "sha256": "39f65008b49de734743f2b43208f218b083d38e5e64f1bdd8815e0cc73af7256"
+    },
+    {
+      "path": "simple-examples/05-Find-nearby-trees.uosimple",
+      "bytes": 77,
+      "sha256": "632e3b10a8f2e44e28905e311db21295351c83f839a2113c9fb24acf4baff43d"
+    },
+    {
+      "path": "simple-examples/06-Find-cave-tiles.uosimple",
+      "bytes": 76,
+      "sha256": "e24caa1bb6797384cd78eeed9eb98d1840142b19f5277dd047fcb23460d61faf"
+    },
+    {
+      "path": "simple-examples/07-Walk-around-found-trees.uosimple",
+      "bytes": 119,
+      "sha256": "55675fa65d408b3191d88543ed0f65f5a505798930750abd72f7c015c5270254"
+    },
+    {
+      "path": "simple-examples/08-Chop-nearby-trees-—-Invicta.uosimple",
+      "bytes": 197,
+      "sha256": "db16401caae1f58b77f4c6fda024cff3e43e00d6263019d7072e3868d81b2853"
+    },
+    {
+      "path": "simple-examples/09-Put-logs-into-a-bag.uosimple",
+      "bytes": 176,
+      "sha256": "e860f27c10a3144c65adf0b34e8297ee91d791a6981ab9830aa9fd862f940971"
+    },
+    {
+      "path": "simple-examples/10-Move-ten-bandages.uosimple",
+      "bytes": 161,
+      "sha256": "10edc8a26a4466868de57827aaf2b54078343ccc13bb546afe66db03dc37b7da"
+    },
+    {
+      "path": "simple-examples/11-Find-a-window.uosimple",
+      "bytes": 79,
+      "sha256": "6d5985035f030267aff1c920320c7b3bc9533d976ee45aae2bdf14c7291e9d67"
+    },
+    {
+      "path": "simple-examples/12-Press-a-window-button.uosimple",
+      "bytes": 166,
+      "sha256": "dc2b349d5fd158fed56f95a39d8fac149c0597a7619782d85aa51bc6c49d63ef"
+    },
+    {
+      "path": "simple-examples/13-Wait-for-new-journal-text.uosimple",
+      "bytes": 123,
+      "sha256": "469d715deb3b625ecc13558a4e53a3b3c4286a06d575b7e3c58dec0809191879"
+    },
+    {
+      "path": "simple-examples/14-Repeat-a-skill.uosimple",
+      "bytes": 101,
+      "sha256": "92df04d4ff909a94b34b17abc08bd60685790858ccf7c1bb0eb033ee534f9020"
+    },
+    {
+      "path": "simple-examples/15-Equip-a-cloak.uosimple",
+      "bytes": 79,
+      "sha256": "a28d91cfcb187df465146967a95111986a8a34721e5efef67e72d94de62a28af"
+    },
+    {
+      "path": "simple-examples/catalog.json",
+      "bytes": 13788,
+      "sha256": "f2aee0c4521904a6f6b79bd8908bf9fc912a8e49398d440c0350898c1fdd372d"
+    },
+    {
+      "path": "simple-examples/README.txt",
+      "bytes": 504,
+      "sha256": "4288c8ce3be168519afd2943c9000fe414800da5a7b1e17a129f78a802161dea"
     }
   ]
 }

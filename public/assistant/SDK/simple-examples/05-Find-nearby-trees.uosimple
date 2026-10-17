@@ -1,0 +1,3 @@
+# UO Assistant run limit: 60 seconds
+scan.trees within 12 as trees
+show trees

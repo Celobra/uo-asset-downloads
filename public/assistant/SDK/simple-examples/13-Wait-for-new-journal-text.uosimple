@@ -1,0 +1,4 @@
+# UO Assistant run limit: 60 seconds
+journal.clear
+items.use saved "my item"
+journal.wait "You put some" timeout 10 seconds

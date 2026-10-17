@@ -1,0 +1,5 @@
+# UO Assistant run limit: 60 seconds
+repeat 3 times
+    player.skill "Hiding"
+    wait 10 seconds
+end

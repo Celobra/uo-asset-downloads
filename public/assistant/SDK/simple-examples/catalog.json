@@ -1,0 +1,382 @@
+{
+  "Commands": [
+    {
+      "Category": "Player",
+      "Label": "Cast a spell",
+      "Command": "player.cast",
+      "Template": "player.cast \u0022Heal\u0022 on self",
+      "Help": "Choose a spell name. Use on self, on last or on saved \u0022name\u0022. Targeting waits automatically."
+    },
+    {
+      "Category": "Player",
+      "Label": "Use a skill",
+      "Command": "player.skill",
+      "Template": "player.skill \u0022Hiding\u0022",
+      "Help": "Spell and skill names ignore spaces, capitals, hyphens and underscores."
+    },
+    {
+      "Category": "Player",
+      "Label": "Open backpack",
+      "Command": "player.backpack",
+      "Template": "player.backpack",
+      "Help": "Opens your backpack. Open inner bags yourself before searching or moving their contents."
+    },
+    {
+      "Category": "Player",
+      "Label": "Open map",
+      "Command": "player.map",
+      "Template": "player.map",
+      "Help": "Opens the game map."
+    },
+    {
+      "Category": "Player",
+      "Label": "Dismount",
+      "Command": "player.dismount",
+      "Template": "player.dismount",
+      "Help": "Gets off your mount."
+    },
+    {
+      "Category": "Player",
+      "Label": "War mode",
+      "Command": "player.war",
+      "Template": "player.war on",
+      "Help": "Choose on or off."
+    },
+    {
+      "Category": "Player",
+      "Label": "Attack last target",
+      "Command": "player.attack",
+      "Template": "player.attack last",
+      "Help": "Saved friends, party members and yourself remain protected."
+    },
+    {
+      "Category": "Player",
+      "Label": "Primary ability",
+      "Command": "player.primary",
+      "Template": "player.primary",
+      "Help": "Requests your primary weapon ability."
+    },
+    {
+      "Category": "Player",
+      "Label": "Secondary ability",
+      "Command": "player.secondary",
+      "Template": "player.secondary",
+      "Help": "Requests your secondary weapon ability."
+    },
+    {
+      "Category": "Player",
+      "Label": "Toggle flight",
+      "Command": "player.fly",
+      "Template": "player.fly",
+      "Help": "Toggles flight when supported by your character and shard."
+    },
+    {
+      "Category": "Targets",
+      "Label": "Target yourself",
+      "Command": "target.self",
+      "Template": "target.self",
+      "Help": "Waits up to five seconds for a fresh target cursor, then targets you."
+    },
+    {
+      "Category": "Targets",
+      "Label": "Target last",
+      "Command": "target.last",
+      "Template": "target.last",
+      "Help": "Uses your last target after waiting for a fresh cursor."
+    },
+    {
+      "Category": "Targets",
+      "Label": "Target saved object",
+      "Command": "target",
+      "Template": "target saved \u0022supplies\u0022",
+      "Help": "Use Choose an object to give something a memorable saved name."
+    },
+    {
+      "Category": "Targets",
+      "Label": "Target ground",
+      "Command": "target.ground",
+      "Template": "target.ground 100 100 0 graphic 0",
+      "Help": "X, Y, Z and optional graphic. A scanned tile can instead be targeted by its loop name."
+    },
+    {
+      "Category": "Targets",
+      "Label": "Wait for cursor",
+      "Command": "target.wait",
+      "Template": "target.wait 5 seconds",
+      "Help": "Normally automatic when targeting. An expired wait stops the script."
+    },
+    {
+      "Category": "Targets",
+      "Label": "Cancel cursor",
+      "Command": "target.cancel",
+      "Template": "target.cancel",
+      "Help": "Cancels the currently available target cursor through the checked runner."
+    },
+    {
+      "Category": "Items",
+      "Label": "Use an item",
+      "Command": "items.use",
+      "Template": "items.use saved \u0022my item\u0022",
+      "Help": "Use a saved object, exact name or graphic. Add on self, on last or on a scanned tile."
+    },
+    {
+      "Category": "Items",
+      "Label": "Equip an item",
+      "Command": "items.equip",
+      "Template": "items.equip saved \u0022my axe\u0022 layer \u0022right hand\u0022",
+      "Help": "Equip a saved item in a named layer, such as right hand or cloak."
+    },
+    {
+      "Category": "Items",
+      "Label": "Find items",
+      "Command": "items.find",
+      "Template": "items.find graphic 0x1BDD in backpack as logs",
+      "Help": "Searches the open source bag, without entering nested bags. Names must match the cached item name."
+    },
+    {
+      "Category": "Items",
+      "Label": "Put items in a bag",
+      "Command": "items.move",
+      "Template": "items.move graphic 0x1BDD to saved \u0022wood bag\u0022 amount all from backpack",
+      "Help": "Move all matching stacks or an exact total amount. Open both bags first. Each move must be observed before continuing."
+    },
+    {
+      "Category": "Scanning",
+      "Label": "Find nearby trees",
+      "Command": "scan.trees",
+      "Template": "scan.trees within 12 as trees",
+      "Help": "Collects all pages around your starting position; closest tiles first. Incomplete scans stop with an explanation."
+    },
+    {
+      "Category": "Scanning",
+      "Label": "Find cave tiles",
+      "Command": "scan.caves",
+      "Template": "scan.caves within 8 as caves",
+      "Help": "Finds currently loaded cave tiles. This does not mine them."
+    },
+    {
+      "Category": "Scanning",
+      "Label": "Find a tile graphic",
+      "Command": "scan.tiles",
+      "Template": "scan.tiles graphic 0x0CCA within 8 as tiles",
+      "Help": "Use graphic or name to narrow the scan. A custom shard may use different graphics."
+    },
+    {
+      "Category": "Scanning",
+      "Label": "Find windows",
+      "Command": "gumps.find",
+      "Template": "gumps.find \u0022craft\u0022 as windows",
+      "Help": "Search visible gump text or a graphic. This is read-only; use gumps.wait and gumps.press to reply."
+    },
+    {
+      "Category": "Walking",
+      "Label": "Walk to a location",
+      "Command": "walk.to",
+      "Template": "walk.to 100 100 z 0 within 1 timeout 10 seconds",
+      "Help": "Nearby loaded locations only (32 tiles per move). The script waits for observed arrival."
+    },
+    {
+      "Category": "Walking",
+      "Label": "Run to a location",
+      "Command": "run.to",
+      "Template": "run.to 100 100 z 0 within 1",
+      "Help": "Running version of walk.to. You can also use a scanned tile\u0027s loop name."
+    },
+    {
+      "Category": "Walking",
+      "Label": "Stop walking",
+      "Command": "walk.stop",
+      "Template": "walk.stop",
+      "Help": "Stops assistant pathfinding."
+    },
+    {
+      "Category": "Windows",
+      "Label": "Wait for a window",
+      "Command": "gumps.wait",
+      "Template": "gumps.wait \u0022craft\u0022 timeout 5 seconds",
+      "Help": "Match text or server serial. Exactly one complete matching server window must be open."
+    },
+    {
+      "Category": "Windows",
+      "Label": "Press a button",
+      "Command": "gumps.press",
+      "Template": "gumps.press button 1",
+      "Help": "Follows gumps.wait. A quoted exact button label works when the client supplies it; otherwise choose its button number."
+    },
+    {
+      "Category": "Windows",
+      "Label": "Wait for a menu",
+      "Command": "menus.wait",
+      "Template": "menus.wait \u0022choose\u0022 timeout 5 seconds",
+      "Help": "Waits for one matching server menu."
+    },
+    {
+      "Category": "Windows",
+      "Label": "Choose a menu option",
+      "Command": "menus.choose",
+      "Template": "menus.choose 1",
+      "Help": "Follows menus.wait. A quoted exact option label is also accepted."
+    },
+    {
+      "Category": "Windows",
+      "Label": "Answer a prompt",
+      "Command": "prompt.reply",
+      "Template": "prompt.reply \u0022My answer\u0022",
+      "Help": "Waits for a prompt and submits this text."
+    },
+    {
+      "Category": "Windows",
+      "Label": "Answer a text entry",
+      "Command": "entry.reply",
+      "Template": "entry.reply \u0022My answer\u0022",
+      "Help": "Waits for a text entry window and submits this text."
+    },
+    {
+      "Category": "Journal",
+      "Label": "Start fresh messages",
+      "Command": "journal.clear",
+      "Template": "journal.clear",
+      "Help": "Marks the current point in your journal; does not erase the game\u0027s journal."
+    },
+    {
+      "Category": "Journal",
+      "Label": "Wait for a message",
+      "Command": "journal.wait",
+      "Template": "journal.wait \u0022You put some\u0022 timeout 10 seconds",
+      "Help": "Only new system messages count, beginning at the script start or journal.clear."
+    },
+    {
+      "Category": "Basics",
+      "Label": "Wait",
+      "Command": "wait",
+      "Template": "wait 1 second",
+      "Help": "Use seconds or ms. Each wait may be at most 30 seconds."
+    },
+    {
+      "Category": "Basics",
+      "Label": "Show a message",
+      "Command": "log",
+      "Template": "log \u0022Finished\u0022",
+      "Help": "Shows a message in script output. This does not speak in game chat."
+    },
+    {
+      "Category": "Scanning",
+      "Label": "Show found results",
+      "Command": "show",
+      "Template": "scan.trees within 8 as trees\nshow trees",
+      "Help": "Shows up to twelve loaded results, including names, graphics and coordinates. Window results include visible button details."
+    },
+    {
+      "Category": "Basics",
+      "Label": "Repeat steps",
+      "Command": "repeat",
+      "Template": "repeat 3 times\n    log \u0022Hello\u0022\n    wait 1 second\nend",
+      "Help": "Repeat between 1 and 100 times. All scripts also have a run-time limit."
+    },
+    {
+      "Category": "Basics",
+      "Label": "Check your health",
+      "Command": "if",
+      "Template": "if player.health below 50 percent\n    player.cast \u0022Heal\u0022 on self\nend",
+      "Help": "Also supports mana, stamina, weight, items.have, journal.contains, player.dead and player.mounted."
+    },
+    {
+      "Category": "Basics",
+      "Label": "Visit found trees",
+      "Command": "for",
+      "Template": "scan.trees within 8 as trees\nfor each tree in trees\n    walk.to tree within 2\nend",
+      "Help": "Runs the steps for each found tile. Use break to finish a loop, continue to skip its current item, and stop to finish the script."
+    },
+    {
+      "Category": "Gathering",
+      "Label": "Chop nearby trees (Invicta)",
+      "Command": "trees.chop",
+      "Template": "trees.chop nearby using \u0022lumberAxe\u0022 within 12",
+      "Help": "Invicta recipe: save lumberAxe, equip it, dismount and choose a 30-minute run limit. Stops for damage, weight or unknown replies; reports skipped trees. Other shards may use different messages."
+    },
+    {
+      "Category": "Basics",
+      "Label": "Stop the script",
+      "Command": "stop",
+      "Template": "stop",
+      "Help": "Finishes the script immediately; the Stop button can also cancel a running script."
+    }
+  ],
+  "Examples": [
+    {
+      "Name": "Start here \u2014 open your backpack",
+      "Source": "# Each line is one step. Nothing runs until you press Run.\nplayer.backpack\nlog \u0022Your backpack is open.\u0022",
+      "MaximumRunSeconds": 60
+    },
+    {
+      "Name": "Heal yourself",
+      "Source": "if player.health below 75 percent\n    player.cast \u0022Heal\u0022 on self\nend",
+      "MaximumRunSeconds": 60
+    },
+    {
+      "Name": "Flame Strike your last target",
+      "Source": "player.cast \u0022flamestrike\u0022 on last",
+      "MaximumRunSeconds": 60
+    },
+    {
+      "Name": "Use an item on yourself",
+      "Source": "# Save the item as bandages with Choose an object.\nitems.use saved \u0022bandages\u0022 on self",
+      "MaximumRunSeconds": 60
+    },
+    {
+      "Name": "Find nearby trees",
+      "Source": "scan.trees within 12 as trees\nshow trees",
+      "MaximumRunSeconds": 60
+    },
+    {
+      "Name": "Find cave tiles",
+      "Source": "scan.caves within 8 as caves\nshow caves",
+      "MaximumRunSeconds": 60
+    },
+    {
+      "Name": "Walk around found trees",
+      "Source": "scan.trees within 8 as trees\nfor each tree in trees\n    walk.to tree within 2\nend",
+      "MaximumRunSeconds": 300
+    },
+    {
+      "Name": "Chop nearby trees \u2014 Invicta",
+      "Source": "# Equip your axe, save it as lumberAxe, and dismount.\n# Stops if hurt, nearly full or a reply is not recognised.\ntrees.chop nearby using \u0022lumberAxe\u0022 within 12",
+      "MaximumRunSeconds": 1800
+    },
+    {
+      "Name": "Put logs into a bag",
+      "Source": "# Open your backpack and wood bag. Choose an object saves its name.\nitems.move graphic 0x1BDD to saved \u0022wood bag\u0022 amount all from backpack",
+      "MaximumRunSeconds": 300
+    },
+    {
+      "Name": "Move ten bandages",
+      "Source": "# Open both bags and save supplies as the destination.\nitems.move graphic 0x0E21 to saved \u0022supplies\u0022 amount 10 from backpack",
+      "MaximumRunSeconds": 60
+    },
+    {
+      "Name": "Find a window",
+      "Source": "gumps.find \u0022craft\u0022 as windows\nshow windows",
+      "MaximumRunSeconds": 60
+    },
+    {
+      "Name": "Press a window button",
+      "Source": "# Replace the window text and button number with those from your shard.\ngumps.wait \u0022craft\u0022 timeout 5 seconds\ngumps.press button 1",
+      "MaximumRunSeconds": 60
+    },
+    {
+      "Name": "Wait for new journal text",
+      "Source": "journal.clear\nitems.use saved \u0022my item\u0022\njournal.wait \u0022You put some\u0022 timeout 10 seconds",
+      "MaximumRunSeconds": 60
+    },
+    {
+      "Name": "Repeat a skill",
+      "Source": "repeat 3 times\n    player.skill \u0022Hiding\u0022\n    wait 10 seconds\nend",
+      "MaximumRunSeconds": 60
+    },
+    {
+      "Name": "Equip a cloak",
+      "Source": "items.equip saved \u0022my cloak\u0022 layer \u0022cloak\u0022",
+      "MaximumRunSeconds": 60
+    }
+  ]
+}

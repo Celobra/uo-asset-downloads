@@ -3,7 +3,7 @@ import { resolve, dirname, extname } from 'node:path';
 import { createHash } from 'node:crypto';
 
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
-const textExtensions = new Set(['.js', '.json', '.ts', '.txt']);
+const textExtensions = new Set(['.js', '.json', '.ts', '.txt', '.uosimple']);
 export function normalizeSdkFile(path, bytes) {
   return textExtensions.has(extname(path).toLowerCase())
     ? Buffer.from(new TextDecoder('utf-8', {fatal: true}).decode(bytes).replace(/^\uFEFF/, '').replaceAll('\r\n', '\n'))

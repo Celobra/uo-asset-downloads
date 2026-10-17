@@ -179,7 +179,7 @@ Five original Orc NPC roles retain their exact native VDs, all 35 humanoid actio
 
 [CentrED# Local - Celobra Edition 0.7.3](https://www.uoassets.com/centred-local/) is a Windows development download maintained and published by Celobra. Version `0.7.3-celobra.1` adds visible edition branding, Windows publisher properties and Help > About and credits, retaining original Copyright (c) 2023 kaczy93, the MIT licence and dependency notices. It keeps Local 0.7.3’s two-corner area picking, inclusive X/Y view bounds, saved workspace layouts and approximate character preview. The optional real-client launcher opens the user's existing client in its own window; it does not install exported maps automatically or sync changes live. The rebuild passed 399 automated checks. A [comparison PDF](https://www.uoassets.com/centred-local/CentrEDSharp-Local-0.7.3-Celobra-Comparison.pdf) explains changes from original CentrED# 0.6.11.31, which already included embedded LocalServer and MUL/UOP support, plus edition attribution and history. Celobra Edition 1 reissues of 0.7.0–0.7.2, their separate source/checksums/guides, and unchanged unbranded 0.7.3/0.7.2 downloads remain linked. Branding and checksums identify the downloads but do not prevent copying; these builds are unsigned. Receiving-computer, multiplayer and in-game acceptance remain unverified; the multiplayer radar broadcast defect remains open.
 
-## UO Assistant 0.4.0
+## UO Assistant 0.5.0
 
 [UO Assistant](https://www.uoassets.com/assistant/) combines a GPU Ultima Online
 client with a separate assistant, quiet startup, configurable keyboard/mouse
@@ -188,9 +188,9 @@ rules and expedition maps. Hardware recording offers HEVC, AV1 and H.264,
 encoded replay, game-only audio and lossless trimming. NVIDIA capture was tested;
 other hardware is probed at runtime and needs receiving-system checks.
 
-[Windows installer](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.4.0/UOAssistant-0.4.0-Setup.exe) · [Full matching source](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.4.0/UOAssistant-0.4.0-Source.zip) · [Scripting guide](https://www.uoassets.com/assistant/guide/Scripting-Guide.html) · [Scanning guide](https://www.uoassets.com/assistant/guide/Scanning.html).
+[Windows installer](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.5.0/UOAssistant-0.5.0-Setup.exe) · [Full matching source](https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.5.0/UOAssistant-0.5.0-Source.zip) · [Scripting guide](https://www.uoassets.com/assistant/guide/Scripting-Guide.html) · [Scanning guide](https://www.uoassets.com/assistant/guide/Scanning.html).
 
-Version 0.4.0 adds loaded tree/cave tile scanning, item searches by cached name,
+Version 0.4.0 introduced loaded tree/cave tile scanning, item searches by cached name,
 graphic and hue, and inspection of visible local/server game windows. Results
 report pagination and incomplete data. Editable text is excluded. Explicit
 script runs can last up to 30 minutes with finite execution budgets. The offline
@@ -203,9 +203,9 @@ The audited importer fully converted 32 of the supplied 200 UOSteam scripts;
 unsupported lines remain visible, and parsing does not verify shard behavior.
 Synthetic screenshots and capture tests are labelled. Live movement, controls,
 travel and individual shard rules still require player acceptance. Earlier
-0.3.0, 0.2.1 and 0.1.6 downloads remain available. Recording binaries and their
+0.4.0, 0.3.0, 0.2.1 and 0.1.6 downloads remain available. Recording binaries and their
 hardware evidence are unchanged from 0.3.0; matching FFmpeg source archives stay
-with that release. A fresh install/uninstall test was not repeated for 0.4.0
+with that release. A fresh install/uninstall test was not repeated for 0.5.0
 because the existing installation was preserved.
 
 The website page is generated from `data/assistant-page.html` and the verified
@@ -219,3 +219,5 @@ Copy the public SDK from the checked final application's `SDK` tree with
 Its release manifest pins every SDK file to the matching installer and source
 identities. The website tests check the complete tree, 48 current API methods
 and the expanded playability, layout and dialog contracts.
+
+UO Assistant 0.5.0 adds Simple Scripts with 43 builder entries and 15 starter recipes. The 21-page beginner guide accompanies the 84-page complete manual. JavaScript and its 48 API methods remain available. The exact public installer and matching source are recorded in data/assistant-release.json.

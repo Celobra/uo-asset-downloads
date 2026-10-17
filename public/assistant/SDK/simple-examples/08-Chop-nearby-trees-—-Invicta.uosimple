@@ -1,0 +1,4 @@
+# UO Assistant run limit: 1800 seconds
+# Equip your axe, save it as lumberAxe, and dismount.
+# Stops if hurt, nearly full or a reply is not recognised.
+trees.chop nearby using "lumberAxe" within 12
