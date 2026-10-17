@@ -1,0 +1,4 @@
+# UO Assistant run limit: 60 seconds
+if player.health below 75 percent
+    player.cast "Heal" on self
+end

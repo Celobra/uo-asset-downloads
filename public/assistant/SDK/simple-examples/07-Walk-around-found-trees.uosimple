@@ -1,0 +1,5 @@
+# UO Assistant run limit: 300 seconds
+scan.trees within 8 as trees
+for each tree in trees
+    walk.to tree within 2
+end

@@ -1,0 +1,4 @@
+# UO Assistant run limit: 60 seconds
+# Replace the window text and button number with those from your shard.
+gumps.wait "craft" timeout 5 seconds
+gumps.press button 1

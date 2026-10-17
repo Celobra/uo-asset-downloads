@@ -1,0 +1,2 @@
+# UO Assistant run limit: 60 seconds
+player.cast "flamestrike" on last

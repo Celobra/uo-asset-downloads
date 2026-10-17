@@ -1,0 +1,4 @@
+# UO Assistant run limit: 60 seconds
+# Each line is one step. Nothing runs until you press Run.
+player.backpack
+log "Your backpack is open."
