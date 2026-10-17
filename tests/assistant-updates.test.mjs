@@ -92,7 +92,7 @@ test('Assistant feed headers persist in both the source generator and deployed h
 test('The published Assistant feed verifies and identifies the website installer exactly', async () => {
   const root = fileURLToPath(new URL('../', import.meta.url));
   const release = await validatePublishedAssistantFeed(root);
-  assert.equal(release.version, '0.5.0');
-  assert.equal(release.bytes, 191672970);
-  assert.ok(release.releases >= 5);
+  assert.equal(release.version, '0.6.0');
+  assert.equal(release.bytes, 192245466);
+  assert.ok(release.releases >= 6);
 });

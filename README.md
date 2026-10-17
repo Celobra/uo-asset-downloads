@@ -221,3 +221,5 @@ identities. The website tests check the complete tree, 48 current API methods
 and the expanded playability, layout and dialog contracts.
 
 UO Assistant 0.5.0 adds Simple Scripts with 43 builder entries and 15 starter recipes. The 21-page beginner guide accompanies the 84-page complete manual. JavaScript and its 48 API methods remain available. The exact public installer and matching source are recorded in data/assistant-release.json.
+
+UO Assistant 0.6.0 reorganizes the full toolset into eight categories with tabs. Its shared task library, script draft retention, stable task shortcuts and save rollback retain Simple Scripts and JavaScript. The 6-page getting-started, 22-page beginner and 85-page complete scripting guides accompany actual synthetic app captures. Exact artifact hashes are recorded in data/assistant-release.json.
