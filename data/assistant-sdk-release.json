@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "version": "0.6.1",
-  "sourceSha256": "83f25b4c4a2fe03444f2a573ed11ca74ca60d74cd3c449b8144e62a4e4fb39e7",
-  "installerSha256": "7c2b5fef4be1ee354fc4ee0129edcd7ad65442f46259a7c6333e0b16c25b2192",
+  "version": "0.7.0",
+  "sourceSha256": "4ce99beea1482571d10c9467692c48d62d8200fb2119d21b52cf7817caa338d2",
+  "installerSha256": "725509558870a4a05b2652648ae0a7d7d3ea47f89b8a63d0619e60005cddf1db",
   "textNormalization": "UTF-8 without BOM; CRLF to LF; no other text changes",
   "files": [
     {
@@ -88,12 +88,12 @@
     {
       "path": "examples/examples.json",
       "bytes": 2109,
-      "sha256": "2196b2049a2342ee2e065807a2121f6eef47718e1680d3eef318b44f9cc982c3"
+      "sha256": "743f5a233153673e1cf7c48a5023c89b74401b9609d5f25e4a74c28a0bc953e2"
     },
     {
       "path": "examples/README.txt",
       "bytes": 372,
-      "sha256": "e74bf310bf312d061073f223a8e14f47e4f05c87533fa37cad79937e6c1fc3ab"
+      "sha256": "22bab6af1f0a1097e9ccf24b00213d69986e1d78a2b70b647028dbe498cc1f9b"
     },
     {
       "path": "simple-examples/01-Start-here-—-open-your-backpack.uosimple",
@@ -178,7 +178,7 @@
     {
       "path": "simple-examples/README.txt",
       "bytes": 504,
-      "sha256": "f6169d38021d1074251beff5980027b33061db3afa4dc06570dbf8a85f0f9bbb"
+      "sha256": "797e4d90abe5f789cb88786fbc770acd55d7b2790edb4295eca0638a47d8efe0"
     }
   ]
 }

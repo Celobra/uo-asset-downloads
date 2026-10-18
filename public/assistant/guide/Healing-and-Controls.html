@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UO Assistant 0.7.0 — healing, hands and game command panels</title><link rel="stylesheet" href="Healing-and-Controls.css"></head><body><main>
+<nav aria-label="Documentation"><a href="Getting-Started.html">Getting started</a> · <a href="Guide.html">Full guide</a> · <a href="Features.html">Features</a> · <a href="Native-Playability.html">Game controls</a> · <a href="Scripting-Guide.html">Scripting</a> · <a href="Release-Notes.html">Release notes</a></nav>
+<h1>Healing, hands and game command panels</h1>
+<p class="lead">Choose a named patient and a healing method in the separate assistant. Use small pet, boat and custom command panels inside the game when you want a quick button.</p>
+<p>This guide covers UO Assistant 0.7.0. Use <strong>Find a tool</strong> to find Healing, Patients &amp; pets, Casting &amp; convenience, Targeting &amp; aliases, Commands, Hotkeys or Bindings &amp; actions. The assistant stays in its separate window; the three command panels are ordinary movable game windows.</p>
+
+<section class="card" id="heal-pet"><h2>Heal your pet once</h2><ol>
+<li>Open <strong>Healing</strong> under Character / Health &amp; pets. In <strong>Who to heal</strong>, choose <strong>A controlled pet</strong>.</li>
+<li>Choose the pet by name in <strong>Choose your pet</strong>, or click <strong>Choose pet in game</strong> and select that pet in the game. Selecting a pet requests its status. It does not cast or use a bandage.</li>
+<li>Wait until the status shows the pet's health. Use <strong>Refresh chosen pet's health</strong> if its health or control information is still missing.</li>
+<li>Choose <strong>Bandages</strong>, <strong>Heal spell</strong>, <strong>Greater Heal spell</strong> or <strong>Cure poison spell</strong> in <strong>Heal using</strong>.</li>
+<li>For healing, set <strong>Heal below health (%)</strong>. Move into range and check the explanation below the controls. Click <strong>Heal once</strong> when it says the patient is ready.</li>
+</ol><p>The patient you chose is the one used for that request. Selecting a different row in a patient table does not silently change the patient. Changing the visible pet choice applies to the next heal; <strong>Save healing settings</strong> remembers the setup for the next launch.</p></section>
+
+<h2 id="methods">Choose the right method</h2>
+<div class="table"><table><thead><tr><th>Method</th><th>What to check</th></tr></thead><tbody>
+<tr><td>Bandages</td><td>Keep matching bandages in a loaded, accessible bag you own. They must be unprotected by your item rules. Bandages reach at most two tiles.</td></tr>
+<tr><td>Heal spell</td><td>A normal Heal request for the selected patient. Keep enough mana and use the range set for your patients.</td></tr>
+<tr><td>Greater Heal spell</td><td>A Greater Heal request for the same selected patient. Mana, spell availability and the result follow your shard's rules.</td></tr>
+<tr><td>Cure poison spell</td><td>Use this for a patient whose poison status is known to be poisoned. Cure can be requested at full health. The health percentage threshold is not used for curing.</td></tr>
+<tr><td>Custom spell (advanced)</td><td>Retains configurable spell numbers and shard-specific settings. Use a spell listed by this client and supported by your shard. Unsupported saved numbers are retained but cannot start healing. The assistant will not consume a harmful target as a healing target.</td></tr>
+</tbody></table></div>
+<p>A healing threshold is strict: at a 90% setting, 90/100 health needs no heal; 89/100 is below the threshold. Unknown health is shown as unknown. Normal healing does not attempt resurrection.</p>
+<p>Spell patient range is configurable from one to twelve tiles under <strong>Patients &amp; pets / Advanced patient settings &amp; object IDs</strong>. Bandages remain limited to two tiles. The server still checks line of sight and its own range rules.</p>
+
+<h2 id="watch">Keep a healing watch running</h2>
+<ol><li>Choose the patient, method, health threshold and <strong>Wait between heals (seconds)</strong>.</li>
+<li>Check <strong>Advanced healing settings</strong> if you want to change minimum spell mana, poison handling, pause-while-walking or the watch time limit. Shard-specific bandage timing formulas remain in the timing tools.</li>
+<li>Click <strong>Start healing watch</strong>. The status explains whether it is waiting for health, range, mana, an available item or the configured cooldown.</li>
+<li>Use <strong>Stop healing</strong> to end this watch, or the window's <strong>Stop all</strong> to stop the current task. Starting the application or saving settings never starts a watch.</li></ol>
+<p>A watch uses the choices captured when you start it. Stop it before choosing a different patient or method. It ends at its shown time limit. Read-only patient refresh and opening a command panel remain available while a watch runs.</p>
+<p>The wait between requests is a local estimate. Stopping and restarting does not make an already requested bandage or spell ready immediately. A request can still be refused by the shard: use the game and journal to check recovery, poison, interruption and cooldown messages.</p>
+<p>Manual targets and target-producing actions have priority. For example, using an all-kill command while healing waits for its cursor stops the healing attempt instead of letting it consume your pet-command target. Finish your manual action before starting healing again.</p>
+
+<h2 id="patients">Heal yourself or a patient list</h2>
+<p>Choose <strong>Myself</strong> to heal your character. For more than one patient, open <strong>Patients &amp; pets</strong>, use <strong>Choose and add patient in game</strong>, <strong>Add saved friends</strong> or <strong>Add loaded party members</strong>, then click <strong>Use my patient list for healing</strong>. Adding a row alone does not start healing or switch the healing mode.</p>
+<p>The list chooses an eligible patient with the lowest known health percentage. After a cast or item use starts, it keeps that patient through the target step. It never changes that target halfway through because someone else becomes more injured.</p>
+<p>Some shards do not report the control information used by the controlled-pet picker. You can explicitly add that pet as a patient and choose <strong>My patient list</strong> once its health is known. This records your chosen patient; it does not claim ownership or change who the shard allows you to heal.</p>
+<p>Use <strong>Save patient preset</strong> to keep the list, target mode and range for the next launch. Saved patients that leave the loaded area remain identifiable and can be selected again when they return.</p>
+
+<h2 id="waiting">When healing is waiting</h2>
+<div class="table"><table><thead><tr><th>Status</th><th>Next step</th></tr></thead><tbody>
+<tr><td>Waiting for pet or health information</td><td>Select the pet in game or refresh its health. Wait for the shard's reply. If the shard does not identify controlled pets, use an explicitly chosen patient list.</td></tr>
+<tr><td>Patient outside range or loaded area</td><td>Move closer. Use two tiles or less for bandages; check the saved patient range for spells.</td></tr>
+<tr><td>At or above the healing threshold</td><td>No healing is needed at the configured threshold. A watch waits for health to fall below it.</td></tr>
+<tr><td>Poisoned patient is skipped</td><td>Choose Cure poison spell, or review the advanced poison setting appropriate for your shard.</td></tr>
+<tr><td>No matching bandages</td><td>Open the bag containing your bandages, check their graphic in advanced settings if your shard changes it, and check your protection rules.</td></tr>
+<tr><td>Finish the current target or held item</td><td>Complete or cancel the game cursor and put down the held item. Your manual action keeps priority.</td></tr>
+<tr><td>Moving or planning a path</td><td>Stop walking, or deliberately change the pause-while-walking setting.</td></tr>
+<tr><td>Cooldown, low mana or no fresh healing target</td><td>Wait for the shown local delay, recover mana or check the game journal. A missing target stops the attempt without repeatedly recasting.</td></tr>
+</tbody></table></div>
+
+<h2 id="casting">Free your hands and recover your weapon after casting</h2>
+<p>Open <strong>Character / Equipment / Casting &amp; convenience</strong>. Your current game choices load into the form. Opening the tool makes no changes. Choose <strong>Save &amp; apply convenience</strong> when you want to remember these choices for the selected shard profile. <strong>Load current game choices</strong> reloads the form without saving it.</p>
+<ol><li>Enable <strong>Free my hands before casting</strong> if your shard requires empty hands. For your next manual spell or spell hotkey, the client moves each original hand item into your backpack and waits until that move is reported before requesting the spell once.</li>
+<li>Enable <strong>Restore my weapon and shield after casting</strong> to request the same original items after a completed spell cycle. For a targeted spell, the actual target must have been sent and casting must have settled. A small set of ordinary spells without targets uses observed casting animation and mana spending instead.</li>
+<li>Under <strong>Advanced hand timing</strong>, adjust <strong>Hand action delay (seconds)</strong> if needed. The default is 0.6 seconds; the allowed range is 0.1 to 5 seconds. A shorter delay never replaces waiting for the shard's item update.</li></ol>
+<p>These helpers apply to explicit native or companion spell use. Healing watches, scripts and macro sequences keep their existing equipment behavior. Restoration never equips an old remembered loadout when you deliberately started the cast empty-handed.</p>
+<p>A new spell, manual item move, replacement target, death, disconnection, <strong>Stop all</strong> or <strong>Escape</strong> stops pending hand work. Newly equipped gear is preserved. Original items must still be known, accessible, unprotected and unchanged; the client makes one request per item and waits for the equipment update rather than repeatedly sending it.</p>
+<p>If a spell fizzles, is cancelled or has no confirmed completion, your hands can remain in the backpack. Use the normal game equipment controls, or use <strong>Remember current hands</strong> before clearing them and <strong>Restore remembered hands</strong> afterwards. This separate memory lasts for the current character session and restores only those exact items. Both actions can be assigned to a key or action-bar slot. Your shard still decides whether each move or equip succeeds.</p>
+
+<h2 id="potions">Use an ordinary potion with occupied hands</h2>
+<p>In <strong>Casting &amp; convenience / Ordinary potions</strong>, enable <strong>Free my hands before using an ordinary potion</strong>. A manual potion click or hotkey then clears the original hands, waits for the backpack updates and uses that potion once. Enable <strong>Put my original weapon and shield back after the potion</strong> to request recovery after the potion stack is observed to decrease or disappear.</p>
+<p>This applies only to the configured ordinary, non-throwing potion graphics. The default list excludes explosion potions. Use <strong>Advanced potion types</strong> only when your shard uses different graphics; an empty list disables this helper. Potion recovery requires the hand-clearing option. A missing result or timeout leaves the original items where they are, with no repeated drink request.</p>
+
+<h2 id="convenience">Choose existing game conveniences</h2>
+<p>The same tool exposes nearby automatic doors, automatic corpses at one to three tiles, fast rotation, the target range indicator and accidental dismount prevention during war mode. It also offers incoming names, overhead health, damage per second, buff time and bar, and spell words and names. Save only the choices you want. Current game options are retained until the first explicit save; fast rotation changes turning behavior and does not increase server movement speed.</p>
+<p>Automatic hand preparation, restoration, doors and corpse access still follow the shard's assistant permissions. Disabled features are refused or kept inactive. Health, damage and buff displays depend on information the shard supplies.</p>
+
+<h2 id="targeting">Keep useful last targets separate</h2>
+<p>Open <strong>Targeting &amp; aliases</strong>. Enable <strong>Remember harmful and beneficial last targets separately</strong> to keep separate last targets for the current server cursor type. A neutral cursor uses the general last target. Enable the range check and set <strong>Maximum target distance (tiles)</strong> from one to twenty-four tiles to keep last-target requests within your chosen distance. Click <strong>Save &amp; apply targeting choices</strong> to apply these independent profile choices.</p>
+<p><strong>Avoid Heal and Greater Heal on poisoned targets</strong> checks a fresh Heal or Greater Heal cursor against known target facts. It keeps the cursor when the target is poisoned or its health or poison information is unknown. It does not change Cure, consume a different target, or silently pick another patient. The target must still be loaded, and the shard checks line of sight and its own rules.</p>
+
+<h2 id="panels">Open pet, boat and custom controls in the game</h2>
+<p>Open <strong>Controls / Commands</strong> in the companion. Click <strong>Open pet controls</strong>, <strong>Open boat controls</strong> or <strong>Open custom controls</strong>. Drag a panel by its border. Close it using <strong>Close</strong> or a right-click. Panels close when the character session, connection or map changes; reopen the panel you need.</p>
+<figure><img src="images/native-command-panels.png" width="1160" height="760" alt="Native pet, boat and shard command panels with named one-click buttons"><figcaption>Synthetic native UI preview before login. The command panels are rendered by the real GPU game client; no shard action was sent.</figcaption></figure>
+<div class="table"><table><thead><tr><th>Panel</th><th>Starting buttons</th></tr></thead><tbody>
+<tr><td>Pets</td><td>Follow me, Come, Stay, Stop, Guard me and Kill / target. These send the corresponding <code>all</code> command. Kill leaves target selection to you in the game. No release-pet button is included.</td></tr>
+<tr><td>Boats</td><td>Forward, Backward, Left, Right, Turn left, Turn right, Stop, Lower anchor and Raise anchor.</td></tr>
+<tr><td>Custom</td><td>A starting Call pets button sends <code>.sacall</code>, as an example of a user-chosen shard command. Edit it to match your shard.</td></tr>
+</tbody></table></div>
+<p>Each click sends one ordinary speech request. The game does not repeat the click on a timer, select a target, confirm pet ownership or assume the boat or pet responded. Use the command words that your shard recognises.</p>
+
+<h2 id="custom">Create a named shard command</h2>
+<ol><li>In <strong>Controls / Commands</strong>, choose the Pets, Boats or Custom panel.</li>
+<li>Click <strong>New button</strong>. Enter a <strong>Button name</strong> and the exact <strong>Command to say</strong>. For example, name it Call pets and enter <code>.sacall</code>.</li>
+<li>Click <strong>Save button</strong>. The open native panel updates, but no speech is sent.</li>
+<li>Open the panel and click the named button when you want to use it.</li></ol>
+<p>Each panel holds up to 32 buttons, with up to 96 across all three. Button names hold up to 40 characters and command text up to 120 characters on one printable line. The configuration is saved with the selected assistant profile.</p>
+<p>Select a row to edit that button. Renaming it keeps its existing button identity and shortcuts. <strong>Remove selected button</strong> removes its keyboard, mouse and action-bar references. <strong>Reset this panel</strong> restores that panel's starting buttons and removes its old shortcut references, so assign those again when ready.</p>
+
+<h2 id="shortcuts">Use a key, mouse shortcut or action-bar button</h2>
+<p>Open <strong>Controls / Hotkeys</strong> for a keyboard shortcut, or <strong>Bindings &amp; actions</strong> for the broader keyboard/mouse editor. Choose <strong>ExecuteQuickCommand</strong> as the action, then choose the saved button by its readable name and command text. Use the same named choice for an action-bar slot. The selected button's identity is shared by its native panel, key binding and action button; you do not need to type a command number.</p>
+<p>You can also bind an action that opens the Pet, Boat or Custom panel. Set the actual shortcut in the binding editor; writing a key label on an action-bar button does not create that binding.</p>
+<p>A tap runs once. A Hold binding runs once after 350 milliseconds; it does not repeat while held. Game, Targeting and Chat contexts decide where a shortcut is active. Existing client macro conflicts are reported, ordinary left/right mouse movement remains available, and Ctrl+Shift+A opens the separate assistant.</p>
+<p>Command speech is for explicit button or hotkey use. Saved configuration, opening panels, macros and scripts do not automatically speak these commands.</p>
+
+<footer>UO Assistant 0.7.0 · Windows x64 · Unsigned development preview. <a href="Native-Playability.html">More game controls</a> · <a href="R8WorkflowGuide.html">Workflow guide</a> · <a href="https://www.uoassets.com/assistant/">UO Assistant website</a></footer>
+</main></body></html>
