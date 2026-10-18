@@ -2,3 +2,5 @@
 /* Assistant 0.3.0 feature tour; all styles remain compatible with the site CSP. */
 .cards.features{grid-template-columns:repeat(2,minmax(0,1fr))}.picture-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.picture-grid figure{margin-top:28px}.native{max-width:640px}.table-wrap{overflow-x:auto;margin-top:28px}.table-wrap table{width:100%;border-collapse:collapse;min-width:400px}.table-wrap caption{text-align:left;color:var(--muted);font-size:14px;padding:8px 0}.table-wrap th,.table-wrap td{text-align:left;padding:14px;border:1px solid var(--line)}.table-wrap th{background:var(--panel)}@media(max-width:800px){.cards.features,.picture-grid{grid-template-columns:1fr}.table-wrap th,.table-wrap td{padding:10px}}
 pre{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%}
+
+.assistant-identity{display:flex;align-items:center;gap:22px}.assistant-identity img{flex:0 0 96px;width:96px;height:96px;object-fit:contain}.assistant-identity .eyebrow{margin:0}.command-panels{max-width:1000px}@media(max-width:600px){.assistant-identity{gap:14px}.assistant-identity img{flex-basis:72px;width:72px;height:72px}.assistant-identity .eyebrow{font-size:11px}}

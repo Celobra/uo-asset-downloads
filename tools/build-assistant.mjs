@@ -56,11 +56,25 @@ export function renderAssistantPage(template, metadata) {
   }).join('\n');
   html = html.replace('<!-- EARLIER_RELEASES -->', older);
   const checks = metadata.producerChecks ?? {};
-  const labels = [['integrated', 'isolated application checks'], ['launcherCoreNetwork', 'launcher core/network checks'], ['launcherInterface', 'synthetic launcher interface checks'], ['installation', 'installation, preservation and removal checks']];
+  const labels = [['integrated', 'isolated application checks'], ['companionInterface', 'synthetic assistant interface checks'], ['launcherCoreNetwork', 'launcher core/network checks'], ['launcherInterface', 'synthetic launcher interface checks'], ['installation', 'installation, preservation and removal checks']];
   const checked = labels.filter(([name]) => Number.isSafeInteger(checks[name]) && checks[name] > 0).map(([name, label]) => `${checks[name].toLocaleString('en-GB')} ${label}`);
   html = html.replace('<!-- VERIFIED_CHECKS -->', checked.length ? `<p>The verified release passed ${escape(checked.join('; '))}. Tests used owned files and synthetic fixtures. Final counts and package identities are retained in the release record.</p>` : '<p>The release record lists the completed application, installer and source verification checks.</p>');
   expect(!/\{\{|RECORDING_DEPENDENCIES|EARLIER_RELEASES|VERIFIED_CHECKS/.test(html), 'Unresolved Assistant website field');
   return html;
+}
+export function renderAssistantHome(html, metadata) {
+  expect(/^\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(metadata.version), 'Invalid Assistant homepage version');
+  const spotlight = `<!-- ASSISTANT_SPOTLIGHT_START -->
+<aside class="assistant-home-strip" aria-label="UO Assistant ${escape(metadata.version)}"><a class="assistant-home-mark" href="/assistant/" aria-label="Explore UO Assistant"><img src="/assistant/media/uo-assistant-070.png" width="76" height="76" alt="UO Assistant compass emblem" loading="lazy"></a><div><span>UO ASSISTANT ${escape(metadata.version)} · WINDOWS PREVIEW</span><strong>Pet healing. Commands in the game.</strong><p>Choose a pet by name, keep your original weapon and shield after casting, and open pet, boat or custom command panels. Add shard commands such as .sacall.</p></div><a class="assistant-home-link" href="/assistant/">See the tools &amp; download →</a></aside>
+<!-- ASSISTANT_SPOTLIGHT_END -->`;
+  if (html.includes('<!-- ASSISTANT_SPOTLIGHT_START -->'))
+    html = html.replace(/<!-- ASSISTANT_SPOTLIGHT_START -->[\s\S]*?<!-- ASSISTANT_SPOTLIGHT_END -->/, spotlight);
+  else {
+    expect(html.includes('<main id="library">'), 'Assistant homepage spotlight needs the existing library landmark');
+    html = html.replace('<main id="library">', spotlight + '\n<main id="library">');
+  }
+  if (!html.includes('href="/assistant/promo.css"')) html = html.replace('</head>', '<link rel="stylesheet" href="/assistant/promo.css"></head>');
+  return html.replace(/UO Assistant \d+\.\d+\.\d+(?= and Studio)/g, `UO Assistant ${metadata.version}`);
 }
 export async function buildAssistant(root = checkout) {
   const metadata = JSON.parse(await readFile(resolve(root, 'data/assistant-release.json'), 'utf8'));
@@ -68,5 +82,9 @@ export async function buildAssistant(root = checkout) {
   const html = renderAssistantPage(template, metadata);
   await mkdir(resolve(root, 'public/assistant'), {recursive: true});
   await writeFile(resolve(root, 'public/assistant/index.html'), html);
+  for (const page of ['public/index.html', 'public/gallery/index.html']) {
+    const home = await readFile(resolve(root, page), 'utf8');
+    await writeFile(resolve(root, page), renderAssistantHome(home, metadata));
+  }
   return {version: metadata.version, bytes: Buffer.byteLength(html)};
 }

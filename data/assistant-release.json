@@ -1,17 +1,17 @@
 {
   "product": "UO Assistant",
-  "version": "0.6.1",
-  "clientVersion": "0.6.0",
-  "date": "2026-10-17",
+  "version": "0.7.0",
+  "clientVersion": "0.7.0",
+  "date": "2026-10-18",
   "platform": "Windows x64",
   "status": "unsigned Windows x64 development preview",
-  "releaseUrl": "https://github.com/Celobra/uo-asset-downloads/releases/tag/uo-assistant-v0.6.1",
+  "releaseUrl": "https://github.com/Celobra/uo-asset-downloads/releases/tag/uo-assistant-v0.7.0",
   "downloads": {
-    "installer": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.6.1/UOAssistant-0.6.1-Setup.exe",
-    "source": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.6.1/UOAssistant-0.6.1-Source.zip",
-    "guide": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.6.1/UOAssistant-0.6.1-Guide.zip",
-    "rebuildKit": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.6.1/UOAssistant-0.6.1-MP3Sharp-Source-Rebuild.zip",
-    "checksums": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.6.1/SHA256SUMS-0.6.1.txt",
+    "installer": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.7.0/UOAssistant-0.7.0-Setup.exe",
+    "source": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.7.0/UOAssistant-0.7.0-Source.zip",
+    "guide": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.7.0/UOAssistant-0.7.0-Guide.zip",
+    "rebuildKit": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.7.0/UOAssistant-0.7.0-MP3Sharp-Source-Rebuild.zip",
+    "checksums": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.7.0/SHA256SUMS-0.7.0.txt",
     "recordingTools": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-Recording-Tools.zip",
     "ffmpegSource": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-FFmpeg-Source-Rebuild.zip",
     "ffmpegDependencies": [
@@ -22,54 +22,60 @@
   },
   "artifacts": {
     "README.txt": {
-      "bytes": 510,
-      "sha256": "e279b09b3a44448b2cca18933cf77e4b7b4b0bbc4f80309fddf26150e51935fc"
+      "bytes": 575,
+      "sha256": "b47652310462d3dbc9102b1cb7df793aeee9b3eb184eb8552a047f5f02bc7fd7"
     },
-    "UOAssistant-0.6.1-Guide.zip": {
-      "bytes": 1887614,
-      "sha256": "a1faf4b4642638e248fc7b1ce8e26692d2d2b9142a80ae10758cf6b839445dfa"
+    "UOAssistant-0.7.0-Guide.zip": {
+      "bytes": 2791431,
+      "sha256": "74cb2057e0d160d9cf2cf66c25c79d7c20069e8d4c06e405933eaf7d17e4dddd"
     },
-    "UOAssistant-0.6.1-MP3Sharp-Source-Rebuild.zip": {
-      "bytes": 170991,
-      "sha256": "480219d8ba07fc8726793aff139b3e7c3ae012b3fac4e033f140e4de737c09cb"
+    "UOAssistant-0.7.0-MP3Sharp-Source-Rebuild.zip": {
+      "bytes": 366416,
+      "sha256": "068b78c97a58b5740e5d3559e4735e5c2e80de7e0f0d4787580cab384323fd34"
     },
-    "UOAssistant-0.6.1-Release-Notes.html": {
-      "bytes": 2457,
-      "sha256": "36747974e59c1fc787fafb15bd7e604b7bd14d7e23b7962e1856bece4a642985"
+    "UOAssistant-0.7.0-Release-Notes.html": {
+      "bytes": 5203,
+      "sha256": "860a0c005f6b5d13a57710344fc50cfd26fe2541170004535d007ee0f9081203"
     },
-    "UOAssistant-0.6.1-Setup.exe": {
-      "bytes": 192227869,
-      "sha256": "7c2b5fef4be1ee354fc4ee0129edcd7ad65442f46259a7c6333e0b16c25b2192"
+    "UOAssistant-0.7.0-Setup.exe": {
+      "bytes": 193494129,
+      "sha256": "725509558870a4a05b2652648ae0a7d7d3ea47f89b8a63d0619e60005cddf1db"
     },
-    "UOAssistant-0.6.1-Source.zip": {
-      "bytes": 23304798,
-      "sha256": "83f25b4c4a2fe03444f2a573ed11ca74ca60d74cd3c449b8144e62a4e4fb39e7"
+    "UOAssistant-0.7.0-Source.zip": {
+      "bytes": 27015571,
+      "sha256": "4ce99beea1482571d10c9467692c48d62d8200fb2119d21b52cf7817caa338d2"
     },
     "update.json": {
-      "bytes": 6557,
-      "sha256": "e4ecfa622ae790c115e7d553e248bce16a9c24ba505773182fccad3ee802fa0c"
+      "bytes": 7373,
+      "sha256": "5c93a8d7229b2f0852938b06cd7714919bdcd56a761dbd5579f671a16470cdaa"
     },
-    "SHA256SUMS-0.6.1.txt": {
+    "SHA256SUMS-0.7.0.txt": {
       "bytes": 660,
-      "sha256": "20f6ac8dd8b46c472760573433fae3f024af7c0cad7030170da455f1fa7acb07"
+      "sha256": "b8c9389b438bda146137b6a1cc1cdae246b675fc2b032e19fc84d47da1b6a2a4"
     }
   },
   "producerChecks": {
-    "integrated": 0,
+    "integrated": 1307,
+    "companionInterface": 502,
+    "nativeSelfChecks": 64,
     "launcherCoreNetwork": 111,
-    "launcherInterface": 14,
+    "launcherInterface": 15,
     "installation": 18,
-    "payloadFiles": 1317,
+    "payloadFiles": 1321,
     "installerSourceGuards": 13
   },
-  "sourceInventorySha256": "9bdeaac7553523913aab7b48378333b4d31533e97b38a2088985460da283048f",
-  "clientManifestSha256": "38203b610e838a5b04c05f1992b243140a4038ef5223bc2f9a74b9d8e2a69665",
-  "payloadManifestSha256": "55165924acc3dcfd563ac56050b86b484c7421d00267c9a5e797b89b03b4b5d0",
+  "sourceInventorySha256": "51572916b9fa00444494d06af1d79a90d5b057148afc9f4c632b2c396a9629bd",
+  "clientManifestSha256": "caf2bbb52bc5256254c72ed0ddd6e81ee40247caeb305589c4e959defd3a1280",
+  "payloadManifestSha256": "848a08072b503a6458c4ce98cdc3799b55a2e806f6aef851872addefb2fc2376",
   "guide": {
-    "pages": 85,
+    "pages": 84,
     "sections": 83,
     "apiMethods": 48,
-    "standaloneExamples": 15
+    "standaloneExamples": 15,
+    "beginnerPages": 21,
+    "gettingStartedPages": 6,
+    "healingControlsPages": 6,
+    "companionTools": 58
   },
   "recording": {
     "defaultPreference": [
@@ -96,13 +102,13 @@
     "verificationVersion": "0.3.0"
   },
   "limits": [
-    "Unsigned development preview.",
-    "Installer lifecycle tests use isolated copies with unique test identities; the real installed app was preserved.",
-    "The unchanged 0.6.0 client retains its prior 1,306 synthetic checks; these were not rerun for this installer patch.",
-    "Live Invicta gameplay, shard-specific tiles/dialogs and populated-world performance need receiving-system checks.",
-    "Downloaded installers, portable copies and development folders are not automatically deleted.",
-    "Draft retention and recording components are unchanged from 0.6.0; matching FFmpeg sources remain in release 0.3.0.",
-    "External Qodo review unavailable: CLI signed out; local review is not independent approval."
+    "Unsigned Windows x64 development preview.",
+    "Synthetic checks and a network-fenced pre-login GPU fixture do not prove live shard behavior, casting completion, boat commands or populated-world performance.",
+    "A cast that does not provide enough completion evidence leaves hands alone; use Restore remembered hands when appropriate.",
+    "Automatic helpers follow the shard permissions and use known owned items; they do not change server rules.",
+    "Existing installed applications, personal profiles, clients, accounts and shard saves were preserved during verification.",
+    "External Qodo review was unavailable because its CLI was signed out; local peer reviews are recorded separately.",
+    "Recording binaries and corresponding FFmpeg archives are unchanged from release0.3.0; receiving hardware still needs a short recording test."
   ],
   "gameDataIncluded": false,
   "privateProfilesIncluded": false,
@@ -114,6 +120,233 @@
     "license": "Original BSD 2-Clause and dependency notices retained"
   },
   "previousReleases": [
+    {
+      "product": "UO Assistant",
+      "version": "0.6.1",
+      "clientVersion": "0.6.0",
+      "date": "2026-10-17",
+      "platform": "Windows x64",
+      "status": "unsigned Windows x64 development preview",
+      "releaseUrl": "https://github.com/Celobra/uo-asset-downloads/releases/tag/uo-assistant-v0.6.1",
+      "downloads": {
+        "installer": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.6.1/UOAssistant-0.6.1-Setup.exe",
+        "source": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.6.1/UOAssistant-0.6.1-Source.zip",
+        "guide": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.6.1/UOAssistant-0.6.1-Guide.zip",
+        "rebuildKit": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.6.1/UOAssistant-0.6.1-MP3Sharp-Source-Rebuild.zip",
+        "checksums": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.6.1/SHA256SUMS-0.6.1.txt",
+        "recordingTools": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-Recording-Tools.zip",
+        "ffmpegSource": "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-FFmpeg-Source-Rebuild.zip",
+        "ffmpegDependencies": [
+          "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-FFmpeg-Dependency-Sources-01.zip",
+          "https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v0.3.0/UOAssistant-0.3.0-FFmpeg-Dependency-Sources-02.zip"
+        ],
+        "recordingNotices": "https://www.uoassets.com/assistant/guide/Recording-Dependencies.html"
+      },
+      "artifacts": {
+        "README.txt": {
+          "bytes": 510,
+          "sha256": "e279b09b3a44448b2cca18933cf77e4b7b4b0bbc4f80309fddf26150e51935fc"
+        },
+        "UOAssistant-0.6.1-Guide.zip": {
+          "bytes": 1887614,
+          "sha256": "a1faf4b4642638e248fc7b1ce8e26692d2d2b9142a80ae10758cf6b839445dfa"
+        },
+        "UOAssistant-0.6.1-MP3Sharp-Source-Rebuild.zip": {
+          "bytes": 170991,
+          "sha256": "480219d8ba07fc8726793aff139b3e7c3ae012b3fac4e033f140e4de737c09cb"
+        },
+        "UOAssistant-0.6.1-Release-Notes.html": {
+          "bytes": 2457,
+          "sha256": "36747974e59c1fc787fafb15bd7e604b7bd14d7e23b7962e1856bece4a642985"
+        },
+        "UOAssistant-0.6.1-Setup.exe": {
+          "bytes": 192227869,
+          "sha256": "7c2b5fef4be1ee354fc4ee0129edcd7ad65442f46259a7c6333e0b16c25b2192"
+        },
+        "UOAssistant-0.6.1-Source.zip": {
+          "bytes": 23304798,
+          "sha256": "83f25b4c4a2fe03444f2a573ed11ca74ca60d74cd3c449b8144e62a4e4fb39e7"
+        },
+        "update.json": {
+          "bytes": 6557,
+          "sha256": "e4ecfa622ae790c115e7d553e248bce16a9c24ba505773182fccad3ee802fa0c"
+        },
+        "SHA256SUMS-0.6.1.txt": {
+          "bytes": 660,
+          "sha256": "20f6ac8dd8b46c472760573433fae3f024af7c0cad7030170da455f1fa7acb07"
+        }
+      },
+      "producerChecks": {
+        "integrated": 0,
+        "launcherCoreNetwork": 111,
+        "launcherInterface": 14,
+        "installation": 18,
+        "payloadFiles": 1317,
+        "installerSourceGuards": 13
+      },
+      "sourceInventorySha256": "9bdeaac7553523913aab7b48378333b4d31533e97b38a2088985460da283048f",
+      "clientManifestSha256": "38203b610e838a5b04c05f1992b243140a4038ef5223bc2f9a74b9d8e2a69665",
+      "payloadManifestSha256": "55165924acc3dcfd563ac56050b86b484c7421d00267c9a5e797b89b03b4b5d0",
+      "guide": {
+        "pages": 85,
+        "sections": 83,
+        "apiMethods": 48,
+        "standaloneExamples": 15
+      },
+      "recording": {
+        "defaultPreference": [
+          "HEVC",
+          "AV1",
+          "H.264"
+        ],
+        "capture": "paired game window",
+        "audio": "optional game-only process loopback",
+        "microphone": false,
+        "localOnly": true,
+        "hardwareTested": "NVIDIA RTX 5090",
+        "syntheticTextQualitySsim": {
+          "av1": 0.978,
+          "hevc": 0.978,
+          "h264": 0.978
+        },
+        "syntheticClipBytes": {
+          "av1": 3625347,
+          "hevc": 2849510,
+          "h264": 3645670
+        },
+        "encodedFrameDrops": 0,
+        "verificationVersion": "0.3.0"
+      },
+      "limits": [
+        "Unsigned development preview.",
+        "Installer lifecycle tests use isolated copies with unique test identities; the real installed app was preserved.",
+        "The unchanged 0.6.0 client retains its prior 1,306 synthetic checks; these were not rerun for this installer patch.",
+        "Live Invicta gameplay, shard-specific tiles/dialogs and populated-world performance need receiving-system checks.",
+        "Downloaded installers, portable copies and development folders are not automatically deleted.",
+        "Draft retention and recording components are unchanged from 0.6.0; matching FFmpeg sources remain in release 0.3.0.",
+        "External Qodo review unavailable: CLI signed out; local review is not independent approval."
+      ],
+      "gameDataIncluded": false,
+      "privateProfilesIncluded": false,
+      "automaticLogin": false,
+      "installation": "current Windows user",
+      "upstream": {
+        "project": "ClassicUO",
+        "commit": "ee79d7ebc1cc0e53ff84fe6cae17d389e2737f93",
+        "license": "Original BSD 2-Clause and dependency notices retained"
+      },
+      "automaticUpdates": {
+        "feed": "https://www.uoassets.com/assistant/update.json",
+        "defaultCheckOnLaunch": true,
+        "intervalMinutesWhileIdle": 30,
+        "automaticInstallation": false,
+        "signedCatalog": true,
+        "existingPreferencesRetained": true
+      },
+      "update": {
+        "feedUrl": "https://www.uoassets.com/assistant/update.json",
+        "defaultEnabled": true,
+        "idleIntervalMinutes": 30,
+        "automaticInstall": false,
+        "savedOptOutsPreserved": true,
+        "signedCatalog": true
+      },
+      "publicationChecks": {
+        "payloadFilesRehashed": 1317,
+        "publicSourceInputsIncluded": 1692,
+        "sourceArchiveCrc": true,
+        "guideArchiveCrc": true,
+        "externalQodo": "unavailable: not logged in",
+        "offlineGuideLinksChecked": 141,
+        "runtimeFilesVerified": 840,
+        "privacyPathMatches": 0
+      },
+      "dependencyArtifacts": {
+        "UOAssistant-0.3.0-FFmpeg-Dependency-Sources-01.zip": {
+          "bytes": 1640788340,
+          "sha256": "70498f0d1430fef2de5fe0750b054ff39ed2a5108e18693881ff235c7b9e77ad"
+        },
+        "UOAssistant-0.3.0-FFmpeg-Dependency-Sources-02.zip": {
+          "bytes": 569112604,
+          "sha256": "deee254acdade1f1953573b2d709525bb81c20cd90a5df4f289940e8e2e50dcb"
+        },
+        "UOAssistant-0.3.0-FFmpeg-Source-Rebuild.zip": {
+          "bytes": 25018882,
+          "sha256": "61e373b300234a59ad1d62bf11344691cc44e9e3ccfaefa2de3cfba0bc897dae"
+        },
+        "UOAssistant-0.3.0-Recording-Tools.zip": {
+          "bytes": 79512020,
+          "sha256": "69e1eebd24e4151ef97686b51fbaf7bcf1113f887d577f20dc8673c26b835d06"
+        }
+      },
+      "scanning": {
+        "methods": [
+          "scanTiles",
+          "findItems",
+          "findGumps"
+        ],
+        "loadedFactsOnly": true,
+        "readOnly": true,
+        "maximumTileRadius": 18,
+        "maximumScriptSeconds": 1800,
+        "editableTextExcluded": true
+      },
+      "simpleScripts": {
+        "commands": 43,
+        "examples": 15,
+        "guidePages": 22,
+        "extension": ".uosimple",
+        "advancedJavaScriptRetained": true,
+        "maximumRepeatCount": 100,
+        "maximumNestingDepth": 8
+      },
+      "navigation": {
+        "categories": [
+          "Home",
+          "Character",
+          "Items",
+          "Tasks",
+          "Map & travel",
+          "Controls",
+          "Recording",
+          "Settings"
+        ],
+        "tabs": true,
+        "previousFeaturesRetained": 51,
+        "featureDestinations": 56,
+        "sharedTaskLibrary": true,
+        "advancedScriptingRetained": true,
+        "scriptDraftsInMemory": true,
+        "stableTaskShortcuts": true,
+        "gettingStartedPages": 6
+      },
+      "inheritedApplicationChecks": {
+        "version": "0.6.0",
+        "total": 1306,
+        "unchangedRuntime": true,
+        "rerun": false,
+        "groups": {
+          "native": 399,
+          "protocol": 30,
+          "automation": 227,
+          "simpleScripts": 123,
+          "scanning": 22,
+          "harvestingJint": 2,
+          "simpleHarvestingJint": 2,
+          "storage": 30,
+          "nativeTools": 45,
+          "mapsTravelTeam": 72,
+          "workflows": 78,
+          "companionInterface": 276
+        }
+      },
+      "upgradeBehavior": {
+        "removeIdentifiedPreviousInstallations": true,
+        "preserveUserData": true,
+        "stopOnUninstallFailure": true,
+        "isolatedLifecycleChecks": 18
+      }
+    },
     {
       "product": "UO Assistant",
       "version": "0.6.0",
@@ -1044,13 +1277,13 @@
     "signedCatalog": true
   },
   "publicationChecks": {
-    "payloadFilesRehashed": 1317,
-    "publicSourceInputsIncluded": 1692,
+    "payloadFilesRehashed": 1321,
+    "publicSourceInputsIncluded": 1740,
     "sourceArchiveCrc": true,
     "guideArchiveCrc": true,
     "externalQodo": "unavailable: not logged in",
-    "offlineGuideLinksChecked": 141,
-    "runtimeFilesVerified": 840,
+    "offlineGuideLinksChecked": 158,
+    "runtimeFilesVerified": 841,
     "privacyPathMatches": 0
   },
   "dependencyArtifacts": {
@@ -1086,7 +1319,7 @@
   "simpleScripts": {
     "commands": 43,
     "examples": 15,
-    "guidePages": 22,
+    "guidePages": 21,
     "extension": ".uosimple",
     "advancedJavaScriptRetained": true,
     "maximumRepeatCount": 100,
@@ -1105,37 +1338,76 @@
     ],
     "tabs": true,
     "previousFeaturesRetained": 51,
-    "featureDestinations": 56,
+    "featureDestinations": 58,
     "sharedTaskLibrary": true,
     "advancedScriptingRetained": true,
     "scriptDraftsInMemory": true,
     "stableTaskShortcuts": true,
     "gettingStartedPages": 6
   },
-  "inheritedApplicationChecks": {
-    "version": "0.6.0",
-    "total": 1306,
-    "unchangedRuntime": true,
-    "rerun": false,
-    "groups": {
-      "native": 399,
-      "protocol": 30,
-      "automation": 227,
-      "simpleScripts": 123,
-      "scanning": 22,
-      "harvestingJint": 2,
-      "simpleHarvestingJint": 2,
-      "storage": 30,
-      "nativeTools": 45,
-      "mapsTravelTeam": 72,
-      "workflows": 78,
-      "companionInterface": 276
-    }
-  },
   "upgradeBehavior": {
     "removeIdentifiedPreviousInstallations": true,
     "preserveUserData": true,
     "stopOnUninstallFailure": true,
     "isolatedLifecycleChecks": 18
+  },
+  "applicationCheckGroups": {
+    "Native": 527,
+    "Protocol": 45,
+    "Automation": 346,
+    "Audit": 15,
+    "Library": 30,
+    "NativeTools": 45,
+    "Maps": 72,
+    "R8Workflow": 78,
+    "SimpleScripts": 123,
+    "Scanning": 22,
+    "Harvest-JavaScript": 2,
+    "Harvest-Simple": 2
+  },
+  "changes": [
+    "Healing uses the selected named patient, configured spell range and a patient fixed for each fresh target. Watches explain temporary range, health and mana waits.",
+    "Cure works for a poisoned patient at full health; cooldown estimates persist across restarted watches. Unsupported saved spell IDs are retained but cannot start healing.",
+    "Optional Free hands before casting and Restore weapon and shield after casting use observed item and cursor state. Remember/Restore hands also have explicit buttons and shortcuts.",
+    "Optional ordinary-potion hand preparation waits for cleared hands and restores originals after observed stack use or removal. Shard potion graphics and hand timing are editable.",
+    "Native pet, boat and custom command panels share named buttons with hotkeys and action bars. Add shard commands such as .sacall; saving or opening a panel sends no speech.",
+    "Smart last target keeps beneficial and harmful histories separate. Optional range and poisoned-heal checks keep a refused cursor available.",
+    "Convenience options include nearby doors/corpses, rotation, target range, dismount protection, incoming names, health, spell labels and buff timers.",
+    "Run and Preview now use visible edits in affected item/vendor tools, macro Repeat uses its visible value, and recording uses its visible options and folder.",
+    "Loot saving preserves AND conditions; equipment editing preserves property requirements and dispatch checks their exact revision. Unrelated partial facts no longer disable complete actions.",
+    "Fixed patient status starvation, old confirmation cursors, stale settings acknowledgements, vendor quantities, travel/resource checks and missing hand/layout actions.",
+    "New original UO Assistant icons cover the game, companion, launcher and installer. The main assistant remains separate; smooth GPU gameplay and paired closing are retained."
+  ],
+  "rendererVerification": {
+    "syntheticOnly": true,
+    "beforeLogin": true,
+    "shippingRuntime": true,
+    "meanDrawFps": 60.024182598932654,
+    "minimumDrawFps": 59.86251973717161,
+    "durationSeconds": 22,
+    "configuredFps": 60,
+    "nativeCommandPanels": 3,
+    "liveShardTest": false
+  },
+  "convenience": {
+    "default": "opt-in per shard profile",
+    "preserveNativeOptionsUntilSave": true,
+    "originalHandsOnly": true,
+    "observedHandClear": true,
+    "potionTypesEditable": true,
+    "smartLastTarget": true,
+    "rangeCheck": true,
+    "poisonedHealCheck": true
+  },
+  "commandPanels": {
+    "groups": [
+      "Pets",
+      "Boats",
+      "Custom"
+    ],
+    "maximumButtons": 96,
+    "maximumPerPanel": 32,
+    "maximumCommandCharacters": 120,
+    "automaticSpeech": false
   }
 }

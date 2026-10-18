@@ -10,12 +10,13 @@ function syntheticMetadata() {
     downloads: {...Object.fromEntries(Object.entries(names).map(([name, file]) => [name, prefix + file])),
       recordingTools: prefix + 'Recording-Tools.zip', ffmpegSource: prefix + 'FFmpeg-Source.zip', ffmpegDependencies: [prefix + 'FFmpeg-Dependencies.zip'], recordingNotices: 'https://www.uoassets.com/assistant/guide/Third-Party-Notices.html'},
     artifacts: Object.fromEntries(Object.values(names).map(name => [name, {bytes: 1234, sha256: 'a'.repeat(64)}])),
-    producerChecks: {integrated: 1000, launcherCoreNetwork: 111}, previousReleases: []};
+    producerChecks: {integrated: 1000, companionInterface: 502, launcherCoreNetwork: 111}, previousReleases: []};
 }
 test('Assistant template renders only exact versioned and verified artifact identities', () => {
   const html = renderAssistantPage(template, syntheticMetadata());
   assert.ok(html.includes('UO Assistant 0.6.1')); assert.ok(html.includes('1,234 bytes'));
   assert.ok(html.includes('a'.repeat(64))); assert.ok(html.includes('1,000 isolated application checks'));
+  assert.ok(html.includes('502 synthetic assistant interface checks'));
   assert.doesNotMatch(html, /\{\{|<style\b|\sstyle=|<script\b/i);
 });
 test('Assistant build refuses unverified private or mismatched release inputs', () => {
