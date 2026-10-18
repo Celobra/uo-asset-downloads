@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { renderAssistantPage } from '../tools/build-assistant.mjs';
 const template = await readFile(new URL('../data/assistant-page.html', import.meta.url), 'utf8');
 function syntheticMetadata() {
-  const version = '0.6.1', prefix = `https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v${version}/`;
+  const version = '0.7.1', prefix = `https://github.com/Celobra/uo-asset-downloads/releases/download/uo-assistant-v${version}/`;
   const names = {installer: `UOAssistant-${version}-Setup.exe`, source: `UOAssistant-${version}-Source.zip`, guide: `UOAssistant-${version}-Guide.zip`, rebuildKit: `UOAssistant-${version}-MP3Sharp-Source-Rebuild.zip`, checksums: `SHA256SUMS-${version}.txt`};
   return {version, gameDataIncluded: false, privateProfilesIncluded: false, automaticLogin: false,
     downloads: {...Object.fromEntries(Object.entries(names).map(([name, file]) => [name, prefix + file])),
@@ -14,15 +14,15 @@ function syntheticMetadata() {
 }
 test('Assistant template renders only exact versioned and verified artifact identities', () => {
   const html = renderAssistantPage(template, syntheticMetadata());
-  assert.ok(html.includes('UO Assistant 0.6.1')); assert.ok(html.includes('1,234 bytes'));
+  assert.ok(html.includes('UO Assistant 0.7.1')); assert.ok(html.includes('1,234 bytes'));
   assert.ok(html.includes('a'.repeat(64))); assert.ok(html.includes('1,000 isolated application checks'));
   assert.ok(html.includes('502 synthetic assistant interface checks'));
   assert.doesNotMatch(html, /\{\{|<style\b|\sstyle=|<script\b/i);
 });
 test('Assistant build refuses unverified private or mismatched release inputs', () => {
   for (const mutate of [m => {m.version = '0.2.1';}, m => {m.gameDataIncluded = true;}, m => {m.downloads.installer += '?other';},
-    m => {delete m.artifacts['UOAssistant-0.6.1-Setup.exe'];}, m => {delete m.artifacts['UOAssistant-0.6.1-Source.zip'];},
-    m => {m.artifacts['UOAssistant-0.6.1-Setup.exe'].sha256 = 'pending';}, m => {delete m.downloads.ffmpegSource;},
+    m => {delete m.artifacts['UOAssistant-0.7.1-Setup.exe'];}, m => {delete m.artifacts['UOAssistant-0.7.1-Source.zip'];},
+    m => {m.artifacts['UOAssistant-0.7.1-Setup.exe'].sha256 = 'pending';}, m => {delete m.downloads.ffmpegSource;},
     m => {m.downloads.ffmpegDependencies = [];}, m => {m.downloads.recordingTools = 'javascript:alert(1)';}]) {
     const metadata = syntheticMetadata(); mutate(metadata); assert.throws(() => renderAssistantPage(template, metadata));
   }

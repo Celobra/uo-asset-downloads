@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "version": "0.7.0",
-  "sourceSha256": "4ce99beea1482571d10c9467692c48d62d8200fb2119d21b52cf7817caa338d2",
-  "installerSha256": "725509558870a4a05b2652648ae0a7d7d3ea47f89b8a63d0619e60005cddf1db",
+  "version": "0.7.1",
+  "sourceSha256": "5109ac011e79ebf794543c21667eef5a6c3a1280a2b116a624f10d099ceae8cf",
+  "installerSha256": "68d992e55e520254da2917ae886595bd5eadd2153bc2e469bd1c62f16cc0c717",
   "textNormalization": "UTF-8 without BOM; CRLF to LF; no other text changes",
   "files": [
     {
@@ -88,7 +88,7 @@
     {
       "path": "examples/examples.json",
       "bytes": 2109,
-      "sha256": "743f5a233153673e1cf7c48a5023c89b74401b9609d5f25e4a74c28a0bc953e2"
+      "sha256": "e322099d647de9f22f1289b26faaf0cfcc34098518362d20c76e0e306ba362a8"
     },
     {
       "path": "examples/README.txt",
