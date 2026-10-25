@@ -49,9 +49,10 @@ test('Assistant page, guides and notices have complete local links under the hos
  }
 });
 test('Both gallery entry points expose the application while retaining current Studio and creature notices',async()=>{
+ const studio=JSON.parse(await readFile(resolve(root,'data/studio-release.json'),'utf8'));
  for(const name of ['public/index.html','public/gallery/index.html']){
   const html=await readFile(resolve(root,name),'utf8');
-  for(const text of ['/assistant/','UO Assistant 0.7.1','Studio 0.33.12','Orc-NPC-Roles','CentrED#'])assert.ok(html.includes(text),name+': '+text);
+  for(const text of ['/assistant/','UO Assistant 0.7.1',`Studio ${studio.version}`,'Orc-NPC-Roles','CentrED#'])assert.ok(html.includes(text),name+': '+text);
  }
 });
 
@@ -95,7 +96,7 @@ test('Published SDK matches the final payload contract and documents all 48 curr
  assert.equal(metadata.simpleScripts.commands,simple.Commands.length); assert.equal(metadata.simpleScripts.examples,simple.Examples.length);
  const files=manifest.files.filter(f=>f.path.endsWith('.uosimple'));
  assert.equal(files.length,15);
- for(const file of files){const text=await readFile(resolve(sdk,file.path),'utf8');assert.match(text,/^# UO Assistant run limit: (60|300|1800) seconds\n/);assert.doesNotMatch(text,/await assistant\./);}
+ for(const file of files){const text=normalizeSdkFile(file.path,await readFile(resolve(sdk,file.path))).toString('utf8');assert.match(text,/^# UO Assistant run limit: (60|300|1800) seconds\n/);assert.doesNotMatch(text,/await assistant\./);}
  assert.equal(manifest.files.length,examples.Examples.length+3+simple.Examples.length+2);
  for(const text of ['Simple Scripts','player.cast','items.move','trees.chop','guide/Simple-Scripts.html','guide/Simple-Scripts.pdf'])assert.ok(page.includes(text),text);
 });
