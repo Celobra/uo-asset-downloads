@@ -2,6 +2,27 @@
   "releases": [
     {
       "added": [
+        "Project Setup recognises Sphere .scp and RunUO, ServUO and ModernUO .cs sources from server roots, Scripts folders, UOContent projects and supported ZIPs.",
+        "Artwork only is visible above the import tabs in Simple and Advanced for items, animated items, effects and ordinary body animations."
+      ],
+      "date": "2026-10-25",
+      "fixed": [
+        "ModernUO content profiles retain Items, Mobiles and generated Scripts together.",
+        "Explicit C# profiles remain C# when an old Sphere file is present; profile switches reset generated-script targets and export folders.",
+        "Artwork-only imports skip new scripts, resource registration and body remapping. Complete mounts and equipment retain their required links."
+      ],
+      "improved": [
+        "C# sources open read-only in Script files; existing C# code is not converted or edited.",
+        "Native graphics ownership, queued reservations and explicit replacement review remain enforced. Source changes invalidate stale checks.",
+        "All 1,538 final application checks passed across 125 test modules with zero skips in a single fresh maintained-source run. The entire suite separately passed from a fresh source ZIP. The frozen runtime and complete 98-page, 33-chapter guide were verified."
+      ],
+      "note": "C# graphic-reference interpretation is unsupported. Verify IDs used only in C# code. ModernUO generation remains a preview; compile and test generated source and gameplay on the receiving server.",
+      "release": true,
+      "title": "Server profiles and artwork-only imports",
+      "version": "0.33.13"
+    },
+    {
+      "added": [
         "Animations keeps native body and Animated items & effects playback in one workspace with visible controls.",
         "Save GIF exports the selected body or Art/AnimData sequence; Export frame exports the shown frame."
       ],
