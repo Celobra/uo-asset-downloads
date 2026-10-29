@@ -1,6 +1,29 @@
 {
   "releases": [
     {
+      "version": "0.33.14",
+      "date": "2026-10-29",
+      "release": true,
+      "title": "Smoother ModernUO imports and visible loading progress",
+      "added": [
+        "Visible loading bars, elapsed time and real completed/total counts for known reading, preparation and preview steps.",
+        "Searchable ZIP source choices show full nested paths and explain incomplete equipment folders without hiding valid pieces."
+      ],
+      "fixed": [
+        "Complete armor sets share one operation’s checked allocation/source inventory instead of repeatedly scanning the same large C# project for every piece.",
+        "C# destination-folder suggestions and mount preparation run in the background; stale or cancelled reads do not replace current choices.",
+        "ModernUO creature and animal-mount diets use its native FruitsAndVeggies flag.",
+        "Cancelled, superseded and replaced ZIP indexes close their owned files while retaining the active profile."
+      ],
+      "improved": [
+        "Armor searches nested folders within its safety budget, including compatible sets under preview/reference/artwork names. Unrelated outer metadata does not hide valid sets; rejected nested packages have readable details.",
+        "Current-file and source-byte checks remain at operation boundaries and on new reviews/saves; occupied graphics, queued reservations and replacement confirmation remain protected.",
+        "Representative generated ModernUO source (61 classes) compiled against actual server/content assemblies and native serialization generation.",
+        "All 1,640 final application checks passed across 137 test modules with zero skips in a single fresh maintained-source run. The entire suite separately passed from a fresh source ZIP. The frozen runtime and complete 100-page, 33-chapter guide were verified."
+      ],
+      "note": "ModernUO generation remains a preview. C# source browsing is read-only and C# graphic-reference analysis is unsupported. Compile and test generated code, movement, riding and equipment with the receiving client and shard. The Windows installer is unsigned."
+    },
+    {
       "added": [
         "Project Setup recognises Sphere .scp and RunUO, ServUO and ModernUO .cs sources from server roots, Scripts folders, UOContent projects and supported ZIPs.",
         "Artwork only is visible above the import tabs in Simple and Advanced for items, animated items, effects and ordinary body animations."
