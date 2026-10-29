@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../public');
-const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.13/';
+const release = 'https://github.com/Celobra/uo-asset-downloads/releases/download/uo-asset-studio-v0.33.14/';
 const pages = ['/studio/', '/studio/workflows/', '/studio/downloads/', '/studio/updates/'];
 const localPath = pathname => resolve(root, '.' + pathname + (pathname.endsWith('/') ? 'index.html' : ''));
 
@@ -34,13 +34,13 @@ test('The installer is the primary download; application source is separate', as
     const html = await readFile(localPath(page), 'utf8');
     const primary = [...html.matchAll(/<a class="button primary" href="([^"]+)"/g)].map(m => m[1]);
     assert.ok(primary.length > 0);
-    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.33.13.exe');
+    assert.equal(primary[0], release + 'UOAssetStudio-Setup-0.33.14.exe');
     assert.ok(primary.every(url => !url.includes('Source-')));
   }
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.33.13.zip'));
-  assert.ok(downloads.includes(release + 'SHA256SUMS-0.33.13.txt'));
-  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.33.13.pdf'));
+  assert.ok(downloads.includes(release + 'UOAssetStudio-Source-0.33.14.zip'));
+  assert.ok(downloads.includes(release + 'SHA256SUMS-0.33.14.txt'));
+  assert.ok(downloads.includes('/studio/guide/UOAssetStudio-User-Guide-0.33.14.pdf'));
 });
 
 test('Studio navigation is available from the existing website sections', async () => {
@@ -53,10 +53,10 @@ test('Studio navigation is available from the existing website sections', async 
 
 test('Public guide is complete and uses scripts/styles allowed by CSP', async () => {
   const guide = root + '/studio/guide/';
-  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.13.html', 'utf8');
-  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.13.pdf');
+  const html = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.14.html', 'utf8');
+  const pdf = await readFile(guide + 'UOAssetStudio-User-Guide-0.33.14.pdf');
   assert.equal(pdf.subarray(0, 5).toString(), '%PDF-');
-  assert.equal(createHash('sha256').update(pdf).digest('hex'), '700ab2df75cf174f0c1fafd0b2f7614df53fdb9f1c681ce41485656cbd12d9a8', 'PDF must match the published guide without newline conversion');
+  assert.equal(createHash('sha256').update(pdf).digest('hex'), '2369d5a1cad2e221490358aac932c7f72fa5556f24f4ac343a8db46848af34a9', 'PDF must match the published guide without newline conversion');
   assert.ok(pdf.length > 100000);
   assert.doesNotMatch(html, /<style\b|<script(?![^>]*src=)[^>]*>\s*\S/i);
   for (const match of html.matchAll(/(?:href|src)="(guide-[^"]+)"/g)) assert.ok((await stat(guide + match[1])).isFile());
@@ -64,15 +64,15 @@ test('Public guide is complete and uses scripts/styles allowed by CSP', async ()
   for (const match of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.has(match[1]), `missing guide section ${match[1]}`);
 });
 
-test('Studio 0.33.13 plays and exports animations and retains earlier imports, safeguards and full history', async () => {
+test('Studio 0.33.14 plays and exports animations and retains earlier imports, safeguards and full history', async () => {
   const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
-  assert.equal(releases[0].version, '0.33.13');
+  assert.equal(releases[0].version, '0.33.14');
   assert.equal(releases[0].release, true);
-  assert.equal(releases[0].date, '2026-10-25');
-  assert.equal(releases[1].version, '0.33.12');
+  assert.equal(releases[0].date, '2026-10-29');
+  assert.equal(releases[1].version, '0.33.13');
   assert.equal(createHash('sha256').update(JSON.stringify(releases.slice(1))).digest('hex'),
-    '0156af20e6a8bb89c19f4940e735ea8df3a3f988844562ed6d0d24ad337d6985',
-    'All 63 earlier release records must survive this update unchanged');
+    '8b3ed9ab05c6f1910150d22eebba076ffc659a6806421b4e05e4f2af9940d8d3',
+    'All 64 earlier release records must survive this update unchanged');
   const workflow = await readFile(localPath('/studio/workflows/'), 'utf8');
   const updates = await readFile(localPath('/studio/updates/'), 'utf8');
   const playback = workflow.match(/<section class="wrap workflow" id="animation-playback-03312">[\s\S]*?<\/section>/)[0];
@@ -153,9 +153,9 @@ test('Practical workspace instructions identify their controls and preserve loca
   assert.match(html, /does not guarantee that every contained image/);
   assert.match(html, /same asset ID/);
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.match(downloads, /98 pages.<br>33 practical chapters/);
+  assert.match(downloads, /100 pages.<br>33 practical chapters/);
   const { releases } = JSON.parse(await readFile(resolve(root, '../data/studio-updates.json'), 'utf8'));
-  assert.equal(releases.length, 64);
+  assert.equal(releases.length, 65);
 });
 
 
@@ -217,7 +217,7 @@ test('Rules 4 world workflow identifies exact controls, dependencies and receivi
   const html = await readFile(localPath('/studio/workflows/'), 'utf8');
   for (const text of ['id="world-generator-0336"','Temperate Mainland','Island Adventures','Frozen Highlands','Dry Frontier','Volcanic Wilderness','Keep this world','Another world','Restore kept','Compare worlds','World setups ▾','Open setup…','Save setup…','Save favourite…','Favourites / recent…','Reroll chosen part','Apply regions','Buildings from your stamps','Add stamp…','Generation stages…','Keep generation pictures','Check details','Terrain review','TileData','bounded one-level approximation','maintained legacy rules','do not create NPCs','receiving client and shard']) assert.ok(html.includes(text), text);
   const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
-  assert.ok(downloads.includes('1,538 final application checks passed across 125 test modules with zero skips'));
+  assert.ok(downloads.includes('1,640 final application checks passed across 137 test modules with zero skips'));
   const overview = await readFile(localPath('/studio/'), 'utf8');
   assert.ok(overview.includes('35 tools'));
   assert.ok(overview.includes('id="worlds-and-activity"'));
@@ -265,4 +265,46 @@ test('Studio profiles and artwork-only imports show scope and actual current scr
     assert.ok(bytes.length > 10000);
     assert.ok(workflow.includes('/studio/media/' + name));
   }
+});
+
+
+test('ModernUO import audit keeps progress, nested choices and actual current screenshots explicit', async () => {
+  const workflow = await readFile(localPath('/studio/workflows/'), 'utf8');
+  const overview = await readFile(localPath('/studio/'), 'utf8');
+  const downloads = await readFile(localPath('/studio/downloads/'), 'utf8');
+  const section = workflow.match(/<section class="wrap workflow" id="modernuo-audit-03314">[\s\S]*?<\/section>/)[0];
+  for (const text of ['ModernUO','RunUO','ServUO','Add whole set','Review complete set','Find name / folder','View skipped folders / import details','Copy details','actual completed/total counts','elapsed time','read-only','C# graphic-reference analysis is unsupported','receiving shard','CRC','whole-suit VD','PNG/BMP images in every folder','including preview/reference folders','PNG is preferred','unrelated folders are never combined automatically']) assert.ok(section.includes(text),text);
+  assert.ok(!section.includes('frame groups keep their separate preview-folder filtering'));
+  assert.ok(overview.includes('id="modernuo-audit-03314"'));
+  assert.ok(downloads.includes('What changed for ModernUO armor, mounts and large ZIP packages?'));
+  for (const image of [{"name": "modernuo-armor-import-03314.jpg", "bytes": 144817, "sha256": "44831597e6eabdccda74c6bfaed75ed2caba6be8697ab671f14c02d7f346463a"}, {"name": "modernuo-mount-import-03314.jpg", "bytes": 134573, "sha256": "b20151ca91158761f5f6da6838be18da266d98953c2c2dd3e3dbc7da85dd0fb7"}, {"name": "nested-zip-source-chooser-03314.jpg", "bytes": 49134, "sha256": "cca58c4e154a05e8a5d4ef3370472f07a2c15e2ad007e0476207a071470731fa"}]) {
+    const bytes = await readFile(root + '/studio/media/' + image.name);
+    assert.equal(extname(image.name),'.jpg');
+    assert.equal(bytes.subarray(0,3).toString('hex'),'ffd8ff');
+    assert.equal(bytes.subarray(-2).toString('hex'),'ffd9');
+    assert.equal(bytes.length,image.bytes);
+    assert.equal(createHash('sha256').update(bytes).digest('hex'),image.sha256);
+    assert.ok(section.includes('/studio/media/' + image.name));
+  }
+});
+
+
+test('Every current Studio installer CTA shows the same version as its download', async () => {
+  for (const page of pages) {
+    const html = await readFile(localPath(page), 'utf8');
+    const sections = [...html.matchAll(/<section\b[^>]*class="(?:hero wrap|closing wrap)"[^>]*>[\s\S]*?<\/section>/g)].map(match => match[0]);
+    assert.equal(sections.length, page === '/studio/' ? 2 : 1, page);
+    for (const section of sections) {
+      assert.ok(section.includes(release + 'UOAssetStudio-Setup-0.33.14.exe'), page);
+      const label = section.match(/<p class="small">v(\d+\.\d+\.\d+) · Windows 10\/11 x64/);
+      assert.equal(label?.[1], '0.33.14', page + ': current CTA label');
+    }
+  }
+});
+
+test('Workflow chapters links directly to the current ModernUO and ZIP import guide', async () => {
+  const html = await readFile(localPath('/studio/workflows/'), 'utf8');
+  const navigation = html.match(/<nav class="jump-links" aria-label="Workflow chapters">[\s\S]*?<\/nav>/)?.[0];
+  assert.ok(navigation?.includes('<a href="#modernuo-audit-03314">ModernUO &amp; ZIP imports</a>'));
+  assert.ok(html.includes('<section class="wrap workflow" id="modernuo-audit-03314">'));
 });
